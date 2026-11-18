@@ -1,0 +1,562 @@
+{
+  "quality": {
+    "always_base": {
+      "n": 1076,
+      "correct": 0.07806691449814127,
+      "method_correct": 0.395910780669145,
+      "arguments_correct": 0.09293680297397769,
+      "went_base": 1.0,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.054878048780487805,
+      "unknown_accuracy": 0.15234375,
+      "known_base": {
+        "n": 820,
+        "accuracy": 0.054878048780487805
+      },
+      "known_expert": {
+        "n": 0,
+        "accuracy": null
+      },
+      "unknown_base": {
+        "n": 256,
+        "accuracy": 0.15234375
+      },
+      "unknown_expert": {
+        "n": 0,
+        "accuracy": null
+      },
+      "executor_counts": {
+        "base": 1076
+      }
+    },
+    "fixed": {
+      "n": 1076,
+      "correct": 0.07434944237918216,
+      "method_correct": 0.387546468401487,
+      "arguments_correct": 0.08550185873605948,
+      "went_base": 0.3680297397769517,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.045121951219512194,
+      "unknown_accuracy": 0.16796875,
+      "known_base": {
+        "n": 223,
+        "accuracy": 0.02242152466367713
+      },
+      "known_expert": {
+        "n": 597,
+        "accuracy": 0.05360134003350084
+      },
+      "unknown_base": {
+        "n": 173,
+        "accuracy": 0.1907514450867052
+      },
+      "unknown_expert": {
+        "n": 83,
+        "accuracy": 0.12048192771084337
+      },
+      "executor_counts": {
+        "transaction": 680,
+        "base": 396
+      }
+    },
+    "lookup": {
+      "n": 1076,
+      "correct": 0.0762081784386617,
+      "method_correct": 0.38104089219330856,
+      "arguments_correct": 0.08921933085501858,
+      "went_base": 0.3680297397769517,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.05,
+      "unknown_accuracy": 0.16015625,
+      "known_base": {
+        "n": 223,
+        "accuracy": 0.02242152466367713
+      },
+      "known_expert": {
+        "n": 597,
+        "accuracy": 0.06030150753768844
+      },
+      "unknown_base": {
+        "n": 173,
+        "accuracy": 0.1907514450867052
+      },
+      "unknown_expert": {
+        "n": 83,
+        "accuracy": 0.0963855421686747
+      },
+      "executor_counts": {
+        "search": 75,
+        "transaction": 570,
+        "base": 396,
+        "context": 35
+      }
+    },
+    "matrix": {
+      "n": 1076,
+      "correct": 0.07806691449814127,
+      "method_correct": 0.35223048327137546,
+      "arguments_correct": 0.09479553903345725,
+      "went_base": 0.3680297397769517,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.0524390243902439,
+      "unknown_accuracy": 0.16015625,
+      "known_base": {
+        "n": 223,
+        "accuracy": 0.02242152466367713
+      },
+      "known_expert": {
+        "n": 597,
+        "accuracy": 0.06365159128978225
+      },
+      "unknown_base": {
+        "n": 173,
+        "accuracy": 0.1907514450867052
+      },
+      "unknown_expert": {
+        "n": 83,
+        "accuracy": 0.0963855421686747
+      },
+      "executor_counts": {
+        "search": 161,
+        "transaction": 393,
+        "base": 396,
+        "context": 126
+      }
+    },
+    "mlp": {
+      "n": 1076,
+      "correct": 0.0724907063197026,
+      "method_correct": 0.30297397769516726,
+      "arguments_correct": 0.08921933085501858,
+      "went_base": 0.3680297397769517,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.05121951219512195,
+      "unknown_accuracy": 0.140625,
+      "known_base": {
+        "n": 223,
+        "accuracy": 0.02242152466367713
+      },
+      "known_expert": {
+        "n": 597,
+        "accuracy": 0.06197654941373534
+      },
+      "unknown_base": {
+        "n": 173,
+        "accuracy": 0.1907514450867052
+      },
+      "unknown_expert": {
+        "n": 83,
+        "accuracy": 0.03614457831325301
+      },
+      "executor_counts": {
+        "search": 321,
+        "base": 396,
+        "transaction": 149,
+        "context": 210
+      }
+    },
+    "embedding": {
+      "n": 1076,
+      "correct": 0.07063197026022305,
+      "method_correct": 0.3429368029739777,
+      "arguments_correct": 0.0845724907063197,
+      "went_base": 0.3680297397769517,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.046341463414634146,
+      "unknown_accuracy": 0.1484375,
+      "known_base": {
+        "n": 223,
+        "accuracy": 0.02242152466367713
+      },
+      "known_expert": {
+        "n": 597,
+        "accuracy": 0.05527638190954774
+      },
+      "unknown_base": {
+        "n": 173,
+        "accuracy": 0.1907514450867052
+      },
+      "unknown_expert": {
+        "n": 83,
+        "accuracy": 0.060240963855421686
+      },
+      "executor_counts": {
+        "transaction": 401,
+        "search": 135,
+        "base": 396,
+        "context": 144
+      }
+    },
+    "matrix_no_gate": {
+      "n": 1076,
+      "correct": 0.05855018587360595,
+      "method_correct": 0.33271375464684017,
+      "arguments_correct": 0.07806691449814127,
+      "went_base": 0.0,
+      "failed_decision": 0.0,
+      "known_accuracy": 0.05365853658536585,
+      "unknown_accuracy": 0.07421875,
+      "known_base": {
+        "n": 0,
+        "accuracy": null
+      },
+      "known_expert": {
+        "n": 820,
+        "accuracy": 0.05365853658536585
+      },
+      "unknown_base": {
+        "n": 0,
+        "accuracy": null
+      },
+      "unknown_expert": {
+        "n": 256,
+        "accuracy": 0.07421875
+      },
+      "executor_counts": {
+        "search": 271,
+        "transaction": 607,
+        "context": 198
+      }
+    }
+  },
+  "diagnostics": {
+    "pool_of_experts": 0.09386616945266724,
+    "experts_and_base": 0.115241639316082,
+    "oracle_with_actual_gate": 0.0957249104976654,
+    "unknown_base_failed_some_expert_correct": 0.0703125,
+    "oos_recall": 0.67578125,
+    "known_false_oos": 0.27195121951219514,
+    "train_unique_wins": {
+      "search": 5,
+      "transaction": 8,
+      "context": 8
+    }
+  },
+  "paired": {
+    "mlp_minus_lookup": {
+      "difference": -0.0037174721189591076,
+      "ci95": [
+        -0.010610910199088514,
+        0.0018905835698526307
+      ],
+      "dialogues": 297
+    },
+    "matrix_minus_lookup": {
+      "difference": 0.0018587360594795538,
+      "ci95": [
+        -0.0037524332989808773,
+        0.0075292943054969825
+      ],
+      "dialogues": 297
+    },
+    "mlp_minus_matrix": {
+      "difference": -0.0055762081784386614,
+      "ci95": [
+        -0.013108921369375443,
+        0.0009225518549085675
+      ],
+      "dialogues": 297
+    },
+    "mlp_minus_embedding": {
+      "difference": 0.0018587360594795538,
+      "ci95": [
+        -0.0037386684434781085,
+        0.007561794695537607
+      ],
+      "dialogues": 297
+    },
+    "matrix_minus_matrix_no_gate": {
+      "difference": 0.019516728624535316,
+      "ci95": [
+        0.008408882823431859,
+        0.03157211577152024
+      ],
+      "dialogues": 297
+    },
+    "matrix_minus_always_base": {
+      "difference": 0.0,
+      "ci95": [
+        -0.009050595715125289,
+        0.008739048476269369
+      ],
+      "dialogues": 297
+    }
+  },
+  "warm_single_client": {
+    "always_base": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "route_ms": {
+        "p50": 0.0,
+        "p95": 0.0
+      },
+      "execution_ms": {
+        "p50": 1.438800012692809,
+        "p95": 2.0905699930153787
+      },
+      "total_ms": {
+        "p50": 1.4397000195458531,
+        "p95": 2.0914049993734807
+      },
+      "route_invocations": 0,
+      "route_mean_ms_if_invoked": null,
+      "sequential_requests_per_second": 690.4011207657147
+    },
+    "fixed": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.7828000234439969,
+        "p95": 0.9975699969800188
+      },
+      "route_ms": {
+        "p50": 0.041399995097890496,
+        "p95": 0.04965000844094902
+      },
+      "execution_ms": {
+        "p50": 0.7608500018250197,
+        "p95": 1.2933399877510963
+      },
+      "total_ms": {
+        "p50": 1.6128999995999038,
+        "p95": 2.246624996769242
+      },
+      "route_invocations": 36,
+      "route_mean_ms_if_invoked": 0.043152774904026754,
+      "sequential_requests_per_second": 611.2811939254118
+    },
+    "lookup": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.7774500118102878,
+        "p95": 0.9295249852584674
+      },
+      "route_ms": {
+        "p50": 0.03309999010525644,
+        "p95": 0.03848000196740031
+      },
+      "execution_ms": {
+        "p50": 0.7400999893434346,
+        "p95": 1.2582850031321868
+      },
+      "total_ms": {
+        "p50": 1.5703999961260706,
+        "p95": 2.0422999979928136
+      },
+      "route_invocations": 36,
+      "route_mean_ms_if_invoked": 0.036155557609163225,
+      "sequential_requests_per_second": 626.321146416675
+    },
+    "matrix": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.7782999891787767,
+        "p95": 0.9683550073532387
+      },
+      "route_ms": {
+        "p50": 0.03359999391250312,
+        "p95": 0.0400500139221549
+      },
+      "execution_ms": {
+        "p50": 0.7421499758493155,
+        "p95": 1.459294997039251
+      },
+      "total_ms": {
+        "p50": 1.57049999688752,
+        "p95": 2.274160014349036
+      },
+      "route_invocations": 36,
+      "route_mean_ms_if_invoked": 0.034944440509813525,
+      "sequential_requests_per_second": 615.2915318132323
+    },
+    "mlp": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.767299992730841,
+        "p95": 0.8716799638932571
+      },
+      "route_ms": {
+        "p50": 0.1293499954044819,
+        "p95": 0.14859502553008497
+      },
+      "execution_ms": {
+        "p50": 0.8181500306818634,
+        "p95": 1.5271549986209718
+      },
+      "total_ms": {
+        "p50": 1.7330499831587076,
+        "p95": 2.4417299951892346
+      },
+      "route_invocations": 36,
+      "route_mean_ms_if_invoked": 0.13563888690744838,
+      "sequential_requests_per_second": 565.9116086468642
+    },
+    "embedding": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.776449975091964,
+        "p95": 0.8707349945325404
+      },
+      "route_ms": {
+        "p50": 0.27435002266429365,
+        "p95": 0.29594000370707363
+      },
+      "execution_ms": {
+        "p50": 0.7487499970011413,
+        "p95": 1.506204972974956
+      },
+      "total_ms": {
+        "p50": 1.7809499986469746,
+        "p95": 2.6196499937213957
+      },
+      "route_invocations": 36,
+      "route_mean_ms_if_invoked": 0.28093334306807566,
+      "sequential_requests_per_second": 533.6707332120136
+    },
+    "matrix_no_gate": {
+      "n": 48,
+      "recognition_ms": {
+        "p50": 0.7784499903209507,
+        "p95": 0.944560015341267
+      },
+      "route_ms": {
+        "p50": 0.03374996595084667,
+        "p95": 0.04312999953981489
+      },
+      "execution_ms": {
+        "p50": 0.66380001953803,
+        "p95": 1.0555300250416622
+      },
+      "total_ms": {
+        "p50": 1.5053999959491193,
+        "p95": 1.9801750051556153
+      },
+      "route_invocations": 48,
+      "route_mean_ms_if_invoked": 0.03520625129264469,
+      "sequential_requests_per_second": 651.678952512433
+    }
+  },
+  "provenance": {
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "torch": "2.8.0+cu128",
+      "transformers": "5.22.1",
+      "peft": null
+    },
+    "source_sha256": {
+      "experiment": "b56a6100427107f40ae625cdac36f5fb9afda196170ad637be22d3fe68f828cb",
+      "routing": "97e0e075d0b45efa85dc2c337af889569d2496b8c865b80620a6176e4ee463e0",
+      "executors": "a66fe19b8abc848aa7aa10635ff728d92b4723a16b99018ccd1f3fafb0cf7947",
+      "lora": "9a8d6b5c8db7b25cb08150b8345f13f51f455f414715e17449b17e83a69d1a9d",
+      "data": "53fce30bf64eaddc9f959a99028c8939818efbd14b1194a567b4306d6fa17931",
+      "metrics": "6266acd557c9050711209509b72177e28b239cab0e4ad6e556aa365767b58900"
+    }
+  },
+  "split_metadata": {
+    "seed": 1118,
+    "dialogue_template_groups": 1213,
+    "excluded_mixed_rows": 0,
+    "counts_by_role": {
+      "fit": {
+        "known": 1852
+      },
+      "router": {
+        "known": 598
+      },
+      "cal": {
+        "known": 334,
+        "dev_unknown": 220
+      },
+      "test": {
+        "known": 820,
+        "test_unknown": 256
+      }
+    }
+  },
+  "recognition": {
+    "threshold": 0.24752335250377655,
+    "temperature": 0.02
+  },
+  "data_manifest": {
+    "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+    "revision": "e852981ae34990f4358979625854259302feaa78",
+    "split": "train",
+    "profile": "pilot",
+    "sha256": {
+      "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+      "dialogues_001.json": "5ce28a6e656bc88c1da29c983d243d5a81eb37de92698da3864d1cf02894ca24",
+      "dialogues_014.json": "5cd6cc68c676a2546a3312eda0f29be170ab5f0d6c602c9548ffa2c095037c7b",
+      "dialogues_028.json": "225af9eebcb34f90ab1c9634c5771c9e6179019fdb903884ff70a5833b77620c",
+      "dialogues_042.json": "51d94d5d602cbf51c819c8f79a25f45174ebc3191c8ea3b2278d5b6c96742d51",
+      "dialogues_056.json": "b4c4293c6cc1eea766025b0ba658e52070d6ef743afb73b1fb5531d280776977",
+      "dialogues_070.json": "ca37b41fefd5af07b4d9fba75c3268d6831f2ce49f5bf4e6d5412e39c764f0a8",
+      "dialogues_084.json": "f728459cbdbb4f69f87dfbc00af0584b9a44b841a568717e7dab7c3146f492cb",
+      "dialogues_098.json": "b08094174ff819f259ea64c199e8d3c5141006b11e00b428be21d5b7e452bc0b",
+      "dialogues_112.json": "0120d9160a30b1b15c21613122250d2a036609b0ba1e3ed33b5b396c4161e10d",
+      "dialogues_126.json": "ae4c17bab75be5eb1ec8738dedd72bd5d33657243068e657642259c8091269ac"
+    }
+  },
+  "setup_ms": 714.8652999894693,
+  "router_supervision_ms": 1472.7901000296697,
+  "router_fit_ms": 213.56479998212308,
+  "offline_router_executor_calls": 1794,
+  "offline_test_executor_calls": 4304,
+  "config": {
+    "command": "run",
+    "sgd_root": "data/sgd",
+    "catalog": "configs/intent_catalog.json",
+    "out": "artifacts/verified-tfidf",
+    "seed": 1118,
+    "encoder": "tfidf",
+    "model_path": null,
+    "backend": "retrieval",
+    "base_path": null,
+    "adapters_dir": null,
+    "device": "cpu",
+    "max_length": 4096,
+    "max_new_tokens": 128,
+    "limit_test": 0,
+    "limit_router": 0,
+    "live_n": 24,
+    "repeats": 2
+  },
+  "hardware": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.18",
+  "catalog_sha256": "28e98b232dc983dcc530a7246e8f82c6927e92b04fd89908b9c5a336f8291d3d",
+  "counts": {
+    "fit": 1852,
+    "router": 598,
+    "cal": 554,
+    "test": 1076
+  },
+  "evaluated": 1076,
+  "expert_ids": [
+    "search",
+    "transaction",
+    "context"
+  ],
+  "known": [
+    "BookAppointment",
+    "BuyBusTicket",
+    "BuyEventTickets",
+    "FindAttractions",
+    "FindBus",
+    "FindEvents",
+    "FindProvider",
+    "FindRestaurants",
+    "GetEvents",
+    "GetRide",
+    "LookupSong",
+    "PlaySong",
+    "ReserveFlight",
+    "ReserveLodging",
+    "ReserveRestaurant",
+    "SearchFlight",
+    "SearchLodging"
+  ]
+}

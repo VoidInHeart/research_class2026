@@ -1,0 +1,461 @@
+{
+  "encoder": "minilm",
+  "evaluated": 1076,
+  "observed_unknown_fraction": 0.2379182156133829,
+  "input_sha256": {
+    "public.jsonl": "754dca2edf91d636b127b1da106824c69ee4f381fc28dae9205bff6f9f04721b",
+    "decisions.jsonl": "007ad57d45395dc4a9b34ac896a3ca44f342dc7c398f6598dcaee9658ae7c20a",
+    "references.jsonl": "3fa418d27d15edc4e3cf1d22529996c217d50ea342b6700e9e879841ebcaa66f",
+    "summary.json": "5e0b6426aaf3b881a381f347354502d121c547dba337cb0f8936b92e5d7ba376"
+  },
+  "scope": "Top1 groups include accepted requests only; switch counts use lookup as paired baseline. Quadrants describe the common gate, including for methods that bypass it. Mixtures reweight empirical known/unknown accuracy holding their conditional distributions fixed.",
+  "switches_vs_lookup": {
+    "matrix": {
+      "n": 1076,
+      "switches": 272,
+      "rescued": 2,
+      "harmed": 3,
+      "unchanged_correctness_among_switches": 267,
+      "net": -1
+    },
+    "mlp": {
+      "n": 1076,
+      "switches": 205,
+      "rescued": 3,
+      "harmed": 7,
+      "unchanged_correctness_among_switches": 195,
+      "net": -4
+    }
+  },
+  "accepted_by_predicted_top1": {
+    "BookAppointment": {
+      "matrix": {
+        "n": 146,
+        "switches": 84,
+        "rescued": 0,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 83,
+        "net": -1
+      },
+      "mlp": {
+        "n": 146,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      }
+    },
+    "BuyBusTicket": {
+      "matrix": {
+        "n": 64,
+        "switches": 52,
+        "rescued": 2,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 49,
+        "net": 1
+      },
+      "mlp": {
+        "n": 64,
+        "switches": 34,
+        "rescued": 1,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 32,
+        "net": 0
+      }
+    },
+    "BuyEventTickets": {
+      "matrix": {
+        "n": 113,
+        "switches": 37,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 37,
+        "net": 0
+      },
+      "mlp": {
+        "n": 113,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      }
+    },
+    "FindAttractions": {
+      "matrix": {
+        "n": 20,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      },
+      "mlp": {
+        "n": 20,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      }
+    },
+    "FindBus": {
+      "matrix": {
+        "n": 37,
+        "switches": 5,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 5,
+        "net": 0
+      },
+      "mlp": {
+        "n": 37,
+        "switches": 1,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 1,
+        "net": 0
+      }
+    },
+    "FindEvents": {
+      "matrix": {
+        "n": 105,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      },
+      "mlp": {
+        "n": 105,
+        "switches": 58,
+        "rescued": 1,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 56,
+        "net": 0
+      }
+    },
+    "FindProvider": {
+      "matrix": {
+        "n": 51,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      },
+      "mlp": {
+        "n": 51,
+        "switches": 1,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 1,
+        "net": 0
+      }
+    },
+    "FindRestaurants": {
+      "matrix": {
+        "n": 31,
+        "switches": 30,
+        "rescued": 0,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 29,
+        "net": -1
+      },
+      "mlp": {
+        "n": 31,
+        "switches": 27,
+        "rescued": 0,
+        "harmed": 1,
+        "unchanged_correctness_among_switches": 26,
+        "net": -1
+      }
+    },
+    "GetRide": {
+      "matrix": {
+        "n": 7,
+        "switches": 7,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 7,
+        "net": 0
+      },
+      "mlp": {
+        "n": 7,
+        "switches": 7,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 7,
+        "net": 0
+      }
+    },
+    "LookupSong": {
+      "matrix": {
+        "n": 11,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      },
+      "mlp": {
+        "n": 11,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      }
+    },
+    "PlaySong": {
+      "matrix": {
+        "n": 6,
+        "switches": 5,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 5,
+        "net": 0
+      },
+      "mlp": {
+        "n": 6,
+        "switches": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 4,
+        "net": 0
+      }
+    },
+    "ReserveFlight": {
+      "matrix": {
+        "n": 28,
+        "switches": 20,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 20,
+        "net": 0
+      },
+      "mlp": {
+        "n": 28,
+        "switches": 26,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 26,
+        "net": 0
+      }
+    },
+    "ReserveLodging": {
+      "matrix": {
+        "n": 12,
+        "switches": 12,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 12,
+        "net": 0
+      },
+      "mlp": {
+        "n": 12,
+        "switches": 12,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 12,
+        "net": 0
+      }
+    },
+    "ReserveRestaurant": {
+      "matrix": {
+        "n": 37,
+        "switches": 9,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 9,
+        "net": 0
+      },
+      "mlp": {
+        "n": 37,
+        "switches": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 0,
+        "net": 0
+      }
+    },
+    "SearchFlight": {
+      "matrix": {
+        "n": 22,
+        "switches": 7,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 7,
+        "net": 0
+      },
+      "mlp": {
+        "n": 22,
+        "switches": 21,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 21,
+        "net": 0
+      }
+    },
+    "SearchLodging": {
+      "matrix": {
+        "n": 14,
+        "switches": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged_correctness_among_switches": 4,
+        "net": 0
+      },
+      "mlp": {
+        "n": 14,
+        "switches": 14,
+        "rescued": 1,
+        "harmed": 4,
+        "unchanged_correctness_among_switches": 9,
+        "net": -3
+      }
+    }
+  },
+  "truth_by_gate": {
+    "known_accepted": {
+      "n": 575,
+      "accuracy": {
+        "always_base": 0.06782608695652174,
+        "embedding": 0.06086956521739131,
+        "fixed": 0.059130434782608696,
+        "lookup": 0.06782608695652174,
+        "matrix": 0.06782608695652174,
+        "matrix_no_gate": 0.06782608695652174,
+        "mlp": 0.059130434782608696
+      }
+    },
+    "known_oos": {
+      "n": 245,
+      "accuracy": {
+        "always_base": 0.024489795918367346,
+        "embedding": 0.024489795918367346,
+        "fixed": 0.024489795918367346,
+        "lookup": 0.024489795918367346,
+        "matrix": 0.024489795918367346,
+        "matrix_no_gate": 0.02040816326530612,
+        "mlp": 0.024489795918367346
+      }
+    },
+    "unknown_accepted": {
+      "n": 129,
+      "accuracy": {
+        "always_base": 0.12403100775193798,
+        "embedding": 0.08527131782945736,
+        "fixed": 0.17054263565891473,
+        "lookup": 0.16279069767441862,
+        "matrix": 0.15503875968992248,
+        "matrix_no_gate": 0.15503875968992248,
+        "mlp": 0.17054263565891473
+      }
+    },
+    "unknown_oos": {
+      "n": 127,
+      "accuracy": {
+        "always_base": 0.18110236220472442,
+        "embedding": 0.18110236220472442,
+        "fixed": 0.18110236220472442,
+        "lookup": 0.18110236220472442,
+        "matrix": 0.18110236220472442,
+        "matrix_no_gate": 0.06299212598425197,
+        "mlp": 0.18110236220472442
+      }
+    }
+  },
+  "oos_mix_sensitivity": [
+    {
+      "unknown_fraction": 0.0,
+      "estimated_accuracy": {
+        "always_base": 0.054878048780487805,
+        "embedding": 0.05,
+        "fixed": 0.04878048780487805,
+        "lookup": 0.054878048780487805,
+        "matrix": 0.054878048780487805,
+        "matrix_no_gate": 0.05365853658536585,
+        "mlp": 0.04878048780487805
+      }
+    },
+    {
+      "unknown_fraction": 0.1,
+      "estimated_accuracy": {
+        "always_base": 0.06462461890243903,
+        "embedding": 0.05828125000000001,
+        "fixed": 0.06148056402439025,
+        "lookup": 0.06657774390243903,
+        "matrix": 0.06618711890243903,
+        "matrix_no_gate": 0.05923018292682927,
+        "mlp": 0.06148056402439025
+      }
+    },
+    {
+      "unknown_fraction": 0.2379182156133829,
+      "estimated_accuracy": {
+        "always_base": 0.07806691449814127,
+        "embedding": 0.06970260223048327,
+        "fixed": 0.07899628252788105,
+        "lookup": 0.08271375464684015,
+        "matrix": 0.08178438661710037,
+        "matrix_no_gate": 0.06691449814126393,
+        "mlp": 0.07899628252788105
+      }
+    },
+    {
+      "unknown_fraction": 0.25,
+      "estimated_accuracy": {
+        "always_base": 0.07924447408536586,
+        "embedding": 0.070703125,
+        "fixed": 0.08053067835365854,
+        "lookup": 0.08412728658536586,
+        "matrix": 0.08315072408536586,
+        "matrix_no_gate": 0.0675876524390244,
+        "mlp": 0.08053067835365854
+      }
+    },
+    {
+      "unknown_fraction": 0.5,
+      "estimated_accuracy": {
+        "always_base": 0.1036108993902439,
+        "embedding": 0.09140625,
+        "fixed": 0.11228086890243902,
+        "lookup": 0.1133765243902439,
+        "matrix": 0.1114233993902439,
+        "matrix_no_gate": 0.08151676829268292,
+        "mlp": 0.11228086890243902
+      }
+    },
+    {
+      "unknown_fraction": 0.75,
+      "estimated_accuracy": {
+        "always_base": 0.12797732469512196,
+        "embedding": 0.112109375,
+        "fixed": 0.14403105945121952,
+        "lookup": 0.14262576219512196,
+        "matrix": 0.13969607469512196,
+        "matrix_no_gate": 0.09544588414634146,
+        "mlp": 0.14403105945121952
+      }
+    },
+    {
+      "unknown_fraction": 1.0,
+      "estimated_accuracy": {
+        "always_base": 0.15234375,
+        "embedding": 0.1328125,
+        "fixed": 0.17578125,
+        "lookup": 0.171875,
+        "matrix": 0.16796875,
+        "matrix_no_gate": 0.109375,
+        "mlp": 0.17578125
+      }
+    }
+  ],
+  "always_use_one_expert_full_test": {
+    "search": 0.04368029739776952,
+    "transaction": 0.06970260223048327,
+    "context": 0.02973977695167286
+  }
+}
