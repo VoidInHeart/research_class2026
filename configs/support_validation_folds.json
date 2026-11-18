@@ -1,0 +1,51 @@
+{
+  "near_domain_bus_ticket": {
+    "dev_unknown": [
+      "CheckBalance"
+    ],
+    "test_unknown": [
+      "BuyBusTicket"
+    ],
+    "related_known": "FindBus"
+  },
+  "near_lodging_booking": {
+    "dev_unknown": [
+      "CheckBalance"
+    ],
+    "test_unknown": [
+      "ReserveLodging"
+    ],
+    "related_known": "SearchLodging"
+  },
+  "near_event_booking": {
+    "dev_unknown": [
+      "CheckBalance"
+    ],
+    "test_unknown": [
+      "BuyEventTickets"
+    ],
+    "related_known": "FindEvents"
+  },
+  "music_transfer": {
+    "dev_unknown": [
+      "CheckBalance"
+    ],
+    "test_unknown": [
+      "PlaySong"
+    ],
+    "related_known": null
+  },
+  "original_domains": {
+    "dev_unknown": [
+      "FindMovies",
+      "PlayMovie",
+      "BuyMovieTickets",
+      "GetTimesForMovie"
+    ],
+    "test_unknown": [
+      "CheckBalance",
+      "TransferMoney",
+      "GetWeather"
+    ]
+  }
+}
