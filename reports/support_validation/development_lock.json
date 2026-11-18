@@ -1,0 +1,2833 @@
+{
+  "rate": 0.07692307692307693,
+  "window": "recent5",
+  "model": "da169a0a8f75b04bac448ffeab990b396edf9db8b9a8416e3650ae43455b4fef",
+  "expert_pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "supervision_sha256": "2956a4315893891417f8515b499c84430636ae0fdd92f4b0186c52ba86f6412e",
+  "holdout_config_sha256": "fb919e1ce63bb0a150b96f27c0d319b8123a6bf676b167ee17e774eb466ca4bd",
+  "original_corpus_sha256": "0fafe4a532e752b4b6cf00b4275b3b202bdaae1c909ca95d7c1c881211f0bace",
+  "new_shard_lock_sha256": "f3de46a45d1c671cf90b3ed6c0a676aed0ce09968b12956ce560626b673a0759",
+  "folds": {
+    "near_domain_bus_ticket": {
+      "known": [
+        "BookAppointment",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ],
+      "dev_unknown": [
+        "CheckBalance"
+      ],
+      "test_unknown": [
+        "BuyBusTicket"
+      ],
+      "related_known": "FindBus",
+      "choice": {
+        "candidate": "lexical_mix",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "reason": "highest_macro_pseudo_unknown_recall",
+        "macro_recall": {
+          "centroid": 0.5999813806265419,
+          "semantic": 0.7297211748824651,
+          "lexical": 0.5381499325047712,
+          "centroid_semantic": 0.7149280826700181,
+          "semantic_mix": 0.781739049480985,
+          "lexical_mix": 0.785020714052972
+        },
+        "candidate_weights": {
+          "centroid": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "semantic": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "lexical": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "centroid_semantic": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "semantic_mix": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "lexical_mix": [
+            0.25,
+            0.25,
+            0.5
+          ]
+        },
+        "known_frr": 0.07692307692307693,
+        "seed": 202611,
+        "active_intents_from_unscored_turns": true,
+        "excluded_cross_phase_rows": 0,
+        "rotations": {
+          "BuyEventTickets": {
+            "fit": 1268,
+            "known": [
+              "BookAppointment",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 7,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 241,
+                "known": 198,
+                "known_rejected": 15,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 5,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 198,
+                "known": 241,
+                "known_rejected": 19,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 3,
+                  "lexical": 3,
+                  "centroid_semantic": 3,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 1.0,
+              "semantic": 1.0,
+              "lexical": 0.75,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 1.0,
+              "lexical_mix": 1.0
+            }
+          },
+          "FindBus": {
+            "fit": 968,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 21,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 162,
+                "known": 153,
+                "known_rejected": 12,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 141,
+                "known": 188,
+                "known_rejected": 14,
+                "hidden": 20,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 13,
+                  "lexical": 9,
+                  "centroid_semantic": 13,
+                  "semantic_mix": 14,
+                  "lexical_mix": 13
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4666666666666667,
+              "semantic": 0.6,
+              "lexical": 0.4,
+              "centroid_semantic": 0.6,
+              "semantic_mix": 0.6,
+              "lexical_mix": 0.6
+            }
+          },
+          "LookupSong": {
+            "fit": 1064,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 28,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 191,
+                "known": 191,
+                "known_rejected": 15,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 10,
+                  "lexical": 4,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 8
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 169,
+                "known": 225,
+                "known_rejected": 17,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 12,
+                  "semantic": 17,
+                  "lexical": 12,
+                  "centroid_semantic": 16,
+                  "semantic_mix": 16,
+                  "lexical_mix": 16
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4838709677419355,
+              "semantic": 0.8709677419354839,
+              "lexical": 0.5161290322580645,
+              "centroid_semantic": 0.8064516129032258,
+              "semantic_mix": 0.8064516129032258,
+              "lexical_mix": 0.7741935483870968
+            }
+          },
+          "PlaySong": {
+            "fit": 871,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 133,
+                "known": 164,
+                "known_rejected": 13,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 4,
+                  "lexical": 4,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 139,
+                "known": 181,
+                "known_rejected": 14,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 10,
+                  "lexical": 6,
+                  "centroid_semantic": 10,
+                  "semantic_mix": 10,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 1.0,
+              "semantic": 0.9333333333333333,
+              "lexical": 0.6666666666666666,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 0.9333333333333333,
+              "lexical_mix": 0.9333333333333333
+            }
+          },
+          "ReserveLodging": {
+            "fit": 1200,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 7,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 241,
+                "known": 197,
+                "known_rejected": 15,
+                "hidden": 6,
+                "hidden_rejected": {
+                  "centroid": 2,
+                  "semantic": 3,
+                  "lexical": 4,
+                  "centroid_semantic": 3,
+                  "semantic_mix": 4,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 191,
+                "known": 243,
+                "known_rejected": 19,
+                "hidden": 1,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 0,
+                  "lexical": 1,
+                  "centroid_semantic": 0,
+                  "semantic_mix": 1,
+                  "lexical_mix": 1
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.2857142857142857,
+              "semantic": 0.42857142857142855,
+              "lexical": 0.7142857142857143,
+              "centroid_semantic": 0.42857142857142855,
+              "semantic_mix": 0.7142857142857143,
+              "lexical_mix": 0.8571428571428571
+            }
+          },
+          "SearchLodging": {
+            "fit": 906,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight"
+            ],
+            "hidden_dialogues": 9,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 196,
+                "known": 143,
+                "known_rejected": 11,
+                "hidden": 8,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 5,
+                  "lexical": 2,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 6,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 126,
+                "known": 202,
+                "known_rejected": 16,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 1,
+                  "lexical": 0,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 1
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.36363636363636365,
+              "semantic": 0.5454545454545454,
+              "lexical": 0.18181818181818182,
+              "centroid_semantic": 0.45454545454545453,
+              "semantic_mix": 0.6363636363636364,
+              "lexical_mix": 0.5454545454545454
+            }
+          }
+        },
+        "skipped": {
+          "BookAppointment": "fewer_than_three_hidden_dialogues",
+          "FindAttractions": "fewer_than_three_hidden_dialogues",
+          "FindEvents": "fewer_than_three_hidden_dialogues",
+          "FindProvider": "fewer_than_three_hidden_dialogues",
+          "FindRestaurants": "fewer_than_three_hidden_dialogues",
+          "GetEvents": "fewer_than_three_hidden_dialogues",
+          "GetRide": "fewer_than_three_hidden_dialogues",
+          "ReserveFlight": "fewer_than_three_hidden_dialogues",
+          "ReserveRestaurant": "fewer_than_three_hidden_dialogues",
+          "SearchFlight": "fewer_than_three_hidden_dialogues"
+        }
+      },
+      "cutoffs": {
+        "centroid": 1.5685566453365853,
+        "semantic": 1.9532360477671593,
+        "lexical": 1.1156875844668965,
+        "adaptive": 1.2881012717942095
+      },
+      "legacy_raw_cut": -0.6347930431365967,
+      "temperature": 0.02,
+      "counts": {
+        "fit": 1307,
+        "router": 447,
+        "cal_known": 404
+      },
+      "model_sha256": "4dccfd51a6cc4c238d462686e08f1e289c91d1947a96e895d164973110977374"
+    },
+    "near_lodging_booking": {
+      "known": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ],
+      "dev_unknown": [
+        "CheckBalance"
+      ],
+      "test_unknown": [
+        "ReserveLodging"
+      ],
+      "related_known": "SearchLodging",
+      "choice": {
+        "candidate": "lexical_mix",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "reason": "highest_macro_pseudo_unknown_recall",
+        "macro_recall": {
+          "centroid": 0.5597261326867629,
+          "semantic": 0.6734418933745814,
+          "lexical": 0.397217950594563,
+          "centroid_semantic": 0.6373478309102317,
+          "semantic_mix": 0.7032461970222637,
+          "lexical_mix": 0.7131458784903736
+        },
+        "candidate_weights": {
+          "centroid": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "semantic": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "lexical": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "centroid_semantic": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "semantic_mix": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "lexical_mix": [
+            0.25,
+            0.25,
+            0.5
+          ]
+        },
+        "known_frr": 0.07692307692307693,
+        "seed": 202611,
+        "active_intents_from_unscored_turns": true,
+        "excluded_cross_phase_rows": 0,
+        "rotations": {
+          "BuyBusTicket": {
+            "fit": 1200,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 32,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 241,
+                "known": 241,
+                "known_rejected": 19,
+                "hidden": 18,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 5,
+                  "lexical": 5,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 8,
+                  "lexical_mix": 7
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 191,
+                "known": 275,
+                "known_rejected": 21,
+                "hidden": 14,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 3,
+                  "lexical": 6,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 4,
+                  "lexical_mix": 5
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.03125,
+              "semantic": 0.25,
+              "lexical": 0.34375,
+              "centroid_semantic": 0.09375,
+              "semantic_mix": 0.375,
+              "lexical_mix": 0.375
+            }
+          },
+          "BuyEventTickets": {
+            "fit": 1605,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 7,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 286,
+                "known": 254,
+                "known_rejected": 20,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 5,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 254,
+                "known": 286,
+                "known_rejected": 22,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 2,
+                  "lexical": 2,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.625,
+              "semantic": 0.875,
+              "lexical": 0.625,
+              "centroid_semantic": 0.75,
+              "semantic_mix": 1.0,
+              "lexical_mix": 1.0
+            }
+          },
+          "FindAttractions": {
+            "fit": 1141,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 19,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 218,
+                "known": 207,
+                "known_rejected": 16,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 7,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 6,
+                  "semantic_mix": 5,
+                  "lexical_mix": 7
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 168,
+                "known": 242,
+                "known_rejected": 19,
+                "hidden": 11,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 3,
+                  "lexical": 4,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 3,
+                  "lexical_mix": 4
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.5217391304347826,
+              "semantic": 0.34782608695652173,
+              "lexical": 0.30434782608695654,
+              "centroid_semantic": 0.43478260869565216,
+              "semantic_mix": 0.34782608695652173,
+              "lexical_mix": 0.4782608695652174
+            }
+          },
+          "FindBus": {
+            "fit": 861,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 21,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 159,
+                "known": 141,
+                "known_rejected": 11,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 129,
+                "known": 185,
+                "known_rejected": 14,
+                "hidden": 20,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 13,
+                  "lexical": 9,
+                  "centroid_semantic": 13,
+                  "semantic_mix": 14,
+                  "lexical_mix": 13
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4666666666666667,
+              "semantic": 0.6,
+              "lexical": 0.4,
+              "centroid_semantic": 0.6,
+              "semantic_mix": 0.6,
+              "lexical_mix": 0.5666666666666667
+            }
+          },
+          "FindEvents": {
+            "fit": 1458,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 17,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 253,
+                "known": 250,
+                "known_rejected": 19,
+                "hidden": 9,
+                "hidden_rejected": {
+                  "centroid": 8,
+                  "semantic": 7,
+                  "lexical": 3,
+                  "centroid_semantic": 8,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 219,
+                "known": 279,
+                "known_rejected": 21,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 6,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 8,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.8947368421052632,
+              "semantic": 0.6842105263157895,
+              "lexical": 0.3157894736842105,
+              "centroid_semantic": 0.8947368421052632,
+              "semantic_mix": 0.8947368421052632,
+              "lexical_mix": 1.0
+            }
+          },
+          "LookupSong": {
+            "fit": 1401,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 28,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 236,
+                "known": 247,
+                "known_rejected": 19,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 10,
+                  "lexical": 4,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 225,
+                "known": 270,
+                "known_rejected": 21,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 12,
+                  "semantic": 18,
+                  "lexical": 12,
+                  "centroid_semantic": 18,
+                  "semantic_mix": 17,
+                  "lexical_mix": 16
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4838709677419355,
+              "semantic": 0.9032258064516129,
+              "lexical": 0.5161290322580645,
+              "centroid_semantic": 0.8709677419354839,
+              "semantic_mix": 0.8387096774193549,
+              "lexical_mix": 0.8064516129032258
+            }
+          },
+          "PlaySong": {
+            "fit": 1208,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 178,
+                "known": 220,
+                "known_rejected": 17,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 5,
+                  "lexical": 2,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 195,
+                "known": 226,
+                "known_rejected": 17,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 10,
+                  "lexical": 4,
+                  "centroid_semantic": 10,
+                  "semantic_mix": 10,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 1.0,
+              "semantic": 1.0,
+              "lexical": 0.4,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 0.9333333333333333,
+              "lexical_mix": 0.9333333333333333
+            }
+          },
+          "SearchLodging": {
+            "fit": 1033,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight"
+            ],
+            "hidden_dialogues": 9,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 209,
+                "known": 160,
+                "known_rejected": 12,
+                "hidden": 8,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 7,
+                  "lexical": 3,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 6,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 143,
+                "known": 215,
+                "known_rejected": 17,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 1,
+                  "lexical": 0,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 1
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.45454545454545453,
+              "semantic": 0.7272727272727273,
+              "lexical": 0.2727272727272727,
+              "centroid_semantic": 0.45454545454545453,
+              "semantic_mix": 0.6363636363636364,
+              "lexical_mix": 0.5454545454545454
+            }
+          }
+        },
+        "skipped": {
+          "BookAppointment": "fewer_than_three_hidden_dialogues",
+          "FindProvider": "fewer_than_three_hidden_dialogues",
+          "FindRestaurants": "fewer_than_three_hidden_dialogues",
+          "GetEvents": "fewer_than_three_hidden_dialogues",
+          "GetRide": "fewer_than_three_hidden_dialogues",
+          "ReserveFlight": "fewer_than_three_hidden_dialogues",
+          "ReserveRestaurant": "fewer_than_three_hidden_dialogues",
+          "SearchFlight": "fewer_than_three_hidden_dialogues"
+        }
+      },
+      "cutoffs": {
+        "centroid": 1.5645398971966904,
+        "semantic": 1.8189587938703973,
+        "lexical": 1.1016407981956755,
+        "adaptive": 1.2664019908259658
+      },
+      "legacy_raw_cut": -0.6636514663696289,
+      "temperature": 0.02,
+      "counts": {
+        "fit": 1644,
+        "router": 548,
+        "cal_known": 475
+      },
+      "model_sha256": "2567f67990092505e6ec34c66896088937ac564219bf906a1ba57032324c7721"
+    },
+    "near_event_booking": {
+      "known": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ],
+      "dev_unknown": [
+        "CheckBalance"
+      ],
+      "test_unknown": [
+        "BuyEventTickets"
+      ],
+      "related_known": "FindEvents",
+      "choice": {
+        "candidate": "semantic_mix",
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "reason": "highest_macro_pseudo_unknown_recall",
+        "macro_recall": {
+          "centroid": 0.4641829612608577,
+          "semantic": 0.5858926378146108,
+          "lexical": 0.3615029157598374,
+          "centroid_semantic": 0.5429017339524116,
+          "semantic_mix": 0.6236313230832533,
+          "lexical_mix": 0.6210961908256267
+        },
+        "candidate_weights": {
+          "centroid": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "semantic": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "lexical": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "centroid_semantic": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "semantic_mix": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "lexical_mix": [
+            0.25,
+            0.25,
+            0.5
+          ]
+        },
+        "known_frr": 0.07692307692307693,
+        "seed": 202611,
+        "active_intents_from_unscored_turns": true,
+        "excluded_cross_phase_rows": 0,
+        "rotations": {
+          "BuyBusTicket": {
+            "fit": 1268,
+            "known": [
+              "BookAppointment",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 40,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 241,
+                "known": 261,
+                "known_rejected": 20,
+                "hidden": 29,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 5,
+                  "lexical": 10,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 198,
+                "known": 281,
+                "known_rejected": 22,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 3,
+                  "lexical": 7,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 4,
+                  "lexical_mix": 5
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.020833333333333332,
+              "semantic": 0.16666666666666666,
+              "lexical": 0.3541666666666667,
+              "centroid_semantic": 0.0625,
+              "semantic_mix": 0.2708333333333333,
+              "lexical_mix": 0.2916666666666667
+            }
+          },
+          "FindAttractions": {
+            "fit": 1310,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 19,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 229,
+                "known": 238,
+                "known_rejected": 18,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 7,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 6,
+                  "semantic_mix": 6,
+                  "lexical_mix": 6
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 199,
+                "known": 253,
+                "known_rejected": 19,
+                "hidden": 11,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 3,
+                  "lexical": 2,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.5217391304347826,
+              "semantic": 0.34782608695652173,
+              "lexical": 0.21739130434782608,
+              "centroid_semantic": 0.43478260869565216,
+              "semantic_mix": 0.43478260869565216,
+              "lexical_mix": 0.43478260869565216
+            }
+          },
+          "FindBus": {
+            "fit": 1030,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 34,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 170,
+                "known": 179,
+                "known_rejected": 14,
+                "hidden": 20,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 2,
+                  "lexical": 3,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 3
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 160,
+                "known": 202,
+                "known_rejected": 16,
+                "hidden": 27,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 3,
+                  "lexical": 8,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 5,
+                  "lexical_mix": 6
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.0851063829787234,
+              "semantic": 0.10638297872340426,
+              "lexical": 0.23404255319148937,
+              "centroid_semantic": 0.10638297872340426,
+              "semantic_mix": 0.1276595744680851,
+              "lexical_mix": 0.19148936170212766
+            }
+          },
+          "FindEvents": {
+            "fit": 1627,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 17,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 264,
+                "known": 281,
+                "known_rejected": 22,
+                "hidden": 9,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 8,
+                  "lexical": 2,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 250,
+                "known": 290,
+                "known_rejected": 22,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 6,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.9473684210526315,
+              "semantic": 0.7368421052631579,
+              "lexical": 0.2631578947368421,
+              "centroid_semantic": 0.9473684210526315,
+              "semantic_mix": 0.9473684210526315,
+              "lexical_mix": 1.0
+            }
+          },
+          "LookupSong": {
+            "fit": 1570,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 28,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 247,
+                "known": 278,
+                "known_rejected": 21,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 11,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 256,
+                "known": 281,
+                "known_rejected": 22,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 12,
+                  "semantic": 18,
+                  "lexical": 12,
+                  "centroid_semantic": 18,
+                  "semantic_mix": 17,
+                  "lexical_mix": 17
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4838709677419355,
+              "semantic": 0.9354838709677419,
+              "lexical": 0.4838709677419355,
+              "centroid_semantic": 0.8709677419354839,
+              "semantic_mix": 0.8387096774193549,
+              "lexical_mix": 0.8387096774193549
+            }
+          },
+          "PlaySong": {
+            "fit": 1377,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 189,
+                "known": 251,
+                "known_rejected": 19,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 5,
+                  "lexical": 2,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 226,
+                "known": 237,
+                "known_rejected": 18,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 10,
+                  "lexical": 5,
+                  "centroid_semantic": 10,
+                  "semantic_mix": 10,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 1.0,
+              "semantic": 1.0,
+              "lexical": 0.4666666666666667,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 0.9333333333333333,
+              "lexical_mix": 0.9333333333333333
+            }
+          },
+          "ReserveLodging": {
+            "fit": 1605,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 286,
+                "known": 278,
+                "known_rejected": 21,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 10,
+                  "lexical": 6,
+                  "centroid_semantic": 7,
+                  "semantic_mix": 10,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 254,
+                "known": 297,
+                "known_rejected": 23,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 0,
+                  "lexical": 3,
+                  "centroid_semantic": 0,
+                  "semantic_mix": 2,
+                  "lexical_mix": 2
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.2,
+              "semantic": 0.6666666666666666,
+              "lexical": 0.6,
+              "centroid_semantic": 0.4666666666666667,
+              "semantic_mix": 0.8,
+              "lexical_mix": 0.7333333333333333
+            }
+          },
+          "SearchLodging": {
+            "fit": 994,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight"
+            ],
+            "hidden_dialogues": 9,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 206,
+                "known": 155,
+                "known_rejected": 12,
+                "hidden": 8,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 7,
+                  "lexical": 3,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 6,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 138,
+                "known": 212,
+                "known_rejected": 16,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 1,
+                  "lexical": 0,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 1
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.45454545454545453,
+              "semantic": 0.7272727272727273,
+              "lexical": 0.2727272727272727,
+              "centroid_semantic": 0.45454545454545453,
+              "semantic_mix": 0.6363636363636364,
+              "lexical_mix": 0.5454545454545454
+            }
+          }
+        },
+        "skipped": {
+          "BookAppointment": "fewer_than_three_hidden_dialogues",
+          "FindProvider": "fewer_than_three_hidden_dialogues",
+          "FindRestaurants": "fewer_than_three_hidden_dialogues",
+          "GetEvents": "fewer_than_three_hidden_dialogues",
+          "GetRide": "fewer_than_three_hidden_dialogues",
+          "ReserveFlight": "fewer_than_three_hidden_dialogues",
+          "ReserveRestaurant": "fewer_than_three_hidden_dialogues",
+          "SearchFlight": "fewer_than_three_hidden_dialogues"
+        }
+      },
+      "cutoffs": {
+        "centroid": 1.1658968959221794,
+        "semantic": 1.3022593862363074,
+        "lexical": 0.8663583399389487,
+        "adaptive": 0.982773349604214
+      },
+      "legacy_raw_cut": -0.6306591033935547,
+      "temperature": 0.05,
+      "counts": {
+        "fit": 1813,
+        "router": 590,
+        "cal_known": 329
+      },
+      "model_sha256": "c11092c4890a5a0ce1565edd9f3c7c31711c8be6e3c033f479befbcf1445aafe"
+    },
+    "music_transfer": {
+      "known": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ],
+      "dev_unknown": [
+        "CheckBalance"
+      ],
+      "test_unknown": [
+        "PlaySong"
+      ],
+      "related_known": null,
+      "choice": {
+        "candidate": "lexical_mix",
+        "weights": [
+          0.25,
+          0.25,
+          0.5
+        ],
+        "reason": "highest_macro_pseudo_unknown_recall",
+        "macro_recall": {
+          "centroid": 0.5184316517262376,
+          "semantic": 0.6179582887291393,
+          "lexical": 0.3602144394709758,
+          "centroid_semantic": 0.5956225291173439,
+          "semantic_mix": 0.6574034926480274,
+          "lexical_mix": 0.6842925922366255
+        },
+        "candidate_weights": {
+          "centroid": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "semantic": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "lexical": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "centroid_semantic": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "semantic_mix": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "lexical_mix": [
+            0.25,
+            0.25,
+            0.5
+          ]
+        },
+        "known_frr": 0.07692307692307693,
+        "seed": 202611,
+        "active_intents_from_unscored_turns": true,
+        "excluded_cross_phase_rows": 0,
+        "rotations": {
+          "BuyBusTicket": {
+            "fit": 871,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 40,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 133,
+                "known": 202,
+                "known_rejected": 16,
+                "hidden": 29,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 5,
+                  "lexical": 10,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 7,
+                  "lexical_mix": 8
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 139,
+                "known": 173,
+                "known_rejected": 13,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 4,
+                  "lexical": 8,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 4,
+                  "lexical_mix": 9
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.020833333333333332,
+              "semantic": 0.1875,
+              "lexical": 0.375,
+              "centroid_semantic": 0.08333333333333333,
+              "semantic_mix": 0.22916666666666666,
+              "lexical_mix": 0.3541666666666667
+            }
+          },
+          "BuyEventTickets": {
+            "fit": 1377,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 7,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 189,
+                "known": 226,
+                "known_rejected": 17,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 5,
+                  "lexical": 1,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 5,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 226,
+                "known": 189,
+                "known_rejected": 15,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 3,
+                  "lexical": 2,
+                  "centroid_semantic": 3,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.625,
+              "semantic": 1.0,
+              "lexical": 0.375,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 1.0,
+              "lexical_mix": 1.0
+            }
+          },
+          "FindAttractions": {
+            "fit": 913,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 19,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 121,
+                "known": 179,
+                "known_rejected": 14,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 8,
+                  "semantic": 8,
+                  "lexical": 2,
+                  "centroid_semantic": 8,
+                  "semantic_mix": 8,
+                  "lexical_mix": 7
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 140,
+                "known": 145,
+                "known_rejected": 11,
+                "hidden": 11,
+                "hidden_rejected": {
+                  "centroid": 8,
+                  "semantic": 6,
+                  "lexical": 4,
+                  "centroid_semantic": 6,
+                  "semantic_mix": 6,
+                  "lexical_mix": 6
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.6956521739130435,
+              "semantic": 0.6086956521739131,
+              "lexical": 0.2608695652173913,
+              "centroid_semantic": 0.6086956521739131,
+              "semantic_mix": 0.6086956521739131,
+              "lexical_mix": 0.5652173913043478
+            }
+          },
+          "FindBus": {
+            "fit": 633,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 34,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 62,
+                "known": 120,
+                "known_rejected": 9,
+                "hidden": 20,
+                "hidden_rejected": {
+                  "centroid": 2,
+                  "semantic": 2,
+                  "lexical": 4,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 2,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 101,
+                "known": 94,
+                "known_rejected": 7,
+                "hidden": 27,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 8,
+                  "lexical": 10,
+                  "centroid_semantic": 10,
+                  "semantic_mix": 8,
+                  "lexical_mix": 11
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.2553191489361702,
+              "semantic": 0.2127659574468085,
+              "lexical": 0.2978723404255319,
+              "centroid_semantic": 0.2553191489361702,
+              "semantic_mix": 0.2127659574468085,
+              "lexical_mix": 0.3191489361702128
+            }
+          },
+          "FindEvents": {
+            "fit": 1230,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 17,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 156,
+                "known": 222,
+                "known_rejected": 17,
+                "hidden": 9,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 8,
+                  "lexical": 3,
+                  "centroid_semantic": 8,
+                  "semantic_mix": 8,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 191,
+                "known": 182,
+                "known_rejected": 14,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 7,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 8,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.9473684210526315,
+              "semantic": 0.7894736842105263,
+              "lexical": 0.3157894736842105,
+              "centroid_semantic": 0.8947368421052632,
+              "semantic_mix": 0.8421052631578947,
+              "lexical_mix": 1.0
+            }
+          },
+          "ReserveLodging": {
+            "fit": 1208,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 178,
+                "known": 219,
+                "known_rejected": 17,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 10,
+                  "lexical": 5,
+                  "centroid_semantic": 8,
+                  "semantic_mix": 10,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 195,
+                "known": 189,
+                "known_rejected": 15,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 2,
+                  "lexical": 3,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 2,
+                  "lexical_mix": 2
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.26666666666666666,
+              "semantic": 0.8,
+              "lexical": 0.5333333333333333,
+              "centroid_semantic": 0.6,
+              "semantic_mix": 0.8,
+              "lexical_mix": 0.7333333333333333
+            }
+          },
+          "SearchLodging": {
+            "fit": 597,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight"
+            ],
+            "hidden_dialogues": 9,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 98,
+                "known": 96,
+                "known_rejected": 7,
+                "hidden": 8,
+                "hidden_rejected": {
+                  "centroid": 7,
+                  "semantic": 7,
+                  "lexical": 4,
+                  "centroid_semantic": 7,
+                  "semantic_mix": 7,
+                  "lexical_mix": 6
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 79,
+                "known": 104,
+                "known_rejected": 8,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 2,
+                  "semantic": 1,
+                  "lexical": 0,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.8181818181818182,
+              "semantic": 0.7272727272727273,
+              "lexical": 0.36363636363636365,
+              "centroid_semantic": 0.7272727272727273,
+              "semantic_mix": 0.9090909090909091,
+              "lexical_mix": 0.8181818181818182
+            }
+          }
+        },
+        "skipped": {
+          "BookAppointment": "fewer_than_three_hidden_dialogues",
+          "FindProvider": "fewer_than_three_hidden_dialogues",
+          "FindRestaurants": "fewer_than_three_hidden_dialogues",
+          "GetEvents": "fewer_than_three_hidden_dialogues",
+          "GetRide": "fewer_than_three_hidden_dialogues",
+          "ReserveFlight": "fewer_than_three_hidden_dialogues",
+          "ReserveRestaurant": "fewer_than_three_hidden_dialogues",
+          "SearchFlight": "fewer_than_three_hidden_dialogues"
+        }
+      },
+      "cutoffs": {
+        "centroid": 1.5940876138425928,
+        "semantic": 2.227431538133346,
+        "lexical": 1.12150712822175,
+        "adaptive": 1.3703839451396753
+      },
+      "legacy_raw_cut": -0.6344082355499268,
+      "temperature": 0.05,
+      "counts": {
+        "fit": 1416,
+        "router": 423,
+        "cal_known": 454
+      },
+      "model_sha256": "602eeffe0341f8c2e5e26afbe35d6f6592f16f324d798e91181c7407763f0b5e"
+    },
+    "original_domains": {
+      "known": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ],
+      "dev_unknown": [
+        "FindMovies",
+        "GetTimesForMovie"
+      ],
+      "test_unknown": [
+        "CheckBalance",
+        "GetWeather"
+      ],
+      "related_known": null,
+      "choice": {
+        "candidate": "semantic_mix",
+        "weights": [
+          0.25,
+          0.5,
+          0.25
+        ],
+        "reason": "highest_macro_pseudo_unknown_recall",
+        "macro_recall": {
+          "centroid": 0.48205152112076227,
+          "semantic": 0.6180156780574318,
+          "lexical": 0.39090220192297437,
+          "centroid_semantic": 0.592039866572836,
+          "semantic_mix": 0.6606191470884958,
+          "lexical_mix": 0.6560508813780128
+        },
+        "candidate_weights": {
+          "centroid": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "semantic": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "lexical": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "centroid_semantic": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "semantic_mix": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "lexical_mix": [
+            0.25,
+            0.25,
+            0.5
+          ]
+        },
+        "known_frr": 0.07692307692307693,
+        "seed": 202611,
+        "active_intents_from_unscored_turns": true,
+        "excluded_cross_phase_rows": 0,
+        "rotations": {
+          "BuyBusTicket": {
+            "fit": 1307,
+            "known": [
+              "BookAppointment",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 40,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 244,
+                "known": 266,
+                "known_rejected": 20,
+                "hidden": 29,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 5,
+                  "lexical": 10,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 9,
+                  "lexical_mix": 8
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 203,
+                "known": 284,
+                "known_rejected": 22,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 3,
+                  "lexical": 8,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 4,
+                  "lexical_mix": 5
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.020833333333333332,
+              "semantic": 0.16666666666666666,
+              "lexical": 0.375,
+              "centroid_semantic": 0.0625,
+              "semantic_mix": 0.2708333333333333,
+              "lexical_mix": 0.2708333333333333
+            }
+          },
+          "BuyEventTickets": {
+            "fit": 1813,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 7,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 300,
+                "known": 290,
+                "known_rejected": 22,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 5,
+                  "lexical": 2,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 5,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 290,
+                "known": 300,
+                "known_rejected": 23,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 2,
+                  "lexical": 2,
+                  "centroid_semantic": 2,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.625,
+              "semantic": 0.875,
+              "lexical": 0.5,
+              "centroid_semantic": 0.875,
+              "semantic_mix": 1.0,
+              "lexical_mix": 1.0
+            }
+          },
+          "FindAttractions": {
+            "fit": 1349,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 19,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 232,
+                "known": 243,
+                "known_rejected": 19,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 7,
+                  "semantic": 5,
+                  "lexical": 3,
+                  "centroid_semantic": 6,
+                  "semantic_mix": 6,
+                  "lexical_mix": 6
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 204,
+                "known": 256,
+                "known_rejected": 20,
+                "hidden": 11,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 3,
+                  "lexical": 2,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 3,
+                  "lexical_mix": 3
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.5217391304347826,
+              "semantic": 0.34782608695652173,
+              "lexical": 0.21739130434782608,
+              "centroid_semantic": 0.4782608695652174,
+              "semantic_mix": 0.391304347826087,
+              "lexical_mix": 0.391304347826087
+            }
+          },
+          "FindBus": {
+            "fit": 1069,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 34,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 173,
+                "known": 184,
+                "known_rejected": 14,
+                "hidden": 20,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 2,
+                  "lexical": 3,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 3
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 165,
+                "known": 205,
+                "known_rejected": 16,
+                "hidden": 27,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 3,
+                  "lexical": 8,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 5,
+                  "lexical_mix": 6
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.0851063829787234,
+              "semantic": 0.10638297872340426,
+              "lexical": 0.23404255319148937,
+              "centroid_semantic": 0.10638297872340426,
+              "semantic_mix": 0.1276595744680851,
+              "lexical_mix": 0.19148936170212766
+            }
+          },
+          "FindEvents": {
+            "fit": 1666,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 17,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 267,
+                "known": 286,
+                "known_rejected": 22,
+                "hidden": 9,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 8,
+                  "lexical": 4,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 255,
+                "known": 293,
+                "known_rejected": 23,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 9,
+                  "semantic": 6,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.9473684210526315,
+              "semantic": 0.7368421052631579,
+              "lexical": 0.3684210526315789,
+              "centroid_semantic": 0.9473684210526315,
+              "semantic_mix": 0.9473684210526315,
+              "lexical_mix": 1.0
+            }
+          },
+          "LookupSong": {
+            "fit": 1609,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 28,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 250,
+                "known": 283,
+                "known_rejected": 22,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 11,
+                  "lexical": 3,
+                  "centroid_semantic": 9,
+                  "semantic_mix": 9,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 261,
+                "known": 284,
+                "known_rejected": 22,
+                "hidden": 19,
+                "hidden_rejected": {
+                  "centroid": 12,
+                  "semantic": 18,
+                  "lexical": 12,
+                  "centroid_semantic": 18,
+                  "semantic_mix": 17,
+                  "lexical_mix": 17
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.4838709677419355,
+              "semantic": 0.9354838709677419,
+              "lexical": 0.4838709677419355,
+              "centroid_semantic": 0.8709677419354839,
+              "semantic_mix": 0.8387096774193549,
+              "lexical_mix": 0.8387096774193549
+            }
+          },
+          "PlaySong": {
+            "fit": 1416,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "ReserveFlight",
+              "ReserveLodging",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 192,
+                "known": 256,
+                "known_rejected": 20,
+                "hidden": 5,
+                "hidden_rejected": {
+                  "centroid": 5,
+                  "semantic": 5,
+                  "lexical": 2,
+                  "centroid_semantic": 5,
+                  "semantic_mix": 4,
+                  "lexical_mix": 4
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 231,
+                "known": 240,
+                "known_rejected": 18,
+                "hidden": 10,
+                "hidden_rejected": {
+                  "centroid": 10,
+                  "semantic": 10,
+                  "lexical": 6,
+                  "centroid_semantic": 10,
+                  "semantic_mix": 10,
+                  "lexical_mix": 10
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 1.0,
+              "semantic": 1.0,
+              "lexical": 0.5333333333333333,
+              "centroid_semantic": 1.0,
+              "semantic_mix": 0.9333333333333333,
+              "lexical_mix": 0.9333333333333333
+            }
+          },
+          "ReserveLodging": {
+            "fit": 1644,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindAttractions",
+              "FindBus",
+              "FindEvents",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight",
+              "SearchLodging"
+            ],
+            "hidden_dialogues": 15,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 289,
+                "known": 283,
+                "known_rejected": 22,
+                "hidden": 12,
+                "hidden_rejected": {
+                  "centroid": 3,
+                  "semantic": 10,
+                  "lexical": 5,
+                  "centroid_semantic": 8,
+                  "semantic_mix": 10,
+                  "lexical_mix": 9
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 259,
+                "known": 300,
+                "known_rejected": 23,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 0,
+                  "semantic": 0,
+                  "lexical": 3,
+                  "centroid_semantic": 0,
+                  "semantic_mix": 2,
+                  "lexical_mix": 2
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.2,
+              "semantic": 0.6666666666666666,
+              "lexical": 0.5333333333333333,
+              "centroid_semantic": 0.5333333333333333,
+              "semantic_mix": 0.8,
+              "lexical_mix": 0.7333333333333333
+            }
+          },
+          "SearchLodging": {
+            "fit": 1033,
+            "known": [
+              "BookAppointment",
+              "BuyBusTicket",
+              "BuyEventTickets",
+              "FindBus",
+              "FindProvider",
+              "FindRestaurants",
+              "GetEvents",
+              "GetRide",
+              "LookupSong",
+              "PlaySong",
+              "ReserveFlight",
+              "ReserveRestaurant",
+              "SearchFlight"
+            ],
+            "hidden_dialogues": 9,
+            "folds": [
+              {
+                "evaluation_half": 0,
+                "reference": 209,
+                "known": 160,
+                "known_rejected": 12,
+                "hidden": 8,
+                "hidden_rejected": {
+                  "centroid": 4,
+                  "semantic": 7,
+                  "lexical": 3,
+                  "centroid_semantic": 4,
+                  "semantic_mix": 6,
+                  "lexical_mix": 5
+                }
+              },
+              {
+                "evaluation_half": 1,
+                "reference": 143,
+                "known": 215,
+                "known_rejected": 17,
+                "hidden": 3,
+                "hidden_rejected": {
+                  "centroid": 1,
+                  "semantic": 1,
+                  "lexical": 0,
+                  "centroid_semantic": 1,
+                  "semantic_mix": 1,
+                  "lexical_mix": 1
+                }
+              }
+            ],
+            "recall": {
+              "centroid": 0.45454545454545453,
+              "semantic": 0.7272727272727273,
+              "lexical": 0.2727272727272727,
+              "centroid_semantic": 0.45454545454545453,
+              "semantic_mix": 0.6363636363636364,
+              "lexical_mix": 0.5454545454545454
+            }
+          }
+        },
+        "skipped": {
+          "BookAppointment": "fewer_than_three_hidden_dialogues",
+          "FindProvider": "fewer_than_three_hidden_dialogues",
+          "FindRestaurants": "fewer_than_three_hidden_dialogues",
+          "GetEvents": "fewer_than_three_hidden_dialogues",
+          "GetRide": "fewer_than_three_hidden_dialogues",
+          "ReserveFlight": "fewer_than_three_hidden_dialogues",
+          "ReserveRestaurant": "fewer_than_three_hidden_dialogues",
+          "SearchFlight": "fewer_than_three_hidden_dialogues"
+        }
+      },
+      "cutoffs": {
+        "centroid": 1.0133238480157358,
+        "semantic": 1.0204322928011371,
+        "lexical": 0.8405886083570382,
+        "adaptive": 0.7813705478642614
+      },
+      "legacy_raw_cut": -0.6267904043197632,
+      "temperature": 0.05,
+      "counts": {
+        "fit": 1852,
+        "router": 598,
+        "cal_known": 334
+      },
+      "model_sha256": "19d52c5ddd26dabe0de9eb85a2962cdb2414f17f60088900fa4fc668b043ef98"
+    }
+  }
+}

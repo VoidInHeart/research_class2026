@@ -2,3 +2,4 @@
 *.py text eol=lf
 reports/*.json -text whitespace=trailing-space,cr-at-eol
 reports/window_holdouts/*.json -text whitespace=trailing-space,cr-at-eol
+reports/support_validation/*.json -text whitespace=trailing-space,cr-at-eol
