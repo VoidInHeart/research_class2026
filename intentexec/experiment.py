@@ -55,7 +55,7 @@ def measure_ms(start):
     return (time.perf_counter() - start) * 1000
 
 
-def provenance():
+def provenance(extra_modules=()):
     package = Path(__file__).parent
     versions = {}
     for name in ("numpy", "scipy", "scikit-learn", "joblib", "torch", "transformers", "peft"):
@@ -63,7 +63,7 @@ def provenance():
             versions[name] = version(name)
         except PackageNotFoundError:
             versions[name] = None
-    modules = ("experiment", "routing", "executors", "lora", "data", "metrics")
+    modules = ("experiment", "routing", "executors", "lora", "data", "metrics") + extra_modules
     return {"versions": versions,
             "source_sha256": {m: sha256((package / (m + ".py")).read_bytes()).hexdigest() for m in modules}}
 
@@ -81,7 +81,7 @@ def policy_decisions(bundle, public_rows):
     texts = [r["text"] for r in public_rows]
     encoder = bundle["recognizer"]
     features = encoder.encode(texts)
-    weights, oos = encoder.predict_encoded(features)
+    weights, oos = encoder.predict_encoded(features, texts)
     experts, base = bundle["experts"], bundle["base"]
     accepted = ~np.asarray(oos, dtype=bool)
     ids = {}
@@ -110,7 +110,7 @@ def infer_one(bundle, pool, policy, text):
     name = bundle["base"]
     if policy != "always_base":
         features = bundle["recognizer"].encode([text])
-        weights, oos = bundle["recognizer"].predict_encoded(features)
+        weights, oos = bundle["recognizer"].predict_encoded(features, [text])
         gate = bool(oos[0])
         intent_result = "OOS" if gate else dict(zip(bundle["known"], weights[0].tolist()))
         gate_ms = measure_ms(start)
@@ -164,7 +164,37 @@ def benchmark(bundle, pool, rows, batches, seed):
     return timings, trace
 
 
+def fit_support(encoder, split, router_rows, root, catalog):
+    """Build support on fit; standardize on router; set the cutoff on known calibration."""
+    from .support_gate import KNOWN_FRR, SupportGate
+    from .support_selection import select_weights
+    from .window_splits import _dialogue_labels
+
+    fit, known = split["fit"], split["known"]
+    fit_x = encoder.encode([r["text"] for r in fit])
+    encoder.fit_centroids(fit_x, [r["intent"] for r in fit], known)
+    router_x = encoder.encode([r["text"] for r in router_rows])
+    active = _dialogue_labels(root, json.loads(catalog.read_bytes()))
+    selection = select_weights(fit, fit_x, known, router_rows, router_x, dialogue_intents=active)
+    weights = selection["weights"]
+    gate = SupportGate(fit, fit_x, known, router_rows, router_x)
+    known_cal = [r for r in split["cal"] if r["intent"] in known]
+    cal_x = encoder.encode([r["text"] for r in known_cal])
+    scores = encoder.calibrate_support(gate, weights, known_cal, cal_x)
+    metadata = {"selected_candidate": selection["candidate"], "weights": weights,
+                "cutoff": encoder.support_cutoff, "target_known_frr": KNOWN_FRR,
+                "known_calibration_rows": len(scores),
+                "known_calibration_rejected": int(np.sum(scores > encoder.support_cutoff))}
+    return router_x, metadata, selection
+
+
 def run(args):
+    oos_gate = getattr(args, "oos_gate", "centroid")
+    window = getattr(args, "recognition_window", "recent5")
+    if oos_gate not in ("centroid", "adaptive-support"):
+        raise ValueError("Unknown OOS gate")
+    if oos_gate != "centroid" and (args.encoder, window) != ("minilm", "recent5"):
+        raise ValueError("Support gates require --encoder minilm --recognition-window recent5")
     root = Path(args.sgd_root).resolve()
     catalog = Path(args.catalog).resolve()
     rows = load_sgd(root, catalog)
@@ -188,9 +218,15 @@ def run(args):
     start = time.perf_counter()
     pool = make_pool(split["fit"], schema, config)
     names, base = list(pool.experts), pool.base
-    encoder = Recognizer(encoder=args.encoder, model_path=args.model_path,
-                         window=getattr(args, "recognition_window", "recent5"))
-    encoder.fit(split["fit"], known).calibrate(split["cal"])
+    encoder = Recognizer(encoder=args.encoder, model_path=args.model_path, window=window)
+    support_metadata, features = {}, None
+    gate_sources = ()
+    if oos_gate == "centroid":
+        encoder.fit(split["fit"], known).calibrate(split["cal"])
+    else:
+        features, support_metadata, selection = fit_support(encoder, split, router_rows, root, catalog)
+        save_json(work / "support_selection.json", selection)
+        gate_sources = ("support_gate", "support_selection", "window_splits", "near_gate_eval")
     encoder_setup_ms = measure_ms(start)
     start = time.perf_counter()
     _, success = all_calls(pool, router_rows, names)
@@ -198,8 +234,10 @@ def run(args):
     save_json(work / "router_supervision.json",
               {"expert_order": names, "row_ids": [r["id"] for r in router_rows], "success": success.astype(int).tolist()})
     start = time.perf_counter()
-    features = encoder.encode([r["text"] for r in router_rows])
-    weights, _ = encoder.predict_encoded(features)
+    router_texts = [r["text"] for r in router_rows]
+    if features is None:
+        features = encoder.encode(router_texts)
+    weights, _ = encoder.predict_encoded(features, router_texts)
     routers = {name: Router(name, seed=args.seed).fit(weights, [r["intent"] for r in router_rows], known, success)
                for name in ("fixed", "lookup", "matrix", "mlp")}
     routers["embedding"] = EmbeddingRouter(seed=args.seed).fit(features, success)
@@ -241,9 +279,9 @@ def run(args):
     write_rows(work / "latency.jsonl", trace)
     manifest = root / "manifest.json"
     summary = {"quality": quality, "diagnostics": oracle, "paired": paired, "warm_single_client": timings,
-               "provenance": provenance(), "split_metadata": split["metadata"],
-               "recognition": {"window": encoder.window, "threshold": encoder.threshold,
-                               "temperature": encoder.temperature},
+               "provenance": provenance(gate_sources), "split_metadata": split["metadata"],
+               "recognition": {"window": encoder.window, "oos_gate": oos_gate, "threshold": encoder.threshold,
+                               "temperature": encoder.temperature, **support_metadata},
                "data_manifest": json.loads(manifest.read_text(encoding="utf8")) if manifest.is_file() else None,
                "setup_ms": encoder_setup_ms, "router_supervision_ms": train_call_ms, "router_fit_ms": fit_ms,
                "offline_router_executor_calls": len(router_rows)*len(names),

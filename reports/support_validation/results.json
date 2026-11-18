@@ -1,0 +1,4317 @@
+{
+  "lock_sha256": "8ed94606b53baf062dbd52ab30a05656626f05b0b70f66d58d303ee01e7bf1d4",
+  "fresh_manifest_sha256": "57a7a4b71803a8b578bf32803ae1f546423754eb684931b8cae6eaac7ae42ec1",
+  "folds": {
+    "near_domain_bus_ticket": {
+      "data": {
+        "source_revision": "e852981ae34990f4358979625854259302feaa78",
+        "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+        "split": "train",
+        "shards": [
+          "dialogues_002.json",
+          "dialogues_003.json",
+          "dialogues_015.json",
+          "dialogues_017.json",
+          "dialogues_029.json",
+          "dialogues_031.json",
+          "dialogues_043.json",
+          "dialogues_045.json",
+          "dialogues_057.json",
+          "dialogues_059.json",
+          "dialogues_071.json",
+          "dialogues_073.json",
+          "dialogues_085.json",
+          "dialogues_087.json",
+          "dialogues_099.json",
+          "dialogues_101.json",
+          "dialogues_113.json",
+          "dialogues_115.json",
+          "dialogues_127.json"
+        ],
+        "source_sha256": {
+          "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+          "dialogues_002.json": "56a06f9762593b27f5b34225de4ce37da5e83c9c5747e56bca2899f147d88b3e",
+          "dialogues_003.json": "aae3d8d141c8c36bc5268ca573044b4e82d4534947c169d951a1f229b9852029",
+          "dialogues_015.json": "b698e8db9b0898186453ec9fcec5f80ab043cfe301447d28dc577e99bd3acfd3",
+          "dialogues_017.json": "0eb666f375ba2cc6362c88c02cfd255b702a2b8216e30fce200f630bcca99fa0",
+          "dialogues_029.json": "87b61fd3495d851df7fa66ce43084431a7cd19154c1de32c0d6949bf6c74bae9",
+          "dialogues_031.json": "45e31767734dc89d825b8f84c37fdd258250bb1e0b63d8a8e775c99dde07547e",
+          "dialogues_043.json": "98c9cc7865bc70e67123cc4e64daad8843d5750552bae2559d7bb95aae782c0a",
+          "dialogues_045.json": "056df88c7bbff91bcc9b8fe009bfc6f01400aa59feae549cace7d5caa823dcb0",
+          "dialogues_057.json": "7586422916e6f7c943b97b304f2724e6eefbe4ee1dd42b9d45413c1fc457cfc2",
+          "dialogues_059.json": "d5597d0c8e9a904aeeb722e8d8c3a8d15a92eacf1713241fe9c05bd470b625a5",
+          "dialogues_071.json": "59a78ab61ef8e419c7c2791e028db3704254a196f73e79a890274f09e7e65801",
+          "dialogues_073.json": "e2b9aa0843a8cdfabaf24fecae2bf4b280ea8aed75670d6e955d25df58dc8494",
+          "dialogues_085.json": "f22be96c2ff0a95c4c883a64f9677e0a0106fac25ea42a523df91700ead7bfa3",
+          "dialogues_087.json": "1b95dda470d3f0809bbbeb86cb99a9a322a81fd1a96e96735d953d5409331810",
+          "dialogues_099.json": "fb7110d90b179fe43eaee15393422ae7fb0d522190a69495023f0cf9cadebcbb",
+          "dialogues_101.json": "142dc7b5452d6aaafb25fa9637b3f5126ac83194b907016af5e85659220d9cba",
+          "dialogues_113.json": "895cbdca09acff80c6a194dc44a293fd6875390ad5899720bc98f004eca7d99b",
+          "dialogues_115.json": "3bb6c375846127053c01d51a0e6509eddfaad47f6d2a2bb3a7cfee65120bec32",
+          "dialogues_127.json": "ba42de75a55e27a239b238d94ece3c98e5b64a755e155a027d8a31e5fbf791dc"
+        },
+        "seed": 202611,
+        "selection": "all_eligible",
+        "pre_filter_requests": 6885,
+        "pre_filter_dialogues": 2391,
+        "estimable": true,
+        "pre_filter_test_unknown": 218,
+        "excluded_rows": {
+          "connected_to_pilot_template": 3,
+          "contains_calibration_unknown": 379,
+          "contains_out_of_catalog_intent": 3267
+        },
+        "excluded_test_unknown_by_reason": {},
+        "out_of_catalog_combinations_for_excluded_test_unknown": [],
+        "dialogues": 1210,
+        "counts_by_role": {
+          "known": 3018,
+          "test_unknown": 218
+        },
+        "counts_by_intent": {
+          "BookAppointment": 136,
+          "BuyBusTicket": 218,
+          "BuyEventTickets": 206,
+          "FindAttractions": 156,
+          "FindBus": 84,
+          "FindEvents": 145,
+          "FindProvider": 161,
+          "FindRestaurants": 181,
+          "GetRide": 97,
+          "LookupSong": 38,
+          "PlaySong": 32,
+          "ReserveFlight": 351,
+          "ReserveLodging": 137,
+          "ReserveRestaurant": 365,
+          "SearchFlight": 576,
+          "SearchLodging": 353
+        },
+        "counts_by_service": {
+          "Buses_1": 78,
+          "Buses_2": 224,
+          "Events_1": 20,
+          "Events_2": 331,
+          "Flights_1": 852,
+          "Flights_2": 75,
+          "Hotels_1": 104,
+          "Hotels_2": 115,
+          "Hotels_3": 271,
+          "Music_1": 70,
+          "Restaurants_1": 546,
+          "RideSharing_1": 33,
+          "RideSharing_2": 64,
+          "Services_1": 177,
+          "Services_2": 120,
+          "Travel_1": 156
+        },
+        "cohort_sha256": "7e7479424d760767870fc384bf38ae16954f771a775cd8a9dd279d889cbdd42e"
+      },
+      "metrics": {
+        "n": 3236,
+        "nk": 3018,
+        "nu": 218,
+        "dialogues": 1210,
+        "known_budget": 232,
+        "target_known_frr": 0.07692307692307693,
+        "related_known": "FindBus",
+        "legacy_calibrated": {
+          "n": 3236,
+          "nk": 3018,
+          "nu": 218,
+          "known_rejected": 278,
+          "unknown_rejected": 7,
+          "known_false_reject_rate": 0.09211398277004638,
+          "unknown_recall": 0.03211009174311927,
+          "accepted": 2951,
+          "known_accepted": 2740,
+          "unknown_accepted": 211,
+          "exact_correct": 163,
+          "method_correct": 1109,
+          "known_exact_correct": 163,
+          "unknown_exact_correct": 0,
+          "known_method_correct": 1096,
+          "unknown_method_correct": 13,
+          "exact": 0.050370828182941904,
+          "method": 0.3427070457354759,
+          "boundary": {
+            "score": -0.6347930431365967,
+            "ties": "none"
+          },
+          "related_known_n": 84,
+          "related_known_rejected": 7
+        },
+        "from_cal": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 150,
+            "unknown_rejected": 1,
+            "known_false_reject_rate": 0.04970178926441352,
+            "unknown_recall": 0.0045871559633027525,
+            "accepted": 3085,
+            "known_accepted": 2868,
+            "unknown_accepted": 217,
+            "exact_correct": 161,
+            "method_correct": 1107,
+            "known_exact_correct": 161,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1094,
+            "unknown_method_correct": 13,
+            "exact": 0.04975278121137206,
+            "method": 0.3420889987639061,
+            "boundary": {
+              "score": 1.5685566453365853,
+              "ties": "none"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 3
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 54,
+            "unknown_rejected": 1,
+            "known_false_reject_rate": 0.017892644135188866,
+            "unknown_recall": 0.0045871559633027525,
+            "accepted": 3181,
+            "known_accepted": 2964,
+            "unknown_accepted": 217,
+            "exact_correct": 163,
+            "method_correct": 1108,
+            "known_exact_correct": 163,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1095,
+            "unknown_method_correct": 13,
+            "exact": 0.050370828182941904,
+            "method": 0.34239802224969096,
+            "boundary": {
+              "score": 1.9532360477671593,
+              "ties": "none"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 0
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 138,
+            "unknown_rejected": 30,
+            "known_false_reject_rate": 0.04572564612326044,
+            "unknown_recall": 0.13761467889908258,
+            "accepted": 3068,
+            "known_accepted": 2880,
+            "unknown_accepted": 188,
+            "exact_correct": 162,
+            "method_correct": 1126,
+            "known_exact_correct": 162,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1104,
+            "unknown_method_correct": 22,
+            "exact": 0.050061804697156986,
+            "method": 0.3479604449938195,
+            "boundary": {
+              "score": 1.1156875844668965,
+              "ties": "none"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 3
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 69,
+            "unknown_rejected": 4,
+            "known_false_reject_rate": 0.02286282306163022,
+            "unknown_recall": 0.01834862385321101,
+            "accepted": 3163,
+            "known_accepted": 2949,
+            "unknown_accepted": 214,
+            "exact_correct": 160,
+            "method_correct": 1106,
+            "known_exact_correct": 160,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1093,
+            "unknown_method_correct": 13,
+            "exact": 0.049443757725587144,
+            "method": 0.34177997527812115,
+            "boundary": {
+              "score": 1.2881012717942095,
+              "ties": "none"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 2
+          }
+        },
+        "matched": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 232,
+            "unknown_rejected": 4,
+            "known_false_reject_rate": 0.07687210072895957,
+            "unknown_recall": 0.01834862385321101,
+            "accepted": 3000,
+            "known_accepted": 2786,
+            "unknown_accepted": 214,
+            "exact_correct": 163,
+            "method_correct": 1109,
+            "known_exact_correct": 163,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1096,
+            "unknown_method_correct": 13,
+            "exact": 0.050370828182941904,
+            "method": 0.3427070457354759,
+            "boundary": {
+              "score": 1.3651690343155733,
+              "ties": "all"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 5
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 232,
+            "unknown_rejected": 12,
+            "known_false_reject_rate": 0.07687210072895957,
+            "unknown_recall": 0.05504587155963303,
+            "accepted": 2992,
+            "known_accepted": 2786,
+            "unknown_accepted": 206,
+            "exact_correct": 158,
+            "method_correct": 1097,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1083,
+            "unknown_method_correct": 14,
+            "exact": 0.04882571075401731,
+            "method": 0.3389987639060569,
+            "boundary": {
+              "score": 1.4716698092429346,
+              "ties": "all"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 2
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 232,
+            "unknown_rejected": 67,
+            "known_false_reject_rate": 0.07687210072895957,
+            "unknown_recall": 0.3073394495412844,
+            "accepted": 2937,
+            "known_accepted": 2786,
+            "unknown_accepted": 151,
+            "exact_correct": 160,
+            "method_correct": 1140,
+            "known_exact_correct": 160,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1107,
+            "unknown_method_correct": 33,
+            "exact": 0.049443757725587144,
+            "method": 0.3522867737948084,
+            "boundary": {
+              "score": 0.9906002803576283,
+              "ties": "all"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 7
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3018,
+            "nu": 218,
+            "known_rejected": 232,
+            "unknown_rejected": 19,
+            "known_false_reject_rate": 0.07687210072895957,
+            "unknown_recall": 0.0871559633027523,
+            "accepted": 2985,
+            "known_accepted": 2786,
+            "unknown_accepted": 199,
+            "exact_correct": 159,
+            "method_correct": 1117,
+            "known_exact_correct": 159,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1099,
+            "unknown_method_correct": 18,
+            "exact": 0.049134734239802226,
+            "method": 0.34517923362175523,
+            "boundary": {
+              "score": 1.0107489401328347,
+              "ties": "all"
+            },
+            "related_known_n": 84,
+            "related_known_rejected": 5
+          }
+        },
+        "from_cal_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 150,
+              "candidate_count": 150,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 1,
+              "candidate_count": 1,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 161,
+              "candidate_count": 161,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1107,
+              "candidate_count": 1107,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 150,
+              "candidate_count": 54,
+              "delta_count": -96,
+              "gain": 15,
+              "loss": 111,
+              "difference": -0.03180914512922465,
+              "ci95": [
+                -0.039469647449547215,
+                -0.024442992080457707
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 1,
+              "candidate_count": 1,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 161,
+              "candidate_count": 163,
+              "delta_count": 2,
+              "gain": 5,
+              "loss": 3,
+              "difference": 0.0006180469715698393,
+              "ci95": [
+                -0.0009389671361502347,
+                0.0022308984904128738
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1107,
+              "candidate_count": 1108,
+              "delta_count": 1,
+              "gain": 14,
+              "loss": 13,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.0030817116111648796,
+                0.0037456998088021415
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 150,
+              "candidate_count": 138,
+              "delta_count": -12,
+              "gain": 119,
+              "loss": 131,
+              "difference": -0.003976143141153081,
+              "ci95": [
+                -0.015077655007646209,
+                0.00713968413734883
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 1,
+              "candidate_count": 30,
+              "delta_count": 29,
+              "gain": 29,
+              "loss": 0,
+              "difference": 0.13302752293577982,
+              "ci95": [
+                0.09046653796653796,
+                0.1822661238086424
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 161,
+              "candidate_count": 162,
+              "delta_count": 1,
+              "gain": 5,
+              "loss": 4,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.001522139643309228,
+                0.0021571981278154153
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1107,
+              "candidate_count": 1126,
+              "delta_count": 19,
+              "gain": 41,
+              "loss": 22,
+              "difference": 0.0058714462299134735,
+              "ci95": [
+                0.0009319158930613278,
+                0.011033130442330095
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 150,
+              "candidate_count": 69,
+              "delta_count": -81,
+              "gain": 23,
+              "loss": 104,
+              "difference": -0.0268389662027833,
+              "ci95": [
+                -0.034472748800314604,
+                -0.018703992630931154
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 1,
+              "candidate_count": 4,
+              "delta_count": 3,
+              "gain": 3,
+              "loss": 0,
+              "difference": 0.013761467889908258,
+              "ci95": [
+                0.0,
+                0.03865098700649673
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 161,
+              "candidate_count": 160,
+              "delta_count": -1,
+              "gain": 2,
+              "loss": 3,
+              "difference": -0.00030902348578491963,
+              "ci95": [
+                -0.0017955616149889985,
+                0.0009325821416501917
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1107,
+              "candidate_count": 1106,
+              "delta_count": -1,
+              "gain": 14,
+              "loss": 15,
+              "difference": -0.00030902348578491963,
+              "ci95": [
+                -0.003968496823453984,
+                0.003397184976901
+              ],
+              "valid_draws": 2000
+            }
+          }
+        },
+        "matched_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 232,
+              "candidate_count": 232,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 4,
+              "candidate_count": 4,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 163,
+              "candidate_count": 163,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1109,
+              "candidate_count": 1109,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 232,
+              "candidate_count": 232,
+              "delta_count": 0,
+              "gain": 98,
+              "loss": 98,
+              "difference": 0.0,
+              "ci95": [
+                -0.009817317367809204,
+                0.009172938863179788
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 4,
+              "candidate_count": 12,
+              "delta_count": 8,
+              "gain": 9,
+              "loss": 1,
+              "difference": 0.03669724770642202,
+              "ci95": [
+                0.009089880707527765,
+                0.07027230748336276
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 163,
+              "candidate_count": 158,
+              "delta_count": -5,
+              "gain": 0,
+              "loss": 5,
+              "difference": -0.0015451174289245982,
+              "ci95": [
+                -0.003030417988688095,
+                -0.000311616282350348
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1109,
+              "candidate_count": 1097,
+              "delta_count": -12,
+              "gain": 9,
+              "loss": 21,
+              "difference": -0.003708281829419036,
+              "ci95": [
+                -0.007121019031847745,
+                -0.00031306992159815437
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 232,
+              "candidate_count": 232,
+              "delta_count": 0,
+              "gain": 189,
+              "loss": 189,
+              "difference": 0.0,
+              "ci95": [
+                -0.013840258502837733,
+                0.01385065204003743
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 4,
+              "candidate_count": 67,
+              "delta_count": 63,
+              "gain": 64,
+              "loss": 1,
+              "difference": 0.2889908256880734,
+              "ci95": [
+                0.2265892269227913,
+                0.35675743582778763
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 163,
+              "candidate_count": 160,
+              "delta_count": -3,
+              "gain": 7,
+              "loss": 10,
+              "difference": -0.000927070457354759,
+              "ci95": [
+                -0.003392993476358676,
+                0.0015399542377759847
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1109,
+              "candidate_count": 1140,
+              "delta_count": 31,
+              "gain": 66,
+              "loss": 35,
+              "difference": 0.009579728059332509,
+              "ci95": [
+                0.003116041851906062,
+                0.016198912205094406
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3018,
+              "baseline_count": 232,
+              "candidate_count": 232,
+              "delta_count": 0,
+              "gain": 112,
+              "loss": 112,
+              "difference": 0.0,
+              "ci95": [
+                -0.010223284305254514,
+                0.010469480206029164
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 218,
+              "baseline_count": 4,
+              "candidate_count": 19,
+              "delta_count": 15,
+              "gain": 16,
+              "loss": 1,
+              "difference": 0.06880733944954129,
+              "ci95": [
+                0.033169016831470756,
+                0.10869792614153173
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 163,
+              "candidate_count": 159,
+              "delta_count": -4,
+              "gain": 3,
+              "loss": 7,
+              "difference": -0.0012360939431396785,
+              "ci95": [
+                -0.0031065548306927616,
+                0.0006174792965824749
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1109,
+              "candidate_count": 1117,
+              "delta_count": 8,
+              "gain": 26,
+              "loss": 18,
+              "difference": 0.002472187886279357,
+              "ci95": [
+                -0.001548479010117035,
+                0.006913999343793113
+              ],
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    },
+    "near_lodging_booking": {
+      "data": {
+        "source_revision": "e852981ae34990f4358979625854259302feaa78",
+        "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+        "split": "train",
+        "shards": [
+          "dialogues_002.json",
+          "dialogues_003.json",
+          "dialogues_015.json",
+          "dialogues_017.json",
+          "dialogues_029.json",
+          "dialogues_031.json",
+          "dialogues_043.json",
+          "dialogues_045.json",
+          "dialogues_057.json",
+          "dialogues_059.json",
+          "dialogues_071.json",
+          "dialogues_073.json",
+          "dialogues_085.json",
+          "dialogues_087.json",
+          "dialogues_099.json",
+          "dialogues_101.json",
+          "dialogues_113.json",
+          "dialogues_115.json",
+          "dialogues_127.json"
+        ],
+        "source_sha256": {
+          "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+          "dialogues_002.json": "56a06f9762593b27f5b34225de4ce37da5e83c9c5747e56bca2899f147d88b3e",
+          "dialogues_003.json": "aae3d8d141c8c36bc5268ca573044b4e82d4534947c169d951a1f229b9852029",
+          "dialogues_015.json": "b698e8db9b0898186453ec9fcec5f80ab043cfe301447d28dc577e99bd3acfd3",
+          "dialogues_017.json": "0eb666f375ba2cc6362c88c02cfd255b702a2b8216e30fce200f630bcca99fa0",
+          "dialogues_029.json": "87b61fd3495d851df7fa66ce43084431a7cd19154c1de32c0d6949bf6c74bae9",
+          "dialogues_031.json": "45e31767734dc89d825b8f84c37fdd258250bb1e0b63d8a8e775c99dde07547e",
+          "dialogues_043.json": "98c9cc7865bc70e67123cc4e64daad8843d5750552bae2559d7bb95aae782c0a",
+          "dialogues_045.json": "056df88c7bbff91bcc9b8fe009bfc6f01400aa59feae549cace7d5caa823dcb0",
+          "dialogues_057.json": "7586422916e6f7c943b97b304f2724e6eefbe4ee1dd42b9d45413c1fc457cfc2",
+          "dialogues_059.json": "d5597d0c8e9a904aeeb722e8d8c3a8d15a92eacf1713241fe9c05bd470b625a5",
+          "dialogues_071.json": "59a78ab61ef8e419c7c2791e028db3704254a196f73e79a890274f09e7e65801",
+          "dialogues_073.json": "e2b9aa0843a8cdfabaf24fecae2bf4b280ea8aed75670d6e955d25df58dc8494",
+          "dialogues_085.json": "f22be96c2ff0a95c4c883a64f9677e0a0106fac25ea42a523df91700ead7bfa3",
+          "dialogues_087.json": "1b95dda470d3f0809bbbeb86cb99a9a322a81fd1a96e96735d953d5409331810",
+          "dialogues_099.json": "fb7110d90b179fe43eaee15393422ae7fb0d522190a69495023f0cf9cadebcbb",
+          "dialogues_101.json": "142dc7b5452d6aaafb25fa9637b3f5126ac83194b907016af5e85659220d9cba",
+          "dialogues_113.json": "895cbdca09acff80c6a194dc44a293fd6875390ad5899720bc98f004eca7d99b",
+          "dialogues_115.json": "3bb6c375846127053c01d51a0e6509eddfaad47f6d2a2bb3a7cfee65120bec32",
+          "dialogues_127.json": "ba42de75a55e27a239b238d94ece3c98e5b64a755e155a027d8a31e5fbf791dc"
+        },
+        "seed": 202611,
+        "selection": "all_eligible",
+        "pre_filter_requests": 6885,
+        "pre_filter_dialogues": 2391,
+        "estimable": true,
+        "pre_filter_test_unknown": 137,
+        "excluded_rows": {
+          "connected_to_pilot_template": 3,
+          "contains_calibration_unknown": 379,
+          "contains_out_of_catalog_intent": 3267
+        },
+        "excluded_test_unknown_by_reason": {},
+        "out_of_catalog_combinations_for_excluded_test_unknown": [],
+        "dialogues": 1210,
+        "counts_by_role": {
+          "known": 3099,
+          "test_unknown": 137
+        },
+        "counts_by_intent": {
+          "BookAppointment": 136,
+          "BuyBusTicket": 218,
+          "BuyEventTickets": 206,
+          "FindAttractions": 156,
+          "FindBus": 84,
+          "FindEvents": 145,
+          "FindProvider": 161,
+          "FindRestaurants": 181,
+          "GetRide": 97,
+          "LookupSong": 38,
+          "PlaySong": 32,
+          "ReserveFlight": 351,
+          "ReserveLodging": 137,
+          "ReserveRestaurant": 365,
+          "SearchFlight": 576,
+          "SearchLodging": 353
+        },
+        "counts_by_service": {
+          "Buses_1": 78,
+          "Buses_2": 224,
+          "Events_1": 20,
+          "Events_2": 331,
+          "Flights_1": 852,
+          "Flights_2": 75,
+          "Hotels_1": 104,
+          "Hotels_2": 115,
+          "Hotels_3": 271,
+          "Music_1": 70,
+          "Restaurants_1": 546,
+          "RideSharing_1": 33,
+          "RideSharing_2": 64,
+          "Services_1": 177,
+          "Services_2": 120,
+          "Travel_1": 156
+        },
+        "cohort_sha256": "7e7479424d760767870fc384bf38ae16954f771a775cd8a9dd279d889cbdd42e"
+      },
+      "metrics": {
+        "n": 3236,
+        "nk": 3099,
+        "nu": 137,
+        "dialogues": 1210,
+        "known_budget": 238,
+        "target_known_frr": 0.07692307692307693,
+        "related_known": "SearchLodging",
+        "legacy_calibrated": {
+          "n": 3236,
+          "nk": 3099,
+          "nu": 137,
+          "known_rejected": 477,
+          "unknown_rejected": 81,
+          "known_false_reject_rate": 0.15392061955469508,
+          "unknown_recall": 0.5912408759124088,
+          "accepted": 2678,
+          "known_accepted": 2622,
+          "unknown_accepted": 56,
+          "exact_correct": 155,
+          "method_correct": 1366,
+          "known_exact_correct": 155,
+          "unknown_exact_correct": 0,
+          "known_method_correct": 1359,
+          "unknown_method_correct": 7,
+          "exact": 0.04789864029666255,
+          "method": 0.4221260815822003,
+          "boundary": {
+            "score": -0.6636514663696289,
+            "ties": "none"
+          },
+          "related_known_n": 353,
+          "related_known_rejected": 164
+        },
+        "from_cal": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 189,
+            "unknown_rejected": 19,
+            "known_false_reject_rate": 0.06098741529525654,
+            "unknown_recall": 0.1386861313868613,
+            "accepted": 3028,
+            "known_accepted": 2910,
+            "unknown_accepted": 118,
+            "exact_correct": 158,
+            "method_correct": 1367,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1360,
+            "unknown_method_correct": 7,
+            "exact": 0.04882571075401731,
+            "method": 0.42243510506798515,
+            "boundary": {
+              "score": 1.5645398971966904,
+              "ties": "none"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 83
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 95,
+            "unknown_rejected": 28,
+            "known_false_reject_rate": 0.030655050016134236,
+            "unknown_recall": 0.20437956204379562,
+            "accepted": 3113,
+            "known_accepted": 3004,
+            "unknown_accepted": 109,
+            "exact_correct": 162,
+            "method_correct": 1369,
+            "known_exact_correct": 162,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1362,
+            "unknown_method_correct": 7,
+            "exact": 0.050061804697156986,
+            "method": 0.423053152039555,
+            "boundary": {
+              "score": 1.8189587938703973,
+              "ties": "none"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 18
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 142,
+            "unknown_rejected": 50,
+            "known_false_reject_rate": 0.04582123265569538,
+            "unknown_recall": 0.36496350364963503,
+            "accepted": 3044,
+            "known_accepted": 2957,
+            "unknown_accepted": 87,
+            "exact_correct": 160,
+            "method_correct": 1381,
+            "known_exact_correct": 160,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1374,
+            "unknown_method_correct": 7,
+            "exact": 0.049443757725587144,
+            "method": 0.426761433868974,
+            "boundary": {
+              "score": 1.1016407981956755,
+              "ties": "none"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 26
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 83,
+            "unknown_rejected": 50,
+            "known_false_reject_rate": 0.026782833171990966,
+            "unknown_recall": 0.36496350364963503,
+            "accepted": 3103,
+            "known_accepted": 3016,
+            "unknown_accepted": 87,
+            "exact_correct": 159,
+            "method_correct": 1368,
+            "known_exact_correct": 159,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1361,
+            "unknown_method_correct": 7,
+            "exact": 0.049134734239802226,
+            "method": 0.4227441285537701,
+            "boundary": {
+              "score": 1.2664019908259658,
+              "ties": "none"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 28
+          }
+        },
+        "matched": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 238,
+            "unknown_rejected": 31,
+            "known_false_reject_rate": 0.07679896740884157,
+            "unknown_recall": 0.22627737226277372,
+            "accepted": 2967,
+            "known_accepted": 2861,
+            "unknown_accepted": 106,
+            "exact_correct": 158,
+            "method_correct": 1368,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1361,
+            "unknown_method_correct": 7,
+            "exact": 0.04882571075401731,
+            "method": 0.4227441285537701,
+            "boundary": {
+              "score": 1.4518666264276376,
+              "ties": "all"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 94
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 238,
+            "unknown_rejected": 79,
+            "known_false_reject_rate": 0.07679896740884157,
+            "unknown_recall": 0.5766423357664233,
+            "accepted": 2919,
+            "known_accepted": 2861,
+            "unknown_accepted": 58,
+            "exact_correct": 158,
+            "method_correct": 1360,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1353,
+            "unknown_method_correct": 7,
+            "exact": 0.04882571075401731,
+            "method": 0.42027194066749074,
+            "boundary": {
+              "score": 1.4741703264654578,
+              "ties": "all"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 43
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 238,
+            "unknown_rejected": 63,
+            "known_false_reject_rate": 0.07679896740884157,
+            "unknown_recall": 0.45985401459854014,
+            "accepted": 2935,
+            "known_accepted": 2861,
+            "unknown_accepted": 74,
+            "exact_correct": 160,
+            "method_correct": 1386,
+            "known_exact_correct": 160,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1379,
+            "unknown_method_correct": 7,
+            "exact": 0.049443757725587144,
+            "method": 0.42830655129789863,
+            "boundary": {
+              "score": 1.0070456247845059,
+              "ties": "all"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 36
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3099,
+            "nu": 137,
+            "known_rejected": 238,
+            "unknown_rejected": 82,
+            "known_false_reject_rate": 0.07679896740884157,
+            "unknown_recall": 0.5985401459854015,
+            "accepted": 2916,
+            "known_accepted": 2861,
+            "unknown_accepted": 55,
+            "exact_correct": 158,
+            "method_correct": 1369,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1362,
+            "unknown_method_correct": 7,
+            "exact": 0.04882571075401731,
+            "method": 0.423053152039555,
+            "boundary": {
+              "score": 1.0171091998309212,
+              "ties": "all"
+            },
+            "related_known_n": 353,
+            "related_known_rejected": 60
+          }
+        },
+        "from_cal_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 189,
+              "candidate_count": 189,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 19,
+              "candidate_count": 19,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 158,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1367,
+              "candidate_count": 1367,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 189,
+              "candidate_count": 95,
+              "delta_count": -94,
+              "gain": 30,
+              "loss": 124,
+              "difference": -0.030332365279122298,
+              "ci95": [
+                -0.038425199423062904,
+                -0.022600218716650994
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 19,
+              "candidate_count": 28,
+              "delta_count": 9,
+              "gain": 14,
+              "loss": 5,
+              "difference": 0.06569343065693431,
+              "ci95": [
+                0.0067556230727371675,
+                0.12878787878787878
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 162,
+              "delta_count": 4,
+              "gain": 5,
+              "loss": 1,
+              "difference": 0.0012360939431396785,
+              "ci95": [
+                0.0,
+                0.0028090106887152843
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1367,
+              "candidate_count": 1369,
+              "delta_count": 2,
+              "gain": 18,
+              "loss": 16,
+              "difference": 0.0006180469715698393,
+              "ci95": [
+                -0.0028021674339205505,
+                0.004301473148120515
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 189,
+              "candidate_count": 142,
+              "delta_count": -47,
+              "gain": 115,
+              "loss": 162,
+              "difference": -0.015166182639561149,
+              "ci95": [
+                -0.02676390057236924,
+                -0.0032391999440832763
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 19,
+              "candidate_count": 50,
+              "delta_count": 31,
+              "gain": 45,
+              "loss": 14,
+              "difference": 0.22627737226277372,
+              "ci95": [
+                0.12142857142857143,
+                0.3310446009389668
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 160,
+              "delta_count": 2,
+              "gain": 6,
+              "loss": 4,
+              "difference": 0.0006180469715698393,
+              "ci95": [
+                -0.0012251995138672013,
+                0.002504735539537635
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1367,
+              "candidate_count": 1381,
+              "delta_count": 14,
+              "gain": 36,
+              "loss": 22,
+              "difference": 0.004326328800988875,
+              "ci95": [
+                -0.0006069941016710396,
+                0.009305644660077383
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 189,
+              "candidate_count": 83,
+              "delta_count": -106,
+              "gain": 22,
+              "loss": 128,
+              "difference": -0.03420458212326557,
+              "ci95": [
+                -0.042900420746910264,
+                -0.025828379431984825
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 19,
+              "candidate_count": 50,
+              "delta_count": 31,
+              "gain": 35,
+              "loss": 4,
+              "difference": 0.22627737226277372,
+              "ci95": [
+                0.14665384615384616,
+                0.3111147902869757
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 159,
+              "delta_count": 1,
+              "gain": 3,
+              "loss": 2,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.0009389671361502347,
+                0.0015838197328600532
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1367,
+              "candidate_count": 1368,
+              "delta_count": 1,
+              "gain": 17,
+              "loss": 16,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.003403518031756736,
+                0.0040579053347003895
+              ],
+              "valid_draws": 2000
+            }
+          }
+        },
+        "matched_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 238,
+              "candidate_count": 238,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 31,
+              "candidate_count": 31,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 158,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1368,
+              "candidate_count": 1368,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 238,
+              "candidate_count": 238,
+              "delta_count": 0,
+              "gain": 101,
+              "loss": 101,
+              "difference": 0.0,
+              "ci95": [
+                -0.009157854898535081,
+                0.009149973106165221
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 31,
+              "candidate_count": 79,
+              "delta_count": 48,
+              "gain": 51,
+              "loss": 3,
+              "difference": 0.35036496350364965,
+              "ci95": [
+                0.26514524382901866,
+                0.44029850746268656
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 158,
+              "delta_count": 0,
+              "gain": 1,
+              "loss": 1,
+              "difference": 0.0,
+              "ci95": [
+                -0.0009322705536951661,
+                0.0009245063542697767
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1368,
+              "candidate_count": 1360,
+              "delta_count": -8,
+              "gain": 12,
+              "loss": 20,
+              "difference": -0.002472187886279357,
+              "ci95": [
+                -0.006215137024634441,
+                0.0009515428781022796
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 238,
+              "candidate_count": 238,
+              "delta_count": 0,
+              "gain": 196,
+              "loss": 196,
+              "difference": 0.0,
+              "ci95": [
+                -0.013647215175933236,
+                0.01337276850026005
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 31,
+              "candidate_count": 63,
+              "delta_count": 32,
+              "gain": 47,
+              "loss": 15,
+              "difference": 0.23357664233576642,
+              "ci95": [
+                0.1276460512080779,
+                0.341958525345622
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 160,
+              "delta_count": 2,
+              "gain": 8,
+              "loss": 6,
+              "difference": 0.0006180469715698393,
+              "ci95": [
+                -0.0015537721740450873,
+                0.002811643334114339
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1368,
+              "candidate_count": 1386,
+              "delta_count": 18,
+              "gain": 46,
+              "loss": 28,
+              "difference": 0.005562422744128554,
+              "ci95": [
+                0.0,
+                0.01146265024735088
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3099,
+              "baseline_count": 238,
+              "candidate_count": 238,
+              "delta_count": 0,
+              "gain": 109,
+              "loss": 109,
+              "difference": 0.0,
+              "ci95": [
+                -0.009389222631257195,
+                0.010042552521974342
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 137,
+              "baseline_count": 31,
+              "candidate_count": 82,
+              "delta_count": 51,
+              "gain": 55,
+              "loss": 4,
+              "difference": 0.3722627737226277,
+              "ci95": [
+                0.28467012914093204,
+                0.46512630312750597
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 158,
+              "candidate_count": 158,
+              "delta_count": 0,
+              "gain": 3,
+              "loss": 3,
+              "difference": 0.0,
+              "ci95": [
+                -0.0015313935681470138,
+                0.0015403811045444909
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1368,
+              "candidate_count": 1369,
+              "delta_count": 1,
+              "gain": 19,
+              "loss": 18,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.0034108527131782944,
+                0.004310677621349916
+              ],
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    },
+    "near_event_booking": {
+      "data": {
+        "source_revision": "e852981ae34990f4358979625854259302feaa78",
+        "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+        "split": "train",
+        "shards": [
+          "dialogues_002.json",
+          "dialogues_003.json",
+          "dialogues_015.json",
+          "dialogues_017.json",
+          "dialogues_029.json",
+          "dialogues_031.json",
+          "dialogues_043.json",
+          "dialogues_045.json",
+          "dialogues_057.json",
+          "dialogues_059.json",
+          "dialogues_071.json",
+          "dialogues_073.json",
+          "dialogues_085.json",
+          "dialogues_087.json",
+          "dialogues_099.json",
+          "dialogues_101.json",
+          "dialogues_113.json",
+          "dialogues_115.json",
+          "dialogues_127.json"
+        ],
+        "source_sha256": {
+          "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+          "dialogues_002.json": "56a06f9762593b27f5b34225de4ce37da5e83c9c5747e56bca2899f147d88b3e",
+          "dialogues_003.json": "aae3d8d141c8c36bc5268ca573044b4e82d4534947c169d951a1f229b9852029",
+          "dialogues_015.json": "b698e8db9b0898186453ec9fcec5f80ab043cfe301447d28dc577e99bd3acfd3",
+          "dialogues_017.json": "0eb666f375ba2cc6362c88c02cfd255b702a2b8216e30fce200f630bcca99fa0",
+          "dialogues_029.json": "87b61fd3495d851df7fa66ce43084431a7cd19154c1de32c0d6949bf6c74bae9",
+          "dialogues_031.json": "45e31767734dc89d825b8f84c37fdd258250bb1e0b63d8a8e775c99dde07547e",
+          "dialogues_043.json": "98c9cc7865bc70e67123cc4e64daad8843d5750552bae2559d7bb95aae782c0a",
+          "dialogues_045.json": "056df88c7bbff91bcc9b8fe009bfc6f01400aa59feae549cace7d5caa823dcb0",
+          "dialogues_057.json": "7586422916e6f7c943b97b304f2724e6eefbe4ee1dd42b9d45413c1fc457cfc2",
+          "dialogues_059.json": "d5597d0c8e9a904aeeb722e8d8c3a8d15a92eacf1713241fe9c05bd470b625a5",
+          "dialogues_071.json": "59a78ab61ef8e419c7c2791e028db3704254a196f73e79a890274f09e7e65801",
+          "dialogues_073.json": "e2b9aa0843a8cdfabaf24fecae2bf4b280ea8aed75670d6e955d25df58dc8494",
+          "dialogues_085.json": "f22be96c2ff0a95c4c883a64f9677e0a0106fac25ea42a523df91700ead7bfa3",
+          "dialogues_087.json": "1b95dda470d3f0809bbbeb86cb99a9a322a81fd1a96e96735d953d5409331810",
+          "dialogues_099.json": "fb7110d90b179fe43eaee15393422ae7fb0d522190a69495023f0cf9cadebcbb",
+          "dialogues_101.json": "142dc7b5452d6aaafb25fa9637b3f5126ac83194b907016af5e85659220d9cba",
+          "dialogues_113.json": "895cbdca09acff80c6a194dc44a293fd6875390ad5899720bc98f004eca7d99b",
+          "dialogues_115.json": "3bb6c375846127053c01d51a0e6509eddfaad47f6d2a2bb3a7cfee65120bec32",
+          "dialogues_127.json": "ba42de75a55e27a239b238d94ece3c98e5b64a755e155a027d8a31e5fbf791dc"
+        },
+        "seed": 202611,
+        "selection": "all_eligible",
+        "pre_filter_requests": 6885,
+        "pre_filter_dialogues": 2391,
+        "estimable": true,
+        "pre_filter_test_unknown": 438,
+        "excluded_rows": {
+          "connected_to_pilot_template": 3,
+          "contains_calibration_unknown": 379,
+          "contains_out_of_catalog_intent": 3267
+        },
+        "excluded_test_unknown_by_reason": {
+          "contains_calibration_unknown": 92,
+          "contains_out_of_catalog_intent": 140
+        },
+        "out_of_catalog_combinations_for_excluded_test_unknown": [
+          {
+            "outside_intents": [
+              "GetAvailableTime"
+            ],
+            "requests": 67
+          },
+          {
+            "outside_intents": [
+              "GetEventDates"
+            ],
+            "requests": 73
+          }
+        ],
+        "dialogues": 1210,
+        "counts_by_role": {
+          "known": 3030,
+          "test_unknown": 206
+        },
+        "counts_by_intent": {
+          "BookAppointment": 136,
+          "BuyBusTicket": 218,
+          "BuyEventTickets": 206,
+          "FindAttractions": 156,
+          "FindBus": 84,
+          "FindEvents": 145,
+          "FindProvider": 161,
+          "FindRestaurants": 181,
+          "GetRide": 97,
+          "LookupSong": 38,
+          "PlaySong": 32,
+          "ReserveFlight": 351,
+          "ReserveLodging": 137,
+          "ReserveRestaurant": 365,
+          "SearchFlight": 576,
+          "SearchLodging": 353
+        },
+        "counts_by_service": {
+          "Buses_1": 78,
+          "Buses_2": 224,
+          "Events_1": 20,
+          "Events_2": 331,
+          "Flights_1": 852,
+          "Flights_2": 75,
+          "Hotels_1": 104,
+          "Hotels_2": 115,
+          "Hotels_3": 271,
+          "Music_1": 70,
+          "Restaurants_1": 546,
+          "RideSharing_1": 33,
+          "RideSharing_2": 64,
+          "Services_1": 177,
+          "Services_2": 120,
+          "Travel_1": 156
+        },
+        "cohort_sha256": "7e7479424d760767870fc384bf38ae16954f771a775cd8a9dd279d889cbdd42e"
+      },
+      "metrics": {
+        "n": 3236,
+        "nk": 3030,
+        "nu": 206,
+        "dialogues": 1210,
+        "known_budget": 233,
+        "target_known_frr": 0.07692307692307693,
+        "related_known": "FindEvents",
+        "legacy_calibrated": {
+          "n": 3236,
+          "nk": 3030,
+          "nu": 206,
+          "known_rejected": 275,
+          "unknown_rejected": 164,
+          "known_false_reject_rate": 0.09075907590759076,
+          "unknown_recall": 0.7961165048543689,
+          "accepted": 2797,
+          "known_accepted": 2755,
+          "unknown_accepted": 42,
+          "exact_correct": 158,
+          "method_correct": 1496,
+          "known_exact_correct": 158,
+          "unknown_exact_correct": 0,
+          "known_method_correct": 1483,
+          "unknown_method_correct": 13,
+          "exact": 0.04882571075401731,
+          "method": 0.4622991347342398,
+          "boundary": {
+            "score": -0.6306591033935547,
+            "ties": "none"
+          },
+          "related_known_n": 145,
+          "related_known_rejected": 48
+        },
+        "from_cal": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 367,
+            "unknown_rejected": 185,
+            "known_false_reject_rate": 0.12112211221122113,
+            "unknown_recall": 0.8980582524271845,
+            "accepted": 2684,
+            "known_accepted": 2663,
+            "unknown_accepted": 21,
+            "exact_correct": 154,
+            "method_correct": 1499,
+            "known_exact_correct": 154,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1484,
+            "unknown_method_correct": 15,
+            "exact": 0.04758961681087762,
+            "method": 0.4632262051915946,
+            "boundary": {
+              "score": 1.1658968959221794,
+              "ties": "none"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 54
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 298,
+            "unknown_rejected": 182,
+            "known_false_reject_rate": 0.09834983498349835,
+            "unknown_recall": 0.883495145631068,
+            "accepted": 2756,
+            "known_accepted": 2732,
+            "unknown_accepted": 24,
+            "exact_correct": 155,
+            "method_correct": 1496,
+            "known_exact_correct": 155,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1482,
+            "unknown_method_correct": 14,
+            "exact": 0.04789864029666255,
+            "method": 0.4622991347342398,
+            "boundary": {
+              "score": 1.3022593862363074,
+              "ties": "none"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 54
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 351,
+            "unknown_rejected": 118,
+            "known_false_reject_rate": 0.11584158415841585,
+            "unknown_recall": 0.5728155339805825,
+            "accepted": 2767,
+            "known_accepted": 2679,
+            "unknown_accepted": 88,
+            "exact_correct": 155,
+            "method_correct": 1507,
+            "known_exact_correct": 155,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1495,
+            "unknown_method_correct": 12,
+            "exact": 0.04789864029666255,
+            "method": 0.4656983930778739,
+            "boundary": {
+              "score": 0.8663583399389487,
+              "ties": "none"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 34
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 344,
+            "unknown_rejected": 197,
+            "known_false_reject_rate": 0.11353135313531353,
+            "unknown_recall": 0.9563106796116505,
+            "accepted": 2695,
+            "known_accepted": 2686,
+            "unknown_accepted": 9,
+            "exact_correct": 158,
+            "method_correct": 1501,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1486,
+            "unknown_method_correct": 15,
+            "exact": 0.04882571075401731,
+            "method": 0.4638442521631644,
+            "boundary": {
+              "score": 0.982773349604214,
+              "ties": "none"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 59
+          }
+        },
+        "matched": {
+          "centroid": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 233,
+            "unknown_rejected": 144,
+            "known_false_reject_rate": 0.0768976897689769,
+            "unknown_recall": 0.6990291262135923,
+            "accepted": 2859,
+            "known_accepted": 2797,
+            "unknown_accepted": 62,
+            "exact_correct": 157,
+            "method_correct": 1495,
+            "known_exact_correct": 157,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1482,
+            "unknown_method_correct": 13,
+            "exact": 0.048516687268232384,
+            "method": 0.4619901112484549,
+            "boundary": {
+              "score": 1.428925440032444,
+              "ties": "all"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 43
+          },
+          "semantic": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 233,
+            "unknown_rejected": 166,
+            "known_false_reject_rate": 0.0768976897689769,
+            "unknown_recall": 0.8058252427184466,
+            "accepted": 2837,
+            "known_accepted": 2797,
+            "unknown_accepted": 40,
+            "exact_correct": 156,
+            "method_correct": 1492,
+            "known_exact_correct": 156,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1478,
+            "unknown_method_correct": 14,
+            "exact": 0.048207663782447466,
+            "method": 0.4610630407911001,
+            "boundary": {
+              "score": 1.4339245756334142,
+              "ties": "all"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 46
+          },
+          "lexical": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 233,
+            "unknown_rejected": 99,
+            "known_false_reject_rate": 0.0768976897689769,
+            "unknown_recall": 0.48058252427184467,
+            "accepted": 2904,
+            "known_accepted": 2797,
+            "unknown_accepted": 107,
+            "exact_correct": 160,
+            "method_correct": 1509,
+            "known_exact_correct": 160,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1497,
+            "unknown_method_correct": 12,
+            "exact": 0.049443757725587144,
+            "method": 0.4663164400494438,
+            "boundary": {
+              "score": 0.9583695914562429,
+              "ties": "all"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 24
+          },
+          "adaptive": {
+            "n": 3236,
+            "nk": 3030,
+            "nu": 206,
+            "known_rejected": 233,
+            "unknown_rejected": 183,
+            "known_false_reject_rate": 0.0768976897689769,
+            "unknown_recall": 0.8883495145631068,
+            "accepted": 2820,
+            "known_accepted": 2797,
+            "unknown_accepted": 23,
+            "exact_correct": 158,
+            "method_correct": 1499,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1485,
+            "unknown_method_correct": 14,
+            "exact": 0.04882571075401731,
+            "method": 0.4632262051915946,
+            "boundary": {
+              "score": 1.159416880393296,
+              "ties": "all"
+            },
+            "related_known_n": 145,
+            "related_known_rejected": 45
+          }
+        },
+        "from_cal_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 367,
+              "candidate_count": 367,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 185,
+              "candidate_count": 185,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 154,
+              "candidate_count": 154,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1499,
+              "candidate_count": 1499,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 367,
+              "candidate_count": 298,
+              "delta_count": -69,
+              "gain": 87,
+              "loss": 156,
+              "difference": -0.02277227722772277,
+              "ci95": [
+                -0.03365884915732923,
+                -0.011714411944390478
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 185,
+              "candidate_count": 182,
+              "delta_count": -3,
+              "gain": 8,
+              "loss": 11,
+              "difference": -0.014563106796116505,
+              "ci95": [
+                -0.05798450508788159,
+                0.025911241270556405
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 154,
+              "candidate_count": 155,
+              "delta_count": 1,
+              "gain": 6,
+              "loss": 5,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.001579480391861946,
+                0.002462352983343659
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1499,
+              "candidate_count": 1496,
+              "delta_count": -3,
+              "gain": 23,
+              "loss": 26,
+              "difference": -0.000927070457354759,
+              "ci95": [
+                -0.005083964913372064,
+                0.003297254248463905
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 367,
+              "candidate_count": 351,
+              "delta_count": -16,
+              "gain": 271,
+              "loss": 287,
+              "difference": -0.005280528052805281,
+              "ci95": [
+                -0.02213442368267652,
+                0.012925272562486032
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 185,
+              "candidate_count": 118,
+              "delta_count": -67,
+              "gain": 8,
+              "loss": 75,
+              "difference": -0.32524271844660196,
+              "ci95": [
+                -0.39674333258628414,
+                -0.2512500000000002
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 154,
+              "candidate_count": 155,
+              "delta_count": 1,
+              "gain": 9,
+              "loss": 8,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.0021578797740570395,
+                0.0028294549573346936
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1499,
+              "candidate_count": 1507,
+              "delta_count": 8,
+              "gain": 67,
+              "loss": 59,
+              "difference": 0.002472187886279357,
+              "ci95": [
+                -0.004314462855298232,
+                0.009434408103577412
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 367,
+              "candidate_count": 344,
+              "delta_count": -23,
+              "gain": 96,
+              "loss": 119,
+              "difference": -0.007590759075907591,
+              "ci95": [
+                -0.01814209639221194,
+                0.002329637956223394
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 185,
+              "candidate_count": 197,
+              "delta_count": 12,
+              "gain": 13,
+              "loss": 1,
+              "difference": 0.05825242718446602,
+              "ci95": [
+                0.02589682245955377,
+                0.09434955312810323
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 154,
+              "candidate_count": 158,
+              "delta_count": 4,
+              "gain": 7,
+              "loss": 3,
+              "difference": 0.0012360939431396785,
+              "ci95": [
+                -0.0006161429451632779,
+                0.0031587913501767663
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1499,
+              "candidate_count": 1501,
+              "delta_count": 2,
+              "gain": 24,
+              "loss": 22,
+              "difference": 0.0006180469715698393,
+              "ci95": [
+                -0.0033919733890563236,
+                0.00462852337088846
+              ],
+              "valid_draws": 2000
+            }
+          }
+        },
+        "matched_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 233,
+              "candidate_count": 233,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 144,
+              "candidate_count": 144,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 157,
+              "candidate_count": 157,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1495,
+              "candidate_count": 1495,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 233,
+              "candidate_count": 233,
+              "delta_count": 0,
+              "gain": 91,
+              "loss": 91,
+              "difference": 0.0,
+              "ci95": [
+                -0.008760474637055907,
+                0.009165450104070303
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 144,
+              "candidate_count": 166,
+              "delta_count": 22,
+              "gain": 32,
+              "loss": 10,
+              "difference": 0.10679611650485436,
+              "ci95": [
+                0.04783555182657203,
+                0.1659178187403993
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 157,
+              "candidate_count": 156,
+              "delta_count": -1,
+              "gain": 2,
+              "loss": 3,
+              "difference": -0.00030902348578491963,
+              "ci95": [
+                -0.0015708574563209287,
+                0.0009386806865389248
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1495,
+              "candidate_count": 1492,
+              "delta_count": -3,
+              "gain": 16,
+              "loss": 19,
+              "difference": -0.000927070457354759,
+              "ci95": [
+                -0.00458585883437665,
+                0.0024783531575466064
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 233,
+              "candidate_count": 233,
+              "delta_count": 0,
+              "gain": 191,
+              "loss": 191,
+              "difference": 0.0,
+              "ci95": [
+                -0.013746738822299591,
+                0.014421944142327245
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 144,
+              "candidate_count": 99,
+              "delta_count": -45,
+              "gain": 25,
+              "loss": 70,
+              "difference": -0.21844660194174756,
+              "ci95": [
+                -0.30662024349109307,
+                -0.12626948271967497
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 157,
+              "candidate_count": 160,
+              "delta_count": 3,
+              "gain": 8,
+              "loss": 5,
+              "difference": 0.000927070457354759,
+              "ci95": [
+                -0.0012210291999476233,
+                0.0031240970076775957
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1495,
+              "candidate_count": 1509,
+              "delta_count": 14,
+              "gain": 49,
+              "loss": 35,
+              "difference": 0.004326328800988875,
+              "ci95": [
+                -0.0012327322597315584,
+                0.010160725688742926
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1210,
+            "known_rejected": {
+              "n": 3030,
+              "baseline_count": 233,
+              "candidate_count": 233,
+              "delta_count": 0,
+              "gain": 83,
+              "loss": 83,
+              "difference": 0.0,
+              "ci95": [
+                -0.008528087524259622,
+                0.00845475718931184
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 206,
+              "baseline_count": 144,
+              "candidate_count": 183,
+              "delta_count": 39,
+              "gain": 41,
+              "loss": 2,
+              "difference": 0.18932038834951456,
+              "ci95": [
+                0.13141666666666665,
+                0.25
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3236,
+              "baseline_count": 157,
+              "candidate_count": 158,
+              "delta_count": 1,
+              "gain": 4,
+              "loss": 3,
+              "difference": 0.00030902348578491963,
+              "ci95": [
+                -0.0012229238053280884,
+                0.0018537261258300397
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3236,
+              "baseline_count": 1495,
+              "candidate_count": 1499,
+              "delta_count": 4,
+              "gain": 19,
+              "loss": 15,
+              "difference": 0.0012360939431396785,
+              "ci95": [
+                -0.002170660673247864,
+                0.004666950736682255
+              ],
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    },
+    "music_transfer": {
+      "data": {
+        "source_revision": "e852981ae34990f4358979625854259302feaa78",
+        "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+        "split": "train",
+        "shards": [
+          "dialogues_002.json",
+          "dialogues_003.json",
+          "dialogues_015.json",
+          "dialogues_017.json",
+          "dialogues_029.json",
+          "dialogues_031.json",
+          "dialogues_043.json",
+          "dialogues_045.json",
+          "dialogues_057.json",
+          "dialogues_059.json",
+          "dialogues_071.json",
+          "dialogues_073.json",
+          "dialogues_085.json",
+          "dialogues_087.json",
+          "dialogues_099.json",
+          "dialogues_101.json",
+          "dialogues_113.json",
+          "dialogues_115.json",
+          "dialogues_127.json"
+        ],
+        "source_sha256": {
+          "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+          "dialogues_002.json": "56a06f9762593b27f5b34225de4ce37da5e83c9c5747e56bca2899f147d88b3e",
+          "dialogues_003.json": "aae3d8d141c8c36bc5268ca573044b4e82d4534947c169d951a1f229b9852029",
+          "dialogues_015.json": "b698e8db9b0898186453ec9fcec5f80ab043cfe301447d28dc577e99bd3acfd3",
+          "dialogues_017.json": "0eb666f375ba2cc6362c88c02cfd255b702a2b8216e30fce200f630bcca99fa0",
+          "dialogues_029.json": "87b61fd3495d851df7fa66ce43084431a7cd19154c1de32c0d6949bf6c74bae9",
+          "dialogues_031.json": "45e31767734dc89d825b8f84c37fdd258250bb1e0b63d8a8e775c99dde07547e",
+          "dialogues_043.json": "98c9cc7865bc70e67123cc4e64daad8843d5750552bae2559d7bb95aae782c0a",
+          "dialogues_045.json": "056df88c7bbff91bcc9b8fe009bfc6f01400aa59feae549cace7d5caa823dcb0",
+          "dialogues_057.json": "7586422916e6f7c943b97b304f2724e6eefbe4ee1dd42b9d45413c1fc457cfc2",
+          "dialogues_059.json": "d5597d0c8e9a904aeeb722e8d8c3a8d15a92eacf1713241fe9c05bd470b625a5",
+          "dialogues_071.json": "59a78ab61ef8e419c7c2791e028db3704254a196f73e79a890274f09e7e65801",
+          "dialogues_073.json": "e2b9aa0843a8cdfabaf24fecae2bf4b280ea8aed75670d6e955d25df58dc8494",
+          "dialogues_085.json": "f22be96c2ff0a95c4c883a64f9677e0a0106fac25ea42a523df91700ead7bfa3",
+          "dialogues_087.json": "1b95dda470d3f0809bbbeb86cb99a9a322a81fd1a96e96735d953d5409331810",
+          "dialogues_099.json": "fb7110d90b179fe43eaee15393422ae7fb0d522190a69495023f0cf9cadebcbb",
+          "dialogues_101.json": "142dc7b5452d6aaafb25fa9637b3f5126ac83194b907016af5e85659220d9cba",
+          "dialogues_113.json": "895cbdca09acff80c6a194dc44a293fd6875390ad5899720bc98f004eca7d99b",
+          "dialogues_115.json": "3bb6c375846127053c01d51a0e6509eddfaad47f6d2a2bb3a7cfee65120bec32",
+          "dialogues_127.json": "ba42de75a55e27a239b238d94ece3c98e5b64a755e155a027d8a31e5fbf791dc"
+        },
+        "seed": 202611,
+        "selection": "all_eligible",
+        "pre_filter_requests": 6885,
+        "pre_filter_dialogues": 2391,
+        "estimable": false,
+        "pre_filter_test_unknown": 43,
+        "excluded_rows": {
+          "connected_to_pilot_template": 3,
+          "contains_calibration_unknown": 379,
+          "contains_out_of_catalog_intent": 3370
+        },
+        "excluded_test_unknown_by_reason": {
+          "contains_out_of_catalog_intent": 43
+        },
+        "out_of_catalog_combinations_for_excluded_test_unknown": [
+          {
+            "outside_intents": [
+              "GetWeather",
+              "LookupSong"
+            ],
+            "requests": 11
+          },
+          {
+            "outside_intents": [
+              "LookupSong"
+            ],
+            "requests": 32
+          }
+        ],
+        "dialogues": 1178,
+        "counts_by_role": {
+          "known": 3133,
+          "test_unknown": 0
+        },
+        "counts_by_intent": {
+          "BookAppointment": 136,
+          "BuyBusTicket": 218,
+          "BuyEventTickets": 206,
+          "FindAttractions": 156,
+          "FindBus": 84,
+          "FindEvents": 145,
+          "FindProvider": 161,
+          "FindRestaurants": 181,
+          "GetRide": 64,
+          "ReserveFlight": 351,
+          "ReserveLodging": 137,
+          "ReserveRestaurant": 365,
+          "SearchFlight": 576,
+          "SearchLodging": 353
+        },
+        "counts_by_service": {
+          "Buses_1": 78,
+          "Buses_2": 224,
+          "Events_1": 20,
+          "Events_2": 331,
+          "Flights_1": 852,
+          "Flights_2": 75,
+          "Hotels_1": 104,
+          "Hotels_2": 115,
+          "Hotels_3": 271,
+          "Restaurants_1": 546,
+          "RideSharing_2": 64,
+          "Services_1": 177,
+          "Services_2": 120,
+          "Travel_1": 156
+        },
+        "cohort_sha256": "a5d5629de6b51a48d8111c69ef1aaca06705145e2f39e82ea5f44b5b91475fbd"
+      },
+      "metrics": {
+        "n": 3133,
+        "nk": 3133,
+        "nu": 0,
+        "dialogues": 1178,
+        "known_budget": 241,
+        "target_known_frr": 0.07692307692307693,
+        "related_known": null,
+        "legacy_calibrated": {
+          "n": 3133,
+          "nk": 3133,
+          "nu": 0,
+          "known_rejected": 357,
+          "unknown_rejected": 0,
+          "known_false_reject_rate": 0.11394829237152888,
+          "unknown_recall": null,
+          "accepted": 2776,
+          "known_accepted": 2776,
+          "unknown_accepted": 0,
+          "exact_correct": 137,
+          "method_correct": 1412,
+          "known_exact_correct": 137,
+          "unknown_exact_correct": 0,
+          "known_method_correct": 1412,
+          "unknown_method_correct": 0,
+          "exact": 0.043728056176188954,
+          "method": 0.45068624321736356,
+          "boundary": {
+            "score": -0.6344082355499268,
+            "ties": "none"
+          },
+          "related_known_n": 0,
+          "related_known_rejected": 0
+        },
+        "from_cal": {
+          "centroid": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 246,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.07851899138206192,
+            "unknown_recall": null,
+            "accepted": 2887,
+            "known_accepted": 2887,
+            "unknown_accepted": 0,
+            "exact_correct": 139,
+            "method_correct": 1413,
+            "known_exact_correct": 139,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1413,
+            "unknown_method_correct": 0,
+            "exact": 0.04436642195978296,
+            "method": 0.45100542610916056,
+            "boundary": {
+              "score": 1.5940876138425928,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "semantic": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 211,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.06734759016916693,
+            "unknown_recall": null,
+            "accepted": 2922,
+            "known_accepted": 2922,
+            "unknown_accepted": 0,
+            "exact_correct": 139,
+            "method_correct": 1399,
+            "known_exact_correct": 139,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1399,
+            "unknown_method_correct": 0,
+            "exact": 0.04436642195978296,
+            "method": 0.4465368656240026,
+            "boundary": {
+              "score": 2.227431538133346,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "lexical": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 131,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.041812958825406955,
+            "unknown_recall": null,
+            "accepted": 3002,
+            "known_accepted": 3002,
+            "unknown_accepted": 0,
+            "exact_correct": 145,
+            "method_correct": 1439,
+            "known_exact_correct": 145,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1439,
+            "unknown_method_correct": 0,
+            "exact": 0.046281519310564956,
+            "method": 0.4593041812958825,
+            "boundary": {
+              "score": 1.12150712822175,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "adaptive": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 149,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.04755825087775295,
+            "unknown_recall": null,
+            "accepted": 2984,
+            "known_accepted": 2984,
+            "unknown_accepted": 0,
+            "exact_correct": 141,
+            "method_correct": 1414,
+            "known_exact_correct": 141,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1414,
+            "unknown_method_correct": 0,
+            "exact": 0.045004787743376955,
+            "method": 0.45132460900095756,
+            "boundary": {
+              "score": 1.3703839451396753,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          }
+        },
+        "matched": {
+          "centroid": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 241,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.07692307692307693,
+            "unknown_recall": null,
+            "accepted": 2892,
+            "known_accepted": 2892,
+            "unknown_accepted": 0,
+            "exact_correct": 139,
+            "method_correct": 1412,
+            "known_exact_correct": 139,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1412,
+            "unknown_method_correct": 0,
+            "exact": 0.04436642195978296,
+            "method": 0.45068624321736356,
+            "boundary": {
+              "score": 1.6051203652405013,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "semantic": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 241,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.07692307692307693,
+            "unknown_recall": null,
+            "accepted": 2892,
+            "known_accepted": 2892,
+            "unknown_accepted": 0,
+            "exact_correct": 139,
+            "method_correct": 1399,
+            "known_exact_correct": 139,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1399,
+            "unknown_method_correct": 0,
+            "exact": 0.04436642195978296,
+            "method": 0.4465368656240026,
+            "boundary": {
+              "score": 2.10806028528412,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "lexical": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 241,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.07692307692307693,
+            "unknown_recall": null,
+            "accepted": 2892,
+            "known_accepted": 2892,
+            "unknown_accepted": 0,
+            "exact_correct": 145,
+            "method_correct": 1440,
+            "known_exact_correct": 145,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1440,
+            "unknown_method_correct": 0,
+            "exact": 0.046281519310564956,
+            "method": 0.4596233641876795,
+            "boundary": {
+              "score": 1.0140684369657067,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "adaptive": {
+            "n": 3133,
+            "nk": 3133,
+            "nu": 0,
+            "known_rejected": 241,
+            "unknown_rejected": 0,
+            "known_false_reject_rate": 0.07692307692307693,
+            "unknown_recall": null,
+            "accepted": 2892,
+            "known_accepted": 2892,
+            "unknown_accepted": 0,
+            "exact_correct": 140,
+            "method_correct": 1410,
+            "known_exact_correct": 140,
+            "unknown_exact_correct": 0,
+            "known_method_correct": 1410,
+            "unknown_method_correct": 0,
+            "exact": 0.044685604851579956,
+            "method": 0.45004787743376956,
+            "boundary": {
+              "score": 1.1990283915330293,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          }
+        },
+        "from_cal_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 246,
+              "candidate_count": 246,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 139,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1413,
+              "candidate_count": 1413,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 246,
+              "candidate_count": 211,
+              "delta_count": -35,
+              "gain": 67,
+              "loss": 102,
+              "difference": -0.011171401212894989,
+              "ci95": [
+                -0.020068167148435435,
+                -0.002585503727450349
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 139,
+              "delta_count": 0,
+              "gain": 2,
+              "loss": 2,
+              "difference": 0.0,
+              "ci95": [
+                -0.0012812402437580063,
+                0.0012642625102017955
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1413,
+              "candidate_count": 1399,
+              "delta_count": -14,
+              "gain": 12,
+              "loss": 26,
+              "difference": -0.004468560485157995,
+              "ci95": [
+                -0.008499456527578317,
+                -0.0006395295351210973
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 246,
+              "candidate_count": 131,
+              "delta_count": -115,
+              "gain": 105,
+              "loss": 220,
+              "difference": -0.036706032556654965,
+              "ci95": [
+                -0.04925005793282373,
+                -0.024748309044236503
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 145,
+              "delta_count": 6,
+              "gain": 9,
+              "loss": 3,
+              "difference": 0.001915097350781998,
+              "ci95": [
+                0.0,
+                0.004149377593360996
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1413,
+              "candidate_count": 1439,
+              "delta_count": 26,
+              "gain": 54,
+              "loss": 28,
+              "difference": 0.008298755186721992,
+              "ci95": [
+                0.0025404890441409972,
+                0.014200175169970452
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 246,
+              "candidate_count": 149,
+              "delta_count": -97,
+              "gain": 41,
+              "loss": 138,
+              "difference": -0.03096074050430897,
+              "ci95": [
+                -0.04071264891279205,
+                -0.021895936208689796
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 141,
+              "delta_count": 2,
+              "gain": 3,
+              "loss": 1,
+              "difference": 0.0006383657835939994,
+              "ci95": [
+                -0.0006315224488716827,
+                0.0019449104175469352
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1413,
+              "candidate_count": 1414,
+              "delta_count": 1,
+              "gain": 23,
+              "loss": 22,
+              "difference": 0.0003191828917969997,
+              "ci95": [
+                -0.0041707773827781396,
+                0.0049932708256118594
+              ],
+              "valid_draws": 2000
+            }
+          }
+        },
+        "matched_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 241,
+              "candidate_count": 241,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 139,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1412,
+              "candidate_count": 1412,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 241,
+              "candidate_count": 241,
+              "delta_count": 0,
+              "gain": 92,
+              "loss": 92,
+              "difference": 0.0,
+              "ci95": [
+                -0.00899375935157407,
+                0.008866553646477432
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 139,
+              "delta_count": 0,
+              "gain": 2,
+              "loss": 2,
+              "difference": 0.0,
+              "ci95": [
+                -0.0012812402437580063,
+                0.0012642625102017955
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1412,
+              "candidate_count": 1399,
+              "delta_count": -13,
+              "gain": 13,
+              "loss": 26,
+              "difference": -0.004149377593360996,
+              "ci95": [
+                -0.008054839807046838,
+                -0.00031625053675481043
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 241,
+              "candidate_count": 241,
+              "delta_count": 0,
+              "gain": 199,
+              "loss": 199,
+              "difference": 0.0,
+              "ci95": [
+                -0.01440499580555433,
+                0.013434798155388342
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 145,
+              "delta_count": 6,
+              "gain": 9,
+              "loss": 3,
+              "difference": 0.001915097350781998,
+              "ci95": [
+                0.0,
+                0.004149377593360996
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1412,
+              "candidate_count": 1440,
+              "delta_count": 28,
+              "gain": 59,
+              "loss": 31,
+              "difference": 0.00893712097031599,
+              "ci95": [
+                0.0028552620729323367,
+                0.0152057685013069
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1178,
+            "known_rejected": {
+              "n": 3133,
+              "baseline_count": 241,
+              "candidate_count": 241,
+              "delta_count": 0,
+              "gain": 100,
+              "loss": 100,
+              "difference": 0.0,
+              "ci95": [
+                -0.009398348683233419,
+                0.009097744290778113
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 0,
+              "baseline_count": 0,
+              "candidate_count": 0,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": null,
+              "ci95": null,
+              "valid_draws": 0
+            },
+            "exact": {
+              "n": 3133,
+              "baseline_count": 139,
+              "candidate_count": 140,
+              "delta_count": 1,
+              "gain": 3,
+              "loss": 2,
+              "difference": 0.0003191828917969997,
+              "ci95": [
+                -0.0009699399470238895,
+                0.001888054238315459
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3133,
+              "baseline_count": 1412,
+              "candidate_count": 1410,
+              "delta_count": -2,
+              "gain": 21,
+              "loss": 23,
+              "difference": -0.0006383657835939994,
+              "ci95": [
+                -0.004873532300804093,
+                0.0038999341986541364
+              ],
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    },
+    "original_domains": {
+      "data": {
+        "source_revision": "e852981ae34990f4358979625854259302feaa78",
+        "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+        "split": "train",
+        "shards": [
+          "dialogues_002.json",
+          "dialogues_003.json",
+          "dialogues_015.json",
+          "dialogues_017.json",
+          "dialogues_029.json",
+          "dialogues_031.json",
+          "dialogues_043.json",
+          "dialogues_045.json",
+          "dialogues_057.json",
+          "dialogues_059.json",
+          "dialogues_071.json",
+          "dialogues_073.json",
+          "dialogues_085.json",
+          "dialogues_087.json",
+          "dialogues_099.json",
+          "dialogues_101.json",
+          "dialogues_113.json",
+          "dialogues_115.json",
+          "dialogues_127.json"
+        ],
+        "source_sha256": {
+          "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+          "dialogues_002.json": "56a06f9762593b27f5b34225de4ce37da5e83c9c5747e56bca2899f147d88b3e",
+          "dialogues_003.json": "aae3d8d141c8c36bc5268ca573044b4e82d4534947c169d951a1f229b9852029",
+          "dialogues_015.json": "b698e8db9b0898186453ec9fcec5f80ab043cfe301447d28dc577e99bd3acfd3",
+          "dialogues_017.json": "0eb666f375ba2cc6362c88c02cfd255b702a2b8216e30fce200f630bcca99fa0",
+          "dialogues_029.json": "87b61fd3495d851df7fa66ce43084431a7cd19154c1de32c0d6949bf6c74bae9",
+          "dialogues_031.json": "45e31767734dc89d825b8f84c37fdd258250bb1e0b63d8a8e775c99dde07547e",
+          "dialogues_043.json": "98c9cc7865bc70e67123cc4e64daad8843d5750552bae2559d7bb95aae782c0a",
+          "dialogues_045.json": "056df88c7bbff91bcc9b8fe009bfc6f01400aa59feae549cace7d5caa823dcb0",
+          "dialogues_057.json": "7586422916e6f7c943b97b304f2724e6eefbe4ee1dd42b9d45413c1fc457cfc2",
+          "dialogues_059.json": "d5597d0c8e9a904aeeb722e8d8c3a8d15a92eacf1713241fe9c05bd470b625a5",
+          "dialogues_071.json": "59a78ab61ef8e419c7c2791e028db3704254a196f73e79a890274f09e7e65801",
+          "dialogues_073.json": "e2b9aa0843a8cdfabaf24fecae2bf4b280ea8aed75670d6e955d25df58dc8494",
+          "dialogues_085.json": "f22be96c2ff0a95c4c883a64f9677e0a0106fac25ea42a523df91700ead7bfa3",
+          "dialogues_087.json": "1b95dda470d3f0809bbbeb86cb99a9a322a81fd1a96e96735d953d5409331810",
+          "dialogues_099.json": "fb7110d90b179fe43eaee15393422ae7fb0d522190a69495023f0cf9cadebcbb",
+          "dialogues_101.json": "142dc7b5452d6aaafb25fa9637b3f5126ac83194b907016af5e85659220d9cba",
+          "dialogues_113.json": "895cbdca09acff80c6a194dc44a293fd6875390ad5899720bc98f004eca7d99b",
+          "dialogues_115.json": "3bb6c375846127053c01d51a0e6509eddfaad47f6d2a2bb3a7cfee65120bec32",
+          "dialogues_127.json": "ba42de75a55e27a239b238d94ece3c98e5b64a755e155a027d8a31e5fbf791dc"
+        },
+        "seed": 202611,
+        "selection": "all_eligible",
+        "pre_filter_requests": 6885,
+        "pre_filter_dialogues": 2391,
+        "estimable": true,
+        "pre_filter_test_unknown": 220,
+        "excluded_rows": {
+          "connected_to_pilot_template": 3,
+          "contains_calibration_unknown": 1623,
+          "contains_out_of_catalog_intent": 1439
+        },
+        "excluded_test_unknown_by_reason": {},
+        "out_of_catalog_combinations_for_excluded_test_unknown": [],
+        "dialogues": 1359,
+        "counts_by_role": {
+          "known": 3600,
+          "test_unknown": 220
+        },
+        "counts_by_intent": {
+          "BookAppointment": 136,
+          "BuyBusTicket": 218,
+          "BuyEventTickets": 298,
+          "CheckBalance": 153,
+          "FindAttractions": 156,
+          "FindBus": 84,
+          "FindEvents": 279,
+          "FindProvider": 161,
+          "FindRestaurants": 232,
+          "GetRide": 97,
+          "GetWeather": 67,
+          "LookupSong": 54,
+          "PlaySong": 43,
+          "ReserveFlight": 351,
+          "ReserveLodging": 137,
+          "ReserveRestaurant": 425,
+          "SearchFlight": 576,
+          "SearchLodging": 353
+        },
+        "counts_by_service": {
+          "Banks_1": 153,
+          "Buses_1": 78,
+          "Buses_2": 224,
+          "Events_1": 45,
+          "Events_2": 532,
+          "Flights_1": 852,
+          "Flights_2": 75,
+          "Hotels_1": 104,
+          "Hotels_2": 115,
+          "Hotels_3": 271,
+          "Music_1": 70,
+          "Music_2": 27,
+          "Restaurants_1": 657,
+          "RideSharing_1": 33,
+          "RideSharing_2": 64,
+          "Services_1": 177,
+          "Services_2": 120,
+          "Travel_1": 156,
+          "Weather_1": 67
+        },
+        "cohort_sha256": "52578762d3502651294c34134460479e37790caa64f2cbf1c78e0f0d5c548ee3"
+      },
+      "metrics": {
+        "n": 3820,
+        "nk": 3600,
+        "nu": 220,
+        "dialogues": 1359,
+        "known_budget": 277,
+        "target_known_frr": 0.07692307692307693,
+        "related_known": null,
+        "legacy_calibrated": {
+          "n": 3820,
+          "nk": 3600,
+          "nu": 220,
+          "known_rejected": 350,
+          "unknown_rejected": 203,
+          "known_false_reject_rate": 0.09722222222222222,
+          "unknown_recall": 0.9227272727272727,
+          "accepted": 3267,
+          "known_accepted": 3250,
+          "unknown_accepted": 17,
+          "exact_correct": 213,
+          "method_correct": 1709,
+          "known_exact_correct": 158,
+          "unknown_exact_correct": 55,
+          "known_method_correct": 1594,
+          "unknown_method_correct": 115,
+          "exact": 0.05575916230366492,
+          "method": 0.44738219895287956,
+          "boundary": {
+            "score": -0.6267904043197632,
+            "ties": "none"
+          },
+          "related_known_n": 0,
+          "related_known_rejected": 0
+        },
+        "from_cal": {
+          "centroid": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 593,
+            "unknown_rejected": 216,
+            "known_false_reject_rate": 0.16472222222222221,
+            "unknown_recall": 0.9818181818181818,
+            "accepted": 3011,
+            "known_accepted": 3007,
+            "unknown_accepted": 4,
+            "exact_correct": 210,
+            "method_correct": 1704,
+            "known_exact_correct": 155,
+            "unknown_exact_correct": 55,
+            "known_method_correct": 1589,
+            "unknown_method_correct": 115,
+            "exact": 0.0549738219895288,
+            "method": 0.44607329842931936,
+            "boundary": {
+              "score": 1.0133238480157358,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "semantic": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 741,
+            "unknown_rejected": 209,
+            "known_false_reject_rate": 0.20583333333333334,
+            "unknown_recall": 0.95,
+            "accepted": 2870,
+            "known_accepted": 2859,
+            "unknown_accepted": 11,
+            "exact_correct": 210,
+            "method_correct": 1704,
+            "known_exact_correct": 155,
+            "unknown_exact_correct": 55,
+            "known_method_correct": 1589,
+            "unknown_method_correct": 115,
+            "exact": 0.0549738219895288,
+            "method": 0.44607329842931936,
+            "boundary": {
+              "score": 1.0204322928011371,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "lexical": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 551,
+            "unknown_rejected": 98,
+            "known_false_reject_rate": 0.15305555555555556,
+            "unknown_recall": 0.44545454545454544,
+            "accepted": 3171,
+            "known_accepted": 3049,
+            "unknown_accepted": 122,
+            "exact_correct": 196,
+            "method_correct": 1703,
+            "known_exact_correct": 157,
+            "unknown_exact_correct": 39,
+            "known_method_correct": 1617,
+            "unknown_method_correct": 86,
+            "exact": 0.05130890052356021,
+            "method": 0.4458115183246073,
+            "boundary": {
+              "score": 0.8405886083570382,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "adaptive": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 780,
+            "unknown_rejected": 216,
+            "known_false_reject_rate": 0.21666666666666667,
+            "unknown_recall": 0.9818181818181818,
+            "accepted": 2824,
+            "known_accepted": 2820,
+            "unknown_accepted": 4,
+            "exact_correct": 211,
+            "method_correct": 1701,
+            "known_exact_correct": 155,
+            "unknown_exact_correct": 56,
+            "known_method_correct": 1585,
+            "unknown_method_correct": 116,
+            "exact": 0.05523560209424084,
+            "method": 0.44528795811518324,
+            "boundary": {
+              "score": 0.7813705478642614,
+              "ties": "none"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          }
+        },
+        "matched": {
+          "centroid": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 277,
+            "unknown_rejected": 195,
+            "known_false_reject_rate": 0.07694444444444444,
+            "unknown_recall": 0.8863636363636364,
+            "accepted": 3348,
+            "known_accepted": 3323,
+            "unknown_accepted": 25,
+            "exact_correct": 210,
+            "method_correct": 1712,
+            "known_exact_correct": 156,
+            "unknown_exact_correct": 54,
+            "known_method_correct": 1598,
+            "unknown_method_correct": 114,
+            "exact": 0.0549738219895288,
+            "method": 0.4481675392670157,
+            "boundary": {
+              "score": 1.5199560123120177,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "semantic": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 277,
+            "unknown_rejected": 194,
+            "known_false_reject_rate": 0.07694444444444444,
+            "unknown_recall": 0.8818181818181818,
+            "accepted": 3349,
+            "known_accepted": 3323,
+            "unknown_accepted": 26,
+            "exact_correct": 213,
+            "method_correct": 1705,
+            "known_exact_correct": 158,
+            "unknown_exact_correct": 55,
+            "known_method_correct": 1590,
+            "unknown_method_correct": 115,
+            "exact": 0.05575916230366492,
+            "method": 0.4463350785340314,
+            "boundary": {
+              "score": 1.6119509662274996,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "lexical": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 277,
+            "unknown_rejected": 72,
+            "known_false_reject_rate": 0.07694444444444444,
+            "unknown_recall": 0.32727272727272727,
+            "accepted": 3471,
+            "known_accepted": 3323,
+            "unknown_accepted": 148,
+            "exact_correct": 199,
+            "method_correct": 1708,
+            "known_exact_correct": 161,
+            "unknown_exact_correct": 38,
+            "known_method_correct": 1624,
+            "unknown_method_correct": 84,
+            "exact": 0.052094240837696336,
+            "method": 0.44712041884816756,
+            "boundary": {
+              "score": 1.0155140298026004,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          },
+          "adaptive": {
+            "n": 3820,
+            "nk": 3600,
+            "nu": 220,
+            "known_rejected": 277,
+            "unknown_rejected": 194,
+            "known_false_reject_rate": 0.07694444444444444,
+            "unknown_recall": 0.8818181818181818,
+            "accepted": 3349,
+            "known_accepted": 3323,
+            "unknown_accepted": 26,
+            "exact_correct": 213,
+            "method_correct": 1710,
+            "known_exact_correct": 159,
+            "unknown_exact_correct": 54,
+            "known_method_correct": 1596,
+            "unknown_method_correct": 114,
+            "exact": 0.05575916230366492,
+            "method": 0.4476439790575916,
+            "boundary": {
+              "score": 1.2873216348950907,
+              "ties": "all"
+            },
+            "related_known_n": 0,
+            "related_known_rejected": 0
+          }
+        },
+        "from_cal_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 593,
+              "candidate_count": 593,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 216,
+              "candidate_count": 216,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 210,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1704,
+              "candidate_count": 1704,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 593,
+              "candidate_count": 741,
+              "delta_count": 148,
+              "gain": 306,
+              "loss": 158,
+              "difference": 0.04111111111111111,
+              "ci95": [
+                0.02794629378056858,
+                0.053571551860180686
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 216,
+              "candidate_count": 209,
+              "delta_count": -7,
+              "gain": 4,
+              "loss": 11,
+              "difference": -0.031818181818181815,
+              "ci95": [
+                -0.06504185308125271,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 210,
+              "delta_count": 0,
+              "gain": 6,
+              "loss": 6,
+              "difference": 0.0,
+              "ci95": [
+                -0.001810715629908594,
+                0.0018200964771161083
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1704,
+              "candidate_count": 1704,
+              "delta_count": 0,
+              "gain": 35,
+              "loss": 35,
+              "difference": 0.0,
+              "ci95": [
+                -0.004296090412815472,
+                0.004438816407572893
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 593,
+              "candidate_count": 551,
+              "delta_count": -42,
+              "gain": 383,
+              "loss": 425,
+              "difference": -0.011666666666666667,
+              "ci95": [
+                -0.029356667893723466,
+                0.005678191678408404
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 216,
+              "candidate_count": 98,
+              "delta_count": -118,
+              "gain": 1,
+              "loss": 119,
+              "difference": -0.5363636363636364,
+              "ci95": [
+                -0.6056407409977104,
+                -0.46859291873050823
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 196,
+              "delta_count": -14,
+              "gain": 15,
+              "loss": 29,
+              "difference": -0.0036649214659685864,
+              "ci95": [
+                -0.007225853081752626,
+                -0.0002587874720609213
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1704,
+              "candidate_count": 1703,
+              "delta_count": -1,
+              "gain": 101,
+              "loss": 102,
+              "difference": -0.0002617801047120419,
+              "ci95": [
+                -0.007558159133991202,
+                0.007113031770701556
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 593,
+              "candidate_count": 780,
+              "delta_count": 187,
+              "gain": 305,
+              "loss": 118,
+              "difference": 0.051944444444444446,
+              "ci95": [
+                0.03948699822385028,
+                0.0641746244144794
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 216,
+              "candidate_count": 216,
+              "delta_count": 0,
+              "gain": 3,
+              "loss": 3,
+              "difference": 0.0,
+              "ci95": [
+                -0.021055976806422835,
+                0.021743897787948104
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 211,
+              "delta_count": 1,
+              "gain": 6,
+              "loss": 5,
+              "difference": 0.0002617801047120419,
+              "ci95": [
+                -0.0015528957572514802,
+                0.0018359213052517955
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1704,
+              "candidate_count": 1701,
+              "delta_count": -3,
+              "gain": 32,
+              "loss": 35,
+              "difference": -0.0007853403141361257,
+              "ci95": [
+                -0.004964919226036686,
+                0.003665881120712228
+              ],
+              "valid_draws": 2000
+            }
+          }
+        },
+        "matched_paired": {
+          "centroid": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 277,
+              "candidate_count": 277,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 195,
+              "candidate_count": 195,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 210,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1712,
+              "candidate_count": 1712,
+              "delta_count": 0,
+              "gain": 0,
+              "loss": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "semantic": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 277,
+              "candidate_count": 277,
+              "delta_count": 0,
+              "gain": 93,
+              "loss": 93,
+              "difference": 0.0,
+              "ci95": [
+                -0.007737994558404795,
+                0.007779466704025395
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 195,
+              "candidate_count": 194,
+              "delta_count": -1,
+              "gain": 18,
+              "loss": 19,
+              "difference": -0.004545454545454545,
+              "ci95": [
+                -0.059072209436133484,
+                0.04716981132075472
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 213,
+              "delta_count": 3,
+              "gain": 5,
+              "loss": 2,
+              "difference": 0.0007853403141361257,
+              "ci95": [
+                -0.0005264647315817955,
+                0.0021121002094034677
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1712,
+              "candidate_count": 1705,
+              "delta_count": -7,
+              "gain": 16,
+              "loss": 23,
+              "difference": -0.0018324607329842932,
+              "ci95": [
+                -0.005002698858197787,
+                0.00153887586106542
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "lexical": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 277,
+              "candidate_count": 277,
+              "delta_count": 0,
+              "gain": 207,
+              "loss": 207,
+              "difference": 0.0,
+              "ci95": [
+                -0.012059317514835913,
+                0.011899519523538208
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 195,
+              "candidate_count": 72,
+              "delta_count": -123,
+              "gain": 6,
+              "loss": 129,
+              "difference": -0.5590909090909091,
+              "ci95": [
+                -0.6363738279657563,
+                -0.4819078199590817
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 199,
+              "delta_count": -11,
+              "gain": 15,
+              "loss": 26,
+              "difference": -0.0028795811518324606,
+              "ci95": [
+                -0.006073532080001116,
+                0.0005176016934027716
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1712,
+              "candidate_count": 1708,
+              "delta_count": -4,
+              "gain": 66,
+              "loss": 70,
+              "difference": -0.0010471204188481676,
+              "ci95": [
+                -0.007059518295507179,
+                0.0052124394954674086
+              ],
+              "valid_draws": 2000
+            }
+          },
+          "adaptive": {
+            "direction": "candidate_minus_baseline",
+            "ci_condition": "frozen_scores_and_thresholds",
+            "bootstrap_unit": "dialogue",
+            "bootstrap_draws": 2000,
+            "dialogues": 1359,
+            "known_rejected": {
+              "n": 3600,
+              "baseline_count": 277,
+              "candidate_count": 277,
+              "delta_count": 0,
+              "gain": 82,
+              "loss": 82,
+              "difference": 0.0,
+              "ci95": [
+                -0.007037463132701268,
+                0.007586667500481867
+              ],
+              "valid_draws": 2000
+            },
+            "unknown_rejected": {
+              "n": 220,
+              "baseline_count": 195,
+              "candidate_count": 194,
+              "delta_count": -1,
+              "gain": 16,
+              "loss": 17,
+              "difference": -0.004545454545454545,
+              "ci95": [
+                -0.05584248643444775,
+                0.04397050318102942
+              ],
+              "valid_draws": 2000
+            },
+            "exact": {
+              "n": 3820,
+              "baseline_count": 210,
+              "candidate_count": 213,
+              "delta_count": 3,
+              "gain": 5,
+              "loss": 2,
+              "difference": 0.0007853403141361257,
+              "ci95": [
+                -0.0005217879071267158,
+                0.0021203427040205015
+              ],
+              "valid_draws": 2000
+            },
+            "method": {
+              "n": 3820,
+              "baseline_count": 1712,
+              "candidate_count": 1710,
+              "delta_count": -2,
+              "gain": 16,
+              "loss": 18,
+              "difference": -0.0005235602094240838,
+              "ci95": [
+                -0.003569652873898157,
+                0.002615062761506276
+              ],
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    }
+  },
+  "unique_frozen_executions": 10967,
+  "prediction_sha256": "92654b9fca967e473529e2d86c7eb0814762b9a9948a9cdb4be8e0b8162fda12"
+}

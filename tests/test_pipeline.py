@@ -10,7 +10,7 @@ from intentexec.metrics import call_parts, paired_interval
 class Gate:
     def encode(self,texts):
         return np.asarray([[t == "previous turns plus current user query"] for t in texts])
-    def predict_encoded(self, features):
+    def predict_encoded(self, features, texts=None):
         return np.tile([.35, .65], (len(features), 1)), ~features[:, 0]
     def predict(self, texts):
         return self.predict_encoded(self.encode(texts))

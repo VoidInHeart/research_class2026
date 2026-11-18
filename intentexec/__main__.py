@@ -21,6 +21,8 @@ def main():
     run.add_argument("--encoder", choices=["tfidf","minilm"], default="tfidf")
     run.add_argument("--recognition-window", choices=["recent5", "original"], default="recent5",
                      help="first-layer context; recent5 keeps the latest five utterances")
+    run.add_argument("--oos-gate", choices=["centroid", "adaptive-support"], default="centroid",
+                     help="adaptive-support uses local recent5 MiniLM training examples")
     run.add_argument("--model-path", help="local MiniLM model snapshot")
     run.add_argument("--backend", choices=["retrieval","lora"], default="retrieval")
     run.add_argument("--base-path")
@@ -48,6 +50,8 @@ def main():
     jev.add_argument("--usd-per-1000-decisions", type=float, help="verified per-1000-call fee, if applicable")
     args = p.parse_args()
     if args.command == "run":
+        if args.oos_gate != "centroid" and (args.encoder, args.recognition_window) != ("minilm", "recent5"):
+            p.error("support gates require --encoder minilm --recognition-window recent5")
         if args.backend == "lora" and not (args.base_path and args.adapters_dir):
             p.error("--backend lora requires --base-path and --adapters-dir")
         if args.backend == "lora" and (args.max_length is None or args.max_new_tokens is None):

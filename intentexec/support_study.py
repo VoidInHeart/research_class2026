@@ -4,6 +4,7 @@ from collections import defaultdict
 import gzip
 import json
 from pathlib import Path
+from shutil import copyfile
 
 import joblib
 import numpy as np
@@ -79,16 +80,19 @@ def prepare(args):
 def validate(args):
     from .support_holdout import fresh_rows
     from .support_metrics import evaluate_records
-    lock = json.loads((args.lock / "development_lock.json").read_bytes())
+    lock_file = args.lock / "development_lock.json"
+    lock = json.loads(lock_file.read_bytes())
     if (lock["expert_pool_sha256"] != digest(args.legacy / "pool.joblib")
             or lock["original_corpus_sha256"] != digest(args.data / "manifest.json")
+            or lock["supervision_sha256"] != digest(args.legacy / "router_supervision.json")
+            or lock["holdout_config_sha256"] != digest(STUDY)
             or lock["new_shard_lock_sha256"] != digest(args.extra_lock)):
         raise ValueError("Experiment inputs differ from development lock")
     old = load_sgd(args.data, args.catalog)
     all_fresh = load_sgd(args.extra, args.catalog)
     fresh_digest = json.loads((args.extra / "manifest.json").read_bytes())["sha256"]
     expected = json.loads(args.extra_lock.read_bytes())
-    if fresh_digest != expected.get("sha256", expected):
+    if fresh_digest != expected:
         raise ValueError("Validation corpus does not match its published digest list")
     x, bank = bank_for(all_fresh, args)
     if bank.model_fingerprint != lock["model"]:
@@ -99,7 +103,8 @@ def validate(args):
         raise ValueError("Expected original local retrieval pool")
     pool = RetrievalPool(pool_data["fit"], pool_data["schema"], pool_data["config"]["seed"])
     answers = {}
-    report = {"lock_sha256": digest(args.lock / "development_lock.json"),
+    copyfile(lock_file, work / "development_lock.json")
+    report = {"lock_sha256": digest(work / "development_lock.json"),
               "fresh_manifest_sha256": digest(args.extra / "manifest.json"), "folds": {}}
     with (work / "predictions.jsonl.gz").open("wb") as raw:
         with gzip.GzipFile(filename="",fileobj=raw,mode="wb",mtime=0) as stream:

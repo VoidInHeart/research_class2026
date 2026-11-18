@@ -70,6 +70,7 @@ class Recognizer:
         self.model_path = str(Path(model_path).expanduser().resolve()) if model_path is not None else None
         self.threshold = None
         self.temperature = None
+        self.support_gate = None
         self._minilm = None
 
     def _load_minilm(self):
@@ -95,6 +96,7 @@ class Recognizer:
         self.__dict__.update(state)
         # Runs saved before the recent-five default learned full-prefix prototypes.
         self.__dict__.setdefault("window", "original")
+        self.__dict__.setdefault("support_gate", None)
 
     def _windowed_texts(self, texts):
         values = _texts(texts)
@@ -151,6 +153,7 @@ class Recognizer:
                            for label in self.known])
         self.centroids = normalize(means, axis=1)
         self.threshold = self.temperature = None
+        self.support_gate = None
         return self
 
     def _cosines(self, features):
@@ -187,22 +190,50 @@ class Recognizer:
         # Exact integer ranking also makes ties independent of rounding.
         utility = (n_known - counts_known) * n_ood + counts_ood * n_known
         self.threshold = float(thresholds[utility.argmax()])
-        targets = np.asarray([self.known.index(label) for label in labels[in_scope]])
-        grid = (0.02, 0.05, 0.1, 0.2, 0.5, 1.0)
-        def nll(temperature):
-            probability = softmax(cosines[in_scope] / temperature, axis=1)
-            return -np.log(probability[np.arange(n_known), targets].clip(1e-15, 1)).mean()
-        self.temperature = min(grid, key=nll)
+        self.temperature = self._temperature(cosines[in_scope], labels[in_scope])
+        self.support_gate = None
         return self
 
-    def predict_encoded(self, features):
-        if self.threshold is None:
+    def _temperature(self, known_cosines, labels):
+        targets = np.asarray([self.known.index(label) for label in labels])
+        grid = (0.02, 0.05, 0.1, 0.2, 0.5, 1.0)
+        def nll(temperature):
+            probability = softmax(known_cosines / temperature, axis=1)
+            return -np.log(probability[np.arange(len(labels)), targets].clip(1e-15, 1)).mean()
+        return min(grid, key=nll)
+
+    def calibrate_support(self, gate, weights, known_cal_rows, known_cal_vectors):
+        """Calibrate intent temperature and the optional novelty gate on known rows."""
+        from .support_gate import known_budget_cutoff
+
+        if self.encoder != "minilm" or self.window != "recent5":
+            raise ValueError("Support gates require a recent5 MiniLM recognizer")
+        if gate.recognizer.known != self.known:
+            raise ValueError("Support and recognition must use the same known intents")
+        labels = [r["intent"] for r in known_cal_rows]
+        if not labels or any(label not in self.known for label in labels):
+            raise ValueError("Support calibration requires nonempty, known-only requests")
+        scores = gate.score([r["text"] for r in known_cal_rows], known_cal_vectors, weights)
+        self.temperature = self._temperature(self._cosines(known_cal_vectors), labels)
+        self.support_cutoff = known_budget_cutoff(scores)
+        self.support_weights = list(weights)
+        self.support_gate = gate
+        self.threshold = None
+        return scores
+
+    def predict_encoded(self, features, texts=None):
+        if self.temperature is None:
             raise RuntimeError("calibrate on development requests before predicting")
         scores = self._cosines(features)
-        return softmax(scores / self.temperature, axis=1), scores.max(axis=1) < self.threshold
+        if self.support_gate is None:
+            rejected = scores.max(axis=1) < self.threshold
+        else:
+            rejected = self.support_gate.score(texts, features, self.support_weights) > self.support_cutoff
+        return softmax(scores / self.temperature, axis=1), rejected
 
     def predict(self, texts):
-        return self.predict_encoded(self.encode(texts))
+        values = _texts(texts)
+        return self.predict_encoded(self.encode(values), values)
 
 
 def _weights(values, width, *, require_rows):

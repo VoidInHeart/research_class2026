@@ -12,6 +12,16 @@
 
 后续实验从 `main` 切研究分支，保留固定基线的配对结果和可复算的评估记录。得到验证的改进连同适用范围合回 `main`，主分支默认配置反映已采纳的方案。
 
+### 可选的近域 OOS 门控
+
+使用本地 MiniLM 时，可在训练命令中传入 `--oos-gate adaptive-support`。训练时模拟遇到未知意图，从原型相似度、已知样本语义近邻和词面近邻的预设组合中选择权重，并用已知校准请求设阈值。保存的模型在 `predict` 时自动使用同一组权重和阈值。通用默认是 `centroid`。
+
+```powershell
+python -m intentexec run --encoder minilm --model-path '../code/models/models--sentence-transformers--all-MiniLM-L6-v2' --oos-gate adaptive-support --out artifacts/my-adaptive-support
+```
+
+19 个新 SGD 分片的独立验证中，在已知误拒数相同的条件下，融合门多拦了 15 条公交购票、51 条住宿预订和 39 条活动购票。完整调用收益随任务变化，天气/账户上的阈值出现误拒漂移。各场景的校准表现和复现命令见[独立验证报告](reports/support_validation/REPORT.md)。
+
 ## 本地复现
 
 以下 PowerShell 命令在本仓库根目录运行。此工作区实测解释器是 `D:\Anaconda\envs\research2026\python.exe`。在已激活的该环境内，`python` 即可运行。新环境先安装 `requirements.txt`，MiniLM 还需要 PyTorch 和 Transformers。
