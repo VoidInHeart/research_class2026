@@ -4,6 +4,10 @@
 
 仓库包含可以直接在 CPU 上跑的 SGD 试点、可替换的共享指令基座与三个 LoRA 适配器，以及两种 Jev 在线对照。首次两层实验的数据、结果和局限见 [试点报告](reports/PILOT.md)。
 
+## 离线窗口与未知意图留出实验
+
+在原有本地检索专家上，比较原窗口、最近 5 条发言，以及“长窗口做 OOS 门控，短窗口生成意图向量”。四组未知意图留出、两种编码器合计 24 个组合。报告分别给出已知识别、未知拒识与完整调用成功率，并可从提交的逐条预测离线复算。[实验报告与复现命令](reports/window_holdouts/REPORT.md)
+
 ## 本地复现
 
 以下 PowerShell 命令在本仓库根目录运行。此工作区实测解释器是 `D:\Anaconda\envs\research2026\python.exe`。在已激活的该环境内，`python` 即可运行。新环境先安装 `requirements.txt`，MiniLM 还需要 PyTorch 和 Transformers。

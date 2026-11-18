@@ -1,0 +1,5127 @@
+{
+  "protocol": {
+    "windows_gate_and_intent": {
+      "original": [
+        "long",
+        "long"
+      ],
+      "recent5": [
+        "short",
+        "short"
+      ],
+      "dual": [
+        "long",
+        "short"
+      ]
+    },
+    "second_layer": "matrix",
+    "bootstrap_unit": "dialogue",
+    "bootstrap_draws": 2000,
+    "seed": 1118,
+    "holdout_config_sha256": "5314a86d9d8db3831252187b8ce1216332ac51f5c4a8fd838b050a0481e633c5",
+    "data_manifest_sha256": "0fafe4a532e752b4b6cf00b4275b3b202bdaae1c909ca95d7c1c881211f0bace",
+    "catalog_sha256": "28e98b232dc983dcc530a7246e8f82c6927e92b04fd89908b9c5a336f8291d3d",
+    "frozen": {
+      "key": "2908f0af59eecb3171050052441d930b400bea436ea0f351a19a6885446268e9",
+      "files": {
+        "pool.joblib": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+        "split.json": "5b2c53662c89ca184eaf5ade3c64b76fedcf57669c35b9a46892ce6f1b59b7e5",
+        "references.jsonl": "3fa418d27d15edc4e3cf1d22529996c217d50ea342b6700e9e879841ebcaa66f",
+        "public.jsonl": "754dca2edf91d636b127b1da106824c69ee4f381fc28dae9205bff6f9f04721b",
+        "router_supervision.json": "2956a4315893891417f8515b499c84430636ae0fdd92f4b0186c52ba86f6412e",
+        "data.py": "53fce30bf64eaddc9f959a99028c8939818efbd14b1194a567b4306d6fa17931",
+        "executors.py": "4f2fc01db22974e900b771f2258c72efded0010110c42ff0e265c608d0ea0bdb",
+        "metrics.py": "6266acd557c9050711209509b72177e28b239cab0e4ad6e556aa365767b58900",
+        "window_frozen.py": "c4c41ced6eff2da091230022b4e780909191a0e2f08ed04f5e3835d0a12d1add",
+        "data_manifest": "0fafe4a532e752b4b6cf00b4275b3b202bdaae1c909ca95d7c1c881211f0bace",
+        "input_rows": "9c9d177c976b3ebae9b9675ec306ec03840dcafac04c1d50c594373965c37e2d"
+      },
+      "experts": [
+        "search",
+        "transaction",
+        "context",
+        "base"
+      ],
+      "outcome_order": [
+        "exact",
+        "service_and_method"
+      ],
+      "unique_requests": 2228,
+      "expert_fit": 1852,
+      "verified_reference_rows": 1076,
+      "verified_router_rows": 598,
+      "outcomes_sha256": "cb8fb4eb728b32151fe372ee7fa11e3a77d118ac66f8a98851f51738ecf70b62"
+    },
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0",
+      "torch": "2.8.0+cu128",
+      "transformers": "5.22.1",
+      "tokenizers": "0.23.3"
+    },
+    "source_sha256": {
+      "data.py": "53fce30bf64eaddc9f959a99028c8939818efbd14b1194a567b4306d6fa17931",
+      "executors.py": "4f2fc01db22974e900b771f2258c72efded0010110c42ff0e265c608d0ea0bdb",
+      "routing.py": "3442c9fe67e826151647e01328f6dc4d7603074535633b2a1e1cec602249ac6e",
+      "metrics.py": "6266acd557c9050711209509b72177e28b239cab0e4ad6e556aa365767b58900",
+      "window_splits.py": "59764c8a8845fc337cd6285b1a9e91d986eafa34dcb6baac5390668fa1b4e076",
+      "window_scoring.py": "0b7534b76b0a07effd087212f0fb114a79ea2caa4f8023a34536d595931eb709",
+      "window_frozen.py": "c4c41ced6eff2da091230022b4e780909191a0e2f08ed04f5e3835d0a12d1add",
+      "window_metrics.py": "3535b66234786f3c0517cd3676ec93a609da0800080dfc04721125660130bcff",
+      "window_experiment.py": "f1ec234b18b248852e04fd42556b2c8d3c8952bb3994e3a45525f49cc88d8a3e"
+    },
+    "minilm_fingerprint": "a861a551859877f5f80e1cf42525b105b711de966e75b71fbe4486a1daad9c7f"
+  },
+  "encoders": {
+    "tfidf": {
+      "original": {
+        "variants": {
+          "original": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.7378048780487805,
+            "known_macro_recall": 0.7580398492796003,
+            "known_accepted_top1": 0.7671691792294807,
+            "known_false_reject": 0.27195121951219514,
+            "unknown_recall": 0.67578125,
+            "gate_balanced_accuracy": 0.7019150152439024,
+            "oos_auroc": 0.7533012576219512,
+            "exact": 0.07806691449814127,
+            "method_accuracy": 0.35223048327137546,
+            "known_exact": 0.0524390243902439,
+            "unknown_exact": 0.16015625,
+            "gate_oracle_exact": 0.09572490706319703,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 605,
+              "known_accepted_top1_correct": 458,
+              "known_rejected": 223,
+              "unknown_rejected": 173,
+              "exact_correct": 84,
+              "method_correct": 379,
+              "known_exact_correct": 43,
+              "gate_oracle_correct": 103
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 149,
+                "top1_correct": 152,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 33,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 60,
+                "top1_correct": 50,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 30,
+                "top1_correct": 0,
+                "exact_correct": 38
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 28,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 43,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 36,
+                "top1_correct": 101,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 75,
+                "top1_correct": 104,
+                "exact_correct": 19
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 28,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 53,
+                "top1_correct": 0,
+                "exact_correct": 3
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 31,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 44,
+                "top1_correct": 9,
+                "exact_correct": 12
+              }
+            }
+          },
+          "recent5": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.85,
+            "known_macro_recall": 0.8790095175765017,
+            "known_accepted_top1": 0.8912337662337663,
+            "known_false_reject": 0.24878048780487805,
+            "unknown_recall": 0.86328125,
+            "gate_balanced_accuracy": 0.807250381097561,
+            "oos_auroc": 0.8708650914634146,
+            "exact": 0.0762081784386617,
+            "method_accuracy": 0.3828996282527881,
+            "known_exact": 0.05609756097560976,
+            "unknown_exact": 0.140625,
+            "gate_oracle_exact": 0.08921933085501858,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 697,
+              "known_accepted_top1_correct": 549,
+              "known_rejected": 204,
+              "unknown_rejected": 221,
+              "exact_correct": 82,
+              "method_correct": 412,
+              "known_exact_correct": 46,
+              "gate_oracle_correct": 96
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 145,
+                "top1_correct": 152,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 32,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 63,
+                "top1_correct": 70,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 14,
+                "top1_correct": 0,
+                "exact_correct": 33
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 21,
+                "top1_correct": 22,
+                "exact_correct": 4
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 35,
+                "top1_correct": 40,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 65,
+                "top1_correct": 112,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 96,
+                "top1_correct": 122,
+                "exact_correct": 22
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 21,
+                "top1_correct": 0,
+                "exact_correct": 3
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 8,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 30,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 17,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 38,
+                "top1_correct": 23,
+                "exact_correct": 12
+              }
+            }
+          },
+          "dual": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.85,
+            "known_macro_recall": 0.8790095175765017,
+            "known_accepted_top1": 0.8793969849246231,
+            "known_false_reject": 0.27195121951219514,
+            "unknown_recall": 0.67578125,
+            "gate_balanced_accuracy": 0.7019150152439024,
+            "oos_auroc": 0.7533012576219512,
+            "exact": 0.07992565055762081,
+            "method_accuracy": 0.38104089219330856,
+            "known_exact": 0.054878048780487805,
+            "unknown_exact": 0.16015625,
+            "gate_oracle_exact": 0.09572490706319703,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 697,
+              "known_accepted_top1_correct": 525,
+              "known_rejected": 223,
+              "unknown_rejected": 173,
+              "exact_correct": 86,
+              "method_correct": 410,
+              "known_exact_correct": 45,
+              "gate_oracle_correct": 103
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 149,
+                "top1_correct": 152,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 33,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 60,
+                "top1_correct": 70,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 30,
+                "top1_correct": 0,
+                "exact_correct": 36
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 28,
+                "top1_correct": 22,
+                "exact_correct": 4
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 43,
+                "top1_correct": 40,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 36,
+                "top1_correct": 112,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 75,
+                "top1_correct": 122,
+                "exact_correct": 20
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 53,
+                "top1_correct": 0,
+                "exact_correct": 5
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 44,
+                "top1_correct": 23,
+                "exact_correct": 13
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.11219512195121951,
+              "ci95": [
+                0.08403177060297803,
+                0.14091512609370077
+              ],
+              "valid_draws": 2000,
+              "rescued": 112,
+              "harmed": 20,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.10533536585365853,
+              "ci95": [
+                0.0696133746039996,
+                0.14116347277591207
+              ],
+              "valid_draws": 2000,
+              "rescued": 134,
+              "harmed": 67,
+              "n": 1076
+            },
+            "exact": {
+              "difference": -0.0018587360594795538,
+              "ci95": [
+                -0.009209596567314734,
+                0.005560833314705947
+              ],
+              "valid_draws": 2000,
+              "rescued": 6,
+              "harmed": 8,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 74,
+                "harmed": 55,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 60,
+                "harmed": 12,
+                "n": 256
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.11219512195121951,
+              "ci95": [
+                0.08403177060297803,
+                0.14091512609370077
+              ],
+              "valid_draws": 2000,
+              "rescued": 112,
+              "harmed": 20,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 1076
+            },
+            "exact": {
+              "difference": 0.0018587360594795538,
+              "ci95": [
+                -0.0027676555647257023,
+                0.006554307116104869
+              ],
+              "valid_draws": 2000,
+              "rescued": 4,
+              "harmed": 2,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 256
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.10533536585365853,
+              "ci95": [
+                -0.14116347277591207,
+                -0.0696133746039996
+              ],
+              "valid_draws": 2000,
+              "rescued": 67,
+              "harmed": 134,
+              "n": 1076
+            },
+            "exact": {
+              "difference": 0.0037174721189591076,
+              "ci95": [
+                -0.0036666138728635358,
+                0.010388637348032996
+              ],
+              "valid_draws": 2000,
+              "rescued": 9,
+              "harmed": 5,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 55,
+                "harmed": 74,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 12,
+                "harmed": 60,
+                "n": 256
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.24752335250377655,
+          "short": 0.24650561809539795
+        },
+        "temperatures": {
+          "long": 0.02,
+          "short": 0.02
+        },
+        "ability": [
+          [
+            0.006287625418060201,
+            0.006421404682274248,
+            0.005351170568561873
+          ],
+          [
+            0.0031438127090301004,
+            0.003210702341137124,
+            0.0026755852842809363
+          ],
+          [
+            0.015719063545150503,
+            0.01605351170568562,
+            0.013377926421404682
+          ],
+          [
+            0.21802834846313107,
+            0.2657270265965918,
+            0.2174709348622392
+          ],
+          [
+            0.001690221886575323,
+            0.0017261840543747978,
+            0.001438486711978998
+          ],
+          [
+            0.0551043159738812,
+            0.10288262462175506,
+            0.006370441153049848
+          ],
+          [
+            0.3981387232805002,
+            0.3548058746546459,
+            0.17972953322669769
+          ],
+          [
+            0.10972746032875542,
+            0.10979861951184801,
+            0.08795275030242652
+          ],
+          [
+            0.031438127090301006,
+            0.03210702341137124,
+            0.026755852842809364
+          ],
+          [
+            0.004912207357859532,
+            0.005016722408026756,
+            0.004180602006688963
+          ],
+          [
+            0.3683997162258032,
+            0.30789500354717747,
+            0.2464781595216378
+          ],
+          [
+            0.07015979189892234,
+            0.07023411371237458,
+            0.02519509476031215
+          ],
+          [
+            0.00542036673970707,
+            0.00553569369161573,
+            0.004613078076346442
+          ],
+          [
+            0.009246507967735589,
+            0.00944324217981507,
+            0.007869368483179224
+          ],
+          [
+            0.003022896835605866,
+            0.0030872137895549268,
+            0.002572678157962439
+          ],
+          [
+            0.004366406540319584,
+            0.004459308807134894,
+            0.0037160906726124115
+          ],
+          [
+            0.1132943143812709,
+            0.12722965440356745,
+            0.19630248978075066
+          ]
+        ]
+      },
+      "music_to_bus": {
+        "variants": {
+          "original": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.8160919540229885,
+            "known_macro_recall": 0.8777296777296777,
+            "known_accepted_top1": 0.8300653594771242,
+            "known_false_reject": 0.1206896551724138,
+            "unknown_recall": 0.2875,
+            "gate_balanced_accuracy": 0.5834051724137931,
+            "oos_auroc": 0.6877873563218391,
+            "exact": 0.047244094488188976,
+            "method_accuracy": 0.547244094488189,
+            "known_exact": 0.06896551724137931,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.05511811023622047,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 142,
+              "known_accepted_top1_correct": 127,
+              "known_rejected": 21,
+              "unknown_rejected": 23,
+              "exact_correct": 12,
+              "method_correct": 139,
+              "known_exact_correct": 12,
+              "gate_oracle_correct": 14
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 17,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 40,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 5,
+                "top1_correct": 6,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 17,
+                "top1_correct": 20,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 27,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 31,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 25,
+                "top1_correct": 13,
+                "exact_correct": 4
+              }
+            }
+          },
+          "recent5": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.9195402298850575,
+            "known_macro_recall": 0.9532828282828283,
+            "known_accepted_top1": 0.9387755102040817,
+            "known_false_reject": 0.15517241379310345,
+            "unknown_recall": 0.6,
+            "gate_balanced_accuracy": 0.7224137931034482,
+            "oos_auroc": 0.7678160919540229,
+            "exact": 0.051181102362204724,
+            "method_accuracy": 0.5196850393700787,
+            "known_exact": 0.07471264367816093,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.05511811023622047,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 160,
+              "known_accepted_top1_correct": 138,
+              "known_rejected": 27,
+              "unknown_rejected": 48,
+              "exact_correct": 13,
+              "method_correct": 132,
+              "known_exact_correct": 13,
+              "gate_oracle_correct": 14
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 6,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 4,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 26,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 5,
+                "top1_correct": 7,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 19,
+                "top1_correct": 21,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 26,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 19,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 32,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 21,
+                "top1_correct": 24,
+                "exact_correct": 5
+              }
+            }
+          },
+          "dual": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.9195402298850575,
+            "known_macro_recall": 0.9532828282828283,
+            "known_accepted_top1": 0.9150326797385621,
+            "known_false_reject": 0.1206896551724138,
+            "unknown_recall": 0.2875,
+            "gate_balanced_accuracy": 0.5834051724137931,
+            "oos_auroc": 0.6877873563218391,
+            "exact": 0.051181102362204724,
+            "method_accuracy": 0.4921259842519685,
+            "known_exact": 0.07471264367816093,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.05511811023622047,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 160,
+              "known_accepted_top1_correct": 140,
+              "known_rejected": 21,
+              "unknown_rejected": 23,
+              "exact_correct": 13,
+              "method_correct": 125,
+              "known_exact_correct": 13,
+              "gate_oracle_correct": 14
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 17,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 40,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 5,
+                "top1_correct": 7,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 17,
+                "top1_correct": 21,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 27,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 31,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 25,
+                "top1_correct": 24,
+                "exact_correct": 5
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.10344827586206896,
+              "ci95": [
+                0.05987779875032544,
+                0.14935064935064934
+              ],
+              "valid_draws": 2000,
+              "rescued": 18,
+              "harmed": 0,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.13900862068965517,
+              "ci95": [
+                0.07184731418509412,
+                0.20669709813035586
+              ],
+              "valid_draws": 2000,
+              "rescued": 39,
+              "harmed": 20,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.003937007874015748,
+              "ci95": [
+                0.0,
+                0.012448132780082987
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 10,
+                "harmed": 16,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 29,
+                "harmed": 4,
+                "n": 80
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.10344827586206896,
+              "ci95": [
+                0.05987779875032544,
+                0.14935064935064934
+              ],
+              "valid_draws": 2000,
+              "rescued": 18,
+              "harmed": 0,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.003937007874015748,
+              "ci95": [
+                0.0,
+                0.012448132780082987
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 80
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.13900862068965517,
+              "ci95": [
+                -0.20669709813035594,
+                -0.07184731418509416
+              ],
+              "valid_draws": 2000,
+              "rescued": 20,
+              "harmed": 39,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 16,
+                "harmed": 10,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 4,
+                "harmed": 29,
+                "n": 80
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.30168959498405457,
+          "short": 0.27173957228660583
+        },
+        "temperatures": {
+          "long": 0.05,
+          "short": 0.02
+        },
+        "ability": [
+          [
+            0.034375,
+            0.03125,
+            0.025
+          ],
+          [
+            0.0171875,
+            0.015625,
+            0.0125
+          ],
+          [
+            0.7388392857142857,
+            0.59375,
+            0.16071428571428573
+          ],
+          [
+            0.07239583333333334,
+            0.071875,
+            0.0375
+          ],
+          [
+            0.034375,
+            0.03125,
+            0.025
+          ],
+          [
+            0.04296875,
+            0.0390625,
+            0.03125
+          ],
+          [
+            0.015625,
+            0.014204545454545454,
+            0.011363636363636364
+          ],
+          [
+            0.019097222222222224,
+            0.017361111111111112,
+            0.013888888888888888
+          ],
+          [
+            0.00537109375,
+            0.0048828125,
+            0.00390625
+          ],
+          [
+            0.0107421875,
+            0.009765625,
+            0.0078125
+          ],
+          [
+            0.19866071428571427,
+            0.19791666666666666,
+            0.2916666666666667
+          ]
+        ]
+      },
+      "flight_to_lodging": {
+        "variants": {
+          "original": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.8271604938271605,
+            "known_macro_recall": 0.8450952065176203,
+            "known_accepted_top1": 0.8791208791208791,
+            "known_false_reject": 0.4382716049382716,
+            "unknown_recall": 0.7962962962962963,
+            "gate_balanced_accuracy": 0.6790123456790124,
+            "oos_auroc": 0.8052126200274348,
+            "exact": 0.10185185185185185,
+            "method_accuracy": 0.6157407407407407,
+            "known_exact": 0.09259259259259259,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.1111111111111111,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 134,
+              "known_accepted_top1_correct": 80,
+              "known_rejected": 71,
+              "unknown_rejected": 43,
+              "exact_correct": 22,
+              "method_correct": 133,
+              "known_exact_correct": 15,
+              "gate_oracle_correct": 24
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 8,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 16,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 4,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 7,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 5,
+                "top1_correct": 10,
+                "exact_correct": 8
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 8,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 3,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 7,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 10,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 3,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 23,
+                "top1_correct": 30,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 8,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          },
+          "recent5": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.9567901234567902,
+            "known_macro_recall": 0.9738726790450929,
+            "known_accepted_top1": 0.9747899159663865,
+            "known_false_reject": 0.2654320987654321,
+            "unknown_recall": 0.9444444444444444,
+            "gate_balanced_accuracy": 0.8395061728395061,
+            "oos_auroc": 0.9215820759030635,
+            "exact": 0.10185185185185185,
+            "method_accuracy": 0.5787037037037037,
+            "known_exact": 0.09259259259259259,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.11574074074074074,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 155,
+              "known_accepted_top1_correct": 116,
+              "known_rejected": 43,
+              "unknown_rejected": 51,
+              "exact_correct": 22,
+              "method_correct": 125,
+              "known_exact_correct": 15,
+              "gate_oracle_correct": 25
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 10,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 20,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 4,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 9,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 6,
+                "top1_correct": 14,
+                "exact_correct": 8
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 18,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 7,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 11,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 0,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 27,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 3,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          },
+          "dual": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.9567901234567902,
+            "known_macro_recall": 0.9738726790450929,
+            "known_accepted_top1": 0.967032967032967,
+            "known_false_reject": 0.4382716049382716,
+            "unknown_recall": 0.7962962962962963,
+            "gate_balanced_accuracy": 0.6790123456790124,
+            "oos_auroc": 0.8052126200274348,
+            "exact": 0.10185185185185185,
+            "method_accuracy": 0.6157407407407407,
+            "known_exact": 0.09259259259259259,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.1111111111111111,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 155,
+              "known_accepted_top1_correct": 88,
+              "known_rejected": 71,
+              "unknown_rejected": 43,
+              "exact_correct": 22,
+              "method_correct": 133,
+              "known_exact_correct": 15,
+              "gate_oracle_correct": 24
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 8,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 16,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 4,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 7,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 5,
+                "top1_correct": 14,
+                "exact_correct": 8
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 8,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 3,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 7,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 10,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 3,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 23,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 8,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.12962962962962962,
+              "ci95": [
+                0.06206896551724138,
+                0.20530445180279613
+              ],
+              "valid_draws": 2000,
+              "rescued": 22,
+              "harmed": 1,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.16049382716049382,
+              "ci95": [
+                0.10142794486215538,
+                0.22266478607554946
+              ],
+              "valid_draws": 2000,
+              "rescued": 40,
+              "harmed": 4,
+              "n": 216
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 32,
+                "harmed": 4,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 8,
+                "harmed": 0,
+                "n": 54
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.12962962962962962,
+              "ci95": [
+                0.06206896551724138,
+                0.20530445180279613
+              ],
+              "valid_draws": 2000,
+              "rescued": 22,
+              "harmed": 1,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 54
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.16049382716049382,
+              "ci95": [
+                -0.22266478607554957,
+                -0.10142794486215538
+              ],
+              "valid_draws": 2000,
+              "rescued": 4,
+              "harmed": 40,
+              "n": 216
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 4,
+                "harmed": 32,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 8,
+                "n": 54
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.3524826169013977,
+          "short": 0.30659016966819763
+        },
+        "temperatures": {
+          "long": 0.02,
+          "short": 0.02
+        },
+        "ability": [
+          [
+            0.008,
+            0.007172413793103448,
+            0.004689655172413793
+          ],
+          [
+            0.013333333333333334,
+            0.011954022988505748,
+            0.007816091954022988
+          ],
+          [
+            0.02,
+            0.01793103448275862,
+            0.011724137931034483
+          ],
+          [
+            0.008,
+            0.007172413793103448,
+            0.004689655172413793
+          ],
+          [
+            0.39999999999999997,
+            0.3556221889055472,
+            0.17901049475262368
+          ],
+          [
+            0.11063829787234043,
+            0.11019809244314013,
+            0.0876008804108584
+          ],
+          [
+            0.04,
+            0.03586206896551724,
+            0.023448275862068966
+          ],
+          [
+            0.00625,
+            0.005603448275862069,
+            0.003663793103448276
+          ],
+          [
+            0.3696969696969697,
+            0.3084639498432602,
+            0.24597701149425288
+          ],
+          [
+            0.07111111111111111,
+            0.07065134099616859,
+            0.02482758620689655
+          ],
+          [
+            0.0038461538461538464,
+            0.0034482758620689655,
+            0.0022546419098143236
+          ]
+        ]
+      },
+      "near_domain_bus_ticket": {
+        "variants": {
+          "original": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.5039787798408488,
+            "known_macro_recall": 0.7324504279245658,
+            "known_accepted_top1": 0.5195195195195195,
+            "known_false_reject": 0.11671087533156499,
+            "unknown_recall": 0.14492753623188406,
+            "gate_balanced_accuracy": 0.5141083304501596,
+            "oos_auroc": 0.637258293929958,
+            "exact": 0.08744394618834081,
+            "method_accuracy": 0.4910313901345291,
+            "known_exact": 0.10344827586206896,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.11434977578475336,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 190,
+              "known_accepted_top1_correct": 173,
+              "known_rejected": 44,
+              "unknown_rejected": 10,
+              "exact_correct": 39,
+              "method_correct": 219,
+              "known_exact_correct": 39,
+              "gate_oracle_correct": 51
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 12,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 59,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 40,
+                "top1_correct": 4,
+                "exact_correct": 6
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 61,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 5,
+                "top1_correct": 5,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 8,
+                "top1_correct": 9,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 21,
+                "top1_correct": 28,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 31,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 68,
+                "top1_correct": 9,
+                "exact_correct": 19
+              }
+            }
+          },
+          "recent5": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.6472148541114059,
+            "known_macro_recall": 0.8372337081819841,
+            "known_accepted_top1": 0.7086092715231788,
+            "known_false_reject": 0.1989389920424403,
+            "unknown_recall": 0.4057971014492754,
+            "gate_balanced_accuracy": 0.6034290547034176,
+            "oos_auroc": 0.7309037788797909,
+            "exact": 0.08295964125560538,
+            "method_accuracy": 0.5067264573991032,
+            "known_exact": 0.09814323607427056,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.10762331838565023,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 244,
+              "known_accepted_top1_correct": 214,
+              "known_rejected": 75,
+              "unknown_rejected": 28,
+              "exact_correct": 37,
+              "method_correct": 226,
+              "known_exact_correct": 37,
+              "gate_oracle_correct": 48
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 41,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 5,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 25,
+                "top1_correct": 9,
+                "exact_correct": 5
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 64,
+                "top1_correct": 34,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 5,
+                "top1_correct": 4,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 8,
+                "top1_correct": 14,
+                "exact_correct": 8
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 25,
+                "top1_correct": 27,
+                "exact_correct": 2
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 30,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 18,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 50,
+                "top1_correct": 28,
+                "exact_correct": 18
+              }
+            }
+          },
+          "dual": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.6472148541114059,
+            "known_macro_recall": 0.8372337081819841,
+            "known_accepted_top1": 0.6516516516516516,
+            "known_false_reject": 0.11671087533156499,
+            "unknown_recall": 0.14492753623188406,
+            "gate_balanced_accuracy": 0.5141083304501596,
+            "oos_auroc": 0.637258293929958,
+            "exact": 0.08520179372197309,
+            "method_accuracy": 0.4820627802690583,
+            "known_exact": 0.10079575596816977,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.11434977578475336,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 244,
+              "known_accepted_top1_correct": 217,
+              "known_rejected": 44,
+              "unknown_rejected": 10,
+              "exact_correct": 38,
+              "method_correct": 215,
+              "known_exact_correct": 38,
+              "gate_oracle_correct": 51
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 12,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 59,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 40,
+                "top1_correct": 9,
+                "exact_correct": 5
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 61,
+                "top1_correct": 34,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 5,
+                "top1_correct": 4,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 8,
+                "top1_correct": 14,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 21,
+                "top1_correct": 27,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 68,
+                "top1_correct": 28,
+                "exact_correct": 19
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.14323607427055704,
+              "ci95": [
+                0.10029477394325126,
+                0.18470382055217974
+              ],
+              "valid_draws": 2000,
+              "rescued": 59,
+              "harmed": 5,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.08932072425325799,
+              "ci95": [
+                0.03135047966172298,
+                0.15131042942451137
+              ],
+              "valid_draws": 2000,
+              "rescued": 39,
+              "harmed": 52,
+              "n": 446
+            },
+            "exact": {
+              "difference": -0.004484304932735426,
+              "ci95": [
+                -0.015730337078651686,
+                0.006465866351381543
+              ],
+              "valid_draws": 2000,
+              "rescued": 2,
+              "harmed": 4,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 19,
+                "harmed": 50,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 20,
+                "harmed": 2,
+                "n": 69
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.14323607427055704,
+              "ci95": [
+                0.10029477394325126,
+                0.18470382055217974
+              ],
+              "valid_draws": 2000,
+              "rescued": 59,
+              "harmed": 5,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 446
+            },
+            "exact": {
+              "difference": -0.002242152466367713,
+              "ci95": [
+                -0.011682926962726258,
+                0.0069605568445475635
+              ],
+              "valid_draws": 2000,
+              "rescued": 2,
+              "harmed": 3,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 69
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.08932072425325799,
+              "ci95": [
+                -0.1513104294245114,
+                -0.03135047966172303
+              ],
+              "valid_draws": 2000,
+              "rescued": 52,
+              "harmed": 39,
+              "n": 446
+            },
+            "exact": {
+              "difference": 0.002242152466367713,
+              "ci95": [
+                -0.0045871559633027525,
+                0.011086474501108648
+              ],
+              "valid_draws": 2000,
+              "rescued": 2,
+              "harmed": 1,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 50,
+                "harmed": 19,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 2,
+                "harmed": 20,
+                "n": 69
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.267368882894516,
+          "short": 0.2434716373682022
+        },
+        "temperatures": {
+          "long": 0.02,
+          "short": 0.02
+        },
+        "ability": [
+          [
+            0.007337807606263982,
+            0.006621923937360179,
+            0.005369127516778523
+          ],
+          [
+            0.018344519015659956,
+            0.016554809843400447,
+            0.013422818791946308
+          ],
+          [
+            0.3254444836924526,
+            0.2718709525491581,
+            0.27022253620628756
+          ],
+          [
+            0.003527792118396145,
+            0.0031836172775770093,
+            0.002581311306143521
+          ],
+          [
+            0.05635453286459998,
+            0.10312133802066688,
+            0.006391818472355385
+          ],
+          [
+            0.3992802256589826,
+            0.3550238303666959,
+            0.17974905164867233
+          ],
+          [
+            0.11028606787567233,
+            0.10990527869008519,
+            0.08796230187062688
+          ],
+          [
+            0.03668903803131991,
+            0.033109619686800894,
+            0.026845637583892617
+          ],
+          [
+            0.005732662192393736,
+            0.00517337807606264,
+            0.0041946308724832215
+          ],
+          [
+            0.3691953087926242,
+            0.30804691207375773,
+            0.24649176327028677
+          ],
+          [
+            0.07074322644792444,
+            0.07034551329853343,
+            0.025205070842654737
+          ],
+          [
+            0.006325696212296536,
+            0.005708555118413948,
+            0.004628558204119417
+          ],
+          [
+            0.02038279890628884,
+            0.01839423315933383,
+            0.014914243102162566
+          ],
+          [
+            0.003527792118396145,
+            0.0031836172775770093,
+            0.002581311306143521
+          ],
+          [
+            0.00509569972657221,
+            0.004598558289833458,
+            0.0037285607755406414
+          ],
+          [
+            0.1264254924428439,
+            0.10159873410814645,
+            0.19839580946145033
+          ]
+        ]
+      }
+    },
+    "minilm": {
+      "original": {
+        "variants": {
+          "original": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.8402439024390244,
+            "known_macro_recall": 0.7940688022770621,
+            "known_accepted_top1": 0.8226086956521739,
+            "known_false_reject": 0.29878048780487804,
+            "unknown_recall": 0.49609375,
+            "gate_balanced_accuracy": 0.598656631097561,
+            "oos_auroc": 0.6909060594512196,
+            "exact": 0.08178438661710037,
+            "method_accuracy": 0.3447955390334573,
+            "known_exact": 0.054878048780487805,
+            "unknown_exact": 0.16796875,
+            "gate_oracle_exact": 0.09944237918215613,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 689,
+              "known_accepted_top1_correct": 473,
+              "known_rejected": 245,
+              "unknown_rejected": 127,
+              "exact_correct": 88,
+              "method_correct": 371,
+              "known_exact_correct": 45,
+              "gate_oracle_correct": 107
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 109,
+                "top1_correct": 154,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 33,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 61,
+                "top1_correct": 67,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 88,
+                "top1_correct": 0,
+                "exact_correct": 40
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 28,
+                "top1_correct": 12,
+                "exact_correct": 4
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 47,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 74,
+                "top1_correct": 127,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 49,
+                "top1_correct": 141,
+                "exact_correct": 21
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 27,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 41,
+                "top1_correct": 0,
+                "exact_correct": 3
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 5,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 12,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 42,
+                "top1_correct": 8,
+                "exact_correct": 12
+              }
+            }
+          },
+          "recent5": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.8890243902439025,
+            "known_macro_recall": 0.8698924489271249,
+            "known_accepted_top1": 0.8951367781155015,
+            "known_false_reject": 0.1975609756097561,
+            "unknown_recall": 0.80859375,
+            "gate_balanced_accuracy": 0.805516387195122,
+            "oos_auroc": 0.8888957698170732,
+            "exact": 0.07713754646840149,
+            "method_accuracy": 0.3680297397769517,
+            "known_exact": 0.05365853658536585,
+            "unknown_exact": 0.15234375,
+            "gate_oracle_exact": 0.09758364312267657,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 729,
+              "known_accepted_top1_correct": 589,
+              "known_rejected": 162,
+              "unknown_rejected": 207,
+              "exact_correct": 83,
+              "method_correct": 396,
+              "known_exact_correct": 44,
+              "gate_oracle_correct": 105
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 126,
+                "top1_correct": 154,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 32,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 64,
+                "top1_correct": 73,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 24,
+                "top1_correct": 0,
+                "exact_correct": 37
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 27,
+                "top1_correct": 16,
+                "exact_correct": 3
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 47,
+                "top1_correct": 37,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 109,
+                "top1_correct": 123,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 82,
+                "top1_correct": 155,
+                "exact_correct": 21
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 26,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 25,
+                "top1_correct": 0,
+                "exact_correct": 2
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 42,
+                "top1_correct": 15,
+                "exact_correct": 12
+              }
+            }
+          },
+          "dual": {
+            "n": 1076,
+            "dialogues": 297,
+            "n_known": 820,
+            "n_unknown": 256,
+            "known_top1": 0.8890243902439025,
+            "known_macro_recall": 0.8698924489271249,
+            "known_accepted_top1": 0.871304347826087,
+            "known_false_reject": 0.29878048780487804,
+            "unknown_recall": 0.49609375,
+            "gate_balanced_accuracy": 0.598656631097561,
+            "oos_auroc": 0.6909060594512196,
+            "exact": 0.06691449814126393,
+            "method_accuracy": 0.3559479553903346,
+            "known_exact": 0.05365853658536585,
+            "unknown_exact": 0.109375,
+            "gate_oracle_exact": 0.09944237918215613,
+            "counts": {
+              "known": 820,
+              "known_top1_correct": 729,
+              "known_accepted_top1_correct": 501,
+              "known_rejected": 245,
+              "unknown_rejected": 127,
+              "exact_correct": 72,
+              "method_correct": 383,
+              "known_exact_correct": 44,
+              "gate_oracle_correct": 107
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 156,
+                "accepted": 109,
+                "top1_correct": 154,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 33,
+                "accepted": 33,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 78,
+                "accepted": 61,
+                "top1_correct": 73,
+                "exact_correct": 0
+              },
+              "CheckBalance": {
+                "known": false,
+                "n": 140,
+                "accepted": 88,
+                "top1_correct": 0,
+                "exact_correct": 24
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 30,
+                "accepted": 28,
+                "top1_correct": 16,
+                "exact_correct": 3
+              },
+              "FindBus": {
+                "known": true,
+                "n": 47,
+                "accepted": 47,
+                "top1_correct": 37,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 140,
+                "accepted": 74,
+                "top1_correct": 123,
+                "exact_correct": 1
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 157,
+                "accepted": 49,
+                "top1_correct": 155,
+                "exact_correct": 21
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 27,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "GetWeather": {
+                "known": false,
+                "n": 116,
+                "accepted": 41,
+                "top1_correct": 0,
+                "exact_correct": 4
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 8,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 32,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 45,
+                "accepted": 42,
+                "top1_correct": 15,
+                "exact_correct": 12
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.04878048780487805,
+              "ci95": [
+                0.022471209616408416,
+                0.07628153206085939
+              ],
+              "valid_draws": 2000,
+              "rescued": 70,
+              "harmed": 30,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.20685975609756097,
+              "ci95": [
+                0.16822233282829066,
+                0.24615687845380582
+              ],
+              "valid_draws": 2000,
+              "rescued": 214,
+              "harmed": 51,
+              "n": 1076
+            },
+            "exact": {
+              "difference": -0.004646840148698885,
+              "ci95": [
+                -0.014325369343021073,
+                0.004596225331629876
+              ],
+              "valid_draws": 2000,
+              "rescued": 10,
+              "harmed": 15,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 121,
+                "harmed": 38,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 93,
+                "harmed": 13,
+                "n": 256
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.04878048780487805,
+              "ci95": [
+                0.022471209616408416,
+                0.07628153206085939
+              ],
+              "valid_draws": 2000,
+              "rescued": 70,
+              "harmed": 30,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 1076
+            },
+            "exact": {
+              "difference": -0.01486988847583643,
+              "ci95": [
+                -0.02387621299555731,
+                -0.007448616344030143
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 17,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 256
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 297,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 820
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.20685975609756097,
+              "ci95": [
+                -0.24615687845380582,
+                -0.1682223328282907
+              ],
+              "valid_draws": 2000,
+              "rescued": 51,
+              "harmed": 214,
+              "n": 1076
+            },
+            "exact": {
+              "difference": -0.010223048327137546,
+              "ci95": [
+                -0.019626168224299065,
+                -0.0018381930940420247
+              ],
+              "valid_draws": 2000,
+              "rescued": 5,
+              "harmed": 16,
+              "n": 1076
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 38,
+                "harmed": 121,
+                "n": 820
+              },
+              "unknown": {
+                "rescued": 13,
+                "harmed": 93,
+                "n": 256
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.6637471914291382,
+          "short": 0.6267904043197632
+        },
+        "temperatures": {
+          "long": 0.05,
+          "short": 0.05
+        },
+        "ability": [
+          [
+            0.006287625418060201,
+            0.006421404682274248,
+            0.005351170568561873
+          ],
+          [
+            0.0031438127090301004,
+            0.003210702341137124,
+            0.0026755852842809363
+          ],
+          [
+            0.015719063545150503,
+            0.01605351170568562,
+            0.013377926421404682
+          ],
+          [
+            0.21802834846313107,
+            0.2657270265965918,
+            0.2174709348622392
+          ],
+          [
+            0.001690221886575323,
+            0.0017261840543747978,
+            0.001438486711978998
+          ],
+          [
+            0.0551043159738812,
+            0.10288262462175506,
+            0.006370441153049848
+          ],
+          [
+            0.3981387232805002,
+            0.3548058746546459,
+            0.17972953322669769
+          ],
+          [
+            0.10972746032875542,
+            0.10979861951184801,
+            0.08795275030242652
+          ],
+          [
+            0.031438127090301006,
+            0.03210702341137124,
+            0.026755852842809364
+          ],
+          [
+            0.004912207357859532,
+            0.005016722408026756,
+            0.004180602006688963
+          ],
+          [
+            0.3683997162258032,
+            0.30789500354717747,
+            0.2464781595216378
+          ],
+          [
+            0.07015979189892234,
+            0.07023411371237458,
+            0.02519509476031215
+          ],
+          [
+            0.00542036673970707,
+            0.00553569369161573,
+            0.004613078076346442
+          ],
+          [
+            0.009246507967735589,
+            0.00944324217981507,
+            0.007869368483179224
+          ],
+          [
+            0.003022896835605866,
+            0.0030872137895549268,
+            0.002572678157962439
+          ],
+          [
+            0.004366406540319584,
+            0.004459308807134894,
+            0.0037160906726124115
+          ],
+          [
+            0.1132943143812709,
+            0.12722965440356745,
+            0.19630248978075066
+          ]
+        ]
+      },
+      "music_to_bus": {
+        "variants": {
+          "original": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.8620689655172413,
+            "known_macro_recall": 0.9185185185185184,
+            "known_accepted_top1": 0.8726114649681529,
+            "known_false_reject": 0.09770114942528736,
+            "unknown_recall": 0.625,
+            "gate_balanced_accuracy": 0.7636494252873562,
+            "oos_auroc": 0.8155890804597701,
+            "exact": 0.047244094488188976,
+            "method_accuracy": 0.5787401574803149,
+            "known_exact": 0.06896551724137931,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.051181102362204724,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 150,
+              "known_accepted_top1_correct": 137,
+              "known_rejected": 17,
+              "unknown_rejected": 50,
+              "exact_correct": 12,
+              "method_correct": 147,
+              "known_exact_correct": 12,
+              "gate_oracle_correct": 13
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 2,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 28,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 20,
+                "top1_correct": 22,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 22,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 37,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 23,
+                "top1_correct": 14,
+                "exact_correct": 4
+              }
+            }
+          },
+          "recent5": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.9022988505747126,
+            "known_macro_recall": 0.9435185185185185,
+            "known_accepted_top1": 0.9182389937106918,
+            "known_false_reject": 0.08620689655172414,
+            "unknown_recall": 0.675,
+            "gate_balanced_accuracy": 0.7943965517241379,
+            "oos_auroc": 0.9099137931034482,
+            "exact": 0.051181102362204724,
+            "method_accuracy": 0.5511811023622047,
+            "known_exact": 0.07471264367816093,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.051181102362204724,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 157,
+              "known_accepted_top1_correct": 146,
+              "known_rejected": 15,
+              "unknown_rejected": 54,
+              "exact_correct": 13,
+              "method_correct": 140,
+              "known_exact_correct": 13,
+              "gate_oracle_correct": 13
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 8,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 18,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 20,
+                "top1_correct": 22,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 27,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 37,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 20,
+                "top1_correct": 20,
+                "exact_correct": 5
+              }
+            }
+          },
+          "dual": {
+            "n": 254,
+            "dialogues": 87,
+            "n_known": 174,
+            "n_unknown": 80,
+            "known_top1": 0.9022988505747126,
+            "known_macro_recall": 0.9435185185185185,
+            "known_accepted_top1": 0.9044585987261147,
+            "known_false_reject": 0.09770114942528736,
+            "unknown_recall": 0.625,
+            "gate_balanced_accuracy": 0.7636494252873562,
+            "oos_auroc": 0.8155890804597701,
+            "exact": 0.051181102362204724,
+            "method_accuracy": 0.5748031496062992,
+            "known_exact": 0.07471264367816093,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.051181102362204724,
+            "counts": {
+              "known": 174,
+              "known_top1_correct": 157,
+              "known_accepted_top1_correct": 142,
+              "known_rejected": 17,
+              "unknown_rejected": 50,
+              "exact_correct": 13,
+              "method_correct": 146,
+              "known_exact_correct": 13,
+              "gate_oracle_correct": 13
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 33,
+                "accepted": 2,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": false,
+                "n": 47,
+                "accepted": 28,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 22,
+                "accepted": 20,
+                "top1_correct": 22,
+                "exact_correct": 2
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 27,
+                "accepted": 22,
+                "top1_correct": 27,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 21,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 40,
+                "accepted": 37,
+                "top1_correct": 33,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 30,
+                "accepted": 23,
+                "top1_correct": 20,
+                "exact_correct": 5
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.040229885057471264,
+              "ci95": [
+                0.0,
+                0.08284023668639054
+              ],
+              "valid_draws": 2000,
+              "rescued": 10,
+              "harmed": 3,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.03074712643678161,
+              "ci95": [
+                -0.06097327534939043,
+                0.12143270192548127
+              ],
+              "valid_draws": 2000,
+              "rescued": 27,
+              "harmed": 21,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.003937007874015748,
+              "ci95": [
+                0.0,
+                0.012448132780082987
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 10,
+                "harmed": 8,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 17,
+                "harmed": 13,
+                "n": 80
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.040229885057471264,
+              "ci95": [
+                0.0,
+                0.08284023668639054
+              ],
+              "valid_draws": 2000,
+              "rescued": 10,
+              "harmed": 3,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.003937007874015748,
+              "ci95": [
+                0.0,
+                0.012448132780082987
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 80
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 87,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 174
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.03074712643678161,
+              "ci95": [
+                -0.12143270192548136,
+                0.060973275349390385
+              ],
+              "valid_draws": 2000,
+              "rescued": 21,
+              "harmed": 27,
+              "n": 254
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 254
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 8,
+                "harmed": 10,
+                "n": 174
+              },
+              "unknown": {
+                "rescued": 13,
+                "harmed": 17,
+                "n": 80
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.6978076696395874,
+          "short": 0.6739040613174438
+        },
+        "temperatures": {
+          "long": 0.1,
+          "short": 0.05
+        },
+        "ability": [
+          [
+            0.034375,
+            0.03125,
+            0.025
+          ],
+          [
+            0.0171875,
+            0.015625,
+            0.0125
+          ],
+          [
+            0.7388392857142857,
+            0.59375,
+            0.16071428571428573
+          ],
+          [
+            0.07239583333333334,
+            0.071875,
+            0.0375
+          ],
+          [
+            0.034375,
+            0.03125,
+            0.025
+          ],
+          [
+            0.04296875,
+            0.0390625,
+            0.03125
+          ],
+          [
+            0.015625,
+            0.014204545454545454,
+            0.011363636363636364
+          ],
+          [
+            0.019097222222222224,
+            0.017361111111111112,
+            0.013888888888888888
+          ],
+          [
+            0.00537109375,
+            0.0048828125,
+            0.00390625
+          ],
+          [
+            0.0107421875,
+            0.009765625,
+            0.0078125
+          ],
+          [
+            0.19866071428571427,
+            0.19791666666666666,
+            0.2916666666666667
+          ]
+        ]
+      },
+      "flight_to_lodging": {
+        "variants": {
+          "original": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.8703703703703703,
+            "known_macro_recall": 0.8693681318681319,
+            "known_accepted_top1": 0.900709219858156,
+            "known_false_reject": 0.12962962962962962,
+            "unknown_recall": 0.7222222222222222,
+            "gate_balanced_accuracy": 0.7962962962962963,
+            "oos_auroc": 0.8499085505258346,
+            "exact": 0.09722222222222222,
+            "method_accuracy": 0.5370370370370371,
+            "known_exact": 0.08641975308641975,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.12037037037037036,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 141,
+              "known_accepted_top1_correct": 127,
+              "known_rejected": 21,
+              "unknown_rejected": 39,
+              "exact_correct": 21,
+              "method_correct": 116,
+              "known_exact_correct": 14,
+              "gate_oracle_correct": 26
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 11,
+                "top1_correct": 12,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 26,
+                "top1_correct": 25,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 11,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 7,
+                "top1_correct": 9,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 9,
+                "top1_correct": 5,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 4,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 11,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          },
+          "recent5": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.9753086419753086,
+            "known_macro_recall": 0.9707570207570209,
+            "known_accepted_top1": 0.9927536231884058,
+            "known_false_reject": 0.14814814814814814,
+            "unknown_recall": 0.8703703703703703,
+            "gate_balanced_accuracy": 0.8611111111111112,
+            "oos_auroc": 0.9210105166895289,
+            "exact": 0.10185185185185185,
+            "method_accuracy": 0.5601851851851852,
+            "known_exact": 0.09259259259259259,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.12037037037037036,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 158,
+              "known_accepted_top1_correct": 137,
+              "known_rejected": 24,
+              "unknown_rejected": 47,
+              "exact_correct": 22,
+              "method_correct": 121,
+              "known_exact_correct": 15,
+              "gate_oracle_correct": 26
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 25,
+                "top1_correct": 25,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 4,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 11,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 4,
+                "top1_correct": 12,
+                "exact_correct": 8
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 12,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 0,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 30,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 7,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          },
+          "dual": {
+            "n": 216,
+            "dialogues": 75,
+            "n_known": 162,
+            "n_unknown": 54,
+            "known_top1": 0.9753086419753086,
+            "known_macro_recall": 0.9707570207570209,
+            "known_accepted_top1": 0.9787234042553191,
+            "known_false_reject": 0.12962962962962962,
+            "unknown_recall": 0.7222222222222222,
+            "gate_balanced_accuracy": 0.7962962962962963,
+            "oos_auroc": 0.8499085505258346,
+            "exact": 0.09722222222222222,
+            "method_accuracy": 0.5370370370370371,
+            "known_exact": 0.08641975308641975,
+            "unknown_exact": 0.12962962962962962,
+            "gate_oracle_exact": 0.12037037037037036,
+            "counts": {
+              "known": 162,
+              "known_top1_correct": 158,
+              "known_accepted_top1_correct": 138,
+              "known_rejected": 21,
+              "unknown_rejected": 39,
+              "exact_correct": 21,
+              "method_correct": 116,
+              "known_exact_correct": 14,
+              "gate_oracle_correct": 26
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 11,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": true,
+                "n": 26,
+                "accepted": 26,
+                "top1_correct": 25,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindBus": {
+                "known": true,
+                "n": 11,
+                "accepted": 11,
+                "top1_correct": 11,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 7,
+                "top1_correct": 12,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 24,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 9,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": false,
+                "n": 23,
+                "accepted": 4,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": false,
+                "n": 31,
+                "accepted": 11,
+                "top1_correct": 0,
+                "exact_correct": 7
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.10493827160493827,
+              "ci95": [
+                0.041659482758620685,
+                0.16766467065868262
+              ],
+              "valid_draws": 2000,
+              "rescued": 18,
+              "harmed": 1,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.06481481481481481,
+              "ci95": [
+                0.008376513853462877,
+                0.13659211787477638
+              ],
+              "valid_draws": 2000,
+              "rescued": 18,
+              "harmed": 13,
+              "n": 216
+            },
+            "exact": {
+              "difference": 0.004629629629629629,
+              "ci95": [
+                0.0,
+                0.014637750811005629
+              ],
+              "valid_draws": 2000,
+              "rescued": 1,
+              "harmed": 0,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 10,
+                "harmed": 13,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 8,
+                "harmed": 0,
+                "n": 54
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.10493827160493827,
+              "ci95": [
+                0.041659482758620685,
+                0.16766467065868262
+              ],
+              "valid_draws": 2000,
+              "rescued": 18,
+              "harmed": 1,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 54
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 75,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 162
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.06481481481481481,
+              "ci95": [
+                -0.1365921178747765,
+                -0.008376513853462894
+              ],
+              "valid_draws": 2000,
+              "rescued": 13,
+              "harmed": 18,
+              "n": 216
+            },
+            "exact": {
+              "difference": -0.004629629629629629,
+              "ci95": [
+                -0.014637750811005648,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 1,
+              "n": 216
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 13,
+                "harmed": 10,
+                "n": 162
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 8,
+                "n": 54
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.7378907799720764,
+          "short": 0.7215853929519653
+        },
+        "temperatures": {
+          "long": 0.05,
+          "short": 0.05
+        },
+        "ability": [
+          [
+            0.008,
+            0.007172413793103448,
+            0.004689655172413793
+          ],
+          [
+            0.013333333333333334,
+            0.011954022988505748,
+            0.007816091954022988
+          ],
+          [
+            0.02,
+            0.01793103448275862,
+            0.011724137931034483
+          ],
+          [
+            0.008,
+            0.007172413793103448,
+            0.004689655172413793
+          ],
+          [
+            0.39999999999999997,
+            0.3556221889055472,
+            0.17901049475262368
+          ],
+          [
+            0.11063829787234043,
+            0.11019809244314013,
+            0.0876008804108584
+          ],
+          [
+            0.04,
+            0.03586206896551724,
+            0.023448275862068966
+          ],
+          [
+            0.00625,
+            0.005603448275862069,
+            0.003663793103448276
+          ],
+          [
+            0.3696969696969697,
+            0.3084639498432602,
+            0.24597701149425288
+          ],
+          [
+            0.07111111111111111,
+            0.07065134099616859,
+            0.02482758620689655
+          ],
+          [
+            0.0038461538461538464,
+            0.0034482758620689655,
+            0.0022546419098143236
+          ]
+        ]
+      },
+      "near_domain_bus_ticket": {
+        "variants": {
+          "original": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.6180371352785146,
+            "known_macro_recall": 0.7710137085137084,
+            "known_accepted_top1": 0.6277372262773723,
+            "known_false_reject": 0.27320954907161804,
+            "unknown_recall": 0.2463768115942029,
+            "gate_balanced_accuracy": 0.48658363126129245,
+            "oos_auroc": 0.6381040249106216,
+            "exact": 0.08744394618834081,
+            "method_accuracy": 0.5089686098654709,
+            "known_exact": 0.10344827586206896,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.11434977578475336,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 233,
+              "known_accepted_top1_correct": 172,
+              "known_rejected": 103,
+              "unknown_rejected": 17,
+              "exact_correct": 39,
+              "method_correct": 227,
+              "known_exact_correct": 39,
+              "gate_oracle_correct": 51
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 11,
+                "top1_correct": 12,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 52,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 35,
+                "top1_correct": 5,
+                "exact_correct": 6
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 33,
+                "top1_correct": 63,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 5,
+                "top1_correct": 5,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 7,
+                "top1_correct": 9,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 23,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 9,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 9,
+                "top1_correct": 5,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 13,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 14,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 28,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 18,
+                "top1_correct": 18,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 53,
+                "top1_correct": 9,
+                "exact_correct": 19
+              }
+            }
+          },
+          "recent5": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.7374005305039788,
+            "known_macro_recall": 0.8456337181337182,
+            "known_accepted_top1": 0.75,
+            "known_false_reject": 0.07692307692307693,
+            "unknown_recall": 0.13043478260869565,
+            "gate_balanced_accuracy": 0.5267558528428093,
+            "oos_auroc": 0.6949217698842887,
+            "exact": 0.07623318385650224,
+            "method_accuracy": 0.4663677130044843,
+            "known_exact": 0.09018567639257294,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.11659192825112108,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 278,
+              "known_accepted_top1_correct": 261,
+              "known_rejected": 29,
+              "unknown_rejected": 9,
+              "exact_correct": 34,
+              "method_correct": 208,
+              "known_exact_correct": 34,
+              "gate_oracle_correct": 52
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 60,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 35,
+                "top1_correct": 15,
+                "exact_correct": 6
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 75,
+                "top1_correct": 68,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 4,
+                "top1_correct": 3,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 10,
+                "top1_correct": 12,
+                "exact_correct": 6
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 26,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 8,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 14,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 15,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 21,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 69,
+                "top1_correct": 24,
+                "exact_correct": 15
+              }
+            }
+          },
+          "dual": {
+            "n": 446,
+            "dialogues": 129,
+            "n_known": 377,
+            "n_unknown": 69,
+            "known_top1": 0.7374005305039788,
+            "known_macro_recall": 0.8456337181337182,
+            "known_accepted_top1": 0.7445255474452555,
+            "known_false_reject": 0.27320954907161804,
+            "unknown_recall": 0.2463768115942029,
+            "gate_balanced_accuracy": 0.48658363126129245,
+            "oos_auroc": 0.6381040249106216,
+            "exact": 0.08744394618834081,
+            "method_accuracy": 0.5134529147982063,
+            "known_exact": 0.10344827586206896,
+            "unknown_exact": 0.0,
+            "gate_oracle_exact": 0.11434977578475336,
+            "counts": {
+              "known": 377,
+              "known_top1_correct": 278,
+              "known_accepted_top1_correct": 204,
+              "known_rejected": 103,
+              "unknown_rejected": 17,
+              "exact_correct": 39,
+              "method_correct": 229,
+              "known_exact_correct": 39,
+              "gate_oracle_correct": 51
+            },
+            "by_intent": {
+              "BookAppointment": {
+                "known": true,
+                "n": 14,
+                "accepted": 11,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "BuyBusTicket": {
+                "known": false,
+                "n": 69,
+                "accepted": 52,
+                "top1_correct": 0,
+                "exact_correct": 0
+              },
+              "BuyEventTickets": {
+                "known": true,
+                "n": 6,
+                "accepted": 6,
+                "top1_correct": 6,
+                "exact_correct": 0
+              },
+              "FindAttractions": {
+                "known": true,
+                "n": 48,
+                "accepted": 35,
+                "top1_correct": 15,
+                "exact_correct": 6
+              },
+              "FindBus": {
+                "known": true,
+                "n": 77,
+                "accepted": 33,
+                "top1_correct": 68,
+                "exact_correct": 0
+              },
+              "FindEvents": {
+                "known": true,
+                "n": 5,
+                "accepted": 5,
+                "top1_correct": 3,
+                "exact_correct": 0
+              },
+              "FindProvider": {
+                "known": true,
+                "n": 14,
+                "accepted": 7,
+                "top1_correct": 12,
+                "exact_correct": 7
+              },
+              "FindRestaurants": {
+                "known": true,
+                "n": 29,
+                "accepted": 23,
+                "top1_correct": 29,
+                "exact_correct": 3
+              },
+              "GetRide": {
+                "known": true,
+                "n": 7,
+                "accepted": 7,
+                "top1_correct": 7,
+                "exact_correct": 0
+              },
+              "LookupSong": {
+                "known": true,
+                "n": 9,
+                "accepted": 9,
+                "top1_correct": 8,
+                "exact_correct": 4
+              },
+              "PlaySong": {
+                "known": true,
+                "n": 14,
+                "accepted": 9,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveFlight": {
+                "known": true,
+                "n": 14,
+                "accepted": 13,
+                "top1_correct": 14,
+                "exact_correct": 0
+              },
+              "ReserveLodging": {
+                "known": true,
+                "n": 15,
+                "accepted": 14,
+                "top1_correct": 15,
+                "exact_correct": 0
+              },
+              "ReserveRestaurant": {
+                "known": true,
+                "n": 32,
+                "accepted": 31,
+                "top1_correct": 32,
+                "exact_correct": 0
+              },
+              "SearchFlight": {
+                "known": true,
+                "n": 21,
+                "accepted": 18,
+                "top1_correct": 17,
+                "exact_correct": 0
+              },
+              "SearchLodging": {
+                "known": true,
+                "n": 72,
+                "accepted": 53,
+                "top1_correct": 24,
+                "exact_correct": 19
+              }
+            }
+          }
+        },
+        "paired": {
+          "recent5_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.11936339522546419,
+              "ci95": [
+                0.07065057544757032,
+                0.16443231347135395
+              ],
+              "valid_draws": 2000,
+              "rescued": 54,
+              "harmed": 9,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.04017222158151693,
+              "ci95": [
+                -0.023554267054643505,
+                0.10559947946154896
+              ],
+              "valid_draws": 2000,
+              "rescued": 96,
+              "harmed": 30,
+              "n": 446
+            },
+            "exact": {
+              "difference": -0.011210762331838564,
+              "ci95": [
+                -0.02417715544367527,
+                0.0022372618653504674
+              ],
+              "valid_draws": 2000,
+              "rescued": 2,
+              "harmed": 7,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 90,
+                "harmed": 16,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 6,
+                "harmed": 14,
+                "n": 69
+              }
+            }
+          },
+          "dual_minus_original": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.11936339522546419,
+              "ci95": [
+                0.07065057544757032,
+                0.16443231347135395
+              ],
+              "valid_draws": 2000,
+              "rescued": 54,
+              "harmed": 9,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 446
+            },
+            "exact": {
+              "difference": 0.0,
+              "ci95": [
+                -0.008869179600886918,
+                0.008948545861297539
+              ],
+              "valid_draws": 2000,
+              "rescued": 2,
+              "harmed": 2,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 0,
+                "harmed": 0,
+                "n": 69
+              }
+            }
+          },
+          "dual_minus_recent5": {
+            "direction": "candidate_minus_baseline",
+            "dialogues": 129,
+            "bootstrap_draws": 2000,
+            "known_top1": {
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "valid_draws": 2000,
+              "rescued": 0,
+              "harmed": 0,
+              "n": 377
+            },
+            "gate_balanced_accuracy": {
+              "difference": -0.04017222158151693,
+              "ci95": [
+                -0.10559947946154898,
+                0.02355426705464337
+              ],
+              "valid_draws": 2000,
+              "rescued": 30,
+              "harmed": 96,
+              "n": 446
+            },
+            "exact": {
+              "difference": 0.011210762331838564,
+              "ci95": [
+                0.00228310502283105,
+                0.021929824561403508
+              ],
+              "valid_draws": 2000,
+              "rescued": 5,
+              "harmed": 0,
+              "n": 446
+            },
+            "gate_by_truth": {
+              "known": {
+                "rescued": 16,
+                "harmed": 90,
+                "n": 377
+              },
+              "unknown": {
+                "rescued": 14,
+                "harmed": 6,
+                "n": 69
+              }
+            }
+          }
+        },
+        "thresholds": {
+          "long": 0.7420632839202881,
+          "short": 0.6347930431365967
+        },
+        "temperatures": {
+          "long": 0.02,
+          "short": 0.02
+        },
+        "ability": [
+          [
+            0.007337807606263982,
+            0.006621923937360179,
+            0.005369127516778523
+          ],
+          [
+            0.018344519015659956,
+            0.016554809843400447,
+            0.013422818791946308
+          ],
+          [
+            0.3254444836924526,
+            0.2718709525491581,
+            0.27022253620628756
+          ],
+          [
+            0.003527792118396145,
+            0.0031836172775770093,
+            0.002581311306143521
+          ],
+          [
+            0.05635453286459998,
+            0.10312133802066688,
+            0.006391818472355385
+          ],
+          [
+            0.3992802256589826,
+            0.3550238303666959,
+            0.17974905164867233
+          ],
+          [
+            0.11028606787567233,
+            0.10990527869008519,
+            0.08796230187062688
+          ],
+          [
+            0.03668903803131991,
+            0.033109619686800894,
+            0.026845637583892617
+          ],
+          [
+            0.005732662192393736,
+            0.00517337807606264,
+            0.0041946308724832215
+          ],
+          [
+            0.3691953087926242,
+            0.30804691207375773,
+            0.24649176327028677
+          ],
+          [
+            0.07074322644792444,
+            0.07034551329853343,
+            0.025205070842654737
+          ],
+          [
+            0.006325696212296536,
+            0.005708555118413948,
+            0.004628558204119417
+          ],
+          [
+            0.02038279890628884,
+            0.01839423315933383,
+            0.014914243102162566
+          ],
+          [
+            0.003527792118396145,
+            0.0031836172775770093,
+            0.002581311306143521
+          ],
+          [
+            0.00509569972657221,
+            0.004598558289833458,
+            0.0037285607755406414
+          ],
+          [
+            0.1264254924428439,
+            0.10159873410814645,
+            0.19839580946145033
+          ]
+        ]
+      }
+    }
+  },
+  "test_overlap": {
+    "original": {
+      "original": 1076,
+      "music_to_bus": 159,
+      "flight_to_lodging": 169,
+      "near_domain_bus_ticket": 328
+    },
+    "music_to_bus": {
+      "original": 159,
+      "music_to_bus": 254,
+      "flight_to_lodging": 134,
+      "near_domain_bus_ticket": 204
+    },
+    "flight_to_lodging": {
+      "original": 169,
+      "music_to_bus": 134,
+      "flight_to_lodging": 216,
+      "near_domain_bus_ticket": 197
+    },
+    "near_domain_bus_ticket": {
+      "original": 328,
+      "music_to_bus": 204,
+      "flight_to_lodging": 197,
+      "near_domain_bus_ticket": 446
+    }
+  },
+  "predictions_sha256": "bd76d5333078b7fb69a84d08956aaca643901e2c17d3d150afdc5b3999f8bed3",
+  "folds_sha256": "d0e82f5dd05780efdbf539df8404df264cd7f3209e9aa8da13f08faedbd6bd6e"
+}

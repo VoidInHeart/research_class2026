@@ -121,6 +121,15 @@ class Recognizer:
                                                token_pattern=r"(?u)\b\w+\b", dtype=np.float32)
             self.vectorizer.fit(texts)
         features = self.encode(texts)
+        return self.fit_centroids(features, labels, self.known)
+
+    def fit_centroids(self, features, labels, known):
+        """Fit class prototypes from already normalized text features."""
+        self.known = _intent_order(known)
+        labels = np.asarray(labels)
+        if (features.ndim != 2 or labels.shape != (features.shape[0],)
+                or set(labels) != set(self.known)):
+            raise ValueError("fit features must align with labels covering all declared known intents")
         means = np.vstack([np.asarray(features[labels == label].mean(axis=0)).ravel()
                            for label in self.known])
         self.centroids = normalize(means, axis=1)
@@ -141,11 +150,18 @@ class Recognizer:
         known-only intent NLL on a prespecified grid; it never defines the gate.
         """
         rows = list(rows)
+        cosines = self._cosines(self.encode([r["text"] for r in rows]))
+        return self.calibrate_scores(cosines, rows)
+
+    def calibrate_scores(self, cosines, rows):
+        """Apply the same gate and temperature fit to cached raw cosine scores."""
         labels = np.asarray([r["intent"] for r in rows], dtype=str)
+        cosines = np.asarray(cosines, dtype=np.float64)
+        if cosines.shape != (len(labels), len(self.known)) or not np.isfinite(cosines).all():
+            raise ValueError("calibration requires a finite row-by-known-intent score matrix")
         in_scope = np.isin(labels, self.known)
         if not in_scope.any() or in_scope.all():
             raise ValueError("calibration requires both known and held-out unknown requests")
-        cosines = self._cosines(self.encode([r["text"] for r in rows]))
         maxima = cosines.max(axis=1)
         thresholds = np.r_[np.unique(maxima), np.nextafter(maxima.max(), np.inf)]
         counts_known = np.searchsorted(np.sort(maxima[in_scope]), thresholds, side="left")

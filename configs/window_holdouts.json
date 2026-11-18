@@ -1,0 +1,18 @@
+{
+  "original": {
+    "dev_unknown": ["FindMovies", "PlayMovie", "BuyMovieTickets", "GetTimesForMovie"],
+    "test_unknown": ["CheckBalance", "TransferMoney", "GetWeather"]
+  },
+  "music_to_bus": {
+    "dev_unknown": ["LookupSong", "PlaySong"],
+    "test_unknown": ["FindBus", "BuyBusTicket"]
+  },
+  "flight_to_lodging": {
+    "dev_unknown": ["SearchFlight", "ReserveFlight"],
+    "test_unknown": ["SearchLodging", "ReserveLodging"]
+  },
+  "near_domain_bus_ticket": {
+    "dev_unknown": ["CheckBalance"],
+    "test_unknown": ["BuyBusTicket"]
+  }
+}
