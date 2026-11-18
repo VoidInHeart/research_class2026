@@ -19,6 +19,8 @@ def main():
     run.add_argument("--out", required=True)
     run.add_argument("--seed", type=int, default=1118)
     run.add_argument("--encoder", choices=["tfidf","minilm"], default="tfidf")
+    run.add_argument("--recognition-window", choices=["recent5", "original"], default="recent5",
+                     help="first-layer context; recent5 keeps the latest five utterances")
     run.add_argument("--model-path", help="local MiniLM model snapshot")
     run.add_argument("--backend", choices=["retrieval","lora"], default="retrieval")
     run.add_argument("--base-path")

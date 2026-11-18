@@ -10,14 +10,14 @@ from zipfile import BadZipFile
 import numpy as np
 from scipy.special import softmax
 
-from .routing import Recognizer, _intent_order, _local_snapshot
+from .routing import Recognizer, _intent_order, _local_snapshot, recent_five
 
 
 def window_text(text, view):
     if view == "long":
         return text
     if view == "short":
-        return "\n".join(text.splitlines()[-5:])
+        return recent_five(text)
     raise ValueError(f"Unknown window: {view}")
 
 
@@ -51,7 +51,7 @@ class WindowFeatures:
     """The vocabulary and centroids use only this fold's fit rows. Inputs keep stable IDs."""
 
     def __init__(self, rows, encoder, model_path, cache_dir):
-        self.rec = Recognizer(encoder, model_path)
+        self.rec = Recognizer(encoder, model_path, window="original")
         rows = sorted(rows, key=lambda row: row["id"])
         self.index = {row["id"]: i for i, row in enumerate(rows)}
         if not rows or len(self.index) != len(rows):
@@ -98,7 +98,7 @@ class WindowFeatures:
         fit_indices = [self.index[row["id"]] for row in fit]
         phase_indices = {part: [self.index[row["id"]] for row in rows] for part, rows in phases.items()}
         if self.rec.encoder == "tfidf":
-            rec = Recognizer("tfidf")
+            rec = Recognizer("tfidf", window="original")
             rec.fit([{"text": window_text(self.texts[i], view), "intent": row["intent"]}
                      for i, row in zip(fit_indices, fit)], known)
             return {part: rec._cosines(rec.encode([window_text(self.texts[i], view) for i in indices]))

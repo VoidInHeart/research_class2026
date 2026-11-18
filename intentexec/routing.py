@@ -32,6 +32,11 @@ def _texts(items):
     return values
 
 
+def recent_five(text):
+    """SGD prefixes store one speaker's utterance per line."""
+    return "\n".join(text.splitlines()[-5:])
+
+
 def _local_snapshot(path):
     if path is None:
         raise ValueError("encoder=minilm requires a local model_path")
@@ -55,10 +60,13 @@ def _local_snapshot(path):
 class Recognizer:
     """Known-class centroid cosine scores, with independently calibrated OOS gate."""
 
-    def __init__(self, encoder="tfidf", model_path=None):
+    def __init__(self, encoder="tfidf", model_path=None, window="recent5"):
         if encoder not in ("tfidf", "minilm"):
             raise ValueError("encoder must be tfidf or minilm")
+        if window not in ("recent5", "original"):
+            raise ValueError("recognition window must be recent5 or original")
         self.encoder = encoder
+        self.window = window
         self.model_path = str(Path(model_path).expanduser().resolve()) if model_path is not None else None
         self.threshold = None
         self.temperature = None
@@ -83,9 +91,18 @@ class Recognizer:
         state["_minilm"] = None
         return state
 
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+        # Runs saved before the recent-five default learned full-prefix prototypes.
+        self.__dict__.setdefault("window", "original")
+
+    def _windowed_texts(self, texts):
+        values = _texts(texts)
+        return [recent_five(text) for text in values] if self.window == "recent5" else values
+
     def encode(self, texts):
         """Return normalized raw text features, reusable by an embedding baseline."""
-        values = _texts(texts)
+        values = self._windowed_texts(texts)
         if self.encoder == "tfidf":
             if not hasattr(self, "vectorizer"):
                 raise RuntimeError("fit the recognizer before encoding with TF-IDF")
@@ -115,11 +132,11 @@ class Recognizer:
         labels = np.asarray([r["intent"] for r in rows])
         if set(labels) != set(self.known):
             raise ValueError("fit rows must contain all and only the declared known intents")
-        texts = _texts([r["text"] for r in rows])
+        texts = [r["text"] for r in rows]
         if self.encoder == "tfidf":
             self.vectorizer = TfidfVectorizer(ngram_range=(1, 2), sublinear_tf=True,
                                                token_pattern=r"(?u)\b\w+\b", dtype=np.float32)
-            self.vectorizer.fit(texts)
+            self.vectorizer.fit(self._windowed_texts(texts))
         features = self.encode(texts)
         return self.fit_centroids(features, labels, self.known)
 

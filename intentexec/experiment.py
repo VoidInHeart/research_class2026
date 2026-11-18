@@ -188,7 +188,8 @@ def run(args):
     start = time.perf_counter()
     pool = make_pool(split["fit"], schema, config)
     names, base = list(pool.experts), pool.base
-    encoder = Recognizer(encoder=args.encoder, model_path=args.model_path)
+    encoder = Recognizer(encoder=args.encoder, model_path=args.model_path,
+                         window=getattr(args, "recognition_window", "recent5"))
     encoder.fit(split["fit"], known).calibrate(split["cal"])
     encoder_setup_ms = measure_ms(start)
     start = time.perf_counter()
@@ -241,7 +242,8 @@ def run(args):
     manifest = root / "manifest.json"
     summary = {"quality": quality, "diagnostics": oracle, "paired": paired, "warm_single_client": timings,
                "provenance": provenance(), "split_metadata": split["metadata"],
-               "recognition": {"threshold": encoder.threshold, "temperature": encoder.temperature},
+               "recognition": {"window": encoder.window, "threshold": encoder.threshold,
+                               "temperature": encoder.temperature},
                "data_manifest": json.loads(manifest.read_text(encoding="utf8")) if manifest.is_file() else None,
                "setup_ms": encoder_setup_ms, "router_supervision_ms": train_call_ms, "router_fit_ms": fit_ms,
                "offline_router_executor_calls": len(router_rows)*len(names),
