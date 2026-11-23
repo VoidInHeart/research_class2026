@@ -101,10 +101,15 @@ def policy_decisions(bundle, public_rows):
     return records
 
 
-def infer_one(bundle, pool, policy, text):
+def infer_one(bundle, pool, policy, text, *, repair_arguments=False):
     """Deployment path. One executor call, including when the detector bypasses stage two."""
     if "supported_policies" in bundle and policy not in bundle["supported_policies"]:
         raise ValueError(f"This run supports {', '.join(bundle['supported_policies'])}")
+    if repair_arguments:
+        from .query_grounding import ground_call
+        from .transaction_executor import RepairedRetrievalPool
+        if policy != "matrix" or not isinstance(pool, RepairedRetrievalPool):
+            raise ValueError("Argument repair requires matrix routing and the retrieval-grounded backend")
     start = time.perf_counter()
     gate_ms = route_ms = 0.
     gate = None
@@ -124,6 +129,8 @@ def infer_one(bundle, pool, policy, text):
             route_ms = measure_ms(then)
     then = time.perf_counter()
     call = pool.execute(name, text)
+    if repair_arguments and not gate:
+        call = ground_call(pool, text, call)
     exec_ms = measure_ms(then)
     return {"executor": name, "pred_oos": gate, "intent_result": intent_result, "call": call, "recognition_ms": gate_ms,
             "route_ms": route_ms, "execution_ms": exec_ms, "total_ms": measure_ms(start)}
