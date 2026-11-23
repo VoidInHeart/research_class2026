@@ -76,6 +76,13 @@ python -m intentexec run --encoder minilm --model-path '../code/models/models--s
 python -m intentexec.refresh_saved_matrix --run-dir artifacts/verified-minilm --out artifacts/my-refreshed-matrix
 ```
 
+在已保存的 `retrieval-grounded` 运行上，`matrix` 推理支持单专家参数纠错和按需双专家复核。默认 `--expert-review off` 复现原输出；用 `single` 保持一次执行器调用，用 `review` 允许至多增加一位专家。两种模式均返回一份工具调用，拒识请求直接交给兜底。新模式的 `proposal_count`、`secondary_executor`、`review_reason` 和 `review_action` 可用于核对成本和采用了哪份提案。[确认结果、适用范围与调用开销](reports/expert_review/REPORT.md)
+
+```powershell
+python -m intentexec predict --run-dir artifacts/my-refreshed-matrix --policy matrix --expert-review single --text 'USER: Could you find a salon in Lafayette?'
+python -m intentexec predict --run-dir artifacts/my-refreshed-matrix --policy matrix --expert-review review --text 'USER: Could you find a salon in Lafayette?'
+```
+
 ## LoRA 训练与评估
 
 准备本地指令模型目录（含聊天模板及模型权重），安装与硬件匹配的 PyTorch 和 [LoRA 依赖](requirements-lora.txt)。下面的路径需替换成实际基座位置，示例 8192 为总上下文，要求模型支持该长度。训练与评估使用相同的 schema、划分、种子和提示预算。

@@ -1,0 +1,110 @@
+{
+  "pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "gate_lock_sha256": "8ed94606b53baf062dbd52ab30a05656626f05b0b70f66d58d303ee01e7bf1d4",
+  "gate_model_sha256": "19d52c5ddd26dabe0de9eb85a2962cdb2414f17f60088900fa4fc668b043ef98",
+  "matrix_lock_sha256": "df1695ac00147a2ca68b8f8e580b0bf94db2e8d8d29fe4f378d23cf643f4b790",
+  "repair_source_sha256_lf": "0c24a6bf0f94f369986cb8bf73adb7dcc742c6b1082e5dbc35ef7d802a9b88e6",
+  "shared_services": [
+    "Buses_1",
+    "Events_1",
+    "Homes_1",
+    "Hotels_1",
+    "Music_1",
+    "RentalCars_1",
+    "RideSharing_1",
+    "Travel_1",
+    "Weather_1"
+  ],
+  "outside_services": [
+    "Alarm_1",
+    "Banks_2",
+    "Flights_3",
+    "Hotels_4",
+    "Media_2",
+    "Movies_2",
+    "Restaurants_2",
+    "Services_4"
+  ],
+  "revision": "e852981ae34990f4358979625854259302feaa78",
+  "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+  "split": "dev",
+  "source_lock_sha256": "e90d3ef9012bee9ef9eebe79ae85c359f3d9a90ba579ac0bb015a072dd4ef08f",
+  "known_order": [
+    "BookAppointment",
+    "BuyBusTicket",
+    "BuyEventTickets",
+    "FindAttractions",
+    "FindBus",
+    "FindEvents",
+    "FindProvider",
+    "FindRestaurants",
+    "GetEvents",
+    "GetRide",
+    "LookupSong",
+    "PlaySong",
+    "ReserveFlight",
+    "ReserveLodging",
+    "ReserveRestaurant",
+    "SearchFlight",
+    "SearchLodging"
+  ],
+  "unknown_intents": [
+    "CheckBalance",
+    "GetWeather"
+  ],
+  "gate_cutoff": 0.7813705478642614,
+  "prior_train_shards": 127,
+  "prior_train_requests": 50623,
+  "previous_scored_sha256": {
+    "dev": "702f413a3e4168e512682e82db3215c94fc3988b74b5b0708e06f1b863397ed8",
+    "test": "a9d57b204f960d3dc101a385b70e655035801fec6ece8c1c5b8ab5685e33980f"
+  },
+  "previous_scored_dialogues": {
+    "dev": 544,
+    "test": 404
+  },
+  "raw_requests": 7666,
+  "raw_dialogues": 2482,
+  "excluded": {
+    "connected_to_train": 22,
+    "current_service_not_executable": 3345,
+    "previously_scored_dialogue_or_template": 1367,
+    "current_intent_outside_fold": 1098,
+    "joins_official_splits": 78
+  },
+  "observations_sha256": "8e35dc835fa27ead098155fe61b2494778e1d9e5bc71d308def66803a7d837b7",
+  "unique_requests": 1756,
+  "dialogues": 1092,
+  "executor_order": [
+    "search",
+    "transaction",
+    "context",
+    "base"
+  ],
+  "counts": {
+    "known": 1489,
+    "test_unknown": 267
+  },
+  "counts_by_intent": {
+    "BuyBusTicket": 211,
+    "BuyEventTickets": 194,
+    "FindAttractions": 148,
+    "FindBus": 178,
+    "FindEvents": 233,
+    "GetRide": 103,
+    "GetWeather": 267,
+    "LookupSong": 121,
+    "PlaySong": 112,
+    "SearchLodging": 189
+  },
+  "counts_by_service": {
+    "Buses_1": 389,
+    "Events_1": 427,
+    "Hotels_1": 189,
+    "Music_1": 233,
+    "RideSharing_1": 103,
+    "Travel_1": 148,
+    "Weather_1": 267
+  },
+  "admitted": 899
+}

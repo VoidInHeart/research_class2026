@@ -1,0 +1,7 @@
+{
+  "observations_sha256": "05cc53ca991494c85e681840235315e62a7779503f474818db4e87c4bcd20521",
+  "verified_raw_prefixes_and_gold": 2032,
+  "prior75_scored_dialogue_overlaps": 0,
+  "prior75_scored_request_overlaps": 0,
+  "any_exposed_long_or_recent5_template_overlap": 0
+}

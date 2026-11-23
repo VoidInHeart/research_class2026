@@ -39,6 +39,8 @@ def main():
     predict.add_argument("--run-dir", required=True)
     predict.add_argument("--policy", choices=["always_base","fixed","lookup","matrix","mlp","embedding","matrix_no_gate"], default="matrix")
     predict.add_argument("--text", required=True)
+    predict.add_argument("--expert-review", choices=["off", "single", "review"], default="off",
+                         help="ground one proposal or selectively request a second draft on retrieval-grounded matrix runs")
     jev = sub.add_parser("compare-jev", help="explicitly run the paid hosted Jev benchmark")
     jev.add_argument("--run-dir", required=True)
     jev.add_argument("--out", required=True)
@@ -68,7 +70,8 @@ def main():
     elif args.command == "predict":
         from .experiment import infer_one, load_run
         bundle, pool = load_run(args.run_dir)
-        print(json.dumps(infer_one(bundle, pool, args.policy, args.text), ensure_ascii=False, indent=2))
+        print(json.dumps(infer_one(bundle, pool, args.policy, args.text, expert_review=args.expert_review),
+                         ensure_ascii=False, indent=2))
     else:
         from .compare import compare
         if args.limit < 1 or args.timeout < 1:

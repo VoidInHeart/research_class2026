@@ -6,3 +6,5 @@ reports/support_validation/*.json -text whitespace=trailing-space,cr-at-eol
 reports/transaction_execution/*.json -text whitespace=trailing-space,cr-at-eol
 reports/refreshed_routing/**/*.json -text whitespace=trailing-space,cr-at-eol
 reports/refreshed_routing/*.json -text whitespace=trailing-space,cr-at-eol
+reports/expert_review/**/*.json -text whitespace=trailing-space,cr-at-eol
+reports/expert_review/*.json -text whitespace=trailing-space,cr-at-eol
