@@ -1,0 +1,241 @@
+{
+  "shards": {
+    "repository": "google-research-datasets/dstc8-schema-guided-dialogue",
+    "revision": "e852981ae34990f4358979625854259302feaa78",
+    "split": "train",
+    "profile": "routing-supplement",
+    "sha256": {
+      "schema.json": "97b6c21673aa7e5c2d1ceef52aa35170c565223cdcbf33bb24c69739bda04a82",
+      "dialogues_039.json": "155da94cb95bdbc95e52062459e46b98cce4c8e049b956c5f285ce7a821a08c3",
+      "dialogues_040.json": "c807c28a3d1dbbe8ecaddd96ed97ac7b67918b12181e07eb89fb046ef6084891",
+      "dialogues_041.json": "d24455e00ea88b20a94cfd54581b30b224c207b20a197484ef9b27022af47f05",
+      "dialogues_044.json": "8d3024399540122bef422925f2508ead00bcd85e4f07e16236de87747555fe5f",
+      "dialogues_058.json": "7ff43d0030fa5f32eb92aa87f3b4086d760d55ebefe0318b17ccf6c11795556e",
+      "dialogues_061.json": "1b1b9c6c8a8113f49e18998512f7d5fea2141be7bec48aac201f306586ac15ce",
+      "dialogues_062.json": "4c4d76ffc33419e835087d081ff1d469f0b9e65b8d5c372b43d4680c286bbd45",
+      "dialogues_067.json": "d16cfeda3585639f9ccbac0b5d1fa5c755d9b87bafa95ac737ddd40d7b1fe7a7",
+      "dialogues_068.json": "ba2f245f26ba2c13463d34f8a8d1635347974a9f0e423bda53ca4bc15fb82a17",
+      "dialogues_069.json": "319035b2843a089f352f2e7fbb06544c7d68d86ebbba57ebc3bbf3725c07a9cd",
+      "dialogues_072.json": "c0e8dd91f70c150ef02118b15152da7f973dcf261112a1604bfa4823d276829c",
+      "dialogues_075.json": "4e1ce624c664a402ee31f69083fc263346aef3ed70d866dc940f4565c1c3e9b8",
+      "dialogues_076.json": "72567237e51a2282a34d66acbc6beeb23b400f29da404d98de6f796686c720ec"
+    }
+  },
+  "quarantined_prior_requests": 15097,
+  "quarantined_prior_dialogues": 4884,
+  "new_requests_before_filter": 5958,
+  "new_dialogues_before_filter": 1664,
+  "folds": {
+    "near_domain_bus_ticket": {
+      "counts": {
+        "known": 2357,
+        "test_unknown": 11
+      },
+      "excluded_rows": {
+        "connected_to_pilot_template": 7,
+        "contains_calibration_unknown": 253,
+        "contains_out_of_catalog_intent": 3330
+      },
+      "excluded_test_unknown_by_reason": {
+        "contains_out_of_catalog_intent": 129
+      },
+      "out_of_catalog_combinations_for_excluded_test_unknown": [
+        {
+          "outside_intents": [
+            "GetEventDates"
+          ],
+          "requests": 129
+        }
+      ],
+      "dialogues": 706,
+      "related_known": "FindBus",
+      "known_order": [
+        "BookAppointment",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ]
+    },
+    "near_lodging_booking": {
+      "counts": {
+        "known": 2131,
+        "test_unknown": 237
+      },
+      "excluded_rows": {
+        "connected_to_pilot_template": 7,
+        "contains_calibration_unknown": 253,
+        "contains_out_of_catalog_intent": 3330
+      },
+      "excluded_test_unknown_by_reason": {},
+      "out_of_catalog_combinations_for_excluded_test_unknown": [],
+      "dialogues": 706,
+      "related_known": "SearchLodging",
+      "known_order": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ]
+    },
+    "near_event_booking": {
+      "counts": {
+        "known": 2230,
+        "test_unknown": 138
+      },
+      "excluded_rows": {
+        "connected_to_pilot_template": 7,
+        "contains_calibration_unknown": 253,
+        "contains_out_of_catalog_intent": 3330
+      },
+      "excluded_test_unknown_by_reason": {
+        "contains_out_of_catalog_intent": 114
+      },
+      "out_of_catalog_combinations_for_excluded_test_unknown": [
+        {
+          "outside_intents": [
+            "GetCarsAvailable",
+            "ReserveCar"
+          ],
+          "requests": 40
+        },
+        {
+          "outside_intents": [
+            "GetEventDates"
+          ],
+          "requests": 74
+        }
+      ],
+      "dialogues": 706,
+      "related_known": "FindEvents",
+      "known_order": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ]
+    },
+    "music_transfer": {
+      "counts": {
+        "known": 2368,
+        "test_unknown": 0
+      },
+      "excluded_rows": {
+        "connected_to_pilot_template": 7,
+        "contains_calibration_unknown": 253,
+        "contains_out_of_catalog_intent": 3330
+      },
+      "excluded_test_unknown_by_reason": {},
+      "out_of_catalog_combinations_for_excluded_test_unknown": [],
+      "dialogues": 706,
+      "related_known": null,
+      "known_order": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ]
+    },
+    "original_domains": {
+      "counts": {
+        "known": 2368,
+        "test_unknown": 0
+      },
+      "excluded_rows": {
+        "connected_to_pilot_template": 7,
+        "contains_calibration_unknown": 1629,
+        "contains_out_of_catalog_intent": 1954
+      },
+      "excluded_test_unknown_by_reason": {
+        "contains_out_of_catalog_intent": 149
+      },
+      "out_of_catalog_combinations_for_excluded_test_unknown": [
+        {
+          "outside_intents": [
+            "TransferMoney"
+          ],
+          "requests": 149
+        }
+      ],
+      "dialogues": 706,
+      "related_known": null,
+      "known_order": [
+        "BookAppointment",
+        "BuyBusTicket",
+        "BuyEventTickets",
+        "FindAttractions",
+        "FindBus",
+        "FindEvents",
+        "FindProvider",
+        "FindRestaurants",
+        "GetEvents",
+        "GetRide",
+        "LookupSong",
+        "PlaySong",
+        "ReserveFlight",
+        "ReserveLodging",
+        "ReserveRestaurant",
+        "SearchFlight",
+        "SearchLodging"
+      ]
+    }
+  },
+  "prior_manifests_sha256": {
+    "sgd": "0fafe4a532e752b4b6cf00b4275b3b202bdaae1c909ca95d7c1c881211f0bace",
+    "sgd-support-holdout": "57a7a4b71803a8b578bf32803ae1f546423754eb684931b8cae6eaac7ae42ec1",
+    "sgd-routing-confirmation": "88af616398d27b2fcfa1eb982a7be3334129f6001990628347c3f6d8e0a572d7"
+  },
+  "encoder": "da169a0a8f75b04bac448ffeab990b396edf9db8b9a8416e3650ae43455b4fef",
+  "pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "gate_lock_sha256": "8ed94606b53baf062dbd52ab30a05656626f05b0b70f66d58d303ee01e7bf1d4",
+  "repair_source_sha256_lf": "0c24a6bf0f94f369986cb8bf73adb7dcc742c6b1082e5dbc35ef7d802a9b88e6",
+  "unique_requests": 2368,
+  "fold_records": 11840,
+  "observations_sha256": "99950b23c64a82d49b2da125cb4454380c63eb5137491f7913e83d80dd06a38a"
+}

@@ -1,0 +1,5065 @@
+{
+  "policy_names": [
+    "legacy",
+    "always_base",
+    "fixed_expert",
+    "fixed_all",
+    "matrix3",
+    "matrix4",
+    "conservative",
+    "selected"
+  ],
+  "executor_order": [
+    "search",
+    "transaction",
+    "context",
+    "base"
+  ],
+  "bootstrap_unit": "dialogue",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 1118,
+  "development_sha256": "df1695ac00147a2ca68b8f8e580b0bf94db2e8d8d29fe4f378d23cf643f4b790",
+  "old_calls_sha256": "852e3bb3fab1654010860dfa94aca877b282ee083904c6832c14d4aa0513ebb0",
+  "all_outcomes_sha256": "0762328a6e2143a3c16d6292b2cceea4ecd7d71c74cb32bd0ff3257c36f74216",
+  "support_predictions_sha256": "92654b9fca967e473529e2d86c7eb0814762b9a9948a9cdb4be8e0b8162fda12",
+  "verified_old_calls": 10967,
+  "all_calls": 15280,
+  "unique_requests": 3820,
+  "fold_observations": 16661,
+  "choices_sha256": "ee684e687c6a5c4f8d871efcfabc015525c4474ebabdc041710850b2092a4844",
+  "related_known": {
+    "near_domain_bus_ticket": "FindBus",
+    "near_lodging_booking": "SearchLodging",
+    "near_event_booking": "FindEvents",
+    "music_transfer": null,
+    "original_domains": null
+  },
+  "folds": {
+    "near_domain_bus_ticket": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "gate_rejected": 73,
+        "oracle_exact": 916,
+        "gate_oracle_exact": 911,
+        "gate_three_expert_oracle_exact": 892,
+        "policies": {
+          "legacy": {
+            "exact": 328,
+            "tool": 1234,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 2758,
+              "transaction": 138,
+              "context": 267,
+              "base": 73
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 90,
+              "loss": 504,
+              "net": -414,
+              "difference": -0.12793572311495674,
+              "ci95": [
+                -0.14303443075159145,
+                -0.11326460257651445
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3163,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 504,
+              "loss": 90,
+              "net": 414,
+              "difference": 0.12793572311495674,
+              "ci95": [
+                0.11326460257651444,
+                0.14303443075159145
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 753,
+            "tool": 1750,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 3163,
+              "context": 0,
+              "base": 73
+            },
+            "vs_legacy": {
+              "gain": 527,
+              "loss": 102,
+              "net": 425,
+              "difference": 0.13133498145859085,
+              "ci95": [
+                0.11640643971348483,
+                0.14659956001432028
+              ]
+            },
+            "vs_base": {
+              "gain": 82,
+              "loss": 71,
+              "net": 11,
+              "difference": 0.003399258343634116,
+              "ci95": [
+                -0.00370730834200311,
+                0.01063288853142183
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3163,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 504,
+              "loss": 90,
+              "net": 414,
+              "difference": 0.12793572311495674,
+              "ci95": [
+                0.11326460257651444,
+                0.14303443075159145
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 757,
+            "tool": 1750,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 376,
+              "transaction": 2374,
+              "context": 413,
+              "base": 73
+            },
+            "vs_legacy": {
+              "gain": 500,
+              "loss": 71,
+              "net": 429,
+              "difference": 0.13257107540173052,
+              "ci95": [
+                0.11824248329154473,
+                0.14702301762882797
+              ]
+            },
+            "vs_base": {
+              "gain": 67,
+              "loss": 52,
+              "net": 15,
+              "difference": 0.0046353522867737945,
+              "ci95": [
+                -0.0015785423884101123,
+                0.011167121665294974
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 739,
+            "tool": 1829,
+            "accepted_to_base": 2932,
+            "executor_counts": {
+              "search": 197,
+              "transaction": 34,
+              "context": 0,
+              "base": 3005
+            },
+            "vs_legacy": {
+              "gain": 493,
+              "loss": 82,
+              "net": 411,
+              "difference": 0.12700865265760197,
+              "ci95": [
+                0.11237938679963459,
+                0.14196175943411324
+              ]
+            },
+            "vs_base": {
+              "gain": 8,
+              "loss": 11,
+              "net": -3,
+              "difference": -0.000927070457354759,
+              "ci95": [
+                -0.0036498854689096505,
+                0.001823735939475961
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3132,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 31,
+              "context": 0,
+              "base": 3205
+            },
+            "vs_legacy": {
+              "gain": 504,
+              "loss": 90,
+              "net": 414,
+              "difference": 0.12793572311495674,
+              "ci95": [
+                0.11326460257651444,
+                0.14303443075159145
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3163,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 504,
+              "loss": 90,
+              "net": 414,
+              "difference": 0.12793572311495674,
+              "ci95": [
+                0.11326460257651444,
+                0.14303443075159145
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "known": {
+        "n": 3018,
+        "dialogues": 1210,
+        "gate_rejected": 69,
+        "oracle_exact": 786,
+        "gate_oracle_exact": 781,
+        "gate_three_expert_oracle_exact": 765,
+        "policies": {
+          "legacy": {
+            "exact": 316,
+            "tool": 1219,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 2544,
+              "transaction": 138,
+              "context": 267,
+              "base": 69
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 89,
+              "loss": 404,
+              "net": -315,
+              "difference": -0.10437375745526839,
+              "ci95": [
+                -0.118270426946346,
+                -0.09093552410511602
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 631,
+            "tool": 1686,
+            "accepted_to_base": 2949,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3018
+            },
+            "vs_legacy": {
+              "gain": 404,
+              "loss": 89,
+              "net": 315,
+              "difference": 0.10437375745526839,
+              "ci95": [
+                0.090935524105116,
+                0.118270426946346
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 638,
+            "tool": 1621,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2949,
+              "context": 0,
+              "base": 69
+            },
+            "vs_legacy": {
+              "gain": 423,
+              "loss": 101,
+              "net": 322,
+              "difference": 0.10669317428760769,
+              "ci95": [
+                0.09246221492041391,
+                0.12166218058312633
+              ]
+            },
+            "vs_base": {
+              "gain": 69,
+              "loss": 62,
+              "net": 7,
+              "difference": 0.0023194168323392977,
+              "ci95": [
+                -0.004899281151169265,
+                0.00968636269193906
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 631,
+            "tool": 1686,
+            "accepted_to_base": 2949,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3018
+            },
+            "vs_legacy": {
+              "gain": 404,
+              "loss": 89,
+              "net": 315,
+              "difference": 0.10437375745526839,
+              "ci95": [
+                0.090935524105116,
+                0.118270426946346
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 642,
+            "tool": 1621,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 376,
+              "transaction": 2162,
+              "context": 411,
+              "base": 69
+            },
+            "vs_legacy": {
+              "gain": 396,
+              "loss": 70,
+              "net": 326,
+              "difference": 0.10801855533465872,
+              "ci95": [
+                0.09472518823717159,
+                0.1216541907394649
+              ]
+            },
+            "vs_base": {
+              "gain": 54,
+              "loss": 43,
+              "net": 11,
+              "difference": 0.003644797879390325,
+              "ci95": [
+                -0.0026076683433213254,
+                0.009849063133755324
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 628,
+            "tool": 1708,
+            "accepted_to_base": 2718,
+            "executor_counts": {
+              "search": 197,
+              "transaction": 34,
+              "context": 0,
+              "base": 2787
+            },
+            "vs_legacy": {
+              "gain": 393,
+              "loss": 81,
+              "net": 312,
+              "difference": 0.10337972166998012,
+              "ci95": [
+                0.08997948293855795,
+                0.11706541449834724
+              ]
+            },
+            "vs_base": {
+              "gain": 8,
+              "loss": 11,
+              "net": -3,
+              "difference": -0.0009940357852882703,
+              "ci95": [
+                -0.003911406680155229,
+                0.001946019160843258
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 631,
+            "tool": 1686,
+            "accepted_to_base": 2918,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 31,
+              "context": 0,
+              "base": 2987
+            },
+            "vs_legacy": {
+              "gain": 404,
+              "loss": 89,
+              "net": 315,
+              "difference": 0.10437375745526839,
+              "ci95": [
+                0.090935524105116,
+                0.118270426946346
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 631,
+            "tool": 1686,
+            "accepted_to_base": 2949,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3018
+            },
+            "vs_legacy": {
+              "gain": 404,
+              "loss": 89,
+              "net": 315,
+              "difference": 0.10437375745526839,
+              "ci95": [
+                0.090935524105116,
+                0.118270426946346
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "unknown": {
+        "n": 218,
+        "dialogues": 117,
+        "gate_rejected": 4,
+        "oracle_exact": 130,
+        "gate_oracle_exact": 130,
+        "gate_three_expert_oracle_exact": 127,
+        "policies": {
+          "legacy": {
+            "exact": 12,
+            "tool": 15,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 214,
+              "transaction": 0,
+              "context": 0,
+              "base": 4
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 1,
+              "loss": 100,
+              "net": -99,
+              "difference": -0.4541284403669725,
+              "ci95": [
+                -0.5395441642100667,
+                -0.36443471582181264
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 111,
+            "tool": 121,
+            "accepted_to_base": 214,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 218
+            },
+            "vs_legacy": {
+              "gain": 100,
+              "loss": 1,
+              "net": 99,
+              "difference": 0.4541284403669725,
+              "ci95": [
+                0.36443471582181264,
+                0.5395441642100666
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 115,
+            "tool": 129,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 214,
+              "context": 0,
+              "base": 4
+            },
+            "vs_legacy": {
+              "gain": 104,
+              "loss": 1,
+              "net": 103,
+              "difference": 0.4724770642201835,
+              "ci95": [
+                0.38317020291319354,
+                0.5591182659932659
+              ]
+            },
+            "vs_base": {
+              "gain": 13,
+              "loss": 9,
+              "net": 4,
+              "difference": 0.01834862385321101,
+              "ci95": [
+                -0.02242152466367713,
+                0.06140350877192982
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 111,
+            "tool": 121,
+            "accepted_to_base": 214,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 218
+            },
+            "vs_legacy": {
+              "gain": 100,
+              "loss": 1,
+              "net": 99,
+              "difference": 0.4541284403669725,
+              "ci95": [
+                0.36443471582181264,
+                0.5395441642100666
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 115,
+            "tool": 129,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 212,
+              "context": 2,
+              "base": 4
+            },
+            "vs_legacy": {
+              "gain": 104,
+              "loss": 1,
+              "net": 103,
+              "difference": 0.4724770642201835,
+              "ci95": [
+                0.38317020291319354,
+                0.5591182659932659
+              ]
+            },
+            "vs_base": {
+              "gain": 13,
+              "loss": 9,
+              "net": 4,
+              "difference": 0.01834862385321101,
+              "ci95": [
+                -0.02242152466367713,
+                0.06140350877192982
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 111,
+            "tool": 121,
+            "accepted_to_base": 214,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 218
+            },
+            "vs_legacy": {
+              "gain": 100,
+              "loss": 1,
+              "net": 99,
+              "difference": 0.4541284403669725,
+              "ci95": [
+                0.36443471582181264,
+                0.5395441642100666
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 111,
+            "tool": 121,
+            "accepted_to_base": 214,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 218
+            },
+            "vs_legacy": {
+              "gain": 100,
+              "loss": 1,
+              "net": 99,
+              "difference": 0.4541284403669725,
+              "ci95": [
+                0.36443471582181264,
+                0.5395441642100666
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 111,
+            "tool": 121,
+            "accepted_to_base": 214,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 218
+            },
+            "vs_legacy": {
+              "gain": 100,
+              "loss": 1,
+              "net": 99,
+              "difference": 0.4541284403669725,
+              "ci95": [
+                0.36443471582181264,
+                0.5395441642100666
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "near_known": {
+        "n": 84,
+        "dialogues": 75,
+        "gate_rejected": 2,
+        "oracle_exact": 0,
+        "gate_oracle_exact": 0,
+        "gate_three_expert_oracle_exact": 0,
+        "policies": {
+          "legacy": {
+            "exact": 0,
+            "tool": 63,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 68,
+              "transaction": 0,
+              "context": 14,
+              "base": 2
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 0,
+            "tool": 71,
+            "accepted_to_base": 82,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 84
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 0,
+            "tool": 45,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 82,
+              "context": 0,
+              "base": 2
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 0,
+            "tool": 71,
+            "accepted_to_base": 82,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 84
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 0,
+            "tool": 50,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 65,
+              "context": 17,
+              "base": 2
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 0,
+            "tool": 71,
+            "accepted_to_base": 82,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 84
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 0,
+            "tool": 71,
+            "accepted_to_base": 82,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 84
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 0,
+            "tool": 71,
+            "accepted_to_base": 82,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 84
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "near_lodging_booking": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "gate_rejected": 133,
+        "oracle_exact": 916,
+        "gate_oracle_exact": 910,
+        "gate_three_expert_oracle_exact": 891,
+        "policies": {
+          "legacy": {
+            "exact": 587,
+            "tool": 1491,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 861,
+              "transaction": 1582,
+              "context": 660,
+              "base": 133
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 49,
+              "loss": 204,
+              "net": -155,
+              "difference": -0.04789864029666255,
+              "ci95": [
+                -0.05804818701081588,
+                -0.03810343621822202
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3103,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.04789864029666255,
+              "ci95": [
+                0.038103436218222014,
+                0.05804818701081587
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 752,
+            "tool": 1745,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 3103,
+              "context": 0,
+              "base": 133
+            },
+            "vs_legacy": {
+              "gain": 215,
+              "loss": 50,
+              "net": 165,
+              "difference": 0.05098887515451174,
+              "ci95": [
+                0.04100023311432904,
+                0.06143405316980312
+              ]
+            },
+            "vs_base": {
+              "gain": 81,
+              "loss": 71,
+              "net": 10,
+              "difference": 0.0030902348578491965,
+              "ci95": [
+                -0.004092428406998778,
+                0.010496778325383111
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3103,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.04789864029666255,
+              "ci95": [
+                0.038103436218222014,
+                0.05804818701081587
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 748,
+            "tool": 1731,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 292,
+              "transaction": 2299,
+              "context": 512,
+              "base": 133
+            },
+            "vs_legacy": {
+              "gain": 181,
+              "loss": 20,
+              "net": 161,
+              "difference": 0.04975278121137206,
+              "ci95": [
+                0.040670470072496745,
+                0.05915148346225655
+              ]
+            },
+            "vs_base": {
+              "gain": 57,
+              "loss": 51,
+              "net": 6,
+              "difference": 0.001854140914709518,
+              "ci95": [
+                -0.004271190847294206,
+                0.007886737361725139
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 739,
+            "tool": 1829,
+            "accepted_to_base": 2870,
+            "executor_counts": {
+              "search": 198,
+              "transaction": 35,
+              "context": 0,
+              "base": 3003
+            },
+            "vs_legacy": {
+              "gain": 193,
+              "loss": 41,
+              "net": 152,
+              "difference": 0.04697156983930779,
+              "ci95": [
+                0.03730829837823288,
+                0.056918300126177414
+              ]
+            },
+            "vs_base": {
+              "gain": 8,
+              "loss": 11,
+              "net": -3,
+              "difference": -0.000927070457354759,
+              "ci95": [
+                -0.0036498854689096505,
+                0.001823735939475961
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3072,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 31,
+              "context": 0,
+              "base": 3205
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.04789864029666255,
+              "ci95": [
+                0.038103436218222014,
+                0.05804818701081587
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 3103,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.04789864029666255,
+              "ci95": [
+                0.038103436218222014,
+                0.05804818701081587
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "known": {
+        "n": 3099,
+        "dialogues": 1180,
+        "gate_rejected": 83,
+        "oracle_exact": 915,
+        "gate_oracle_exact": 909,
+        "gate_three_expert_oracle_exact": 890,
+        "policies": {
+          "legacy": {
+            "exact": 586,
+            "tool": 1484,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 861,
+              "transaction": 1575,
+              "context": 580,
+              "base": 83
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 49,
+              "loss": 204,
+              "net": -155,
+              "difference": -0.0500161342368506,
+              "ci95": [
+                -0.06074653697728678,
+                -0.039677782886334625
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 741,
+            "tool": 1800,
+            "accepted_to_base": 3016,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3099
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.0500161342368506,
+              "ci95": [
+                0.03967778288633461,
+                0.06074653697728678
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 751,
+            "tool": 1738,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 3016,
+              "context": 0,
+              "base": 83
+            },
+            "vs_legacy": {
+              "gain": 215,
+              "loss": 50,
+              "net": 165,
+              "difference": 0.05324298160696999,
+              "ci95": [
+                0.04288928051254296,
+                0.06341001806976983
+              ]
+            },
+            "vs_base": {
+              "gain": 81,
+              "loss": 71,
+              "net": 10,
+              "difference": 0.003226847370119393,
+              "ci95": [
+                -0.004285380983750549,
+                0.010721334671311578
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 741,
+            "tool": 1800,
+            "accepted_to_base": 3016,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3099
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.0500161342368506,
+              "ci95": [
+                0.03967778288633461,
+                0.06074653697728678
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 747,
+            "tool": 1724,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 292,
+              "transaction": 2288,
+              "context": 436,
+              "base": 83
+            },
+            "vs_legacy": {
+              "gain": 181,
+              "loss": 20,
+              "net": 161,
+              "difference": 0.05195224265892223,
+              "ci95": [
+                0.04261229545454545,
+                0.06106112160902268
+              ]
+            },
+            "vs_base": {
+              "gain": 57,
+              "loss": 51,
+              "net": 6,
+              "difference": 0.001936108422071636,
+              "ci95": [
+                -0.004221226483005094,
+                0.008252666464013333
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 738,
+            "tool": 1822,
+            "accepted_to_base": 2783,
+            "executor_counts": {
+              "search": 198,
+              "transaction": 35,
+              "context": 0,
+              "base": 2866
+            },
+            "vs_legacy": {
+              "gain": 193,
+              "loss": 41,
+              "net": 152,
+              "difference": 0.04904808002581478,
+              "ci95": [
+                0.0386189512127347,
+                0.05933059165855487
+              ]
+            },
+            "vs_base": {
+              "gain": 8,
+              "loss": 11,
+              "net": -3,
+              "difference": -0.000968054211035818,
+              "ci95": [
+                -0.003605671683970334,
+                0.001633453119895459
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 741,
+            "tool": 1800,
+            "accepted_to_base": 2985,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 31,
+              "context": 0,
+              "base": 3068
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.0500161342368506,
+              "ci95": [
+                0.03967778288633461,
+                0.06074653697728678
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 741,
+            "tool": 1800,
+            "accepted_to_base": 3016,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3099
+            },
+            "vs_legacy": {
+              "gain": 204,
+              "loss": 49,
+              "net": 155,
+              "difference": 0.0500161342368506,
+              "ci95": [
+                0.03967778288633461,
+                0.06074653697728678
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "unknown": {
+        "n": 137,
+        "dialogues": 137,
+        "gate_rejected": 50,
+        "oracle_exact": 1,
+        "gate_oracle_exact": 1,
+        "gate_three_expert_oracle_exact": 1,
+        "policies": {
+          "legacy": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 7,
+              "context": 80,
+              "base": 50
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 87,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 137
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 87,
+              "context": 0,
+              "base": 50
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 87,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 137
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 11,
+              "context": 76,
+              "base": 50
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 87,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 137
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 87,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 137
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 1,
+            "tool": 7,
+            "accepted_to_base": 87,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 137
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "near_known": {
+        "n": 353,
+        "dialogues": 298,
+        "gate_rejected": 28,
+        "oracle_exact": 85,
+        "gate_oracle_exact": 81,
+        "gate_three_expert_oracle_exact": 75,
+        "policies": {
+          "legacy": {
+            "exact": 37,
+            "tool": 133,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 12,
+              "transaction": 72,
+              "context": 241,
+              "base": 28
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 10,
+              "loss": 12,
+              "net": -2,
+              "difference": -0.0056657223796034,
+              "ci95": [
+                -0.028985507246376812,
+                0.017501822157434354
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 39,
+            "tool": 120,
+            "accepted_to_base": 325,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 353
+            },
+            "vs_legacy": {
+              "gain": 12,
+              "loss": 10,
+              "net": 2,
+              "difference": 0.0056657223796034,
+              "ci95": [
+                -0.017501822157434403,
+                0.028985507246376812
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 46,
+            "tool": 184,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 325,
+              "context": 0,
+              "base": 28
+            },
+            "vs_legacy": {
+              "gain": 22,
+              "loss": 13,
+              "net": 9,
+              "difference": 0.025495750708215296,
+              "ci95": [
+                -0.006042683026317933,
+                0.058823529411764705
+              ]
+            },
+            "vs_base": {
+              "gain": 28,
+              "loss": 21,
+              "net": 7,
+              "difference": 0.019830028328611898,
+              "ci95": [
+                -0.019287764003673095,
+                0.059322033898305086
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 39,
+            "tool": 120,
+            "accepted_to_base": 325,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 353
+            },
+            "vs_legacy": {
+              "gain": 12,
+              "loss": 10,
+              "net": 2,
+              "difference": 0.0056657223796034,
+              "ci95": [
+                -0.017501822157434403,
+                0.028985507246376812
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 36,
+            "tool": 134,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 8,
+              "transaction": 104,
+              "context": 213,
+              "base": 28
+            },
+            "vs_legacy": {
+              "gain": 3,
+              "loss": 4,
+              "net": -1,
+              "difference": -0.0028328611898017,
+              "ci95": [
+                -0.01749271137026239,
+                0.011396011396011397
+              ]
+            },
+            "vs_base": {
+              "gain": 13,
+              "loss": 16,
+              "net": -3,
+              "difference": -0.0084985835694051,
+              "ci95": [
+                -0.03693709415584416,
+                0.019831436711305682
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 39,
+            "tool": 123,
+            "accepted_to_base": 321,
+            "executor_counts": {
+              "search": 4,
+              "transaction": 0,
+              "context": 0,
+              "base": 349
+            },
+            "vs_legacy": {
+              "gain": 12,
+              "loss": 10,
+              "net": 2,
+              "difference": 0.0056657223796034,
+              "ci95": [
+                -0.017501822157434403,
+                0.028985507246376812
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 39,
+            "tool": 120,
+            "accepted_to_base": 325,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 353
+            },
+            "vs_legacy": {
+              "gain": 12,
+              "loss": 10,
+              "net": 2,
+              "difference": 0.0056657223796034,
+              "ci95": [
+                -0.017501822157434403,
+                0.028985507246376812
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 39,
+            "tool": 120,
+            "accepted_to_base": 325,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 353
+            },
+            "vs_legacy": {
+              "gain": 12,
+              "loss": 10,
+              "net": 2,
+              "difference": 0.0056657223796034,
+              "ci95": [
+                -0.017501822157434403,
+                0.028985507246376812
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "near_event_booking": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "gate_rejected": 541,
+        "oracle_exact": 916,
+        "gate_oracle_exact": 844,
+        "gate_three_expert_oracle_exact": 830,
+        "policies": {
+          "legacy": {
+            "exact": 698,
+            "tool": 1659,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 427,
+              "transaction": 1362,
+              "context": 906,
+              "base": 541
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 40,
+              "loss": 84,
+              "net": -44,
+              "difference": -0.013597033374536464,
+              "ci95": [
+                -0.020783717578547946,
+                -0.006406296488776824
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 2695,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.013597033374536464,
+              "ci95": [
+                0.006406296488776824,
+                0.020783717578547935
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 751,
+            "tool": 1731,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2695,
+              "context": 0,
+              "base": 541
+            },
+            "vs_legacy": {
+              "gain": 99,
+              "loss": 46,
+              "net": 53,
+              "difference": 0.016378244746600743,
+              "ci95": [
+                0.00833320481184454,
+                0.02426908357121206
+              ]
+            },
+            "vs_base": {
+              "gain": 70,
+              "loss": 61,
+              "net": 9,
+              "difference": 0.002781211372064277,
+              "ci95": [
+                -0.0037707443299651905,
+                0.009346524532710275
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 2695,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.013597033374536464,
+              "ci95": [
+                0.006406296488776824,
+                0.020783717578547935
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 757,
+            "tool": 1727,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 215,
+              "transaction": 2069,
+              "context": 411,
+              "base": 541
+            },
+            "vs_legacy": {
+              "gain": 82,
+              "loss": 23,
+              "net": 59,
+              "difference": 0.01823238566131026,
+              "ci95": [
+                0.011444425258082185,
+                0.02518112782405254
+              ]
+            },
+            "vs_base": {
+              "gain": 58,
+              "loss": 43,
+              "net": 15,
+              "difference": 0.0046353522867737945,
+              "ci95": [
+                -0.0012446911947728687,
+                0.01060858993835245
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 734,
+            "tool": 1806,
+            "accepted_to_base": 2419,
+            "executor_counts": {
+              "search": 152,
+              "transaction": 124,
+              "context": 0,
+              "base": 2960
+            },
+            "vs_legacy": {
+              "gain": 75,
+              "loss": 39,
+              "net": 36,
+              "difference": 0.011124845488257108,
+              "ci95": [
+                0.004270442813647002,
+                0.017890191239975324
+              ]
+            },
+            "vs_base": {
+              "gain": 6,
+              "loss": 14,
+              "net": -8,
+              "difference": -0.002472187886279357,
+              "ci95": [
+                -0.005240605638519736,
+                0.0003045136598308423
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 2668,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 27,
+              "context": 0,
+              "base": 3209
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.013597033374536464,
+              "ci95": [
+                0.006406296488776824,
+                0.020783717578547935
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 742,
+            "tool": 1807,
+            "accepted_to_base": 2695,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3236
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.013597033374536464,
+              "ci95": [
+                0.006406296488776824,
+                0.020783717578547935
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "known": {
+        "n": 3030,
+        "dialogues": 1142,
+        "gate_rejected": 344,
+        "oracle_exact": 853,
+        "gate_oracle_exact": 831,
+        "gate_three_expert_oracle_exact": 817,
+        "policies": {
+          "legacy": {
+            "exact": 687,
+            "tool": 1647,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 427,
+              "transaction": 1360,
+              "context": 899,
+              "base": 344
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 40,
+              "loss": 84,
+              "net": -44,
+              "difference": -0.014521452145214522,
+              "ci95": [
+                -0.022035888948021314,
+                -0.007127453480425282
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 731,
+            "tool": 1795,
+            "accepted_to_base": 2686,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3030
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.014521452145214522,
+              "ci95": [
+                0.007127453480425273,
+                0.022035888948021293
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 740,
+            "tool": 1719,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2686,
+              "context": 0,
+              "base": 344
+            },
+            "vs_legacy": {
+              "gain": 99,
+              "loss": 46,
+              "net": 53,
+              "difference": 0.01749174917491749,
+              "ci95": [
+                0.008992939063642142,
+                0.02581997351203542
+              ]
+            },
+            "vs_base": {
+              "gain": 70,
+              "loss": 61,
+              "net": 9,
+              "difference": 0.0029702970297029703,
+              "ci95": [
+                -0.003992015968063872,
+                0.010440740023694309
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 731,
+            "tool": 1795,
+            "accepted_to_base": 2686,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3030
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.014521452145214522,
+              "ci95": [
+                0.007127453480425273,
+                0.022035888948021293
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 746,
+            "tool": 1715,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 215,
+              "transaction": 2060,
+              "context": 411,
+              "base": 344
+            },
+            "vs_legacy": {
+              "gain": 82,
+              "loss": 23,
+              "net": 59,
+              "difference": 0.019471947194719473,
+              "ci95": [
+                0.01261201460338533,
+                0.02658391982399202
+              ]
+            },
+            "vs_base": {
+              "gain": 58,
+              "loss": 43,
+              "net": 15,
+              "difference": 0.0049504950495049506,
+              "ci95": [
+                -0.0013020236866499685,
+                0.011398976208384067
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 723,
+            "tool": 1794,
+            "accepted_to_base": 2410,
+            "executor_counts": {
+              "search": 152,
+              "transaction": 124,
+              "context": 0,
+              "base": 2754
+            },
+            "vs_legacy": {
+              "gain": 75,
+              "loss": 39,
+              "net": 36,
+              "difference": 0.011881188118811881,
+              "ci95": [
+                0.004838040536229674,
+                0.019187449523501855
+              ]
+            },
+            "vs_base": {
+              "gain": 6,
+              "loss": 14,
+              "net": -8,
+              "difference": -0.0026402640264026403,
+              "ci95": [
+                -0.005345851550230395,
+                0.0003211407046695041
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 731,
+            "tool": 1795,
+            "accepted_to_base": 2659,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 27,
+              "context": 0,
+              "base": 3003
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.014521452145214522,
+              "ci95": [
+                0.007127453480425273,
+                0.022035888948021293
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 731,
+            "tool": 1795,
+            "accepted_to_base": 2686,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3030
+            },
+            "vs_legacy": {
+              "gain": 84,
+              "loss": 40,
+              "net": 44,
+              "difference": 0.014521452145214522,
+              "ci95": [
+                0.007127453480425273,
+                0.022035888948021293
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "unknown": {
+        "n": 206,
+        "dialogues": 198,
+        "gate_rejected": 197,
+        "oracle_exact": 63,
+        "gate_oracle_exact": 13,
+        "gate_three_expert_oracle_exact": 13,
+        "policies": {
+          "legacy": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2,
+              "context": 7,
+              "base": 197
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 9,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 206
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 9,
+              "context": 0,
+              "base": 197
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 9,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 206
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 9,
+              "context": 0,
+              "base": 197
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 9,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 206
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 9,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 206
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 11,
+            "tool": 12,
+            "accepted_to_base": 9,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 206
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "near_known": {
+        "n": 145,
+        "dialogues": 119,
+        "gate_rejected": 59,
+        "oracle_exact": 14,
+        "gate_oracle_exact": 13,
+        "gate_three_expert_oracle_exact": 13,
+        "policies": {
+          "legacy": {
+            "exact": 11,
+            "tool": 72,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 84,
+              "context": 2,
+              "base": 59
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 1,
+              "net": 4,
+              "difference": 0.027586206896551724,
+              "ci95": [
+                0.0,
+                0.06293706293706294
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 7,
+            "tool": 66,
+            "accepted_to_base": 86,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 145
+            },
+            "vs_legacy": {
+              "gain": 1,
+              "loss": 5,
+              "net": -4,
+              "difference": -0.027586206896551724,
+              "ci95": [
+                -0.06293706293706294,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 11,
+            "tool": 72,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 86,
+              "context": 0,
+              "base": 59
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 1,
+              "net": 4,
+              "difference": 0.027586206896551724,
+              "ci95": [
+                0.0,
+                0.06293706293706294
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 7,
+            "tool": 66,
+            "accepted_to_base": 86,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 145
+            },
+            "vs_legacy": {
+              "gain": 1,
+              "loss": 5,
+              "net": -4,
+              "difference": -0.027586206896551724,
+              "ci95": [
+                -0.06293706293706294,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 11,
+            "tool": 72,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 86,
+              "context": 0,
+              "base": 59
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 1,
+              "net": 4,
+              "difference": 0.027586206896551724,
+              "ci95": [
+                0.0,
+                0.06293706293706294
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 7,
+            "tool": 66,
+            "accepted_to_base": 86,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 145
+            },
+            "vs_legacy": {
+              "gain": 1,
+              "loss": 5,
+              "net": -4,
+              "difference": -0.027586206896551724,
+              "ci95": [
+                -0.06293706293706294,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 7,
+            "tool": 66,
+            "accepted_to_base": 86,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 145
+            },
+            "vs_legacy": {
+              "gain": 1,
+              "loss": 5,
+              "net": -4,
+              "difference": -0.027586206896551724,
+              "ci95": [
+                -0.06293706293706294,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 7,
+            "tool": 66,
+            "accepted_to_base": 86,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 145
+            },
+            "vs_legacy": {
+              "gain": 1,
+              "loss": 5,
+              "net": -4,
+              "difference": -0.027586206896551724,
+              "ci95": [
+                -0.06293706293706294,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "music_transfer": {
+      "all": {
+        "n": 3133,
+        "dialogues": 1178,
+        "gate_rejected": 149,
+        "oracle_exact": 889,
+        "gate_oracle_exact": 877,
+        "gate_three_expert_oracle_exact": 861,
+        "policies": {
+          "legacy": {
+            "exact": 684,
+            "tool": 1574,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 128,
+              "transaction": 1480,
+              "context": 1376,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 42,
+              "loss": 73,
+              "net": -31,
+              "difference": -0.00989466964570699,
+              "ci95": [
+                -0.016602923181254003,
+                -0.002849837384414509
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 729,
+            "tool": 1673,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2984,
+              "context": 0,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 89,
+              "loss": 44,
+              "net": 45,
+              "difference": 0.014363230130864985,
+              "ci95": [
+                0.006976710649217054,
+                0.02136373264541712
+              ]
+            },
+            "vs_base": {
+              "gain": 77,
+              "loss": 63,
+              "net": 14,
+              "difference": 0.004468560485157995,
+              "ci95": [
+                -0.002458096932932819,
+                0.01135343127774691
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 729,
+            "tool": 1635,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 108,
+              "transaction": 2631,
+              "context": 245,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 68,
+              "loss": 23,
+              "net": 45,
+              "difference": 0.014363230130864985,
+              "ci95": [
+                0.008183074347360894,
+                0.02067679638963779
+              ]
+            },
+            "vs_base": {
+              "gain": 65,
+              "loss": 51,
+              "net": 14,
+              "difference": 0.004468560485157995,
+              "ci95": [
+                -0.0019132105112369788,
+                0.011173586206403862
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 715,
+            "tool": 1726,
+            "accepted_to_base": 2860,
+            "executor_counts": {
+              "search": 108,
+              "transaction": 16,
+              "context": 0,
+              "base": 3009
+            },
+            "vs_legacy": {
+              "gain": 69,
+              "loss": 38,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0031835729608587124,
+                0.01659661660309685
+              ]
+            },
+            "vs_base": {
+              "gain": 6,
+              "loss": 6,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                -0.0021745883814849334,
+                0.0022180150404030054
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 714,
+            "tool": 1716,
+            "accepted_to_base": 2918,
+            "executor_counts": {
+              "search": 66,
+              "transaction": 0,
+              "context": 0,
+              "base": 3067
+            },
+            "vs_legacy": {
+              "gain": 70,
+              "loss": 40,
+              "net": 30,
+              "difference": 0.009575486753909991,
+              "ci95": [
+                0.0028433110931492876,
+                0.01633594404474449
+              ]
+            },
+            "vs_base": {
+              "gain": 2,
+              "loss": 3,
+              "net": -1,
+              "difference": -0.0003191828917969997,
+              "ci95": [
+                -0.001622876077634938,
+                0.0009734017984250038
+              ]
+            }
+          },
+          "selected": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "known": {
+        "n": 3133,
+        "dialogues": 1178,
+        "gate_rejected": 149,
+        "oracle_exact": 889,
+        "gate_oracle_exact": 877,
+        "gate_three_expert_oracle_exact": 861,
+        "policies": {
+          "legacy": {
+            "exact": 684,
+            "tool": 1574,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 128,
+              "transaction": 1480,
+              "context": 1376,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 42,
+              "loss": 73,
+              "net": -31,
+              "difference": -0.00989466964570699,
+              "ci95": [
+                -0.016602923181254003,
+                -0.002849837384414509
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 729,
+            "tool": 1673,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2984,
+              "context": 0,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 89,
+              "loss": 44,
+              "net": 45,
+              "difference": 0.014363230130864985,
+              "ci95": [
+                0.006976710649217054,
+                0.02136373264541712
+              ]
+            },
+            "vs_base": {
+              "gain": 77,
+              "loss": 63,
+              "net": 14,
+              "difference": 0.004468560485157995,
+              "ci95": [
+                -0.002458096932932819,
+                0.01135343127774691
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 729,
+            "tool": 1635,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 108,
+              "transaction": 2631,
+              "context": 245,
+              "base": 149
+            },
+            "vs_legacy": {
+              "gain": 68,
+              "loss": 23,
+              "net": 45,
+              "difference": 0.014363230130864985,
+              "ci95": [
+                0.008183074347360894,
+                0.02067679638963779
+              ]
+            },
+            "vs_base": {
+              "gain": 65,
+              "loss": 51,
+              "net": 14,
+              "difference": 0.004468560485157995,
+              "ci95": [
+                -0.0019132105112369788,
+                0.011173586206403862
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 715,
+            "tool": 1726,
+            "accepted_to_base": 2860,
+            "executor_counts": {
+              "search": 108,
+              "transaction": 16,
+              "context": 0,
+              "base": 3009
+            },
+            "vs_legacy": {
+              "gain": 69,
+              "loss": 38,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0031835729608587124,
+                0.01659661660309685
+              ]
+            },
+            "vs_base": {
+              "gain": 6,
+              "loss": 6,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                -0.0021745883814849334,
+                0.0022180150404030054
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 714,
+            "tool": 1716,
+            "accepted_to_base": 2918,
+            "executor_counts": {
+              "search": 66,
+              "transaction": 0,
+              "context": 0,
+              "base": 3067
+            },
+            "vs_legacy": {
+              "gain": 70,
+              "loss": 40,
+              "net": 30,
+              "difference": 0.009575486753909991,
+              "ci95": [
+                0.0028433110931492876,
+                0.01633594404474449
+              ]
+            },
+            "vs_base": {
+              "gain": 2,
+              "loss": 3,
+              "net": -1,
+              "difference": -0.0003191828917969997,
+              "ci95": [
+                -0.001622876077634938,
+                0.0009734017984250038
+              ]
+            }
+          },
+          "selected": {
+            "exact": 715,
+            "tool": 1716,
+            "accepted_to_base": 2984,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3133
+            },
+            "vs_legacy": {
+              "gain": 73,
+              "loss": 42,
+              "net": 31,
+              "difference": 0.00989466964570699,
+              "ci95": [
+                0.0028498373844145085,
+                0.016602923181253997
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "unknown": {
+        "n": 0,
+        "dialogues": 0,
+        "gate_rejected": 0,
+        "oracle_exact": 0,
+        "gate_oracle_exact": 0,
+        "gate_three_expert_oracle_exact": 0,
+        "policies": {
+          "legacy": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "always_base": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_expert": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_all": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix3": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix4": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "conservative": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "selected": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          }
+        }
+      },
+      "near_known": {
+        "n": 0,
+        "dialogues": 0,
+        "gate_rejected": 0,
+        "oracle_exact": 0,
+        "gate_oracle_exact": 0,
+        "gate_three_expert_oracle_exact": 0,
+        "policies": {
+          "legacy": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "always_base": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_expert": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_all": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix3": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix4": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "conservative": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "selected": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          }
+        }
+      }
+    },
+    "original_domains": {
+      "all": {
+        "n": 3820,
+        "dialogues": 1359,
+        "gate_rejected": 996,
+        "oracle_exact": 1038,
+        "gate_oracle_exact": 967,
+        "gate_three_expert_oracle_exact": 954,
+        "policies": {
+          "legacy": {
+            "exact": 785,
+            "tool": 1873,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 417,
+              "transaction": 1576,
+              "context": 831,
+              "base": 996
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 33,
+              "loss": 85,
+              "net": -52,
+              "difference": -0.013612565445026177,
+              "ci95": [
+                -0.019433620448179274,
+                -0.00776593474000029
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 837,
+            "tool": 2024,
+            "accepted_to_base": 2824,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3820
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.013612565445026177,
+              "ci95": [
+                0.007765934740000289,
+                0.019433620448179267
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 846,
+            "tool": 1944,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2824,
+              "context": 0,
+              "base": 996
+            },
+            "vs_legacy": {
+              "gain": 99,
+              "loss": 38,
+              "net": 61,
+              "difference": 0.015968586387434557,
+              "ci95": [
+                0.00963570970192987,
+                0.022328957430858474
+              ]
+            },
+            "vs_base": {
+              "gain": 63,
+              "loss": 54,
+              "net": 9,
+              "difference": 0.002356020942408377,
+              "ci95": [
+                -0.0028693291219100523,
+                0.007901002985372019
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 837,
+            "tool": 2024,
+            "accepted_to_base": 2824,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3820
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.013612565445026177,
+              "ci95": [
+                0.007765934740000289,
+                0.019433620448179267
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 851,
+            "tool": 1943,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 201,
+              "transaction": 2315,
+              "context": 308,
+              "base": 996
+            },
+            "vs_legacy": {
+              "gain": 86,
+              "loss": 20,
+              "net": 66,
+              "difference": 0.017277486910994764,
+              "ci95": [
+                0.012013561396803582,
+                0.022957611250289674
+              ]
+            },
+            "vs_base": {
+              "gain": 52,
+              "loss": 38,
+              "net": 14,
+              "difference": 0.0036649214659685864,
+              "ci95": [
+                -0.0010323047669880243,
+                0.008359784714464516
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 828,
+            "tool": 2020,
+            "accepted_to_base": 2544,
+            "executor_counts": {
+              "search": 141,
+              "transaction": 139,
+              "context": 0,
+              "base": 3540
+            },
+            "vs_legacy": {
+              "gain": 76,
+              "loss": 33,
+              "net": 43,
+              "difference": 0.011256544502617802,
+              "ci95": [
+                0.005493861607142858,
+                0.017076657624661425
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 14,
+              "net": -9,
+              "difference": -0.002356020942408377,
+              "ci95": [
+                -0.004612910400724155,
+                -0.00026122960950096996
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 837,
+            "tool": 2024,
+            "accepted_to_base": 2787,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 37,
+              "context": 0,
+              "base": 3783
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.013612565445026177,
+              "ci95": [
+                0.007765934740000289,
+                0.019433620448179267
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 828,
+            "tool": 2020,
+            "accepted_to_base": 2544,
+            "executor_counts": {
+              "search": 141,
+              "transaction": 139,
+              "context": 0,
+              "base": 3540
+            },
+            "vs_legacy": {
+              "gain": 76,
+              "loss": 33,
+              "net": 43,
+              "difference": 0.011256544502617802,
+              "ci95": [
+                0.005493861607142858,
+                0.017076657624661425
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 14,
+              "net": -9,
+              "difference": -0.002356020942408377,
+              "ci95": [
+                -0.004612910400724155,
+                -0.00026122960950096996
+              ]
+            }
+          }
+        }
+      },
+      "known": {
+        "n": 3600,
+        "dialogues": 1359,
+        "gate_rejected": 780,
+        "oracle_exact": 963,
+        "gate_oracle_exact": 911,
+        "gate_three_expert_oracle_exact": 898,
+        "policies": {
+          "legacy": {
+            "exact": 729,
+            "tool": 1757,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 417,
+              "transaction": 1574,
+              "context": 829,
+              "base": 780
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 33,
+              "loss": 85,
+              "net": -52,
+              "difference": -0.014444444444444444,
+              "ci95": [
+                -0.020596320077345985,
+                -0.00825489025756957
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 781,
+            "tool": 1908,
+            "accepted_to_base": 2820,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3600
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.014444444444444444,
+              "ci95": [
+                0.00825489025756957,
+                0.02059632007734598
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 790,
+            "tool": 1828,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2820,
+              "context": 0,
+              "base": 780
+            },
+            "vs_legacy": {
+              "gain": 99,
+              "loss": 38,
+              "net": 61,
+              "difference": 0.016944444444444446,
+              "ci95": [
+                0.010262075977114078,
+                0.023616448861415697
+              ]
+            },
+            "vs_base": {
+              "gain": 63,
+              "loss": 54,
+              "net": 9,
+              "difference": 0.0025,
+              "ci95": [
+                -0.003046084745448134,
+                0.008385384360059592
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 781,
+            "tool": 1908,
+            "accepted_to_base": 2820,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 3600
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.014444444444444444,
+              "ci95": [
+                0.00825489025756957,
+                0.02059632007734598
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 795,
+            "tool": 1827,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 201,
+              "transaction": 2311,
+              "context": 308,
+              "base": 780
+            },
+            "vs_legacy": {
+              "gain": 86,
+              "loss": 20,
+              "net": 66,
+              "difference": 0.018333333333333333,
+              "ci95": [
+                0.012745296143858642,
+                0.02442651133104455
+              ]
+            },
+            "vs_base": {
+              "gain": 52,
+              "loss": 38,
+              "net": 14,
+              "difference": 0.0038888888888888888,
+              "ci95": [
+                -0.0010977174519611536,
+                0.008887225368154575
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 772,
+            "tool": 1904,
+            "accepted_to_base": 2540,
+            "executor_counts": {
+              "search": 141,
+              "transaction": 139,
+              "context": 0,
+              "base": 3320
+            },
+            "vs_legacy": {
+              "gain": 76,
+              "loss": 33,
+              "net": 43,
+              "difference": 0.011944444444444445,
+              "ci95": [
+                0.0057976619969718314,
+                0.018122159965240688
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 14,
+              "net": -9,
+              "difference": -0.0025,
+              "ci95": [
+                -0.004928975067205532,
+                -0.0002776216161404148
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 781,
+            "tool": 1908,
+            "accepted_to_base": 2783,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 37,
+              "context": 0,
+              "base": 3563
+            },
+            "vs_legacy": {
+              "gain": 85,
+              "loss": 33,
+              "net": 52,
+              "difference": 0.014444444444444444,
+              "ci95": [
+                0.00825489025756957,
+                0.02059632007734598
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 772,
+            "tool": 1904,
+            "accepted_to_base": 2540,
+            "executor_counts": {
+              "search": 141,
+              "transaction": 139,
+              "context": 0,
+              "base": 3320
+            },
+            "vs_legacy": {
+              "gain": 76,
+              "loss": 33,
+              "net": 43,
+              "difference": 0.011944444444444445,
+              "ci95": [
+                0.0057976619969718314,
+                0.018122159965240688
+              ]
+            },
+            "vs_base": {
+              "gain": 5,
+              "loss": 14,
+              "net": -9,
+              "difference": -0.0025,
+              "ci95": [
+                -0.004928975067205532,
+                -0.0002776216161404148
+              ]
+            }
+          }
+        }
+      },
+      "unknown": {
+        "n": 220,
+        "dialogues": 149,
+        "gate_rejected": 216,
+        "oracle_exact": 75,
+        "gate_oracle_exact": 56,
+        "gate_three_expert_oracle_exact": 56,
+        "policies": {
+          "legacy": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 2,
+              "context": 2,
+              "base": 216
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_base": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 4,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 220
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_expert": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 4,
+              "context": 0,
+              "base": 216
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "fixed_all": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 4,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 220
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix3": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 4,
+              "context": 0,
+              "base": 216
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "matrix4": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 4,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 220
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "conservative": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 4,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 220
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "selected": {
+            "exact": 56,
+            "tool": 116,
+            "accepted_to_base": 4,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 220
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        }
+      },
+      "near_known": {
+        "n": 0,
+        "dialogues": 0,
+        "gate_rejected": 0,
+        "oracle_exact": 0,
+        "gate_oracle_exact": 0,
+        "gate_three_expert_oracle_exact": 0,
+        "policies": {
+          "legacy": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "always_base": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_expert": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "fixed_all": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix3": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "matrix4": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "conservative": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "selected": {
+            "exact": 0,
+            "tool": 0,
+            "accepted_to_base": 0,
+            "executor_counts": {
+              "search": 0,
+              "transaction": 0,
+              "context": 0,
+              "base": 0
+            },
+            "vs_legacy": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "vs_base": {
+              "gain": 0,
+              "loss": 0,
+              "net": 0,
+              "difference": null,
+              "ci95": null
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "records_sha256": "99950b23c64a82d49b2da125cb4454380c63eb5137491f7913e83d80dd06a38a",
+  "folds": {
+    "near_domain_bus_ticket": {
+      "all": {
+        "n": 2368,
+        "accepted": 2225,
+        "rejected_correct": 5,
+        "always_base_exact": 210,
+        "best_fixed_on_accepted_exact": 271,
+        "best_per_predicted_top1_on_accepted_exact": 276,
+        "best_per_request_on_accepted_exact": 366,
+        "only_base_correct_among_accepted": 10,
+        "some_specialist_correct_and_base_wrong_among_accepted": 156
+      },
+      "unknown": {
+        "n": 11,
+        "accepted": 10,
+        "rejected_correct": 1,
+        "always_base_exact": 9,
+        "best_fixed_on_accepted_exact": 9,
+        "best_per_predicted_top1_on_accepted_exact": 9,
+        "best_per_request_on_accepted_exact": 9,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      },
+      "top1_FindBus_actual_FindBus": {
+        "n": 183,
+        "accepted": 183,
+        "rejected_correct": 0,
+        "always_base_exact": 0,
+        "best_fixed_on_accepted_exact": 0,
+        "best_per_predicted_top1_on_accepted_exact": 0,
+        "best_per_request_on_accepted_exact": 0,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      },
+      "top1_FindBus_actual_BuyBusTicket": {
+        "n": 9,
+        "accepted": 8,
+        "rejected_correct": 1,
+        "always_base_exact": 7,
+        "best_fixed_on_accepted_exact": 7,
+        "best_per_predicted_top1_on_accepted_exact": 7,
+        "best_per_request_on_accepted_exact": 7,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      }
+    },
+    "near_lodging_booking": {
+      "all": {
+        "n": 2368,
+        "accepted": 2052,
+        "rejected_correct": 17,
+        "always_base_exact": 210,
+        "best_fixed_on_accepted_exact": 267,
+        "best_per_predicted_top1_on_accepted_exact": 274,
+        "best_per_request_on_accepted_exact": 360,
+        "only_base_correct_among_accepted": 10,
+        "some_specialist_correct_and_base_wrong_among_accepted": 150
+      },
+      "unknown": {
+        "n": 237,
+        "accepted": 122,
+        "rejected_correct": 12,
+        "always_base_exact": 21,
+        "best_fixed_on_accepted_exact": 21,
+        "best_per_predicted_top1_on_accepted_exact": 21,
+        "best_per_request_on_accepted_exact": 21,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      }
+    },
+    "near_event_booking": {
+      "all": {
+        "n": 2368,
+        "accepted": 1695,
+        "rejected_correct": 50,
+        "always_base_exact": 210,
+        "best_fixed_on_accepted_exact": 254,
+        "best_per_predicted_top1_on_accepted_exact": 257,
+        "best_per_request_on_accepted_exact": 310,
+        "only_base_correct_among_accepted": 7,
+        "some_specialist_correct_and_base_wrong_among_accepted": 100
+      },
+      "unknown": {
+        "n": 138,
+        "accepted": 5,
+        "rejected_correct": 27,
+        "always_base_exact": 29,
+        "best_fixed_on_accepted_exact": 29,
+        "best_per_predicted_top1_on_accepted_exact": 29,
+        "best_per_request_on_accepted_exact": 29,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      }
+    },
+    "music_transfer": {
+      "all": {
+        "n": 2368,
+        "accepted": 2186,
+        "rejected_correct": 12,
+        "always_base_exact": 210,
+        "best_fixed_on_accepted_exact": 272,
+        "best_per_predicted_top1_on_accepted_exact": 278,
+        "best_per_request_on_accepted_exact": 365,
+        "only_base_correct_among_accepted": 9,
+        "some_specialist_correct_and_base_wrong_among_accepted": 155
+      },
+      "unknown": {
+        "n": 0,
+        "accepted": 0,
+        "rejected_correct": 0,
+        "always_base_exact": 0,
+        "best_fixed_on_accepted_exact": 0,
+        "best_per_predicted_top1_on_accepted_exact": 0,
+        "best_per_request_on_accepted_exact": 0,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      }
+    },
+    "original_domains": {
+      "all": {
+        "n": 2368,
+        "accepted": 1615,
+        "rejected_correct": 47,
+        "always_base_exact": 210,
+        "best_fixed_on_accepted_exact": 255,
+        "best_per_predicted_top1_on_accepted_exact": 257,
+        "best_per_request_on_accepted_exact": 316,
+        "only_base_correct_among_accepted": 7,
+        "some_specialist_correct_and_base_wrong_among_accepted": 106
+      },
+      "unknown": {
+        "n": 0,
+        "accepted": 0,
+        "rejected_correct": 0,
+        "always_base_exact": 0,
+        "best_fixed_on_accepted_exact": 0,
+        "best_per_predicted_top1_on_accepted_exact": 0,
+        "best_per_request_on_accepted_exact": 0,
+        "only_base_correct_among_accepted": 0,
+        "some_specialist_correct_and_base_wrong_among_accepted": 0
+      }
+    }
+  }
+}
