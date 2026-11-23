@@ -1,0 +1,5687 @@
+{
+  "frozen_inputs": {
+    "development_lock.json": "8ed94606b53baf062dbd52ab30a05656626f05b0b70f66d58d303ee01e7bf1d4",
+    "predictions.jsonl.gz": "92654b9fca967e473529e2d86c7eb0814762b9a9948a9cdb4be8e0b8162fda12",
+    "results.json": "1c197c75c9169e9a76ad613ab5c4735173035090478dd85d190f98183b3a304e"
+  },
+  "ledger_sha256": "852e3bb3fab1654010860dfa94aca877b282ee083904c6832c14d4aa0513ebb0",
+  "repair_source_sha256_lf": "0c24a6bf0f94f369986cb8bf73adb7dcc742c6b1082e5dbc35ef7d802a9b88e6",
+  "expert_pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "data_manifest_sha256": "57a7a4b71803a8b578bf32803ae1f546423754eb684931b8cae6eaac7ae42ec1",
+  "fit_requests": 1852,
+  "unique_requests": 3820,
+  "unique_dialogues": 1359,
+  "fold_observations": 16661,
+  "calls_per_version": 10967,
+  "primary_policy": "adaptive_from_cal",
+  "bootstrap_unit": "dialogue within cohort",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 1118,
+  "folds": {
+    "near_domain_bus_ticket": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1548,
+              "after": 1660,
+              "gain": 132,
+              "loss": 20,
+              "delta_count": 112,
+              "difference": 0.034610630407911,
+              "ci95": [
+                0.027034915226898746,
+                0.04236246136123754
+              ]
+            },
+            "method_name": {
+              "before": 1349,
+              "after": 1420,
+              "gain": 71,
+              "loss": 0,
+              "delta_count": 71,
+              "difference": 0.021940667490729295,
+              "ci95": [
+                0.016768123949028865,
+                0.02735882068135802
+              ]
+            },
+            "service_method": {
+              "before": 1106,
+              "after": 1234,
+              "gain": 148,
+              "loss": 20,
+              "delta_count": 128,
+              "difference": 0.03955500618046971,
+              "ci95": [
+                0.03155668033406394,
+                0.04776856829948227
+              ]
+            },
+            "argument_keys": {
+              "before": 231,
+              "after": 471,
+              "gain": 240,
+              "loss": 0,
+              "delta_count": 240,
+              "difference": 0.07416563658838071,
+              "ci95": [
+                0.06343954170827676,
+                0.08431391030217465
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 363,
+              "gain": 169,
+              "loss": 0,
+              "delta_count": 169,
+              "difference": 0.052224969097651425,
+              "ci95": [
+                0.04398214097569041,
+                0.06067388094585568
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 328,
+              "gain": 168,
+              "loss": 0,
+              "delta_count": 168,
+              "difference": 0.0519159456118665,
+              "ci95": [
+                0.04370874668627769,
+                0.060381029001931555
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1560,
+              "after": 1672,
+              "gain": 133,
+              "loss": 21,
+              "delta_count": 112,
+              "difference": 0.034610630407911,
+              "ci95": [
+                0.026654098558568408,
+                0.042515424152333836
+              ]
+            },
+            "method_name": {
+              "before": 1366,
+              "after": 1440,
+              "gain": 74,
+              "loss": 0,
+              "delta_count": 74,
+              "difference": 0.022867737948084055,
+              "ci95": [
+                0.017663327719301482,
+                0.0283775447254781
+              ]
+            },
+            "service_method": {
+              "before": 1117,
+              "after": 1245,
+              "gain": 149,
+              "loss": 21,
+              "delta_count": 128,
+              "difference": 0.03955500618046971,
+              "ci95": [
+                0.031297713642480095,
+                0.04812079432717461
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 481,
+              "gain": 251,
+              "loss": 0,
+              "delta_count": 251,
+              "difference": 0.07756489493201484,
+              "ci95": [
+                0.06666511771995043,
+                0.08802507581161301
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 372,
+              "gain": 178,
+              "loss": 0,
+              "delta_count": 178,
+              "difference": 0.0550061804697157,
+              "ci95": [
+                0.04644147274350914,
+                0.06355410581263628
+              ]
+            },
+            "exact": {
+              "before": 159,
+              "after": 336,
+              "gain": 177,
+              "loss": 0,
+              "delta_count": 177,
+              "difference": 0.05469715698393078,
+              "ci95": [
+                0.046313157795220834,
+                0.06334738071898202
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1556,
+              "after": 1670,
+              "gain": 134,
+              "loss": 20,
+              "delta_count": 114,
+              "difference": 0.03522867737948084,
+              "ci95": [
+                0.027700430723904376,
+                0.043162601695171554
+              ]
+            },
+            "method_name": {
+              "before": 1356,
+              "after": 1427,
+              "gain": 71,
+              "loss": 0,
+              "delta_count": 71,
+              "difference": 0.021940667490729295,
+              "ci95": [
+                0.016768123949028865,
+                0.02735882068135802
+              ]
+            },
+            "service_method": {
+              "before": 1109,
+              "after": 1238,
+              "gain": 149,
+              "loss": 20,
+              "delta_count": 129,
+              "difference": 0.03986402966625464,
+              "ci95": [
+                0.03188805156637955,
+                0.048024407952234
+              ]
+            },
+            "argument_keys": {
+              "before": 236,
+              "after": 487,
+              "gain": 251,
+              "loss": 0,
+              "delta_count": 251,
+              "difference": 0.07756489493201484,
+              "ci95": [
+                0.06658207886090269,
+                0.0880962333202116
+              ]
+            },
+            "arguments": {
+              "before": 199,
+              "after": 377,
+              "gain": 178,
+              "loss": 0,
+              "delta_count": 178,
+              "difference": 0.0550061804697157,
+              "ci95": [
+                0.046603172514773444,
+                0.06335436035810234
+              ]
+            },
+            "exact": {
+              "before": 163,
+              "after": 340,
+              "gain": 177,
+              "loss": 0,
+              "delta_count": 177,
+              "difference": 0.05469715698393078,
+              "ci95": [
+                0.04633991412509406,
+                0.06321483079933984
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1550,
+              "after": 1663,
+              "gain": 133,
+              "loss": 20,
+              "delta_count": 113,
+              "difference": 0.03491965389369592,
+              "ci95": [
+                0.02711967433112135,
+                0.04278078981109778
+              ]
+            },
+            "method_name": {
+              "before": 1348,
+              "after": 1416,
+              "gain": 68,
+              "loss": 0,
+              "delta_count": 68,
+              "difference": 0.021013597033374538,
+              "ci95": [
+                0.01608898449773836,
+                0.026309136794682827
+              ]
+            },
+            "service_method": {
+              "before": 1107,
+              "after": 1233,
+              "gain": 146,
+              "loss": 20,
+              "delta_count": 126,
+              "difference": 0.03893695920889988,
+              "ci95": [
+                0.030939876734968706,
+                0.047218213426851396
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 467,
+              "gain": 237,
+              "loss": 0,
+              "delta_count": 237,
+              "difference": 0.07323856613102596,
+              "ci95": [
+                0.06267059747395269,
+                0.08336136125232141
+              ]
+            },
+            "arguments": {
+              "before": 195,
+              "after": 363,
+              "gain": 168,
+              "loss": 0,
+              "delta_count": 168,
+              "difference": 0.0519159456118665,
+              "ci95": [
+                0.0436765157973488,
+                0.06040951313412223
+              ]
+            },
+            "exact": {
+              "before": 162,
+              "after": 329,
+              "gain": 167,
+              "loss": 0,
+              "delta_count": 167,
+              "difference": 0.05160692212608158,
+              "ci95": [
+                0.043438290640093614,
+                0.06003947770296595
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1888,
+              "after": 2069,
+              "gain": 205,
+              "loss": 24,
+              "delta_count": 181,
+              "difference": 0.05593325092707046,
+              "ci95": [
+                0.04643947342979692,
+                0.06546777102659451
+              ]
+            },
+            "method_name": {
+              "before": 1904,
+              "after": 2163,
+              "gain": 267,
+              "loss": 8,
+              "delta_count": 259,
+              "difference": 0.08003708281829419,
+              "ci95": [
+                0.06973152171367,
+                0.09082552987307037
+              ]
+            },
+            "service_method": {
+              "before": 1589,
+              "after": 1807,
+              "gain": 238,
+              "loss": 20,
+              "delta_count": 218,
+              "difference": 0.06736711990111248,
+              "ci95": [
+                0.05730682621528605,
+                0.07808225320578155
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 963,
+              "gain": 734,
+              "loss": 0,
+              "delta_count": 734,
+              "difference": 0.226823238566131,
+              "ci95": [
+                0.2114971445121906,
+                0.24257901145981628
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 776,
+              "gain": 584,
+              "loss": 0,
+              "delta_count": 584,
+              "difference": 0.18046971569839307,
+              "ci95": [
+                0.16579781345575312,
+                0.1950114851716286
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 742,
+              "gain": 582,
+              "loss": 0,
+              "delta_count": 582,
+              "difference": 0.17985166872682323,
+              "ci95": [
+                0.16539512020962271,
+                0.1943487543808596
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 73,
+          "adaptive_matched": 251,
+          "centroid_default": 285,
+          "always_matrix_expert": 0,
+          "always_base": 3236
+        }
+      },
+      "known": {
+        "n": 3018,
+        "dialogues": 1210,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1473,
+              "after": 1583,
+              "gain": 130,
+              "loss": 20,
+              "delta_count": 110,
+              "difference": 0.03644797879390325,
+              "ci95": [
+                0.02836411609498681,
+                0.044691042992450324
+              ]
+            },
+            "method_name": {
+              "before": 1329,
+              "after": 1400,
+              "gain": 71,
+              "loss": 0,
+              "delta_count": 71,
+              "difference": 0.02352551358515573,
+              "ci95": [
+                0.018068127881374182,
+                0.029209058089924515
+              ]
+            },
+            "service_method": {
+              "before": 1093,
+              "after": 1219,
+              "gain": 146,
+              "loss": 20,
+              "delta_count": 126,
+              "difference": 0.041749502982107355,
+              "ci95": [
+                0.03332162798553008,
+                0.050654567855928714
+              ]
+            },
+            "argument_keys": {
+              "before": 231,
+              "after": 456,
+              "gain": 225,
+              "loss": 0,
+              "delta_count": 225,
+              "difference": 0.07455268389662027,
+              "ci95": [
+                0.0638503401426511,
+                0.08490596968759666
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 351,
+              "gain": 157,
+              "loss": 0,
+              "delta_count": 157,
+              "difference": 0.052021206096752814,
+              "ci95": [
+                0.043361078851358016,
+                0.06064961117823836
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 316,
+              "gain": 156,
+              "loss": 0,
+              "delta_count": 156,
+              "difference": 0.05168986083499006,
+              "ci95": [
+                0.04315419321821752,
+                0.060319799722828735
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1480,
+              "after": 1589,
+              "gain": 129,
+              "loss": 20,
+              "delta_count": 109,
+              "difference": 0.036116633532140494,
+              "ci95": [
+                0.028178013032322376,
+                0.044299986643227686
+              ]
+            },
+            "method_name": {
+              "before": 1338,
+              "after": 1410,
+              "gain": 72,
+              "loss": 0,
+              "delta_count": 72,
+              "difference": 0.02385685884691849,
+              "ci95": [
+                0.01829232829965388,
+                0.029606971341558635
+              ]
+            },
+            "service_method": {
+              "before": 1099,
+              "after": 1224,
+              "gain": 145,
+              "loss": 20,
+              "delta_count": 125,
+              "difference": 0.0414181577203446,
+              "ci95": [
+                0.0329434138412243,
+                0.05021195419388983
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 461,
+              "gain": 231,
+              "loss": 0,
+              "delta_count": 231,
+              "difference": 0.07654075546719682,
+              "ci95": [
+                0.06567715461284292,
+                0.08726251496965814
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 355,
+              "gain": 161,
+              "loss": 0,
+              "delta_count": 161,
+              "difference": 0.053346587143803845,
+              "ci95": [
+                0.04482636836401509,
+                0.06186135083520138
+              ]
+            },
+            "exact": {
+              "before": 159,
+              "after": 319,
+              "gain": 160,
+              "loss": 0,
+              "delta_count": 160,
+              "difference": 0.053015241882041084,
+              "ci95": [
+                0.04457186777060758,
+                0.06163806365632939
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1480,
+              "after": 1591,
+              "gain": 131,
+              "loss": 20,
+              "delta_count": 111,
+              "difference": 0.036779324055666,
+              "ci95": [
+                0.02868426468565684,
+                0.04506671121277613
+              ]
+            },
+            "method_name": {
+              "before": 1335,
+              "after": 1406,
+              "gain": 71,
+              "loss": 0,
+              "delta_count": 71,
+              "difference": 0.02352551358515573,
+              "ci95": [
+                0.018068127881374182,
+                0.029209058089924515
+              ]
+            },
+            "service_method": {
+              "before": 1096,
+              "after": 1222,
+              "gain": 146,
+              "loss": 20,
+              "delta_count": 126,
+              "difference": 0.041749502982107355,
+              "ci95": [
+                0.03332162798553008,
+                0.050654567855928714
+              ]
+            },
+            "argument_keys": {
+              "before": 236,
+              "after": 471,
+              "gain": 235,
+              "loss": 0,
+              "delta_count": 235,
+              "difference": 0.07786613651424784,
+              "ci95": [
+                0.06707779750354224,
+                0.08821601026324218
+              ]
+            },
+            "arguments": {
+              "before": 199,
+              "after": 364,
+              "gain": 165,
+              "loss": 0,
+              "delta_count": 165,
+              "difference": 0.05467196819085487,
+              "ci95": [
+                0.0461383497354201,
+                0.06310362172479872
+              ]
+            },
+            "exact": {
+              "before": 163,
+              "after": 327,
+              "gain": 164,
+              "loss": 0,
+              "delta_count": 164,
+              "difference": 0.054340622929092114,
+              "ci95": [
+                0.04593517268205062,
+                0.06275213200368224
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1476,
+              "after": 1587,
+              "gain": 131,
+              "loss": 20,
+              "delta_count": 111,
+              "difference": 0.036779324055666,
+              "ci95": [
+                0.028637552131728507,
+                0.045113091523274584
+              ]
+            },
+            "method_name": {
+              "before": 1329,
+              "after": 1397,
+              "gain": 68,
+              "loss": 0,
+              "delta_count": 68,
+              "difference": 0.02253147779986746,
+              "ci95": [
+                0.01733383692645426,
+                0.028196846410738954
+              ]
+            },
+            "service_method": {
+              "before": 1095,
+              "after": 1219,
+              "gain": 144,
+              "loss": 20,
+              "delta_count": 124,
+              "difference": 0.04108681245858184,
+              "ci95": [
+                0.032763844872419956,
+                0.04984078868390231
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 453,
+              "gain": 223,
+              "loss": 0,
+              "delta_count": 223,
+              "difference": 0.07388999337309476,
+              "ci95": [
+                0.06338910670611748,
+                0.0841579022867081
+              ]
+            },
+            "arguments": {
+              "before": 195,
+              "after": 351,
+              "gain": 156,
+              "loss": 0,
+              "delta_count": 156,
+              "difference": 0.05168986083499006,
+              "ci95": [
+                0.04331733288172783,
+                0.06000308742281441
+              ]
+            },
+            "exact": {
+              "before": 162,
+              "after": 317,
+              "gain": 155,
+              "loss": 0,
+              "delta_count": 155,
+              "difference": 0.051358515573227306,
+              "ci95": [
+                0.043071232204841346,
+                0.05970744820890436
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1763,
+              "after": 1929,
+              "gain": 183,
+              "loss": 17,
+              "delta_count": 166,
+              "difference": 0.05500331345261763,
+              "ci95": [
+                0.04584415765593917,
+                0.06447700535967046
+              ]
+            },
+            "method_name": {
+              "before": 1782,
+              "after": 1999,
+              "gain": 225,
+              "loss": 8,
+              "delta_count": 217,
+              "difference": 0.07190192180251823,
+              "ci95": [
+                0.062054589277571494,
+                0.08300647443977406
+              ]
+            },
+            "service_method": {
+              "before": 1503,
+              "after": 1686,
+              "gain": 198,
+              "loss": 15,
+              "delta_count": 183,
+              "difference": 0.06063618290258449,
+              "ci95": [
+                0.050690519425031284,
+                0.07112796590333599
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 845,
+              "gain": 616,
+              "loss": 0,
+              "delta_count": 616,
+              "difference": 0.20410868124585818,
+              "ci95": [
+                0.18959237973100276,
+                0.21921893580993743
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 665,
+              "gain": 473,
+              "loss": 0,
+              "delta_count": 473,
+              "difference": 0.15672630881378397,
+              "ci95": [
+                0.1433747903910322,
+                0.1696522070783853
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 631,
+              "gain": 471,
+              "loss": 0,
+              "delta_count": 471,
+              "difference": 0.15606361829025844,
+              "ci95": [
+                0.14280940035852915,
+                0.169212005045332
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 69,
+          "adaptive_matched": 232,
+          "centroid_default": 278,
+          "always_matrix_expert": 0,
+          "always_base": 3018
+        }
+      },
+      "unknown": {
+        "n": 218,
+        "dialogues": 117,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 75,
+              "after": 77,
+              "gain": 2,
+              "loss": 0,
+              "delta_count": 2,
+              "difference": 0.009174311926605505,
+              "ci95": [
+                0.0,
+                0.02857142857142857
+              ]
+            },
+            "method_name": {
+              "before": 20,
+              "after": 20,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 13,
+              "after": 15,
+              "gain": 2,
+              "loss": 0,
+              "delta_count": 2,
+              "difference": 0.009174311926605505,
+              "ci95": [
+                0.0,
+                0.02857142857142857
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 15,
+              "gain": 15,
+              "loss": 0,
+              "delta_count": 15,
+              "difference": 0.06880733944954129,
+              "ci95": [
+                0.02830188679245283,
+                0.11522070745861061
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 12,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05504587155963303,
+              "ci95": [
+                0.018691588785046728,
+                0.09813084112149532
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 12,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05504587155963303,
+              "ci95": [
+                0.018691588785046728,
+                0.09813084112149532
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 80,
+              "after": 83,
+              "gain": 4,
+              "loss": 1,
+              "delta_count": 3,
+              "difference": 0.013761467889908258,
+              "ci95": [
+                -0.004904411764705882,
+                0.04054054054054054
+              ]
+            },
+            "method_name": {
+              "before": 28,
+              "after": 30,
+              "gain": 2,
+              "loss": 0,
+              "delta_count": 2,
+              "difference": 0.009174311926605505,
+              "ci95": [
+                0.0,
+                0.02304147465437788
+              ]
+            },
+            "service_method": {
+              "before": 18,
+              "after": 21,
+              "gain": 4,
+              "loss": 1,
+              "delta_count": 3,
+              "difference": 0.013761467889908258,
+              "ci95": [
+                -0.004904411764705882,
+                0.04054054054054054
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 20,
+              "gain": 20,
+              "loss": 0,
+              "delta_count": 20,
+              "difference": 0.09174311926605505,
+              "ci95": [
+                0.046506244616709734,
+                0.14285714285714285
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 17,
+              "gain": 17,
+              "loss": 0,
+              "delta_count": 17,
+              "difference": 0.0779816513761468,
+              "ci95": [
+                0.03791022087096486,
+                0.1232876712328767
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 17,
+              "gain": 17,
+              "loss": 0,
+              "delta_count": 17,
+              "difference": 0.0779816513761468,
+              "ci95": [
+                0.03791022087096486,
+                0.1232876712328767
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 76,
+              "after": 79,
+              "gain": 3,
+              "loss": 0,
+              "delta_count": 3,
+              "difference": 0.013761467889908258,
+              "ci95": [
+                0.0,
+                0.03686635944700461
+              ]
+            },
+            "method_name": {
+              "before": 21,
+              "after": 21,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 13,
+              "after": 16,
+              "gain": 3,
+              "loss": 0,
+              "delta_count": 3,
+              "difference": 0.013761467889908258,
+              "ci95": [
+                0.0,
+                0.03686635944700461
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 16,
+              "gain": 16,
+              "loss": 0,
+              "delta_count": 16,
+              "difference": 0.07339449541284404,
+              "ci95": [
+                0.03255813953488372,
+                0.12037037037037036
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 13,
+              "gain": 13,
+              "loss": 0,
+              "delta_count": 13,
+              "difference": 0.05963302752293578,
+              "ci95": [
+                0.02304147465437788,
+                0.10329043224866438
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 13,
+              "gain": 13,
+              "loss": 0,
+              "delta_count": 13,
+              "difference": 0.05963302752293578,
+              "ci95": [
+                0.02304147465437788,
+                0.10329043224866438
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 74,
+              "after": 76,
+              "gain": 2,
+              "loss": 0,
+              "delta_count": 2,
+              "difference": 0.009174311926605505,
+              "ci95": [
+                0.0,
+                0.02857142857142857
+              ]
+            },
+            "method_name": {
+              "before": 19,
+              "after": 19,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 12,
+              "after": 14,
+              "gain": 2,
+              "loss": 0,
+              "delta_count": 2,
+              "difference": 0.009174311926605505,
+              "ci95": [
+                0.0,
+                0.02857142857142857
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 14,
+              "gain": 14,
+              "loss": 0,
+              "delta_count": 14,
+              "difference": 0.06422018348623854,
+              "ci95": [
+                0.027146263910969793,
+                0.1111111111111111
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 12,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05504587155963303,
+              "ci95": [
+                0.018691588785046728,
+                0.09813084112149532
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 12,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05504587155963303,
+              "ci95": [
+                0.018691588785046728,
+                0.09813084112149532
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 125,
+              "after": 140,
+              "gain": 22,
+              "loss": 7,
+              "delta_count": 15,
+              "difference": 0.06880733944954129,
+              "ci95": [
+                0.017777777777777778,
+                0.12206838314957617
+              ]
+            },
+            "method_name": {
+              "before": 122,
+              "after": 164,
+              "gain": 42,
+              "loss": 0,
+              "delta_count": 42,
+              "difference": 0.1926605504587156,
+              "ci95": [
+                0.1382488479262673,
+                0.2511415525114155
+              ]
+            },
+            "service_method": {
+              "before": 86,
+              "after": 121,
+              "gain": 40,
+              "loss": 5,
+              "delta_count": 35,
+              "difference": 0.16055045871559634,
+              "ci95": [
+                0.09722222222222222,
+                0.22374592302674493
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 118,
+              "gain": 118,
+              "loss": 0,
+              "delta_count": 118,
+              "difference": 0.5412844036697247,
+              "ci95": [
+                0.45042772129928094,
+                0.629960473115684
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 111,
+              "gain": 111,
+              "loss": 0,
+              "delta_count": 111,
+              "difference": 0.5091743119266054,
+              "ci95": [
+                0.4191903552233792,
+                0.596581270467628
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 111,
+              "gain": 111,
+              "loss": 0,
+              "delta_count": 111,
+              "difference": 0.5091743119266054,
+              "ci95": [
+                0.4191903552233792,
+                0.596581270467628
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 4,
+          "adaptive_matched": 19,
+          "centroid_default": 7,
+          "always_matrix_expert": 0,
+          "always_base": 218
+        }
+      }
+    },
+    "near_lodging_booking": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1699,
+              "after": 1809,
+              "gain": 134,
+              "loss": 24,
+              "delta_count": 110,
+              "difference": 0.033992583436341164,
+              "ci95": [
+                0.026242511538543182,
+                0.04207231234016948
+              ]
+            },
+            "method_name": {
+              "before": 1753,
+              "after": 1897,
+              "gain": 146,
+              "loss": 2,
+              "delta_count": 144,
+              "difference": 0.04449938195302843,
+              "ci95": [
+                0.03767112884701809,
+                0.052140534289451736
+              ]
+            },
+            "service_method": {
+              "before": 1368,
+              "after": 1491,
+              "gain": 141,
+              "loss": 18,
+              "delta_count": 123,
+              "difference": 0.038009888751545116,
+              "ci95": [
+                0.030215885566755665,
+                0.04644642662469509
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 772,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.16779975278121137,
+              "ci95": [
+                0.15377664443492858,
+                0.18217050528158443
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 620,
+              "gain": 428,
+              "loss": 0,
+              "delta_count": 428,
+              "difference": 0.13226205191594562,
+              "ci95": [
+                0.120011274966408,
+                0.14498565209574862
+              ]
+            },
+            "exact": {
+              "before": 159,
+              "after": 587,
+              "gain": 428,
+              "loss": 0,
+              "delta_count": 428,
+              "difference": 0.13226205191594562,
+              "ci95": [
+                0.120011274966408,
+                0.14498565209574862
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1703,
+              "after": 1813,
+              "gain": 134,
+              "loss": 24,
+              "delta_count": 110,
+              "difference": 0.033992583436341164,
+              "ci95": [
+                0.026484316071303457,
+                0.042085725448140786
+              ]
+            },
+            "method_name": {
+              "before": 1748,
+              "after": 1893,
+              "gain": 147,
+              "loss": 2,
+              "delta_count": 145,
+              "difference": 0.04480840543881335,
+              "ci95": [
+                0.0378737993097013,
+                0.05256654056729208
+              ]
+            },
+            "service_method": {
+              "before": 1369,
+              "after": 1492,
+              "gain": 141,
+              "loss": 18,
+              "delta_count": 123,
+              "difference": 0.038009888751545116,
+              "ci95": [
+                0.030292961384944816,
+                0.04653333172881159
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 777,
+              "gain": 547,
+              "loss": 0,
+              "delta_count": 547,
+              "difference": 0.16903584672435104,
+              "ci95": [
+                0.1549935731034172,
+                0.18355089809048356
+              ]
+            },
+            "arguments": {
+              "before": 193,
+              "after": 624,
+              "gain": 431,
+              "loss": 0,
+              "delta_count": 431,
+              "difference": 0.13318912237330038,
+              "ci95": [
+                0.1211904219749759,
+                0.14620431558937125
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 589,
+              "gain": 431,
+              "loss": 0,
+              "delta_count": 431,
+              "difference": 0.13318912237330038,
+              "ci95": [
+                0.1211904219749759,
+                0.14620431558937125
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1701,
+              "after": 1820,
+              "gain": 143,
+              "loss": 24,
+              "delta_count": 119,
+              "difference": 0.03677379480840544,
+              "ci95": [
+                0.028935573905097406,
+                0.04484123113997766
+              ]
+            },
+            "method_name": {
+              "before": 1748,
+              "after": 1901,
+              "gain": 155,
+              "loss": 2,
+              "delta_count": 153,
+              "difference": 0.047280593325092705,
+              "ci95": [
+                0.04030059085979885,
+                0.05487119365431493
+              ]
+            },
+            "service_method": {
+              "before": 1366,
+              "after": 1498,
+              "gain": 150,
+              "loss": 18,
+              "delta_count": 132,
+              "difference": 0.0407911001236094,
+              "ci95": [
+                0.0329141819153848,
+                0.04887925349251357
+              ]
+            },
+            "argument_keys": {
+              "before": 225,
+              "after": 778,
+              "gain": 553,
+              "loss": 0,
+              "delta_count": 553,
+              "difference": 0.17088998763906058,
+              "ci95": [
+                0.15712357766903268,
+                0.18544002723528405
+              ]
+            },
+            "arguments": {
+              "before": 189,
+              "after": 627,
+              "gain": 438,
+              "loss": 0,
+              "delta_count": 438,
+              "difference": 0.13535228677379482,
+              "ci95": [
+                0.12329824641160625,
+                0.1486889544840136
+              ]
+            },
+            "exact": {
+              "before": 155,
+              "after": 593,
+              "gain": 438,
+              "loss": 0,
+              "delta_count": 438,
+              "difference": 0.13535228677379482,
+              "ci95": [
+                0.12329824641160625,
+                0.1486889544840136
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1704,
+              "after": 1814,
+              "gain": 135,
+              "loss": 25,
+              "delta_count": 110,
+              "difference": 0.033992583436341164,
+              "ci95": [
+                0.026241622636778022,
+                0.04206768235660848
+              ]
+            },
+            "method_name": {
+              "before": 1756,
+              "after": 1899,
+              "gain": 145,
+              "loss": 2,
+              "delta_count": 143,
+              "difference": 0.044190358467243514,
+              "ci95": [
+                0.03742894428820066,
+                0.051847814159865384
+              ]
+            },
+            "service_method": {
+              "before": 1372,
+              "after": 1493,
+              "gain": 139,
+              "loss": 18,
+              "delta_count": 121,
+              "difference": 0.03739184177997528,
+              "ci95": [
+                0.02950264775167617,
+                0.045770024214341315
+              ]
+            },
+            "argument_keys": {
+              "before": 227,
+              "after": 767,
+              "gain": 540,
+              "loss": 0,
+              "delta_count": 540,
+              "difference": 0.1668726823238566,
+              "ci95": [
+                0.15288363929451856,
+                0.18103965595649474
+              ]
+            },
+            "arguments": {
+              "before": 191,
+              "after": 618,
+              "gain": 427,
+              "loss": 0,
+              "delta_count": 427,
+              "difference": 0.13195302843016068,
+              "ci95": [
+                0.1198956867380487,
+                0.14488769599447207
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 587,
+              "gain": 427,
+              "loss": 0,
+              "delta_count": 427,
+              "difference": 0.13195302843016068,
+              "ci95": [
+                0.1198956867380487,
+                0.14488769599447207
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1888,
+              "after": 2069,
+              "gain": 205,
+              "loss": 24,
+              "delta_count": 181,
+              "difference": 0.05593325092707046,
+              "ci95": [
+                0.04643947342979692,
+                0.06546777102659451
+              ]
+            },
+            "method_name": {
+              "before": 1904,
+              "after": 2163,
+              "gain": 267,
+              "loss": 8,
+              "delta_count": 259,
+              "difference": 0.08003708281829419,
+              "ci95": [
+                0.06973152171367,
+                0.09082552987307037
+              ]
+            },
+            "service_method": {
+              "before": 1589,
+              "after": 1807,
+              "gain": 238,
+              "loss": 20,
+              "delta_count": 218,
+              "difference": 0.06736711990111248,
+              "ci95": [
+                0.05730682621528605,
+                0.07808225320578155
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 963,
+              "gain": 734,
+              "loss": 0,
+              "delta_count": 734,
+              "difference": 0.226823238566131,
+              "ci95": [
+                0.2114971445121906,
+                0.24257901145981628
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 776,
+              "gain": 584,
+              "loss": 0,
+              "delta_count": 584,
+              "difference": 0.18046971569839307,
+              "ci95": [
+                0.16579781345575312,
+                0.1950114851716286
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 742,
+              "gain": 582,
+              "loss": 0,
+              "delta_count": 582,
+              "difference": 0.17985166872682323,
+              "ci95": [
+                0.16539512020962271,
+                0.1943487543808596
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 133,
+          "adaptive_matched": 320,
+          "centroid_default": 558,
+          "always_matrix_expert": 0,
+          "always_base": 3236
+        }
+      },
+      "known": {
+        "n": 3099,
+        "dialogues": 1180,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1671,
+              "after": 1787,
+              "gain": 134,
+              "loss": 18,
+              "delta_count": 116,
+              "difference": 0.03743142949338496,
+              "ci95": [
+                0.029300270503278467,
+                0.04549975262994121
+              ]
+            },
+            "method_name": {
+              "before": 1682,
+              "after": 1811,
+              "gain": 131,
+              "loss": 2,
+              "delta_count": 129,
+              "difference": 0.041626331074540175,
+              "ci95": [
+                0.03419838072454877,
+                0.04896204741799284
+              ]
+            },
+            "service_method": {
+              "before": 1361,
+              "after": 1484,
+              "gain": 141,
+              "loss": 18,
+              "delta_count": 123,
+              "difference": 0.03969022265246854,
+              "ci95": [
+                0.03100395909316359,
+                0.048408985046723
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 768,
+              "gain": 539,
+              "loss": 0,
+              "delta_count": 539,
+              "difference": 0.1739270732494353,
+              "ci95": [
+                0.16020057498776902,
+                0.18837788650641282
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 619,
+              "gain": 427,
+              "loss": 0,
+              "delta_count": 427,
+              "difference": 0.1377863827040981,
+              "ci95": [
+                0.12496031871432947,
+                0.15075740608039456
+              ]
+            },
+            "exact": {
+              "before": 159,
+              "after": 586,
+              "gain": 427,
+              "loss": 0,
+              "delta_count": 427,
+              "difference": 0.1377863827040981,
+              "ci95": [
+                0.12496031871432947,
+                0.15075740608039456
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1675,
+              "after": 1791,
+              "gain": 134,
+              "loss": 18,
+              "delta_count": 116,
+              "difference": 0.03743142949338496,
+              "ci95": [
+                0.029417018115064315,
+                0.045338701944373505
+              ]
+            },
+            "method_name": {
+              "before": 1678,
+              "after": 1807,
+              "gain": 131,
+              "loss": 2,
+              "delta_count": 129,
+              "difference": 0.041626331074540175,
+              "ci95": [
+                0.03406740697576889,
+                0.04892441961232907
+              ]
+            },
+            "service_method": {
+              "before": 1362,
+              "after": 1485,
+              "gain": 141,
+              "loss": 18,
+              "delta_count": 123,
+              "difference": 0.03969022265246854,
+              "ci95": [
+                0.030973306895937615,
+                0.04845553410299854
+              ]
+            },
+            "argument_keys": {
+              "before": 230,
+              "after": 773,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17521781219748306,
+              "ci95": [
+                0.16173941296632166,
+                0.18951491529731318
+              ]
+            },
+            "arguments": {
+              "before": 193,
+              "after": 623,
+              "gain": 430,
+              "loss": 0,
+              "delta_count": 430,
+              "difference": 0.13875443691513392,
+              "ci95": [
+                0.12631965930929948,
+                0.15165575054988567
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 588,
+              "gain": 430,
+              "loss": 0,
+              "delta_count": 430,
+              "difference": 0.13875443691513392,
+              "ci95": [
+                0.12631965930929948,
+                0.15165575054988567
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1672,
+              "after": 1797,
+              "gain": 143,
+              "loss": 18,
+              "delta_count": 125,
+              "difference": 0.04033559212649242,
+              "ci95": [
+                0.03186465366938087,
+                0.04849935536916821
+              ]
+            },
+            "method_name": {
+              "before": 1677,
+              "after": 1813,
+              "gain": 138,
+              "loss": 2,
+              "delta_count": 136,
+              "difference": 0.04388512423362375,
+              "ci95": [
+                0.03643940478852025,
+                0.051579786149482165
+              ]
+            },
+            "service_method": {
+              "before": 1359,
+              "after": 1491,
+              "gain": 150,
+              "loss": 18,
+              "delta_count": 132,
+              "difference": 0.04259438528557599,
+              "ci95": [
+                0.03372925057268079,
+                0.051607878698151845
+              ]
+            },
+            "argument_keys": {
+              "before": 225,
+              "after": 774,
+              "gain": 549,
+              "loss": 0,
+              "delta_count": 549,
+              "difference": 0.1771539206195547,
+              "ci95": [
+                0.1634306668155986,
+                0.1918052746433894
+              ]
+            },
+            "arguments": {
+              "before": 189,
+              "after": 626,
+              "gain": 437,
+              "loss": 0,
+              "delta_count": 437,
+              "difference": 0.14101323007421748,
+              "ci95": [
+                0.1281799336650083,
+                0.15405145927519984
+              ]
+            },
+            "exact": {
+              "before": 155,
+              "after": 592,
+              "gain": 437,
+              "loss": 0,
+              "delta_count": 437,
+              "difference": 0.14101323007421748,
+              "ci95": [
+                0.1281799336650083,
+                0.15405145927519984
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1675,
+              "after": 1792,
+              "gain": 135,
+              "loss": 18,
+              "delta_count": 117,
+              "difference": 0.0377541142303969,
+              "ci95": [
+                0.02938260584663613,
+                0.04566022243939333
+              ]
+            },
+            "method_name": {
+              "before": 1682,
+              "after": 1808,
+              "gain": 128,
+              "loss": 2,
+              "delta_count": 126,
+              "difference": 0.04065827686350436,
+              "ci95": [
+                0.03324855895158659,
+                0.048034301491233534
+              ]
+            },
+            "service_method": {
+              "before": 1365,
+              "after": 1486,
+              "gain": 139,
+              "loss": 18,
+              "delta_count": 121,
+              "difference": 0.03904485317844466,
+              "ci95": [
+                0.030303030303030304,
+                0.04778636154472408
+              ]
+            },
+            "argument_keys": {
+              "before": 227,
+              "after": 763,
+              "gain": 536,
+              "loss": 0,
+              "delta_count": 536,
+              "difference": 0.1729590190383995,
+              "ci95": [
+                0.1591315613792675,
+                0.1874407137612898
+              ]
+            },
+            "arguments": {
+              "before": 191,
+              "after": 617,
+              "gain": 426,
+              "loss": 0,
+              "delta_count": 426,
+              "difference": 0.13746369796708616,
+              "ci95": [
+                0.12476037630878571,
+                0.15047167224728175
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 586,
+              "gain": 426,
+              "loss": 0,
+              "delta_count": 426,
+              "difference": 0.13746369796708616,
+              "ci95": [
+                0.12476037630878571,
+                0.15047167224728175
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1857,
+              "after": 2046,
+              "gain": 205,
+              "loss": 16,
+              "delta_count": 189,
+              "difference": 0.06098741529525654,
+              "ci95": [
+                0.051701307261848795,
+                0.07005280623674916
+              ]
+            },
+            "method_name": {
+              "before": 1836,
+              "after": 2079,
+              "gain": 251,
+              "loss": 8,
+              "delta_count": 243,
+              "difference": 0.07841239109390126,
+              "ci95": [
+                0.06823449581532653,
+                0.08915807963690311
+              ]
+            },
+            "service_method": {
+              "before": 1582,
+              "after": 1800,
+              "gain": 238,
+              "loss": 20,
+              "delta_count": 218,
+              "difference": 0.07034527266860277,
+              "ci95": [
+                0.05993367719612318,
+                0.08102264474447515
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 959,
+              "gain": 730,
+              "loss": 0,
+              "delta_count": 730,
+              "difference": 0.2355598580187157,
+              "ci95": [
+                0.22085825664621678,
+                0.2512364539601855
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 775,
+              "gain": 583,
+              "loss": 0,
+              "delta_count": 583,
+              "difference": 0.18812520167796062,
+              "ci95": [
+                0.1743462269542977,
+                0.2031256409993436
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 741,
+              "gain": 581,
+              "loss": 0,
+              "delta_count": 581,
+              "difference": 0.18747983220393674,
+              "ci95": [
+                0.17377398972418198,
+                0.20252839290086827
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 83,
+          "adaptive_matched": 238,
+          "centroid_default": 477,
+          "always_matrix_expert": 0,
+          "always_base": 3099
+        }
+      },
+      "unknown": {
+        "n": 137,
+        "dialogues": 137,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 28,
+              "after": 22,
+              "gain": 0,
+              "loss": 6,
+              "delta_count": -6,
+              "difference": -0.043795620437956206,
+              "ci95": [
+                -0.08029197080291971,
+                -0.014598540145985401
+              ]
+            },
+            "method_name": {
+              "before": 71,
+              "after": 86,
+              "gain": 15,
+              "loss": 0,
+              "delta_count": 15,
+              "difference": 0.10948905109489052,
+              "ci95": [
+                0.058394160583941604,
+                0.1678832116788321
+              ]
+            },
+            "service_method": {
+              "before": 7,
+              "after": 7,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 4,
+              "gain": 4,
+              "loss": 0,
+              "delta_count": 4,
+              "difference": 0.029197080291970802,
+              "ci95": [
+                0.0072992700729927005,
+                0.058394160583941604
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 28,
+              "after": 22,
+              "gain": 0,
+              "loss": 6,
+              "delta_count": -6,
+              "difference": -0.043795620437956206,
+              "ci95": [
+                -0.08029197080291971,
+                -0.014598540145985401
+              ]
+            },
+            "method_name": {
+              "before": 70,
+              "after": 86,
+              "gain": 16,
+              "loss": 0,
+              "delta_count": 16,
+              "difference": 0.11678832116788321,
+              "ci95": [
+                0.06569343065693431,
+                0.17518248175182483
+              ]
+            },
+            "service_method": {
+              "before": 7,
+              "after": 7,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 4,
+              "gain": 4,
+              "loss": 0,
+              "delta_count": 4,
+              "difference": 0.029197080291970802,
+              "ci95": [
+                0.0072992700729927005,
+                0.058394160583941604
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 29,
+              "after": 23,
+              "gain": 0,
+              "loss": 6,
+              "delta_count": -6,
+              "difference": -0.043795620437956206,
+              "ci95": [
+                -0.08029197080291971,
+                -0.014598540145985401
+              ]
+            },
+            "method_name": {
+              "before": 71,
+              "after": 88,
+              "gain": 17,
+              "loss": 0,
+              "delta_count": 17,
+              "difference": 0.12408759124087591,
+              "ci95": [
+                0.072992700729927,
+                0.18248175182481752
+              ]
+            },
+            "service_method": {
+              "before": 7,
+              "after": 7,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 4,
+              "gain": 4,
+              "loss": 0,
+              "delta_count": 4,
+              "difference": 0.029197080291970802,
+              "ci95": [
+                0.0072992700729927005,
+                0.058394160583941604
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 29,
+              "after": 22,
+              "gain": 0,
+              "loss": 7,
+              "delta_count": -7,
+              "difference": -0.051094890510948905,
+              "ci95": [
+                -0.08759124087591241,
+                -0.014598540145985401
+              ]
+            },
+            "method_name": {
+              "before": 74,
+              "after": 91,
+              "gain": 17,
+              "loss": 0,
+              "delta_count": 17,
+              "difference": 0.12408759124087591,
+              "ci95": [
+                0.072992700729927,
+                0.18248175182481752
+              ]
+            },
+            "service_method": {
+              "before": 7,
+              "after": 7,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 4,
+              "gain": 4,
+              "loss": 0,
+              "delta_count": 4,
+              "difference": 0.029197080291970802,
+              "ci95": [
+                0.0072992700729927005,
+                0.058394160583941604
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 31,
+              "after": 23,
+              "gain": 0,
+              "loss": 8,
+              "delta_count": -8,
+              "difference": -0.058394160583941604,
+              "ci95": [
+                -0.0948905109489051,
+                -0.021897810218978103
+              ]
+            },
+            "method_name": {
+              "before": 68,
+              "after": 84,
+              "gain": 16,
+              "loss": 0,
+              "delta_count": 16,
+              "difference": 0.11678832116788321,
+              "ci95": [
+                0.06569343065693431,
+                0.17518248175182483
+              ]
+            },
+            "service_method": {
+              "before": 7,
+              "after": 7,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 4,
+              "gain": 4,
+              "loss": 0,
+              "delta_count": 4,
+              "difference": 0.029197080291970802,
+              "ci95": [
+                0.0072992700729927005,
+                0.058394160583941604
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 1,
+              "gain": 1,
+              "loss": 0,
+              "delta_count": 1,
+              "difference": 0.0072992700729927005,
+              "ci95": [
+                0.0,
+                0.021897810218978103
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 50,
+          "adaptive_matched": 82,
+          "centroid_default": 81,
+          "always_matrix_expert": 0,
+          "always_base": 137
+        }
+      }
+    },
+    "near_event_booking": {
+      "all": {
+        "n": 3236,
+        "dialogues": 1210,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1765,
+              "after": 1924,
+              "gain": 178,
+              "loss": 19,
+              "delta_count": 159,
+              "difference": 0.049134734239802226,
+              "ci95": [
+                0.040623306888544895,
+                0.05802493210839545
+              ]
+            },
+            "method_name": {
+              "before": 1852,
+              "after": 2037,
+              "gain": 187,
+              "loss": 2,
+              "delta_count": 185,
+              "difference": 0.05716934487021014,
+              "ci95": [
+                0.04895314814495849,
+                0.06595368136575094
+              ]
+            },
+            "service_method": {
+              "before": 1501,
+              "after": 1659,
+              "gain": 173,
+              "loss": 15,
+              "delta_count": 158,
+              "difference": 0.04882571075401731,
+              "ci95": [
+                0.040222038267970044,
+                0.05794105893880241
+              ]
+            },
+            "argument_keys": {
+              "before": 233,
+              "after": 914,
+              "gain": 681,
+              "loss": 0,
+              "delta_count": 681,
+              "difference": 0.21044499381953027,
+              "ci95": [
+                0.19578890851091232,
+                0.22561408276141864
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 734,
+              "gain": 540,
+              "loss": 0,
+              "delta_count": 540,
+              "difference": 0.1668726823238566,
+              "ci95": [
+                0.1533310454800309,
+                0.1803488980331985
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 698,
+              "gain": 540,
+              "loss": 0,
+              "delta_count": 540,
+              "difference": 0.1668726823238566,
+              "ci95": [
+                0.1533310454800309,
+                0.1803488980331985
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1761,
+              "after": 1919,
+              "gain": 176,
+              "loss": 18,
+              "delta_count": 158,
+              "difference": 0.04882571075401731,
+              "ci95": [
+                0.04025147496933232,
+                0.05762608354079634
+              ]
+            },
+            "method_name": {
+              "before": 1855,
+              "after": 2038,
+              "gain": 185,
+              "loss": 2,
+              "delta_count": 183,
+              "difference": 0.056551297898640294,
+              "ci95": [
+                0.04835256411350884,
+                0.06546184069090774
+              ]
+            },
+            "service_method": {
+              "before": 1499,
+              "after": 1656,
+              "gain": 171,
+              "loss": 14,
+              "delta_count": 157,
+              "difference": 0.048516687268232384,
+              "ci95": [
+                0.040194268283467595,
+                0.057722740113535745
+              ]
+            },
+            "argument_keys": {
+              "before": 234,
+              "after": 911,
+              "gain": 677,
+              "loss": 0,
+              "delta_count": 677,
+              "difference": 0.2092088998763906,
+              "ci95": [
+                0.19463402906470426,
+                0.2244640703172317
+              ]
+            },
+            "arguments": {
+              "before": 193,
+              "after": 730,
+              "gain": 537,
+              "loss": 0,
+              "delta_count": 537,
+              "difference": 0.16594561186650186,
+              "ci95": [
+                0.15248622187161154,
+                0.17956936331035828
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 695,
+              "gain": 537,
+              "loss": 0,
+              "delta_count": 537,
+              "difference": 0.16594561186650186,
+              "ci95": [
+                0.15248622187161154,
+                0.17956936331035828
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1756,
+              "after": 1916,
+              "gain": 177,
+              "loss": 17,
+              "delta_count": 160,
+              "difference": 0.049443757725587144,
+              "ci95": [
+                0.04098491669876734,
+                0.05836953986475967
+              ]
+            },
+            "method_name": {
+              "before": 1851,
+              "after": 2033,
+              "gain": 184,
+              "loss": 2,
+              "delta_count": 182,
+              "difference": 0.05624227441285538,
+              "ci95": [
+                0.048213984790888016,
+                0.06501326591394246
+              ]
+            },
+            "service_method": {
+              "before": 1496,
+              "after": 1654,
+              "gain": 171,
+              "loss": 13,
+              "delta_count": 158,
+              "difference": 0.04882571075401731,
+              "ci95": [
+                0.04044403925878481,
+                0.0579020563582992
+              ]
+            },
+            "argument_keys": {
+              "before": 233,
+              "after": 912,
+              "gain": 679,
+              "loss": 0,
+              "delta_count": 679,
+              "difference": 0.20982694684796044,
+              "ci95": [
+                0.19510204649170862,
+                0.22520601484227865
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 731,
+              "gain": 539,
+              "loss": 0,
+              "delta_count": 539,
+              "difference": 0.1665636588380717,
+              "ci95": [
+                0.15296207234184242,
+                0.1801525466875946
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 697,
+              "gain": 539,
+              "loss": 0,
+              "delta_count": 539,
+              "difference": 0.1665636588380717,
+              "ci95": [
+                0.15296207234184242,
+                0.1801525466875946
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1756,
+              "after": 1916,
+              "gain": 176,
+              "loss": 16,
+              "delta_count": 160,
+              "difference": 0.049443757725587144,
+              "ci95": [
+                0.041062710770271064,
+                0.058367361764908574
+              ]
+            },
+            "method_name": {
+              "before": 1878,
+              "after": 2049,
+              "gain": 173,
+              "loss": 2,
+              "delta_count": 171,
+              "difference": 0.05284301606922126,
+              "ci95": [
+                0.044989682957475345,
+                0.06161001680563265
+              ]
+            },
+            "service_method": {
+              "before": 1503,
+              "after": 1659,
+              "gain": 168,
+              "loss": 12,
+              "delta_count": 156,
+              "difference": 0.048207663782447466,
+              "ci95": [
+                0.04005978244241519,
+                0.05740863778232976
+              ]
+            },
+            "argument_keys": {
+              "before": 231,
+              "after": 903,
+              "gain": 672,
+              "loss": 0,
+              "delta_count": 672,
+              "difference": 0.207663782447466,
+              "ci95": [
+                0.19312807757234823,
+                0.22290223974174933
+              ]
+            },
+            "arguments": {
+              "before": 190,
+              "after": 724,
+              "gain": 534,
+              "loss": 0,
+              "delta_count": 534,
+              "difference": 0.1650185414091471,
+              "ci95": [
+                0.15154868172630426,
+                0.17844963272215097
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 692,
+              "gain": 534,
+              "loss": 0,
+              "delta_count": 534,
+              "difference": 0.1650185414091471,
+              "ci95": [
+                0.15154868172630426,
+                0.17844963272215097
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1888,
+              "after": 2069,
+              "gain": 205,
+              "loss": 24,
+              "delta_count": 181,
+              "difference": 0.05593325092707046,
+              "ci95": [
+                0.04643947342979692,
+                0.06546777102659451
+              ]
+            },
+            "method_name": {
+              "before": 1904,
+              "after": 2163,
+              "gain": 267,
+              "loss": 8,
+              "delta_count": 259,
+              "difference": 0.08003708281829419,
+              "ci95": [
+                0.06973152171367,
+                0.09082552987307037
+              ]
+            },
+            "service_method": {
+              "before": 1589,
+              "after": 1807,
+              "gain": 238,
+              "loss": 20,
+              "delta_count": 218,
+              "difference": 0.06736711990111248,
+              "ci95": [
+                0.05730682621528605,
+                0.07808225320578155
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 963,
+              "gain": 734,
+              "loss": 0,
+              "delta_count": 734,
+              "difference": 0.226823238566131,
+              "ci95": [
+                0.2114971445121906,
+                0.24257901145981628
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 776,
+              "gain": 584,
+              "loss": 0,
+              "delta_count": 584,
+              "difference": 0.18046971569839307,
+              "ci95": [
+                0.16579781345575312,
+                0.1950114851716286
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 742,
+              "gain": 582,
+              "loss": 0,
+              "delta_count": 582,
+              "difference": 0.17985166872682323,
+              "ci95": [
+                0.16539512020962271,
+                0.1943487543808596
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 541,
+          "adaptive_matched": 416,
+          "centroid_default": 439,
+          "always_matrix_expert": 0,
+          "always_base": 3236
+        }
+      },
+      "known": {
+        "n": 3030,
+        "dialogues": 1142,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1749,
+              "after": 1911,
+              "gain": 178,
+              "loss": 16,
+              "delta_count": 162,
+              "difference": 0.053465346534653464,
+              "ci95": [
+                0.044159980780061926,
+                0.0630815330507925
+              ]
+            },
+            "method_name": {
+              "before": 1731,
+              "after": 1904,
+              "gain": 175,
+              "loss": 2,
+              "delta_count": 173,
+              "difference": 0.057095709570957096,
+              "ci95": [
+                0.048290641205913185,
+                0.06586284708696855
+              ]
+            },
+            "service_method": {
+              "before": 1486,
+              "after": 1647,
+              "gain": 173,
+              "loss": 12,
+              "delta_count": 161,
+              "difference": 0.05313531353135314,
+              "ci95": [
+                0.04374760256544677,
+                0.062312685782737576
+              ]
+            },
+            "argument_keys": {
+              "before": 233,
+              "after": 903,
+              "gain": 670,
+              "loss": 0,
+              "delta_count": 670,
+              "difference": 0.22112211221122113,
+              "ci95": [
+                0.20539383684853196,
+                0.23800118689401537
+              ]
+            },
+            "arguments": {
+              "before": 194,
+              "after": 723,
+              "gain": 529,
+              "loss": 0,
+              "delta_count": 529,
+              "difference": 0.17458745874587459,
+              "ci95": [
+                0.160940038966571,
+                0.1899846301627754
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 687,
+              "gain": 529,
+              "loss": 0,
+              "delta_count": 529,
+              "difference": 0.17458745874587459,
+              "ci95": [
+                0.160940038966571,
+                0.1899846301627754
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1746,
+              "after": 1906,
+              "gain": 176,
+              "loss": 16,
+              "delta_count": 160,
+              "difference": 0.052805280528052806,
+              "ci95": [
+                0.04324412532995211,
+                0.06216637795616848
+              ]
+            },
+            "method_name": {
+              "before": 1730,
+              "after": 1901,
+              "gain": 173,
+              "loss": 2,
+              "delta_count": 171,
+              "difference": 0.05643564356435644,
+              "ci95": [
+                0.047884086758877925,
+                0.06508763872912492
+              ]
+            },
+            "service_method": {
+              "before": 1485,
+              "after": 1644,
+              "gain": 171,
+              "loss": 12,
+              "delta_count": 159,
+              "difference": 0.05247524752475247,
+              "ci95": [
+                0.043079546701187,
+                0.06153910149750416
+              ]
+            },
+            "argument_keys": {
+              "before": 234,
+              "after": 900,
+              "gain": 666,
+              "loss": 0,
+              "delta_count": 666,
+              "difference": 0.2198019801980198,
+              "ci95": [
+                0.20410800503103826,
+                0.23654167820584962
+              ]
+            },
+            "arguments": {
+              "before": 193,
+              "after": 719,
+              "gain": 526,
+              "loss": 0,
+              "delta_count": 526,
+              "difference": 0.1735973597359736,
+              "ci95": [
+                0.15990680539542737,
+                0.18898325814111167
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 684,
+              "gain": 526,
+              "loss": 0,
+              "delta_count": 526,
+              "difference": 0.1735973597359736,
+              "ci95": [
+                0.15990680539542737,
+                0.18898325814111167
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1742,
+              "after": 1903,
+              "gain": 177,
+              "loss": 16,
+              "delta_count": 161,
+              "difference": 0.05313531353135314,
+              "ci95": [
+                0.04387652371872578,
+                0.06262976789465732
+              ]
+            },
+            "method_name": {
+              "before": 1730,
+              "after": 1901,
+              "gain": 173,
+              "loss": 2,
+              "delta_count": 171,
+              "difference": 0.05643564356435644,
+              "ci95": [
+                0.04787620321353696,
+                0.06504092023993589
+              ]
+            },
+            "service_method": {
+              "before": 1483,
+              "after": 1642,
+              "gain": 171,
+              "loss": 12,
+              "delta_count": 159,
+              "difference": 0.05247524752475247,
+              "ci95": [
+                0.04319879077565747,
+                0.06158924630446243
+              ]
+            },
+            "argument_keys": {
+              "before": 233,
+              "after": 901,
+              "gain": 668,
+              "loss": 0,
+              "delta_count": 668,
+              "difference": 0.22046204620462045,
+              "ci95": [
+                0.20498674857577398,
+                0.23717980705256153
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 720,
+              "gain": 528,
+              "loss": 0,
+              "delta_count": 528,
+              "difference": 0.17425742574257425,
+              "ci95": [
+                0.1607596872831254,
+                0.18960470325913098
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 686,
+              "gain": 528,
+              "loss": 0,
+              "delta_count": 528,
+              "difference": 0.17425742574257425,
+              "ci95": [
+                0.1607596872831254,
+                0.18960470325913098
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1744,
+              "after": 1904,
+              "gain": 176,
+              "loss": 16,
+              "delta_count": 160,
+              "difference": 0.052805280528052806,
+              "ci95": [
+                0.04309912857514858,
+                0.06212873553172778
+              ]
+            },
+            "method_name": {
+              "before": 1739,
+              "after": 1907,
+              "gain": 170,
+              "loss": 2,
+              "delta_count": 168,
+              "difference": 0.055445544554455446,
+              "ci95": [
+                0.04678617160636678,
+                0.06409948021688062
+              ]
+            },
+            "service_method": {
+              "before": 1491,
+              "after": 1647,
+              "gain": 168,
+              "loss": 12,
+              "delta_count": 156,
+              "difference": 0.05148514851485148,
+              "ci95": [
+                0.041952525627211655,
+                0.060648165723903164
+              ]
+            },
+            "argument_keys": {
+              "before": 231,
+              "after": 892,
+              "gain": 661,
+              "loss": 0,
+              "delta_count": 661,
+              "difference": 0.21815181518151816,
+              "ci95": [
+                0.20275887142358595,
+                0.23474666875159042
+              ]
+            },
+            "arguments": {
+              "before": 190,
+              "after": 713,
+              "gain": 523,
+              "loss": 0,
+              "delta_count": 523,
+              "difference": 0.1726072607260726,
+              "ci95": [
+                0.15880808110412953,
+                0.18775441789506786
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 681,
+              "gain": 523,
+              "loss": 0,
+              "delta_count": 523,
+              "difference": 0.1726072607260726,
+              "ci95": [
+                0.15880808110412953,
+                0.18775441789506786
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1872,
+              "after": 2056,
+              "gain": 205,
+              "loss": 21,
+              "delta_count": 184,
+              "difference": 0.06072607260726073,
+              "ci95": [
+                0.05061123455614553,
+                0.07099804085733423
+              ]
+            },
+            "method_name": {
+              "before": 1782,
+              "after": 2028,
+              "gain": 254,
+              "loss": 8,
+              "delta_count": 246,
+              "difference": 0.08118811881188119,
+              "ci95": [
+                0.07043106952687599,
+                0.09283826132046759
+              ]
+            },
+            "service_method": {
+              "before": 1574,
+              "after": 1795,
+              "gain": 238,
+              "loss": 17,
+              "delta_count": 221,
+              "difference": 0.07293729372937294,
+              "ci95": [
+                0.06169559544152461,
+                0.08458734815839497
+              ]
+            },
+            "argument_keys": {
+              "before": 229,
+              "after": 952,
+              "gain": 723,
+              "loss": 0,
+              "delta_count": 723,
+              "difference": 0.2386138613861386,
+              "ci95": [
+                0.22203419677957886,
+                0.25553079673711343
+              ]
+            },
+            "arguments": {
+              "before": 192,
+              "after": 765,
+              "gain": 573,
+              "loss": 0,
+              "delta_count": 573,
+              "difference": 0.1891089108910891,
+              "ci95": [
+                0.17476942961172828,
+                0.20521491903971617
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 731,
+              "gain": 571,
+              "loss": 0,
+              "delta_count": 571,
+              "difference": 0.18844884488448846,
+              "ci95": [
+                0.17412451361867703,
+                0.20439343062698323
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 344,
+          "adaptive_matched": 233,
+          "centroid_default": 275,
+          "always_matrix_expert": 0,
+          "always_base": 3030
+        }
+      },
+      "unknown": {
+        "n": 206,
+        "dialogues": 198,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 16,
+              "after": 13,
+              "gain": 0,
+              "loss": 3,
+              "delta_count": -3,
+              "difference": -0.014563106796116505,
+              "ci95": [
+                -0.03365384615384615,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 121,
+              "after": 133,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05825242718446602,
+              "ci95": [
+                0.02912621359223301,
+                0.09314872500724422
+              ]
+            },
+            "service_method": {
+              "before": 15,
+              "after": 12,
+              "gain": 0,
+              "loss": 3,
+              "delta_count": -3,
+              "difference": -0.014563106796116505,
+              "ci95": [
+                -0.03365384615384615,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 15,
+              "after": 13,
+              "gain": 0,
+              "loss": 2,
+              "delta_count": -2,
+              "difference": -0.009708737864077669,
+              "ci95": [
+                -0.024509803921568627,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 125,
+              "after": 137,
+              "gain": 12,
+              "loss": 0,
+              "delta_count": 12,
+              "difference": 0.05825242718446602,
+              "ci95": [
+                0.02912621359223301,
+                0.09314872500724422
+              ]
+            },
+            "service_method": {
+              "before": 14,
+              "after": 12,
+              "gain": 0,
+              "loss": 2,
+              "delta_count": -2,
+              "difference": -0.009708737864077669,
+              "ci95": [
+                -0.024509803921568627,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 14,
+              "after": 13,
+              "gain": 0,
+              "loss": 1,
+              "delta_count": -1,
+              "difference": -0.0048543689320388345,
+              "ci95": [
+                -0.014925373134328358,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 121,
+              "after": 132,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.024390243902439025,
+                0.08780487804878048
+              ]
+            },
+            "service_method": {
+              "before": 13,
+              "after": 12,
+              "gain": 0,
+              "loss": 1,
+              "delta_count": -1,
+              "difference": -0.0048543689320388345,
+              "ci95": [
+                -0.014925373134328358,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 12,
+              "after": 12,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 139,
+              "after": 142,
+              "gain": 3,
+              "loss": 0,
+              "delta_count": 3,
+              "difference": 0.014563106796116505,
+              "ci95": [
+                0.0,
+                0.03303071680057771
+              ]
+            },
+            "service_method": {
+              "before": 12,
+              "after": 12,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 16,
+              "after": 13,
+              "gain": 0,
+              "loss": 3,
+              "delta_count": -3,
+              "difference": -0.014563106796116505,
+              "ci95": [
+                -0.03365384615384615,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 122,
+              "after": 135,
+              "gain": 13,
+              "loss": 0,
+              "delta_count": 13,
+              "difference": 0.06310679611650485,
+              "ci95": [
+                0.03317144326209425,
+                0.09852216748768473
+              ]
+            },
+            "service_method": {
+              "before": 15,
+              "after": 12,
+              "gain": 0,
+              "loss": 3,
+              "delta_count": -3,
+              "difference": -0.014563106796116505,
+              "ci95": [
+                -0.03365384615384615,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "arguments": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            },
+            "exact": {
+              "before": 0,
+              "after": 11,
+              "gain": 11,
+              "loss": 0,
+              "delta_count": 11,
+              "difference": 0.05339805825242718,
+              "ci95": [
+                0.0196078431372549,
+                0.09047619047619047
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 197,
+          "adaptive_matched": 183,
+          "centroid_default": 164,
+          "always_matrix_expert": 0,
+          "always_base": 206
+        }
+      }
+    },
+    "music_transfer": {
+      "all": {
+        "n": 3133,
+        "dialogues": 1178,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1665,
+              "after": 1834,
+              "gain": 186,
+              "loss": 17,
+              "delta_count": 169,
+              "difference": 0.05394190871369295,
+              "ci95": [
+                0.04477505398136222,
+                0.06370897226077263
+              ]
+            },
+            "method_name": {
+              "before": 1789,
+              "after": 1969,
+              "gain": 182,
+              "loss": 2,
+              "delta_count": 180,
+              "difference": 0.05745292052345994,
+              "ci95": [
+                0.04870275863776073,
+                0.06652111032568582
+              ]
+            },
+            "service_method": {
+              "before": 1414,
+              "after": 1574,
+              "gain": 171,
+              "loss": 11,
+              "delta_count": 160,
+              "difference": 0.05106926268751995,
+              "ci95": [
+                0.04201411161000641,
+                0.06026922523041474
+              ]
+            },
+            "argument_keys": {
+              "before": 218,
+              "after": 896,
+              "gain": 678,
+              "loss": 0,
+              "delta_count": 678,
+              "difference": 0.2164060006383658,
+              "ci95": [
+                0.20012176084920388,
+                0.2326266772430139
+              ]
+            },
+            "arguments": {
+              "before": 176,
+              "after": 719,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            },
+            "exact": {
+              "before": 141,
+              "after": 684,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1663,
+              "after": 1838,
+              "gain": 192,
+              "loss": 17,
+              "delta_count": 175,
+              "difference": 0.05585700606447495,
+              "ci95": [
+                0.046584656412355444,
+                0.06548548186673882
+              ]
+            },
+            "method_name": {
+              "before": 1781,
+              "after": 1968,
+              "gain": 189,
+              "loss": 2,
+              "delta_count": 187,
+              "difference": 0.05968720076603894,
+              "ci95": [
+                0.05079947438367006,
+                0.06897692875830902
+              ]
+            },
+            "service_method": {
+              "before": 1410,
+              "after": 1577,
+              "gain": 178,
+              "loss": 11,
+              "delta_count": 167,
+              "difference": 0.053303542930098945,
+              "ci95": [
+                0.04427500669303173,
+                0.06291947763362597
+              ]
+            },
+            "argument_keys": {
+              "before": 217,
+              "after": 898,
+              "gain": 681,
+              "loss": 0,
+              "delta_count": 681,
+              "difference": 0.2173635493137568,
+              "ci95": [
+                0.20088572579862327,
+                0.23341084216645433
+              ]
+            },
+            "arguments": {
+              "before": 175,
+              "after": 720,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.16017202970224398,
+                0.18802549045141273
+              ]
+            },
+            "exact": {
+              "before": 140,
+              "after": 685,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.16017202970224398,
+                0.18802549045141273
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1668,
+              "after": 1822,
+              "gain": 171,
+              "loss": 17,
+              "delta_count": 154,
+              "difference": 0.04915416533673795,
+              "ci95": [
+                0.04022998376857478,
+                0.05856046862996159
+              ]
+            },
+            "method_name": {
+              "before": 1783,
+              "after": 1950,
+              "gain": 169,
+              "loss": 2,
+              "delta_count": 167,
+              "difference": 0.053303542930098945,
+              "ci95": [
+                0.04483714055507768,
+                0.0617443178298546
+              ]
+            },
+            "service_method": {
+              "before": 1412,
+              "after": 1558,
+              "gain": 157,
+              "loss": 11,
+              "delta_count": 146,
+              "difference": 0.046600702202361954,
+              "ci95": [
+                0.037782824000384976,
+                0.05543113548234976
+              ]
+            },
+            "argument_keys": {
+              "before": 214,
+              "after": 889,
+              "gain": 675,
+              "loss": 0,
+              "delta_count": 675,
+              "difference": 0.2154484519629748,
+              "ci95": [
+                0.19937384857669221,
+                0.23148887545218017
+              ]
+            },
+            "arguments": {
+              "before": 168,
+              "after": 713,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.15999968444304197,
+                0.18811595518547258
+              ]
+            },
+            "exact": {
+              "before": 137,
+              "after": 682,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.15999968444304197,
+                0.18811595518547258
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1683,
+              "after": 1824,
+              "gain": 158,
+              "loss": 17,
+              "delta_count": 141,
+              "difference": 0.045004787743376955,
+              "ci95": [
+                0.03647696890993812,
+                0.054055568536836546
+              ]
+            },
+            "method_name": {
+              "before": 1824,
+              "after": 1977,
+              "gain": 155,
+              "loss": 2,
+              "delta_count": 153,
+              "difference": 0.04883498244494095,
+              "ci95": [
+                0.0407324875922409,
+                0.057017530267421276
+              ]
+            },
+            "service_method": {
+              "before": 1445,
+              "after": 1577,
+              "gain": 143,
+              "loss": 11,
+              "delta_count": 132,
+              "difference": 0.04213214171720396,
+              "ci95": [
+                0.0339409083617738,
+                0.050554696830754
+              ]
+            },
+            "argument_keys": {
+              "before": 224,
+              "after": 889,
+              "gain": 665,
+              "loss": 0,
+              "delta_count": 665,
+              "difference": 0.21225662304500478,
+              "ci95": [
+                0.19627458048899346,
+                0.22788426783463248
+              ]
+            },
+            "arguments": {
+              "before": 176,
+              "after": 719,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            },
+            "exact": {
+              "before": 144,
+              "after": 687,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1790,
+              "after": 1972,
+              "gain": 205,
+              "loss": 23,
+              "delta_count": 182,
+              "difference": 0.058091286307053944,
+              "ci95": [
+                0.04857133961928482,
+                0.06774165638768662
+              ]
+            },
+            "method_name": {
+              "before": 1815,
+              "after": 2070,
+              "gain": 263,
+              "loss": 8,
+              "delta_count": 255,
+              "difference": 0.08139163740823492,
+              "ci95": [
+                0.07113885416712676,
+                0.0922341524509535
+              ]
+            },
+            "service_method": {
+              "before": 1501,
+              "after": 1716,
+              "gain": 234,
+              "loss": 19,
+              "delta_count": 215,
+              "difference": 0.06862432173635494,
+              "ci95": [
+                0.058614598332380315,
+                0.07938084230879659
+              ]
+            },
+            "argument_keys": {
+              "before": 208,
+              "after": 930,
+              "gain": 722,
+              "loss": 0,
+              "delta_count": 722,
+              "difference": 0.23045004787743376,
+              "ci95": [
+                0.21401628213871066,
+                0.24655594271180112
+              ]
+            },
+            "arguments": {
+              "before": 174,
+              "after": 749,
+              "gain": 575,
+              "loss": 0,
+              "delta_count": 575,
+              "difference": 0.1835301627832748,
+              "ci95": [
+                0.16874959203655354,
+                0.1985318754843471
+              ]
+            },
+            "exact": {
+              "before": 142,
+              "after": 715,
+              "gain": 573,
+              "loss": 0,
+              "delta_count": 573,
+              "difference": 0.1828917969996808,
+              "ci95": [
+                0.16819612017004754,
+                0.1976839477955683
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 149,
+          "adaptive_matched": 241,
+          "centroid_default": 357,
+          "always_matrix_expert": 0,
+          "always_base": 3133
+        }
+      },
+      "known": {
+        "n": 3133,
+        "dialogues": 1178,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1665,
+              "after": 1834,
+              "gain": 186,
+              "loss": 17,
+              "delta_count": 169,
+              "difference": 0.05394190871369295,
+              "ci95": [
+                0.04477505398136222,
+                0.06370897226077263
+              ]
+            },
+            "method_name": {
+              "before": 1789,
+              "after": 1969,
+              "gain": 182,
+              "loss": 2,
+              "delta_count": 180,
+              "difference": 0.05745292052345994,
+              "ci95": [
+                0.04870275863776073,
+                0.06652111032568582
+              ]
+            },
+            "service_method": {
+              "before": 1414,
+              "after": 1574,
+              "gain": 171,
+              "loss": 11,
+              "delta_count": 160,
+              "difference": 0.05106926268751995,
+              "ci95": [
+                0.04201411161000641,
+                0.06026922523041474
+              ]
+            },
+            "argument_keys": {
+              "before": 218,
+              "after": 896,
+              "gain": 678,
+              "loss": 0,
+              "delta_count": 678,
+              "difference": 0.2164060006383658,
+              "ci95": [
+                0.20012176084920388,
+                0.2326266772430139
+              ]
+            },
+            "arguments": {
+              "before": 176,
+              "after": 719,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            },
+            "exact": {
+              "before": 141,
+              "after": 684,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1663,
+              "after": 1838,
+              "gain": 192,
+              "loss": 17,
+              "delta_count": 175,
+              "difference": 0.05585700606447495,
+              "ci95": [
+                0.046584656412355444,
+                0.06548548186673882
+              ]
+            },
+            "method_name": {
+              "before": 1781,
+              "after": 1968,
+              "gain": 189,
+              "loss": 2,
+              "delta_count": 187,
+              "difference": 0.05968720076603894,
+              "ci95": [
+                0.05079947438367006,
+                0.06897692875830902
+              ]
+            },
+            "service_method": {
+              "before": 1410,
+              "after": 1577,
+              "gain": 178,
+              "loss": 11,
+              "delta_count": 167,
+              "difference": 0.053303542930098945,
+              "ci95": [
+                0.04427500669303173,
+                0.06291947763362597
+              ]
+            },
+            "argument_keys": {
+              "before": 217,
+              "after": 898,
+              "gain": 681,
+              "loss": 0,
+              "delta_count": 681,
+              "difference": 0.2173635493137568,
+              "ci95": [
+                0.20088572579862327,
+                0.23341084216645433
+              ]
+            },
+            "arguments": {
+              "before": 175,
+              "after": 720,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.16017202970224398,
+                0.18802549045141273
+              ]
+            },
+            "exact": {
+              "before": 140,
+              "after": 685,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.16017202970224398,
+                0.18802549045141273
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1668,
+              "after": 1822,
+              "gain": 171,
+              "loss": 17,
+              "delta_count": 154,
+              "difference": 0.04915416533673795,
+              "ci95": [
+                0.04022998376857478,
+                0.05856046862996159
+              ]
+            },
+            "method_name": {
+              "before": 1783,
+              "after": 1950,
+              "gain": 169,
+              "loss": 2,
+              "delta_count": 167,
+              "difference": 0.053303542930098945,
+              "ci95": [
+                0.04483714055507768,
+                0.0617443178298546
+              ]
+            },
+            "service_method": {
+              "before": 1412,
+              "after": 1558,
+              "gain": 157,
+              "loss": 11,
+              "delta_count": 146,
+              "difference": 0.046600702202361954,
+              "ci95": [
+                0.037782824000384976,
+                0.05543113548234976
+              ]
+            },
+            "argument_keys": {
+              "before": 214,
+              "after": 889,
+              "gain": 675,
+              "loss": 0,
+              "delta_count": 675,
+              "difference": 0.2154484519629748,
+              "ci95": [
+                0.19937384857669221,
+                0.23148887545218017
+              ]
+            },
+            "arguments": {
+              "before": 168,
+              "after": 713,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.15999968444304197,
+                0.18811595518547258
+              ]
+            },
+            "exact": {
+              "before": 137,
+              "after": 682,
+              "gain": 545,
+              "loss": 0,
+              "delta_count": 545,
+              "difference": 0.17395467602936482,
+              "ci95": [
+                0.15999968444304197,
+                0.18811595518547258
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1683,
+              "after": 1824,
+              "gain": 158,
+              "loss": 17,
+              "delta_count": 141,
+              "difference": 0.045004787743376955,
+              "ci95": [
+                0.03647696890993812,
+                0.054055568536836546
+              ]
+            },
+            "method_name": {
+              "before": 1824,
+              "after": 1977,
+              "gain": 155,
+              "loss": 2,
+              "delta_count": 153,
+              "difference": 0.04883498244494095,
+              "ci95": [
+                0.0407324875922409,
+                0.057017530267421276
+              ]
+            },
+            "service_method": {
+              "before": 1445,
+              "after": 1577,
+              "gain": 143,
+              "loss": 11,
+              "delta_count": 132,
+              "difference": 0.04213214171720396,
+              "ci95": [
+                0.0339409083617738,
+                0.050554696830754
+              ]
+            },
+            "argument_keys": {
+              "before": 224,
+              "after": 889,
+              "gain": 665,
+              "loss": 0,
+              "delta_count": 665,
+              "difference": 0.21225662304500478,
+              "ci95": [
+                0.19627458048899346,
+                0.22788426783463248
+              ]
+            },
+            "arguments": {
+              "before": 176,
+              "after": 719,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            },
+            "exact": {
+              "before": 144,
+              "after": 687,
+              "gain": 543,
+              "loss": 0,
+              "delta_count": 543,
+              "difference": 0.17331631024577082,
+              "ci95": [
+                0.15957710815852924,
+                0.1875
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1790,
+              "after": 1972,
+              "gain": 205,
+              "loss": 23,
+              "delta_count": 182,
+              "difference": 0.058091286307053944,
+              "ci95": [
+                0.04857133961928482,
+                0.06774165638768662
+              ]
+            },
+            "method_name": {
+              "before": 1815,
+              "after": 2070,
+              "gain": 263,
+              "loss": 8,
+              "delta_count": 255,
+              "difference": 0.08139163740823492,
+              "ci95": [
+                0.07113885416712676,
+                0.0922341524509535
+              ]
+            },
+            "service_method": {
+              "before": 1501,
+              "after": 1716,
+              "gain": 234,
+              "loss": 19,
+              "delta_count": 215,
+              "difference": 0.06862432173635494,
+              "ci95": [
+                0.058614598332380315,
+                0.07938084230879659
+              ]
+            },
+            "argument_keys": {
+              "before": 208,
+              "after": 930,
+              "gain": 722,
+              "loss": 0,
+              "delta_count": 722,
+              "difference": 0.23045004787743376,
+              "ci95": [
+                0.21401628213871066,
+                0.24655594271180112
+              ]
+            },
+            "arguments": {
+              "before": 174,
+              "after": 749,
+              "gain": 575,
+              "loss": 0,
+              "delta_count": 575,
+              "difference": 0.1835301627832748,
+              "ci95": [
+                0.16874959203655354,
+                0.1985318754843471
+              ]
+            },
+            "exact": {
+              "before": 142,
+              "after": 715,
+              "gain": 573,
+              "loss": 0,
+              "delta_count": 573,
+              "difference": 0.1828917969996808,
+              "ci95": [
+                0.16819612017004754,
+                0.1976839477955683
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 149,
+          "adaptive_matched": 241,
+          "centroid_default": 357,
+          "always_matrix_expert": 0,
+          "always_base": 3133
+        }
+      },
+      "unknown": {
+        "n": 0,
+        "dialogues": 0,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "method_name": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "service_method": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "arguments": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "exact": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "method_name": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "service_method": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "arguments": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "exact": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "method_name": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "service_method": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "arguments": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "exact": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "method_name": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "service_method": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "arguments": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "exact": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "method_name": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "service_method": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "argument_keys": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "arguments": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            },
+            "exact": {
+              "before": 0,
+              "after": 0,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": null,
+              "ci95": null
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 0,
+          "adaptive_matched": 0,
+          "centroid_default": 0,
+          "always_matrix_expert": 0,
+          "always_base": 0
+        }
+      }
+    },
+    "original_domains": {
+      "all": {
+        "n": 3820,
+        "dialogues": 1359,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1965,
+              "after": 2142,
+              "gain": 195,
+              "loss": 18,
+              "delta_count": 177,
+              "difference": 0.04633507853403141,
+              "ci95": [
+                0.03861379607335834,
+                0.05374281409612548
+              ]
+            },
+            "method_name": {
+              "before": 2111,
+              "after": 2317,
+              "gain": 208,
+              "loss": 2,
+              "delta_count": 206,
+              "difference": 0.05392670157068063,
+              "ci95": [
+                0.04644355990255844,
+                0.06134900347949188
+              ]
+            },
+            "service_method": {
+              "before": 1701,
+              "after": 1873,
+              "gain": 186,
+              "loss": 14,
+              "delta_count": 172,
+              "difference": 0.04502617801047121,
+              "ci95": [
+                0.037637695835860505,
+                0.05240496286393471
+              ]
+            },
+            "argument_keys": {
+              "before": 293,
+              "after": 1021,
+              "gain": 728,
+              "loss": 0,
+              "delta_count": 728,
+              "difference": 0.1905759162303665,
+              "ci95": [
+                0.1773482718352217,
+                0.20426613584636558
+              ]
+            },
+            "arguments": {
+              "before": 251,
+              "after": 826,
+              "gain": 575,
+              "loss": 0,
+              "delta_count": 575,
+              "difference": 0.1505235602094241,
+              "ci95": [
+                0.1385367622056703,
+                0.16281741811036396
+              ]
+            },
+            "exact": {
+              "before": 211,
+              "after": 785,
+              "gain": 574,
+              "loss": 0,
+              "delta_count": 574,
+              "difference": 0.15026178010471203,
+              "ci95": [
+                0.138307654809132,
+                0.16274798911104246
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1974,
+              "after": 2145,
+              "gain": 187,
+              "loss": 16,
+              "delta_count": 171,
+              "difference": 0.04476439790575916,
+              "ci95": [
+                0.03732858885274072,
+                0.05198955013039698
+              ]
+            },
+            "method_name": {
+              "before": 2141,
+              "after": 2335,
+              "gain": 196,
+              "loss": 2,
+              "delta_count": 194,
+              "difference": 0.050785340314136125,
+              "ci95": [
+                0.04351137403990262,
+                0.05786301548250562
+              ]
+            },
+            "service_method": {
+              "before": 1710,
+              "after": 1878,
+              "gain": 180,
+              "loss": 12,
+              "delta_count": 168,
+              "difference": 0.04397905759162304,
+              "ci95": [
+                0.03657900276042074,
+                0.050997293548319805
+              ]
+            },
+            "argument_keys": {
+              "before": 297,
+              "after": 1020,
+              "gain": 723,
+              "loss": 0,
+              "delta_count": 723,
+              "difference": 0.1892670157068063,
+              "ci95": [
+                0.1762724719865862,
+                0.20276821998116015
+              ]
+            },
+            "arguments": {
+              "before": 252,
+              "after": 823,
+              "gain": 571,
+              "loss": 0,
+              "delta_count": 571,
+              "difference": 0.14947643979057593,
+              "ci95": [
+                0.1375413847122854,
+                0.1616488119016123
+              ]
+            },
+            "exact": {
+              "before": 213,
+              "after": 783,
+              "gain": 570,
+              "loss": 0,
+              "delta_count": 570,
+              "difference": 0.14921465968586387,
+              "ci95": [
+                0.13726949960580132,
+                0.1614583675177212
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1972,
+              "after": 2146,
+              "gain": 190,
+              "loss": 16,
+              "delta_count": 174,
+              "difference": 0.04554973821989529,
+              "ci95": [
+                0.03822771028641241,
+                0.052782495460574924
+              ]
+            },
+            "method_name": {
+              "before": 2142,
+              "after": 2338,
+              "gain": 198,
+              "loss": 2,
+              "delta_count": 196,
+              "difference": 0.05130890052356021,
+              "ci95": [
+                0.04402329937352054,
+                0.05861181480672635
+              ]
+            },
+            "service_method": {
+              "before": 1709,
+              "after": 1879,
+              "gain": 182,
+              "loss": 12,
+              "delta_count": 170,
+              "difference": 0.04450261780104712,
+              "ci95": [
+                0.03708410489116333,
+                0.051760737719620434
+              ]
+            },
+            "argument_keys": {
+              "before": 299,
+              "after": 1023,
+              "gain": 724,
+              "loss": 0,
+              "delta_count": 724,
+              "difference": 0.18952879581151832,
+              "ci95": [
+                0.17630392099254333,
+                0.20310036653647875
+              ]
+            },
+            "arguments": {
+              "before": 253,
+              "after": 825,
+              "gain": 572,
+              "loss": 0,
+              "delta_count": 572,
+              "difference": 0.14973821989528796,
+              "ci95": [
+                0.1378667421779686,
+                0.16187871606916893
+              ]
+            },
+            "exact": {
+              "before": 213,
+              "after": 784,
+              "gain": 571,
+              "loss": 0,
+              "delta_count": 571,
+              "difference": 0.14947643979057593,
+              "ci95": [
+                0.13754089997044378,
+                0.16172232540828255
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1950,
+              "after": 2120,
+              "gain": 186,
+              "loss": 16,
+              "delta_count": 170,
+              "difference": 0.04450261780104712,
+              "ci95": [
+                0.037307489428928205,
+                0.05172459308888322
+              ]
+            },
+            "method_name": {
+              "before": 2124,
+              "after": 2316,
+              "gain": 194,
+              "loss": 2,
+              "delta_count": 192,
+              "difference": 0.050261780104712044,
+              "ci95": [
+                0.042916829493858014,
+                0.05739809516914401
+              ]
+            },
+            "service_method": {
+              "before": 1692,
+              "after": 1858,
+              "gain": 178,
+              "loss": 12,
+              "delta_count": 166,
+              "difference": 0.043455497382198956,
+              "ci95": [
+                0.03613459757731707,
+                0.05043374341123696
+              ]
+            },
+            "argument_keys": {
+              "before": 268,
+              "after": 987,
+              "gain": 719,
+              "loss": 0,
+              "delta_count": 719,
+              "difference": 0.18821989528795813,
+              "ci95": [
+                0.17518170082317303,
+                0.2016340118509968
+              ]
+            },
+            "arguments": {
+              "before": 222,
+              "after": 791,
+              "gain": 569,
+              "loss": 0,
+              "delta_count": 569,
+              "difference": 0.14895287958115183,
+              "ci95": [
+                0.13704249399603077,
+                0.16114527865455508
+              ]
+            },
+            "exact": {
+              "before": 183,
+              "after": 751,
+              "gain": 568,
+              "loss": 0,
+              "delta_count": 568,
+              "difference": 0.1486910994764398,
+              "ci95": [
+                0.136766835851552,
+                0.1609388097059606
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 2085,
+              "after": 2295,
+              "gain": 235,
+              "loss": 25,
+              "delta_count": 210,
+              "difference": 0.0549738219895288,
+              "ci95": [
+                0.04674807148414351,
+                0.06396531036338728
+              ]
+            },
+            "method_name": {
+              "before": 2119,
+              "after": 2423,
+              "gain": 312,
+              "loss": 8,
+              "delta_count": 304,
+              "difference": 0.07958115183246073,
+              "ci95": [
+                0.06970171689461584,
+                0.08851169101245807
+              ]
+            },
+            "service_method": {
+              "before": 1779,
+              "after": 2024,
+              "gain": 265,
+              "loss": 20,
+              "delta_count": 245,
+              "difference": 0.06413612565445026,
+              "ci95": [
+                0.054796940670915936,
+                0.07347623180298507
+              ]
+            },
+            "argument_keys": {
+              "before": 297,
+              "after": 1082,
+              "gain": 785,
+              "loss": 0,
+              "delta_count": 785,
+              "difference": 0.2054973821989529,
+              "ci95": [
+                0.19143802821821387,
+                0.21951912509251256
+              ]
+            },
+            "arguments": {
+              "before": 255,
+              "after": 877,
+              "gain": 622,
+              "loss": 0,
+              "delta_count": 622,
+              "difference": 0.16282722513089004,
+              "ci95": [
+                0.15029716830442408,
+                0.17554349039998518
+              ]
+            },
+            "exact": {
+              "before": 218,
+              "after": 837,
+              "gain": 619,
+              "loss": 0,
+              "delta_count": 619,
+              "difference": 0.16204188481675394,
+              "ci95": [
+                0.14938298428766153,
+                0.1752791621076357
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 996,
+          "adaptive_matched": 471,
+          "centroid_default": 553,
+          "always_matrix_expert": 0,
+          "always_base": 3820
+        }
+      },
+      "known": {
+        "n": 3600,
+        "dialogues": 1359,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 1848,
+              "after": 2025,
+              "gain": 195,
+              "loss": 18,
+              "delta_count": 177,
+              "difference": 0.049166666666666664,
+              "ci95": [
+                0.04106108700001539,
+                0.05687305762201619
+              ]
+            },
+            "method_name": {
+              "before": 1995,
+              "after": 2201,
+              "gain": 208,
+              "loss": 2,
+              "delta_count": 206,
+              "difference": 0.05722222222222222,
+              "ci95": [
+                0.049301076023757974,
+                0.06520577737134077
+              ]
+            },
+            "service_method": {
+              "before": 1585,
+              "after": 1757,
+              "gain": 186,
+              "loss": 14,
+              "delta_count": 172,
+              "difference": 0.04777777777777778,
+              "ci95": [
+                0.0399015609901466,
+                0.05555594146522182
+              ]
+            },
+            "argument_keys": {
+              "before": 237,
+              "after": 965,
+              "gain": 728,
+              "loss": 0,
+              "delta_count": 728,
+              "difference": 0.20222222222222222,
+              "ci95": [
+                0.18899255240433185,
+                0.21612596715403723
+              ]
+            },
+            "arguments": {
+              "before": 195,
+              "after": 770,
+              "gain": 575,
+              "loss": 0,
+              "delta_count": 575,
+              "difference": 0.1597222222222222,
+              "ci95": [
+                0.14723595355930957,
+                0.1726097769337152
+              ]
+            },
+            "exact": {
+              "before": 155,
+              "after": 729,
+              "gain": 574,
+              "loss": 0,
+              "delta_count": 574,
+              "difference": 0.15944444444444444,
+              "ci95": [
+                0.1468340085050585,
+                0.1722570154852168
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 1859,
+              "after": 2030,
+              "gain": 187,
+              "loss": 16,
+              "delta_count": 171,
+              "difference": 0.0475,
+              "ci95": [
+                0.039777310170133834,
+                0.05501534923956314
+              ]
+            },
+            "method_name": {
+              "before": 2027,
+              "after": 2221,
+              "gain": 196,
+              "loss": 2,
+              "delta_count": 194,
+              "difference": 0.05388888888888889,
+              "ci95": [
+                0.04620801310331139,
+                0.06157882646657344
+              ]
+            },
+            "service_method": {
+              "before": 1596,
+              "after": 1764,
+              "gain": 180,
+              "loss": 12,
+              "delta_count": 168,
+              "difference": 0.04666666666666667,
+              "ci95": [
+                0.03878939448135685,
+                0.05416065161527943
+              ]
+            },
+            "argument_keys": {
+              "before": 243,
+              "after": 966,
+              "gain": 723,
+              "loss": 0,
+              "delta_count": 723,
+              "difference": 0.20083333333333334,
+              "ci95": [
+                0.1872030624087366,
+                0.21474650140228554
+              ]
+            },
+            "arguments": {
+              "before": 198,
+              "after": 769,
+              "gain": 571,
+              "loss": 0,
+              "delta_count": 571,
+              "difference": 0.15861111111111112,
+              "ci95": [
+                0.1458698051706934,
+                0.17113885940857562
+              ]
+            },
+            "exact": {
+              "before": 159,
+              "after": 729,
+              "gain": 570,
+              "loss": 0,
+              "delta_count": 570,
+              "difference": 0.15833333333333333,
+              "ci95": [
+                0.14552723972997728,
+                0.17096888700735888
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 1856,
+              "after": 2030,
+              "gain": 190,
+              "loss": 16,
+              "delta_count": 174,
+              "difference": 0.04833333333333333,
+              "ci95": [
+                0.0405399818230579,
+                0.0558817120681255
+              ]
+            },
+            "method_name": {
+              "before": 2027,
+              "after": 2223,
+              "gain": 198,
+              "loss": 2,
+              "delta_count": 196,
+              "difference": 0.05444444444444444,
+              "ci95": [
+                0.04680731195684747,
+                0.06223986122905815
+              ]
+            },
+            "service_method": {
+              "before": 1594,
+              "after": 1764,
+              "gain": 182,
+              "loss": 12,
+              "delta_count": 170,
+              "difference": 0.04722222222222222,
+              "ci95": [
+                0.039371478475062935,
+                0.05472636815920398
+              ]
+            },
+            "argument_keys": {
+              "before": 244,
+              "after": 968,
+              "gain": 724,
+              "loss": 0,
+              "delta_count": 724,
+              "difference": 0.2011111111111111,
+              "ci95": [
+                0.18753288081208788,
+                0.21502115312742062
+              ]
+            },
+            "arguments": {
+              "before": 198,
+              "after": 770,
+              "gain": 572,
+              "loss": 0,
+              "delta_count": 572,
+              "difference": 0.15888888888888889,
+              "ci95": [
+                0.1461860081520168,
+                0.17151946527540238
+              ]
+            },
+            "exact": {
+              "before": 158,
+              "after": 729,
+              "gain": 571,
+              "loss": 0,
+              "delta_count": 571,
+              "difference": 0.15861111111111112,
+              "ci95": [
+                0.14605437353533826,
+                0.1712797175473507
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 1886,
+              "after": 2056,
+              "gain": 186,
+              "loss": 16,
+              "delta_count": 170,
+              "difference": 0.04722222222222222,
+              "ci95": [
+                0.03955693260508453,
+                0.054729193625228365
+              ]
+            },
+            "method_name": {
+              "before": 2061,
+              "after": 2253,
+              "gain": 194,
+              "loss": 2,
+              "delta_count": 192,
+              "difference": 0.05333333333333334,
+              "ci95": [
+                0.04560673403881105,
+                0.061023321495848194
+              ]
+            },
+            "service_method": {
+              "before": 1629,
+              "after": 1795,
+              "gain": 178,
+              "loss": 12,
+              "delta_count": 166,
+              "difference": 0.04611111111111111,
+              "ci95": [
+                0.03839612913065469,
+                0.0534567822787532
+              ]
+            },
+            "argument_keys": {
+              "before": 244,
+              "after": 963,
+              "gain": 719,
+              "loss": 0,
+              "delta_count": 719,
+              "difference": 0.19972222222222222,
+              "ci95": [
+                0.18622177158520797,
+                0.2136201483094112
+              ]
+            },
+            "arguments": {
+              "before": 198,
+              "after": 767,
+              "gain": 569,
+              "loss": 0,
+              "delta_count": 569,
+              "difference": 0.15805555555555556,
+              "ci95": [
+                0.14531076186562658,
+                0.17064491322898695
+              ]
+            },
+            "exact": {
+              "before": 160,
+              "after": 728,
+              "gain": 568,
+              "loss": 0,
+              "delta_count": 568,
+              "difference": 0.15777777777777777,
+              "ci95": [
+                0.1449852703992627,
+                0.17036719290474459
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 1968,
+              "after": 2178,
+              "gain": 235,
+              "loss": 25,
+              "delta_count": 210,
+              "difference": 0.058333333333333334,
+              "ci95": [
+                0.04966878178216651,
+                0.06786855568409507
+              ]
+            },
+            "method_name": {
+              "before": 2003,
+              "after": 2307,
+              "gain": 312,
+              "loss": 8,
+              "delta_count": 304,
+              "difference": 0.08444444444444445,
+              "ci95": [
+                0.07402098495720363,
+                0.09394283668845008
+              ]
+            },
+            "service_method": {
+              "before": 1663,
+              "after": 1908,
+              "gain": 265,
+              "loss": 20,
+              "delta_count": 245,
+              "difference": 0.06805555555555555,
+              "ci95": [
+                0.05838257699558243,
+                0.07796663881252427
+              ]
+            },
+            "argument_keys": {
+              "before": 241,
+              "after": 1026,
+              "gain": 785,
+              "loss": 0,
+              "delta_count": 785,
+              "difference": 0.21805555555555556,
+              "ci95": [
+                0.20341963081910197,
+                0.23278869926879883
+              ]
+            },
+            "arguments": {
+              "before": 199,
+              "after": 821,
+              "gain": 622,
+              "loss": 0,
+              "delta_count": 622,
+              "difference": 0.17277777777777778,
+              "ci95": [
+                0.159842416746156,
+                0.18623827007172675
+              ]
+            },
+            "exact": {
+              "before": 162,
+              "after": 781,
+              "gain": 619,
+              "loss": 0,
+              "delta_count": 619,
+              "difference": 0.17194444444444446,
+              "ci95": [
+                0.15905850120230347,
+                0.18561433961908397
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 780,
+          "adaptive_matched": 277,
+          "centroid_default": 350,
+          "always_matrix_expert": 0,
+          "always_base": 3600
+        }
+      },
+      "unknown": {
+        "n": 220,
+        "dialogues": 149,
+        "routes": {
+          "adaptive_from_cal": {
+            "service": {
+              "before": 117,
+              "after": 117,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 116,
+              "after": 116,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 116,
+              "after": 116,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "arguments": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "exact": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "adaptive_matched": {
+            "service": {
+              "before": 115,
+              "after": 115,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 114,
+              "after": 114,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 114,
+              "after": 114,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 54,
+              "after": 54,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "arguments": {
+              "before": 54,
+              "after": 54,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "exact": {
+              "before": 54,
+              "after": 54,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "centroid_default": {
+            "service": {
+              "before": 116,
+              "after": 116,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 115,
+              "after": 115,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 115,
+              "after": 115,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 55,
+              "after": 55,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "arguments": {
+              "before": 55,
+              "after": 55,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "exact": {
+              "before": 55,
+              "after": 55,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_matrix_expert": {
+            "service": {
+              "before": 64,
+              "after": 64,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 63,
+              "after": 63,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 63,
+              "after": 63,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 24,
+              "after": 24,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "arguments": {
+              "before": 24,
+              "after": 24,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "exact": {
+              "before": 23,
+              "after": 23,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "always_base": {
+            "service": {
+              "before": 117,
+              "after": 117,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "method_name": {
+              "before": 116,
+              "after": 116,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "service_method": {
+              "before": 116,
+              "after": 116,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "argument_keys": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "arguments": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "exact": {
+              "before": 56,
+              "after": 56,
+              "gain": 0,
+              "loss": 0,
+              "delta_count": 0,
+              "difference": 0.0,
+              "ci95": [
+                0.0,
+                0.0
+              ]
+            }
+          }
+        },
+        "routed_to_base": {
+          "adaptive_from_cal": 216,
+          "adaptive_matched": 194,
+          "centroid_default": 203,
+          "always_matrix_expert": 0,
+          "always_base": 220
+        }
+      }
+    }
+  }
+}

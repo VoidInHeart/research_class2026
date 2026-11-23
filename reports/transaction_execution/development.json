@@ -1,0 +1,169 @@
+{
+  "source_sha256": {
+    "pool.joblib": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+    "split.json": "5b2c53662c89ca184eaf5ade3c64b76fedcf57669c35b9a46892ce6f1b59b7e5",
+    "transaction_executor.py": "0c24a6bf0f94f369986cb8bf73adb7dcc742c6b1082e5dbc35ef7d802a9b88e6"
+  },
+  "development_partition": "router",
+  "training_rows": 1852,
+  "calendar_anchor_from_fit": "2019-03-01",
+  "year_from_fit": 2019,
+  "groups": {
+    "all": {
+      "requests": 598,
+      "legacy": {
+        "base": {
+          "exact": 51,
+          "service_and_method": 407
+        },
+        "search": {
+          "exact": 47,
+          "service_and_method": 277
+        },
+        "transaction": {
+          "exact": 48,
+          "service_and_method": 417
+        },
+        "context": {
+          "exact": 40,
+          "service_and_method": 341
+        }
+      },
+      "grounded": {
+        "base": {
+          "exact": 185,
+          "service_and_method": 464
+        },
+        "search": {
+          "exact": 89,
+          "service_and_method": 302
+        },
+        "transaction": {
+          "exact": 178,
+          "service_and_method": 444
+        },
+        "context": {
+          "exact": 161,
+          "service_and_method": 388
+        }
+      }
+    },
+    "BuyBusTicket": {
+      "requests": 48,
+      "legacy": {
+        "base": {
+          "exact": 0,
+          "service_and_method": 35
+        },
+        "search": {
+          "exact": 0,
+          "service_and_method": 3
+        },
+        "transaction": {
+          "exact": 0,
+          "service_and_method": 31
+        },
+        "context": {
+          "exact": 0,
+          "service_and_method": 28
+        }
+      },
+      "grounded": {
+        "base": {
+          "exact": 44,
+          "service_and_method": 47
+        },
+        "search": {
+          "exact": 3,
+          "service_and_method": 3
+        },
+        "transaction": {
+          "exact": 43,
+          "service_and_method": 45
+        },
+        "context": {
+          "exact": 36,
+          "service_and_method": 38
+        }
+      }
+    },
+    "ReserveLodging": {
+      "requests": 15,
+      "legacy": {
+        "base": {
+          "exact": 0,
+          "service_and_method": 13
+        },
+        "search": {
+          "exact": 0,
+          "service_and_method": 7
+        },
+        "transaction": {
+          "exact": 0,
+          "service_and_method": 15
+        },
+        "context": {
+          "exact": 0,
+          "service_and_method": 14
+        }
+      },
+      "grounded": {
+        "base": {
+          "exact": 13,
+          "service_and_method": 15
+        },
+        "search": {
+          "exact": 7,
+          "service_and_method": 7
+        },
+        "transaction": {
+          "exact": 13,
+          "service_and_method": 15
+        },
+        "context": {
+          "exact": 13,
+          "service_and_method": 15
+        }
+      }
+    },
+    "BuyEventTickets": {
+      "requests": 8,
+      "legacy": {
+        "base": {
+          "exact": 0,
+          "service_and_method": 7
+        },
+        "search": {
+          "exact": 0,
+          "service_and_method": 6
+        },
+        "transaction": {
+          "exact": 0,
+          "service_and_method": 6
+        },
+        "context": {
+          "exact": 0,
+          "service_and_method": 7
+        }
+      },
+      "grounded": {
+        "base": {
+          "exact": 3,
+          "service_and_method": 8
+        },
+        "search": {
+          "exact": 1,
+          "service_and_method": 1
+        },
+        "transaction": {
+          "exact": 3,
+          "service_and_method": 7
+        },
+        "context": {
+          "exact": 2,
+          "service_and_method": 7
+        }
+      }
+    }
+  }
+}

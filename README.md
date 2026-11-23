@@ -64,6 +64,12 @@ python -m intentexec.profile --run-dir artifacts/my-minilm --policy matrix --lim
 
 `retrieval` 后端用 fit 中的调用模板、公共工具说明和参数抽取生成输出。它提供通用检索兜底与三个侧重不同的执行器（search、transaction、context），用于低成本验证。其指标只反映这个执行池。最终质量比较应在同一强指令基座上训练三个适配器，再以该基座关闭适配器的状态作为兜底。
 
+近域交易实验另提供本地 `--backend retrieval-grounded`。它用拟合对话学习识别交易确认和服务版本，通过公开话语与服务参数定义提取日期、时间、地点、数量及名称。SGD 试点从旧训练样本推得参考日 2019-03-01 和年份 2019，用于补全口语日期。已有运行目录按原来保存的后端重载。下例训练一个新运行目录。实验报告中的配对回放固定使用上轮的门控和矩阵选择。[分层错误、实际错例与端到端复算](reports/transaction_execution/REPORT.md)
+
+```powershell
+python -m intentexec run --encoder minilm --model-path '../code/models/models--sentence-transformers--all-MiniLM-L6-v2' --oos-gate adaptive-support --backend retrieval-grounded --out artifacts/my-grounded-run
+```
+
 ## LoRA 训练与评估
 
 准备本地指令模型目录（含聊天模板及模型权重），安装与硬件匹配的 PyTorch 和 [LoRA 依赖](requirements-lora.txt)。下面的路径需替换成实际基座位置，示例 8192 为总上下文，要求模型支持该长度。训练与评估使用相同的 schema、划分、种子和提示预算。

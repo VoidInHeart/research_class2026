@@ -30,7 +30,7 @@ def read_gzip(path):
 def write_gzip(path, records):
     with path.open("wb") as raw, gzip.GzipFile(filename="", fileobj=raw, mode="wb", mtime=0) as stream:
         for row in records:
-            stream.write((json.dumps(row, separators=(",", ":"), ensure_ascii=False) + "\n").encode("utf8"))
+            stream.write((json.dumps(row, separators=(",", ":"), ensure_ascii=False, sort_keys=True) + "\n").encode("utf8"))
 
 
 def frozen_routes(directory):

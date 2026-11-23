@@ -1,0 +1,26 @@
+{
+  "fit_reference_day": "2019-03-01",
+  "fit_year": 2019,
+  "policy": "adaptive_from_cal",
+  "ledger_sha256": "852e3bb3fab1654010860dfa94aca877b282ee083904c6832c14d4aa0513ebb0",
+  "unknown": {
+    "near_domain_bus_ticket": {
+      "n": 218,
+      "as_trained": 12,
+      "year_only": 12,
+      "no_fit_calendar": 0
+    },
+    "near_lodging_booking": {
+      "n": 137,
+      "as_trained": 1,
+      "year_only": 0,
+      "no_fit_calendar": 0
+    },
+    "near_event_booking": {
+      "n": 206,
+      "as_trained": 11,
+      "year_only": 6,
+      "no_fit_calendar": 0
+    }
+  }
+}

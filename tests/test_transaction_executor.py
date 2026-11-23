@@ -3,7 +3,7 @@ from datetime import date
 
 from intentexec.executors import RetrievalPool
 from intentexec.transaction_executor import (
-    RepairedRetrievalPool, _calendar_anchor, _date_range, _read_clock, _read_count, _read_date,
+    RepairedRetrievalPool, _PublicNames, _ServiceVariants, _calendar_anchor, _date_range, _read_clock, _read_count, _read_date,
 )
 
 
@@ -55,6 +55,28 @@ class GroundingTests(unittest.TestCase):
         for name in (*pool.experts, pool.base):
             self.assertEqual(pool.execute(name, text)["arguments"],
                              {"origin": "Bath", "destination": "York", "departure_time": "19:35"})
+
+    def test_public_capitalized_span_extraction_generalizes_to_unseen_names(self):
+        key = ("Venues", "Reserve")
+        catalog = {key: {"is_transactional": True}}
+        rows = [{"text": "SYSTEM: Buy tickets for Amber String in Bosford this Friday?\nUSER: Yes.",
+                 "gold": {"service": key[0], "method": key[1],
+                          "arguments": {"event_name": "Amber String", "city": "Bosford"}}}] * 20
+        names = _PublicNames(rows, catalog)
+        text = "SYSTEM: Buy tickets for Glass Violin in Fernville this Friday?\nUSER: Yes."
+        self.assertEqual(names.extract(text, key, ["event_name", "city"], {}),
+                         {"event_name": "Glass Violin", "city": "Fernville"})
+        self.assertEqual(names.extract(text, key, ["event_name", "city"], {"city": "Existing"}),
+                         {"event_name": "Glass Violin"})
+
+    def test_provider_uses_search_examples_to_resolve_its_transaction_schema(self):
+        catalog = {(s, m): {"is_transactional": m != "Find"} for s, action in
+                   [("Shows_1", "ReserveHall"), ("Shows_2", "BuyArena")] for m in ("Find", action)}
+        rows = [{"text": f"USER: {text}", "gold": {"service": s, "method": "Find"}}
+                for s, text in [("Shows_1", "hall hall recital musician"), ("Shows_2", "arena arena field stadium")]] * 12
+        variants = _ServiceVariants(rows, catalog)
+        self.assertEqual(variants.resolve(("Shows_1", "ReserveHall"), "USER: Find an arena field stadium"),
+                         ("Shows_2", "BuyArena"))
 
 
 if __name__ == "__main__":
