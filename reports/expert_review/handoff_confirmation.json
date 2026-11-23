@@ -1,0 +1,181 @@
+{
+  "test_primary": "transport",
+  "bootstrap": {
+    "unit": "dialogue",
+    "draws": 2000,
+    "seed": 1118
+  },
+  "splits": {
+    "dev": {
+      "source_split": "dev",
+      "results_sha256": "470ce011c7a24b5e3bfd04c36d891785aa68be1fae78c1bd1b2f6891a6682043",
+      "n": 1756,
+      "dialogues": 1092,
+      "admitted": 899,
+      "called_second": 280,
+      "expert_calls_each_two_expert_policy": 2036,
+      "exact": {
+        "matrix": 190,
+        "single": 225,
+        "review": 229,
+        "replace": 232,
+        "replace_raw": 231
+      },
+      "contrasts": {
+        "replace_vs_review": {
+          "gain": 5,
+          "loss": 2,
+          "net": 3,
+          "delta_pp": 0.17084282460136674,
+          "ci95_pp": [
+            -0.11442303655029078,
+            0.46701692936368944
+          ],
+          "discordant_dialogues": 7,
+          "extra_calls": 0,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "replace_vs_single": {
+          "gain": 11,
+          "loss": 4,
+          "net": 7,
+          "delta_pp": 0.39863325740318906,
+          "ci95_pp": [
+            -0.0013646288209606212,
+            0.853740099802547
+          ],
+          "discordant_dialogues": 15,
+          "extra_calls": 280,
+          "extra_calls_per_net_gain": 40.0
+        },
+        "replace_vs_matrix": {
+          "gain": 45,
+          "loss": 3,
+          "net": 42,
+          "delta_pp": 2.3917995444191344,
+          "ci95_pp": [
+            1.6560785636323663,
+            3.182214587737841
+          ],
+          "discordant_dialogues": 47,
+          "extra_calls": 280,
+          "extra_calls_per_net_gain": 6.666666666666667
+        }
+      }
+    },
+    "test": {
+      "source_split": "test",
+      "results_sha256": "6f9518ab7865185babcaef562f5d0bd421b0854b51ed34bda6bbf09697676db8",
+      "n": 2193,
+      "dialogues": 1513,
+      "admitted": 1007,
+      "called_second": 401,
+      "expert_calls_each_two_expert_policy": 2594,
+      "exact": {
+        "matrix": 274,
+        "single": 328,
+        "review": 347,
+        "replace": 364,
+        "replace_raw": 360
+      },
+      "contrasts": {
+        "replace_vs_review": {
+          "gain": 18,
+          "loss": 1,
+          "net": 17,
+          "delta_pp": 0.7751937984496124,
+          "ci95_pp": [
+            0.4111466423024212,
+            1.2140424300235924
+          ],
+          "discordant_dialogues": 19,
+          "extra_calls": 0,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "replace_vs_single": {
+          "gain": 38,
+          "loss": 2,
+          "net": 36,
+          "delta_pp": 1.6415868673050615,
+          "ci95_pp": [
+            1.1064879438591124,
+            2.2375355360026523
+          ],
+          "discordant_dialogues": 40,
+          "extra_calls": 401,
+          "extra_calls_per_net_gain": 11.13888888888889
+        },
+        "replace_vs_matrix": {
+          "gain": 92,
+          "loss": 2,
+          "net": 90,
+          "delta_pp": 4.1039671682626535,
+          "ci95_pp": [
+            3.315406082447042,
+            5.027681718856295
+          ],
+          "discordant_dialogues": 94,
+          "extra_calls": 401,
+          "extra_calls_per_net_gain": 4.455555555555556
+        }
+      }
+    },
+    "transport": {
+      "source_split": "transport",
+      "results_sha256": "f85ff0601f905eb99b91098257eda0a417188279af138f3cbbeff6109f57e7c3",
+      "n": 2032,
+      "dialogues": 1000,
+      "admitted": 1233,
+      "called_second": 395,
+      "expert_calls_each_two_expert_policy": 2427,
+      "exact": {
+        "matrix": 313,
+        "single": 342,
+        "review": 343,
+        "replace": 349,
+        "replace_raw": 343
+      },
+      "contrasts": {
+        "replace_vs_review": {
+          "gain": 6,
+          "loss": 0,
+          "net": 6,
+          "delta_pp": 0.2952755905511811,
+          "ci95_pp": [
+            0.09689687971363606,
+            0.5432367548151812
+          ],
+          "discordant_dialogues": 6,
+          "extra_calls": 0,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "replace_vs_single": {
+          "gain": 10,
+          "loss": 3,
+          "net": 7,
+          "delta_pp": 0.34448818897637795,
+          "ci95_pp": [
+            0.0,
+            0.6856107485096175
+          ],
+          "discordant_dialogues": 13,
+          "extra_calls": 395,
+          "extra_calls_per_net_gain": 56.42857142857143
+        },
+        "replace_vs_matrix": {
+          "gain": 37,
+          "loss": 1,
+          "net": 36,
+          "delta_pp": 1.7716535433070866,
+          "ci95_pp": [
+            1.188707280832095,
+            2.353014890166593
+          ],
+          "discordant_dialogues": 37,
+          "extra_calls": 395,
+          "extra_calls_per_net_gain": 10.972222222222221
+        }
+      }
+    }
+  }
+}

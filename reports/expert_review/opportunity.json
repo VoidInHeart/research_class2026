@@ -1,0 +1,120 @@
+{
+  "dev": {
+    "observations_sha256": "8e35dc835fa27ead098155fe61b2494778e1d9e5bc71d308def66803a7d837b7",
+    "groups": {
+      "all": {
+        "primary": 190,
+        "choose": 229,
+        "trim": 232,
+        "combine": 232,
+        "n": 1756,
+        "choose_extra": 39,
+        "trim_extra": 3,
+        "combine_extra": 0,
+        "no_matching_tool": 417,
+        "arguments_unrecoverable": 300
+      },
+      "admitted_known": {
+        "primary": 140,
+        "choose": 179,
+        "trim": 182,
+        "combine": 182,
+        "choose_extra": 39,
+        "trim_extra": 3,
+        "combine_extra": 0,
+        "no_matching_tool": 399,
+        "arguments_unrecoverable": 300,
+        "n": 881
+      },
+      "admitted_unknown": {
+        "primary": 0,
+        "choose": 0,
+        "trim": 0,
+        "combine": 0,
+        "choose_extra": 0,
+        "trim_extra": 0,
+        "combine_extra": 0,
+        "no_matching_tool": 18,
+        "arguments_unrecoverable": 0,
+        "n": 18
+      },
+      "rejected": {
+        "primary": 50,
+        "choose": 50,
+        "trim": 50,
+        "combine": 50,
+        "n": 857
+      }
+    },
+    "first_request_ids": {
+      "choose_extra": [
+        "dev/10_00049:12",
+        "dev/10_00069:16",
+        "dev/10_00097:14"
+      ],
+      "trim_extra": [
+        "dev/10_00078:12",
+        "dev/10_00105:8",
+        "dev/10_00114:12"
+      ],
+      "combine_extra": []
+    }
+  },
+  "test": {
+    "observations_sha256": "70566cabe75b345a51042c44f7a00ab277aad24984c6a082fc2fc5bc99ad17f6",
+    "groups": {
+      "all": {
+        "primary": 274,
+        "choose": 339,
+        "trim": 339,
+        "combine": 339,
+        "n": 2193,
+        "choose_extra": 65,
+        "trim_extra": 0,
+        "combine_extra": 0,
+        "no_matching_tool": 227,
+        "arguments_unrecoverable": 500
+      },
+      "admitted_known": {
+        "primary": 215,
+        "choose": 280,
+        "trim": 280,
+        "combine": 280,
+        "choose_extra": 65,
+        "trim_extra": 0,
+        "combine_extra": 0,
+        "no_matching_tool": 206,
+        "arguments_unrecoverable": 495,
+        "n": 981
+      },
+      "admitted_unknown": {
+        "primary": 0,
+        "choose": 0,
+        "trim": 0,
+        "combine": 0,
+        "choose_extra": 0,
+        "trim_extra": 0,
+        "combine_extra": 0,
+        "no_matching_tool": 21,
+        "arguments_unrecoverable": 5,
+        "n": 26
+      },
+      "rejected": {
+        "primary": 59,
+        "choose": 59,
+        "trim": 59,
+        "combine": 59,
+        "n": 1186
+      }
+    },
+    "first_request_ids": {
+      "choose_extra": [
+        "test/16_00013:6",
+        "test/16_00018:2",
+        "test/16_00018:28"
+      ],
+      "trim_extra": [],
+      "combine_extra": []
+    }
+  }
+}

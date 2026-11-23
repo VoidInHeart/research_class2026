@@ -1,0 +1,29 @@
+{
+  "scope": "real local executor stage after routing; one process, warm, interleaved",
+  "python": "3.13.14",
+  "sample": 192,
+  "repeats": 3,
+  "admitted": 91,
+  "observations_sha256": "70566cabe75b345a51042c44f7a00ab277aad24984c6a082fc2fc5bc99ad17f6",
+  "selection": "first 192 by SHA-256 of review-latency/ + request ID",
+  "results": {
+    "matrix": {
+      "p50_ms": 1.6682000000000001,
+      "p95_ms": 2.9769,
+      "mean_ms": 1.7189862847222224,
+      "executor_invocations": 576
+    },
+    "single": {
+      "p50_ms": 1.6635,
+      "p95_ms": 2.963575,
+      "mean_ms": 1.7439494791666668,
+      "executor_invocations": 576
+    },
+    "review": {
+      "p50_ms": 2.19835,
+      "p95_ms": 4.545375,
+      "mean_ms": 2.418765798611111,
+      "executor_invocations": 675
+    }
+  }
+}

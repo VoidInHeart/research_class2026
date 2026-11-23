@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "observations_sha256": "8e35dc835fa27ead098155fe61b2494778e1d9e5bc71d308def66803a7d837b7",
+    "raw_prefix_gold_verified": 1756,
+    "prior_scored_dialogue_overlap": 0,
+    "prior_and_train_template_overlap": 0,
+    "between_fresh_splits_template_overlap": 0,
+    "prefix_context": {
+      "outside_scope_only_later_or_inactive": 774,
+      "outside_scope_already_active": 982
+    }
+  },
+  "test": {
+    "observations_sha256": "70566cabe75b345a51042c44f7a00ab277aad24984c6a082fc2fc5bc99ad17f6",
+    "raw_prefix_gold_verified": 2193,
+    "prior_scored_dialogue_overlap": 0,
+    "prior_and_train_template_overlap": 0,
+    "between_fresh_splits_template_overlap": 0,
+    "prefix_context": {
+      "outside_scope_already_active": 1398,
+      "outside_scope_only_later_or_inactive": 795
+    }
+  }
+}

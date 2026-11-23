@@ -1,0 +1,2129 @@
+{
+  "split": "test",
+  "cohort_sha256": "0c6526103f92323aa453f7df874ff7de90d67d36b53aa4aee25aa8c326e6452a",
+  "observations_sha256": "70566cabe75b345a51042c44f7a00ab277aad24984c6a082fc2fc5bc99ad17f6",
+  "matrix_sha256": "df1695ac00147a2ca68b8f8e580b0bf94db2e8d8d29fe4f378d23cf643f4b790",
+  "cues_sha256": "8842c43f8ab0a47f925906c620987c3b92d4a7b1ea5239567675681ac8b68c2b",
+  "pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "policy_source_sha256_lf": {
+    "expert_review.py": "4dbbe67d36e4f38a4b21e9ecaecfd325f42c0908c7f781741feeba7a5f16081d",
+    "query_grounding.py": "8765d4e568c872ebe27f9748211c345fb5640df782f80c40c64202a954235301",
+    "within_schema_cues.py": "ca4751d6b1099f4345a274d1eec65f62eca21c3ef81a8d2897743b246a268b7c"
+  },
+  "bootstrap": {
+    "unit": "dialogue",
+    "draws": 2000,
+    "seed": 1118
+  },
+  "groups": {
+    "all": {
+      "n": 2193,
+      "dialogues": 1513,
+      "admitted": 1007,
+      "called_second": 401,
+      "help_pct_all": 18.28545371637027,
+      "help_pct_admitted": 39.821251241310826,
+      "policies": {
+        "matrix": {
+          "exact": 274,
+          "service_method": 978,
+          "arguments": 357,
+          "service": 994,
+          "method_name": 1050,
+          "exact_pct": 12.494300045599635,
+          "expert_calls": 2193,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 428,
+            "context": 314,
+            "base": 1186
+          }
+        },
+        "single": {
+          "exact": 328,
+          "service_method": 978,
+          "arguments": 419,
+          "service": 994,
+          "method_name": 1050,
+          "exact_pct": 14.956680346557228,
+          "expert_calls": 2193,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 428,
+            "context": 314,
+            "base": 1186
+          }
+        },
+        "review": {
+          "exact": 347,
+          "service_method": 1016,
+          "arguments": 424,
+          "service": 1041,
+          "method_name": 1079,
+          "exact_pct": 15.823073415412678,
+          "expert_calls": 2594,
+          "calls_per_request": 1.1828545371637027,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 1186
+          }
+        },
+        "replace": {
+          "exact": 364,
+          "service_method": 984,
+          "arguments": 419,
+          "service": 1012,
+          "method_name": 1046,
+          "exact_pct": 16.59826721386229,
+          "expert_calls": 2594,
+          "calls_per_request": 1.1828545371637027,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 1186
+          }
+        },
+        "replace_raw": {
+          "exact": 360,
+          "service_method": 984,
+          "arguments": 414,
+          "service": 1012,
+          "method_name": 1046,
+          "exact_pct": 16.415868673050614,
+          "expert_calls": 2594,
+          "calls_per_request": 1.1828545371637027,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 1186
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 55,
+          "loss": 1,
+          "net": 54,
+          "delta_pp": 2.462380300957592,
+          "ci95_pp": [
+            1.8295057132858064,
+            3.140950202812576
+          ],
+          "output_changed": 212,
+          "discordant_dialogues": 56,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "review_vs_matrix": {
+          "gain": 74,
+          "loss": 1,
+          "net": 73,
+          "delta_pp": 3.3287733698130415,
+          "ci95_pp": [
+            2.6444993868751463,
+            4.129987919694733
+          ],
+          "output_changed": 270,
+          "discordant_dialogues": 75,
+          "extra_calls_per_net_gain": 5.493150684931507
+        },
+        "review_vs_single": {
+          "gain": 20,
+          "loss": 1,
+          "net": 19,
+          "delta_pp": 0.8663930688554492,
+          "ci95_pp": [
+            0.4941433009375314,
+            1.2935132177984865
+          ],
+          "output_changed": 73,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": 21.105263157894736
+        },
+        "review_vs_replace": {
+          "gain": 1,
+          "loss": 18,
+          "net": -17,
+          "delta_pp": -0.7751937984496124,
+          "ci95_pp": [
+            -1.2140424300235924,
+            -0.4111466423024212
+          ],
+          "output_changed": 211,
+          "discordant_dialogues": 19,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 38,
+          "loss": 2,
+          "net": 36,
+          "delta_pp": 1.6415868673050615,
+          "ci95_pp": [
+            1.1064879438591124,
+            2.2375355360026523
+          ],
+          "output_changed": 284,
+          "discordant_dialogues": 40,
+          "extra_calls_per_net_gain": 11.13888888888889
+        },
+        "review_vs_replace_raw": {
+          "gain": 4,
+          "loss": 17,
+          "net": -13,
+          "delta_pp": -0.5927952576379389,
+          "ci95_pp": [
+            -1.021415026228433,
+            -0.18441253464981944
+          ],
+          "output_changed": 235,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 339,
+      "review_exact_when_both_raw_drafts_wrong": 3,
+      "review_exact_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_four_raw_wrong": 3
+    },
+    "admitted": {
+      "n": 1007,
+      "dialogues": 784,
+      "admitted": 1007,
+      "called_second": 401,
+      "help_pct_all": 39.821251241310826,
+      "help_pct_admitted": 39.821251241310826,
+      "policies": {
+        "matrix": {
+          "exact": 215,
+          "service_method": 611,
+          "arguments": 262,
+          "service": 611,
+          "method_name": 642,
+          "exact_pct": 21.350546176762663,
+          "expert_calls": 1007,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 428,
+            "context": 314,
+            "base": 0
+          }
+        },
+        "single": {
+          "exact": 269,
+          "service_method": 611,
+          "arguments": 324,
+          "service": 611,
+          "method_name": 642,
+          "exact_pct": 26.713008937437934,
+          "expert_calls": 1007,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 428,
+            "context": 314,
+            "base": 0
+          }
+        },
+        "review": {
+          "exact": 288,
+          "service_method": 649,
+          "arguments": 329,
+          "service": 658,
+          "method_name": 671,
+          "exact_pct": 28.599801390268123,
+          "expert_calls": 1408,
+          "calls_per_request": 1.3982125124131082,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 0
+          }
+        },
+        "replace": {
+          "exact": 305,
+          "service_method": 617,
+          "arguments": 324,
+          "service": 629,
+          "method_name": 638,
+          "exact_pct": 30.28798411122145,
+          "expert_calls": 1408,
+          "calls_per_request": 1.3982125124131082,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 0
+          }
+        },
+        "replace_raw": {
+          "exact": 301,
+          "service_method": 617,
+          "arguments": 319,
+          "service": 629,
+          "method_name": 638,
+          "exact_pct": 29.890764647467726,
+          "expert_calls": 1408,
+          "calls_per_request": 1.3982125124131082,
+          "calls_by_executor": {
+            "search": 332,
+            "transaction": 518,
+            "context": 558,
+            "base": 0
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 55,
+          "loss": 1,
+          "net": 54,
+          "delta_pp": 5.362462760675273,
+          "ci95_pp": [
+            3.9512677971524557,
+            6.818238807331084
+          ],
+          "output_changed": 212,
+          "discordant_dialogues": 56,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "review_vs_matrix": {
+          "gain": 74,
+          "loss": 1,
+          "net": 73,
+          "delta_pp": 7.249255213505462,
+          "ci95_pp": [
+            5.647458146182116,
+            8.877834467120179
+          ],
+          "output_changed": 270,
+          "discordant_dialogues": 75,
+          "extra_calls_per_net_gain": 5.493150684931507
+        },
+        "review_vs_single": {
+          "gain": 20,
+          "loss": 1,
+          "net": 19,
+          "delta_pp": 1.8867924528301887,
+          "ci95_pp": [
+            1.076320939334638,
+            2.7411863934629186
+          ],
+          "output_changed": 73,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": 21.105263157894736
+        },
+        "review_vs_replace": {
+          "gain": 1,
+          "loss": 18,
+          "net": -17,
+          "delta_pp": -1.6881827209533267,
+          "ci95_pp": [
+            -2.6106389303437316,
+            -0.8875739644970414
+          ],
+          "output_changed": 211,
+          "discordant_dialogues": 19,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 38,
+          "loss": 2,
+          "net": 36,
+          "delta_pp": 3.5749751737835154,
+          "ci95_pp": [
+            2.443318703761118,
+            4.85925779022064
+          ],
+          "output_changed": 284,
+          "discordant_dialogues": 40,
+          "extra_calls_per_net_gain": 11.13888888888889
+        },
+        "review_vs_replace_raw": {
+          "gain": 4,
+          "loss": 17,
+          "net": -13,
+          "delta_pp": -1.2909632571996028,
+          "ci95_pp": [
+            -2.220299707001834,
+            -0.3968253968253968
+          ],
+          "output_changed": 235,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 280,
+      "review_exact_when_both_raw_drafts_wrong": 3,
+      "review_exact_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_four_raw_wrong": 3
+    },
+    "rejected": {
+      "n": 1186,
+      "dialogues": 946,
+      "admitted": 0,
+      "called_second": 0,
+      "help_pct_all": 0.0,
+      "help_pct_admitted": null,
+      "policies": {
+        "matrix": {
+          "exact": 59,
+          "service_method": 367,
+          "arguments": 95,
+          "service": 383,
+          "method_name": 408,
+          "exact_pct": 4.974704890387859,
+          "expert_calls": 1186,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 0,
+            "context": 0,
+            "base": 1186
+          }
+        },
+        "single": {
+          "exact": 59,
+          "service_method": 367,
+          "arguments": 95,
+          "service": 383,
+          "method_name": 408,
+          "exact_pct": 4.974704890387859,
+          "expert_calls": 1186,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 0,
+            "context": 0,
+            "base": 1186
+          }
+        },
+        "review": {
+          "exact": 59,
+          "service_method": 367,
+          "arguments": 95,
+          "service": 383,
+          "method_name": 408,
+          "exact_pct": 4.974704890387859,
+          "expert_calls": 1186,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 0,
+            "context": 0,
+            "base": 1186
+          }
+        },
+        "replace": {
+          "exact": 59,
+          "service_method": 367,
+          "arguments": 95,
+          "service": 383,
+          "method_name": 408,
+          "exact_pct": 4.974704890387859,
+          "expert_calls": 1186,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 0,
+            "context": 0,
+            "base": 1186
+          }
+        },
+        "replace_raw": {
+          "exact": 59,
+          "service_method": 367,
+          "arguments": 95,
+          "service": 383,
+          "method_name": 408,
+          "exact_pct": 4.974704890387859,
+          "expert_calls": 1186,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 0,
+            "context": 0,
+            "base": 1186
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_matrix": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_single": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_replace": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_replace_raw": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 59,
+      "review_exact_when_both_raw_drafts_wrong": 0,
+      "review_exact_when_all_three_raw_experts_wrong": 0,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 0,
+      "review_gain_over_single_when_all_four_raw_wrong": 0
+    },
+    "known": {
+      "n": 1811,
+      "dialogues": 1166,
+      "admitted": 981,
+      "called_second": 387,
+      "help_pct_all": 21.369409166206516,
+      "help_pct_admitted": 39.44954128440367,
+      "policies": {
+        "matrix": {
+          "exact": 255,
+          "service_method": 771,
+          "arguments": 335,
+          "service": 787,
+          "method_name": 843,
+          "exact_pct": 14.080618442849255,
+          "expert_calls": 1811,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 421,
+            "context": 295,
+            "base": 830
+          }
+        },
+        "single": {
+          "exact": 309,
+          "service_method": 771,
+          "arguments": 396,
+          "service": 787,
+          "method_name": 843,
+          "exact_pct": 17.062396466040862,
+          "expert_calls": 1811,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 265,
+            "transaction": 421,
+            "context": 295,
+            "base": 830
+          }
+        },
+        "review": {
+          "exact": 328,
+          "service_method": 809,
+          "arguments": 401,
+          "service": 834,
+          "method_name": 872,
+          "exact_pct": 18.11154058531198,
+          "expert_calls": 2198,
+          "calls_per_request": 1.213694091662065,
+          "calls_by_executor": {
+            "search": 330,
+            "transaction": 501,
+            "context": 537,
+            "base": 830
+          }
+        },
+        "replace": {
+          "exact": 344,
+          "service_method": 775,
+          "arguments": 395,
+          "service": 803,
+          "method_name": 837,
+          "exact_pct": 18.99503036996135,
+          "expert_calls": 2198,
+          "calls_per_request": 1.213694091662065,
+          "calls_by_executor": {
+            "search": 330,
+            "transaction": 501,
+            "context": 537,
+            "base": 830
+          }
+        },
+        "replace_raw": {
+          "exact": 341,
+          "service_method": 775,
+          "arguments": 391,
+          "service": 803,
+          "method_name": 837,
+          "exact_pct": 18.829376035339592,
+          "expert_calls": 2198,
+          "calls_per_request": 1.213694091662065,
+          "calls_by_executor": {
+            "search": 330,
+            "transaction": 501,
+            "context": 537,
+            "base": 830
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 55,
+          "loss": 1,
+          "net": 54,
+          "delta_pp": 2.9817780231916067,
+          "ci95_pp": [
+            2.2358167072803905,
+            3.846365638766519
+          ],
+          "output_changed": 207,
+          "discordant_dialogues": 56,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "review_vs_matrix": {
+          "gain": 74,
+          "loss": 1,
+          "net": 73,
+          "delta_pp": 4.030922142462728,
+          "ci95_pp": [
+            3.143916957706531,
+            4.988859187040534
+          ],
+          "output_changed": 265,
+          "discordant_dialogues": 75,
+          "extra_calls_per_net_gain": 5.301369863013699
+        },
+        "review_vs_single": {
+          "gain": 20,
+          "loss": 1,
+          "net": 19,
+          "delta_pp": 1.0491441192711208,
+          "ci95_pp": [
+            0.6010846890080669,
+            1.5428062645541294
+          ],
+          "output_changed": 73,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": 20.36842105263158
+        },
+        "review_vs_replace": {
+          "gain": 1,
+          "loss": 17,
+          "net": -16,
+          "delta_pp": -0.883489784649365,
+          "ci95_pp": [
+            -1.375137513751375,
+            -0.44567005051749825
+          ],
+          "output_changed": 200,
+          "discordant_dialogues": 18,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 37,
+          "loss": 2,
+          "net": 35,
+          "delta_pp": 1.9326339039204858,
+          "ci95_pp": [
+            1.2884254260363364,
+            2.627240288827461
+          ],
+          "output_changed": 273,
+          "discordant_dialogues": 39,
+          "extra_calls_per_net_gain": 11.057142857142857
+        },
+        "review_vs_replace_raw": {
+          "gain": 4,
+          "loss": 17,
+          "net": -13,
+          "delta_pp": -0.7178354500276091,
+          "ci95_pp": [
+            -1.2242967620128256,
+            -0.22721837110554077
+          ],
+          "output_changed": 222,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 320,
+      "review_exact_when_both_raw_drafts_wrong": 3,
+      "review_exact_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_four_raw_wrong": 3
+    },
+    "unknown": {
+      "n": 382,
+      "dialogues": 347,
+      "admitted": 26,
+      "called_second": 14,
+      "help_pct_all": 3.6649214659685865,
+      "help_pct_admitted": 53.84615384615385,
+      "policies": {
+        "matrix": {
+          "exact": 19,
+          "service_method": 207,
+          "arguments": 22,
+          "service": 207,
+          "method_name": 207,
+          "exact_pct": 4.973821989528796,
+          "expert_calls": 382,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 7,
+            "context": 19,
+            "base": 356
+          }
+        },
+        "single": {
+          "exact": 19,
+          "service_method": 207,
+          "arguments": 23,
+          "service": 207,
+          "method_name": 207,
+          "exact_pct": 4.973821989528796,
+          "expert_calls": 382,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 0,
+            "transaction": 7,
+            "context": 19,
+            "base": 356
+          }
+        },
+        "review": {
+          "exact": 19,
+          "service_method": 207,
+          "arguments": 23,
+          "service": 207,
+          "method_name": 207,
+          "exact_pct": 4.973821989528796,
+          "expert_calls": 396,
+          "calls_per_request": 1.036649214659686,
+          "calls_by_executor": {
+            "search": 2,
+            "transaction": 17,
+            "context": 21,
+            "base": 356
+          }
+        },
+        "replace": {
+          "exact": 20,
+          "service_method": 209,
+          "arguments": 24,
+          "service": 209,
+          "method_name": 209,
+          "exact_pct": 5.2356020942408374,
+          "expert_calls": 396,
+          "calls_per_request": 1.036649214659686,
+          "calls_by_executor": {
+            "search": 2,
+            "transaction": 17,
+            "context": 21,
+            "base": 356
+          }
+        },
+        "replace_raw": {
+          "exact": 19,
+          "service_method": 209,
+          "arguments": 23,
+          "service": 209,
+          "method_name": 209,
+          "exact_pct": 4.973821989528796,
+          "expert_calls": 396,
+          "calls_per_request": 1.036649214659686,
+          "calls_by_executor": {
+            "search": 2,
+            "transaction": 17,
+            "context": 21,
+            "base": 356
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 5,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_matrix": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 5,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_single": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 0,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        },
+        "review_vs_replace": {
+          "gain": 0,
+          "loss": 1,
+          "net": -1,
+          "delta_pp": -0.2617801047120419,
+          "ci95_pp": [
+            -0.8,
+            0.0
+          ],
+          "output_changed": 11,
+          "discordant_dialogues": 1,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 1,
+          "loss": 0,
+          "net": 1,
+          "delta_pp": 0.2617801047120419,
+          "ci95_pp": [
+            0.0,
+            0.8
+          ],
+          "output_changed": 11,
+          "discordant_dialogues": 1,
+          "extra_calls_per_net_gain": 14.0
+        },
+        "review_vs_replace_raw": {
+          "gain": 0,
+          "loss": 0,
+          "net": 0,
+          "delta_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "output_changed": 13,
+          "discordant_dialogues": 0,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 19,
+      "review_exact_when_both_raw_drafts_wrong": 0,
+      "review_exact_when_all_three_raw_experts_wrong": 0,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 0,
+      "review_gain_over_single_when_all_four_raw_wrong": 0
+    },
+    "triggered": {
+      "n": 401,
+      "dialogues": 366,
+      "admitted": 401,
+      "called_second": 401,
+      "help_pct_all": 100.0,
+      "help_pct_admitted": 100.0,
+      "policies": {
+        "matrix": {
+          "exact": 1,
+          "service_method": 120,
+          "arguments": 40,
+          "service": 120,
+          "method_name": 135,
+          "exact_pct": 0.24937655860349128,
+          "expert_calls": 401,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 111,
+            "transaction": 191,
+            "context": 99,
+            "base": 0
+          }
+        },
+        "single": {
+          "exact": 2,
+          "service_method": 120,
+          "arguments": 45,
+          "service": 120,
+          "method_name": 135,
+          "exact_pct": 0.49875311720698257,
+          "expert_calls": 401,
+          "calls_per_request": 1.0,
+          "calls_by_executor": {
+            "search": 111,
+            "transaction": 191,
+            "context": 99,
+            "base": 0
+          }
+        },
+        "review": {
+          "exact": 21,
+          "service_method": 158,
+          "arguments": 50,
+          "service": 167,
+          "method_name": 164,
+          "exact_pct": 5.236907730673317,
+          "expert_calls": 802,
+          "calls_per_request": 2.0,
+          "calls_by_executor": {
+            "search": 178,
+            "transaction": 281,
+            "context": 343,
+            "base": 0
+          }
+        },
+        "replace": {
+          "exact": 38,
+          "service_method": 126,
+          "arguments": 45,
+          "service": 138,
+          "method_name": 131,
+          "exact_pct": 9.476309226932669,
+          "expert_calls": 802,
+          "calls_per_request": 2.0,
+          "calls_by_executor": {
+            "search": 178,
+            "transaction": 281,
+            "context": 343,
+            "base": 0
+          }
+        },
+        "replace_raw": {
+          "exact": 34,
+          "service_method": 126,
+          "arguments": 40,
+          "service": 138,
+          "method_name": 131,
+          "exact_pct": 8.478802992518704,
+          "expert_calls": 802,
+          "calls_per_request": 2.0,
+          "calls_by_executor": {
+            "search": 178,
+            "transaction": 281,
+            "context": 343,
+            "base": 0
+          }
+        }
+      },
+      "contrasts": {
+        "single_vs_matrix": {
+          "gain": 1,
+          "loss": 0,
+          "net": 1,
+          "delta_pp": 0.24937655860349128,
+          "ci95_pp": [
+            0.0,
+            0.7614213197969543
+          ],
+          "output_changed": 37,
+          "discordant_dialogues": 1,
+          "extra_calls_per_net_gain": 0.0
+        },
+        "review_vs_matrix": {
+          "gain": 20,
+          "loss": 0,
+          "net": 20,
+          "delta_pp": 4.987531172069826,
+          "ci95_pp": [
+            2.9411764705882355,
+            7.25
+          ],
+          "output_changed": 95,
+          "discordant_dialogues": 20,
+          "extra_calls_per_net_gain": 20.05
+        },
+        "review_vs_single": {
+          "gain": 20,
+          "loss": 1,
+          "net": 19,
+          "delta_pp": 4.738154613466334,
+          "ci95_pp": [
+            2.70935960591133,
+            7.035618900548078
+          ],
+          "output_changed": 73,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": 21.105263157894736
+        },
+        "review_vs_replace": {
+          "gain": 1,
+          "loss": 18,
+          "net": -17,
+          "delta_pp": -4.239401496259352,
+          "ci95_pp": [
+            -6.404336191692513,
+            -2.255639097744361
+          ],
+          "output_changed": 211,
+          "discordant_dialogues": 19,
+          "extra_calls_per_net_gain": null
+        },
+        "replace_vs_single": {
+          "gain": 38,
+          "loss": 2,
+          "net": 36,
+          "delta_pp": 8.977556109725686,
+          "ci95_pp": [
+            5.999625935162094,
+            12.0
+          ],
+          "output_changed": 284,
+          "discordant_dialogues": 40,
+          "extra_calls_per_net_gain": 11.13888888888889
+        },
+        "review_vs_replace_raw": {
+          "gain": 4,
+          "loss": 17,
+          "net": -13,
+          "delta_pp": -3.2418952618453867,
+          "ci95_pp": [
+            -5.513784461152882,
+            -1.2165450121654502
+          ],
+          "output_changed": 235,
+          "discordant_dialogues": 21,
+          "extra_calls_per_net_gain": null
+        }
+      },
+      "same_gate_raw_three_expert_selection_oracle": 51,
+      "review_exact_when_both_raw_drafts_wrong": 3,
+      "review_exact_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+      "review_gain_over_single_when_all_four_raw_wrong": 3
+    }
+  },
+  "mechanisms": {
+    "trigger": {
+      "required_missing": {
+        "n": 261,
+        "dialogues": 244,
+        "admitted": 261,
+        "called_second": 261,
+        "help_pct_all": 100.0,
+        "help_pct_admitted": 100.0,
+        "policies": {
+          "matrix": {
+            "exact": 0,
+            "service_method": 101,
+            "arguments": 18,
+            "service": 101,
+            "method_name": 103,
+            "exact_pct": 0.0,
+            "expert_calls": 261,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 67,
+              "transaction": 116,
+              "context": 78,
+              "base": 0
+            }
+          },
+          "single": {
+            "exact": 0,
+            "service_method": 101,
+            "arguments": 18,
+            "service": 101,
+            "method_name": 103,
+            "exact_pct": 0.0,
+            "expert_calls": 261,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 67,
+              "transaction": 116,
+              "context": 78,
+              "base": 0
+            }
+          },
+          "review": {
+            "exact": 0,
+            "service_method": 101,
+            "arguments": 18,
+            "service": 101,
+            "method_name": 103,
+            "exact_pct": 0.0,
+            "expert_calls": 522,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 67,
+              "transaction": 194,
+              "context": 261,
+              "base": 0
+            }
+          },
+          "replace": {
+            "exact": 18,
+            "service_method": 72,
+            "arguments": 22,
+            "service": 75,
+            "method_name": 75,
+            "exact_pct": 6.896551724137931,
+            "expert_calls": 522,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 67,
+              "transaction": 194,
+              "context": 261,
+              "base": 0
+            }
+          },
+          "replace_raw": {
+            "exact": 17,
+            "service_method": 72,
+            "arguments": 21,
+            "service": 75,
+            "method_name": 75,
+            "exact_pct": 6.513409961685824,
+            "expert_calls": 522,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 67,
+              "transaction": 194,
+              "context": 261,
+              "base": 0
+            }
+          }
+        },
+        "contrasts": {
+          "single_vs_matrix": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 9,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_matrix": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 9,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_single": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 0,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_replace": {
+            "gain": 0,
+            "loss": 18,
+            "net": -18,
+            "delta_pp": -6.896551724137931,
+            "ci95_pp": [
+              -10.150522791353383,
+              -3.952180137561858
+            ],
+            "output_changed": 171,
+            "discordant_dialogues": 18,
+            "extra_calls_per_net_gain": null
+          },
+          "replace_vs_single": {
+            "gain": 18,
+            "loss": 0,
+            "net": 18,
+            "delta_pp": 6.896551724137931,
+            "ci95_pp": [
+              3.952180137561856,
+              10.150522791353383
+            ],
+            "output_changed": 171,
+            "discordant_dialogues": 18,
+            "extra_calls_per_net_gain": 14.5
+          },
+          "review_vs_replace_raw": {
+            "gain": 0,
+            "loss": 17,
+            "net": -17,
+            "delta_pp": -6.513409961685824,
+            "ci95_pp": [
+              -9.775173227185611,
+              -3.816431080022061
+            ],
+            "output_changed": 175,
+            "discordant_dialogues": 17,
+            "extra_calls_per_net_gain": null
+          }
+        },
+        "same_gate_raw_three_expert_selection_oracle": 27,
+        "review_exact_when_both_raw_drafts_wrong": 0,
+        "review_exact_when_all_three_raw_experts_wrong": 0,
+        "review_gain_over_single_when_all_three_raw_experts_wrong": 0,
+        "review_gain_over_single_when_all_four_raw_wrong": 0
+      },
+      "service_conflict": {
+        "n": 140,
+        "dialogues": 136,
+        "admitted": 140,
+        "called_second": 140,
+        "help_pct_all": 100.0,
+        "help_pct_admitted": 100.0,
+        "policies": {
+          "matrix": {
+            "exact": 1,
+            "service_method": 19,
+            "arguments": 22,
+            "service": 19,
+            "method_name": 32,
+            "exact_pct": 0.7142857142857143,
+            "expert_calls": 140,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 44,
+              "transaction": 75,
+              "context": 21,
+              "base": 0
+            }
+          },
+          "single": {
+            "exact": 2,
+            "service_method": 19,
+            "arguments": 27,
+            "service": 19,
+            "method_name": 32,
+            "exact_pct": 1.4285714285714286,
+            "expert_calls": 140,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 44,
+              "transaction": 75,
+              "context": 21,
+              "base": 0
+            }
+          },
+          "review": {
+            "exact": 21,
+            "service_method": 57,
+            "arguments": 32,
+            "service": 66,
+            "method_name": 61,
+            "exact_pct": 15.0,
+            "expert_calls": 280,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 111,
+              "transaction": 87,
+              "context": 82,
+              "base": 0
+            }
+          },
+          "replace": {
+            "exact": 20,
+            "service_method": 54,
+            "arguments": 23,
+            "service": 63,
+            "method_name": 56,
+            "exact_pct": 14.285714285714286,
+            "expert_calls": 280,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 111,
+              "transaction": 87,
+              "context": 82,
+              "base": 0
+            }
+          },
+          "replace_raw": {
+            "exact": 17,
+            "service_method": 54,
+            "arguments": 19,
+            "service": 63,
+            "method_name": 56,
+            "exact_pct": 12.142857142857142,
+            "expert_calls": 280,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 111,
+              "transaction": 87,
+              "context": 82,
+              "base": 0
+            }
+          }
+        },
+        "contrasts": {
+          "single_vs_matrix": {
+            "gain": 1,
+            "loss": 0,
+            "net": 1,
+            "delta_pp": 0.7142857142857143,
+            "ci95_pp": [
+              0.0,
+              2.1739130434782608
+            ],
+            "output_changed": 28,
+            "discordant_dialogues": 1,
+            "extra_calls_per_net_gain": 0.0
+          },
+          "review_vs_matrix": {
+            "gain": 20,
+            "loss": 0,
+            "net": 20,
+            "delta_pp": 14.285714285714286,
+            "ci95_pp": [
+              9.082614465826145,
+              20.27972027972028
+            ],
+            "output_changed": 86,
+            "discordant_dialogues": 20,
+            "extra_calls_per_net_gain": 7.0
+          },
+          "review_vs_single": {
+            "gain": 20,
+            "loss": 1,
+            "net": 19,
+            "delta_pp": 13.571428571428571,
+            "ci95_pp": [
+              7.913669064748201,
+              19.858156028368793
+            ],
+            "output_changed": 73,
+            "discordant_dialogues": 21,
+            "extra_calls_per_net_gain": 7.368421052631579
+          },
+          "review_vs_replace": {
+            "gain": 1,
+            "loss": 0,
+            "net": 1,
+            "delta_pp": 0.7142857142857143,
+            "ci95_pp": [
+              0.0,
+              2.1739130434782608
+            ],
+            "output_changed": 40,
+            "discordant_dialogues": 1,
+            "extra_calls_per_net_gain": 0.0
+          },
+          "replace_vs_single": {
+            "gain": 20,
+            "loss": 2,
+            "net": 18,
+            "delta_pp": 12.857142857142858,
+            "ci95_pp": [
+              7.142857142857143,
+              19.313197717687903
+            ],
+            "output_changed": 113,
+            "discordant_dialogues": 22,
+            "extra_calls_per_net_gain": 7.777777777777778
+          },
+          "review_vs_replace_raw": {
+            "gain": 4,
+            "loss": 0,
+            "net": 4,
+            "delta_pp": 2.857142857142857,
+            "ci95_pp": [
+              0.7092198581560284,
+              5.755395683453237
+            ],
+            "output_changed": 60,
+            "discordant_dialogues": 4,
+            "extra_calls_per_net_gain": 0.0
+          }
+        },
+        "same_gate_raw_three_expert_selection_oracle": 24,
+        "review_exact_when_both_raw_drafts_wrong": 3,
+        "review_exact_when_all_three_raw_experts_wrong": 3,
+        "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+        "review_gain_over_single_when_all_four_raw_wrong": 3
+      }
+    },
+    "action": {
+      "keep": {
+        "n": 328,
+        "dialogues": 302,
+        "admitted": 328,
+        "called_second": 328,
+        "help_pct_all": 100.0,
+        "help_pct_admitted": 100.0,
+        "policies": {
+          "matrix": {
+            "exact": 1,
+            "service_method": 108,
+            "arguments": 28,
+            "service": 108,
+            "method_name": 114,
+            "exact_pct": 0.3048780487804878,
+            "expert_calls": 328,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 86,
+              "transaction": 151,
+              "context": 91,
+              "base": 0
+            }
+          },
+          "single": {
+            "exact": 1,
+            "service_method": 108,
+            "arguments": 30,
+            "service": 108,
+            "method_name": 114,
+            "exact_pct": 0.3048780487804878,
+            "expert_calls": 328,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 86,
+              "transaction": 151,
+              "context": 91,
+              "base": 0
+            }
+          },
+          "review": {
+            "exact": 1,
+            "service_method": 108,
+            "arguments": 30,
+            "service": 108,
+            "method_name": 114,
+            "exact_pct": 0.3048780487804878,
+            "expert_calls": 656,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 117,
+              "transaction": 235,
+              "context": 304,
+              "base": 0
+            }
+          },
+          "replace": {
+            "exact": 18,
+            "service_method": 76,
+            "arguments": 25,
+            "service": 79,
+            "method_name": 81,
+            "exact_pct": 5.487804878048781,
+            "expert_calls": 656,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 117,
+              "transaction": 235,
+              "context": 304,
+              "base": 0
+            }
+          },
+          "replace_raw": {
+            "exact": 17,
+            "service_method": 76,
+            "arguments": 23,
+            "service": 79,
+            "method_name": 81,
+            "exact_pct": 5.182926829268292,
+            "expert_calls": 656,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 117,
+              "transaction": 235,
+              "context": 304,
+              "base": 0
+            }
+          }
+        },
+        "contrasts": {
+          "single_vs_matrix": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 22,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_matrix": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 22,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_single": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 0,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "review_vs_replace": {
+            "gain": 1,
+            "loss": 18,
+            "net": -17,
+            "delta_pp": -5.182926829268292,
+            "ci95_pp": [
+              -7.788653139120429,
+              -2.9727636322668056
+            ],
+            "output_changed": 211,
+            "discordant_dialogues": 19,
+            "extra_calls_per_net_gain": null
+          },
+          "replace_vs_single": {
+            "gain": 18,
+            "loss": 1,
+            "net": 17,
+            "delta_pp": 5.182926829268292,
+            "ci95_pp": [
+              2.972763632266787,
+              7.788653139120426
+            ],
+            "output_changed": 211,
+            "discordant_dialogues": 19,
+            "extra_calls_per_net_gain": 19.294117647058822
+          },
+          "review_vs_replace_raw": {
+            "gain": 1,
+            "loss": 17,
+            "net": -16,
+            "delta_pp": -4.878048780487805,
+            "ci95_pp": [
+              -7.385185185185185,
+              -2.694610778443114
+            ],
+            "output_changed": 220,
+            "discordant_dialogues": 18,
+            "extra_calls_per_net_gain": null
+          }
+        },
+        "same_gate_raw_three_expert_selection_oracle": 34,
+        "review_exact_when_both_raw_drafts_wrong": 0,
+        "review_exact_when_all_three_raw_experts_wrong": 0,
+        "review_gain_over_single_when_all_three_raw_experts_wrong": 0,
+        "review_gain_over_single_when_all_four_raw_wrong": 0
+      },
+      "replace": {
+        "n": 73,
+        "dialogues": 71,
+        "admitted": 73,
+        "called_second": 73,
+        "help_pct_all": 100.0,
+        "help_pct_admitted": 100.0,
+        "policies": {
+          "matrix": {
+            "exact": 0,
+            "service_method": 12,
+            "arguments": 12,
+            "service": 12,
+            "method_name": 21,
+            "exact_pct": 0.0,
+            "expert_calls": 73,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 25,
+              "transaction": 40,
+              "context": 8,
+              "base": 0
+            }
+          },
+          "single": {
+            "exact": 1,
+            "service_method": 12,
+            "arguments": 15,
+            "service": 12,
+            "method_name": 21,
+            "exact_pct": 1.36986301369863,
+            "expert_calls": 73,
+            "calls_per_request": 1.0,
+            "calls_by_executor": {
+              "search": 25,
+              "transaction": 40,
+              "context": 8,
+              "base": 0
+            }
+          },
+          "review": {
+            "exact": 20,
+            "service_method": 50,
+            "arguments": 20,
+            "service": 59,
+            "method_name": 50,
+            "exact_pct": 27.397260273972602,
+            "expert_calls": 146,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 61,
+              "transaction": 46,
+              "context": 39,
+              "base": 0
+            }
+          },
+          "replace": {
+            "exact": 20,
+            "service_method": 50,
+            "arguments": 20,
+            "service": 59,
+            "method_name": 50,
+            "exact_pct": 27.397260273972602,
+            "expert_calls": 146,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 61,
+              "transaction": 46,
+              "context": 39,
+              "base": 0
+            }
+          },
+          "replace_raw": {
+            "exact": 17,
+            "service_method": 50,
+            "arguments": 17,
+            "service": 59,
+            "method_name": 50,
+            "exact_pct": 23.28767123287671,
+            "expert_calls": 146,
+            "calls_per_request": 2.0,
+            "calls_by_executor": {
+              "search": 61,
+              "transaction": 46,
+              "context": 39,
+              "base": 0
+            }
+          }
+        },
+        "contrasts": {
+          "single_vs_matrix": {
+            "gain": 1,
+            "loss": 0,
+            "net": 1,
+            "delta_pp": 1.36986301369863,
+            "ci95_pp": [
+              0.0,
+              4.166666666666667
+            ],
+            "output_changed": 15,
+            "discordant_dialogues": 1,
+            "extra_calls_per_net_gain": 0.0
+          },
+          "review_vs_matrix": {
+            "gain": 20,
+            "loss": 0,
+            "net": 20,
+            "delta_pp": 27.397260273972602,
+            "ci95_pp": [
+              17.80821917808219,
+              37.83783783783784
+            ],
+            "output_changed": 73,
+            "discordant_dialogues": 20,
+            "extra_calls_per_net_gain": 3.65
+          },
+          "review_vs_single": {
+            "gain": 20,
+            "loss": 1,
+            "net": 19,
+            "delta_pp": 26.027397260273972,
+            "ci95_pp": [
+              15.277777777777779,
+              36.8421052631579
+            ],
+            "output_changed": 73,
+            "discordant_dialogues": 21,
+            "extra_calls_per_net_gain": 3.8421052631578947
+          },
+          "review_vs_replace": {
+            "gain": 0,
+            "loss": 0,
+            "net": 0,
+            "delta_pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "output_changed": 0,
+            "discordant_dialogues": 0,
+            "extra_calls_per_net_gain": null
+          },
+          "replace_vs_single": {
+            "gain": 20,
+            "loss": 1,
+            "net": 19,
+            "delta_pp": 26.027397260273972,
+            "ci95_pp": [
+              15.277777777777779,
+              36.8421052631579
+            ],
+            "output_changed": 73,
+            "discordant_dialogues": 21,
+            "extra_calls_per_net_gain": 3.8421052631578947
+          },
+          "review_vs_replace_raw": {
+            "gain": 3,
+            "loss": 0,
+            "net": 3,
+            "delta_pp": 4.109589041095891,
+            "ci95_pp": [
+              0.0,
+              9.333333333333334
+            ],
+            "output_changed": 15,
+            "discordant_dialogues": 3,
+            "extra_calls_per_net_gain": 0.0
+          }
+        },
+        "same_gate_raw_three_expert_selection_oracle": 17,
+        "review_exact_when_both_raw_drafts_wrong": 3,
+        "review_exact_when_all_three_raw_experts_wrong": 3,
+        "review_gain_over_single_when_all_three_raw_experts_wrong": 3,
+        "review_gain_over_single_when_all_four_raw_wrong": 3
+      }
+    }
+  },
+  "single_edit_counts_overlapping": {
+    "add:city": {
+      "changed": 45,
+      "gain": 2,
+      "loss": 0
+    },
+    "add:destination": {
+      "changed": 79,
+      "gain": 39,
+      "loss": 0
+    },
+    "add:location": {
+      "changed": 42,
+      "gain": 2,
+      "loss": 0
+    },
+    "add:shared_ride": {
+      "changed": 2,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:number_of_rooms": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:destination": {
+      "changed": 21,
+      "gain": 11,
+      "loss": 1
+    },
+    "add:where_to": {
+      "changed": 5,
+      "gain": 1,
+      "loss": 0
+    },
+    "add:departure_date": {
+      "changed": 4,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:from_location": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:leaving_date": {
+      "changed": 4,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:group_size": {
+      "changed": 2,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:passengers": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:origin": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:date": {
+      "changed": 3,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:group_size": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "change:destination_city": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:travelers": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:rating": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:star_rating": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "add:number_of_rooms": {
+      "changed": 1,
+      "gain": 0,
+      "loss": 0
+    }
+  },
+  "examples": {
+    "review_vs_single_gain": [
+      {
+        "id": "test/15_00111:2",
+        "gold": {
+          "arguments": {
+            "city": "Lafayette"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "primary": "search",
+        "secondary": "context",
+        "last_three_turns": [
+          "USER: I am looking for a salon.",
+          "SYSTEM: What city do you want me to search in?",
+          "USER: Find me a salon in Lafayette."
+        ],
+        "reasons": {
+          "action": "replace",
+          "trigger": "service_conflict"
+        },
+        "from": {
+          "arguments": {
+            "city": "Lafayette"
+          },
+          "method": "FindEvents",
+          "service": "Events_2"
+        },
+        "to": {
+          "arguments": {
+            "city": "Lafayette"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "raw_second": {
+          "arguments": {},
+          "method": "FindProvider",
+          "service": "Services_1"
+        }
+      },
+      {
+        "id": "test/16_00013:6",
+        "gold": {
+          "arguments": {
+            "city": "Pleasant Hill"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "primary": "search",
+        "secondary": "context",
+        "last_three_turns": [
+          "USER: Would it be unisex?",
+          "SYSTEM: The salon is unisex.",
+          "USER: Will you find me a different salon in Pleasant Hill."
+        ],
+        "reasons": {
+          "action": "replace",
+          "trigger": "service_conflict"
+        },
+        "from": {
+          "arguments": {
+            "city": "Pleasant Hill"
+          },
+          "method": "FindProvider",
+          "service": "Services_2"
+        },
+        "to": {
+          "arguments": {
+            "city": "Pleasant Hill"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "raw_second": {
+          "arguments": {
+            "city": "Pleasant Hill"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        }
+      }
+    ],
+    "single_vs_matrix_gain": [
+      {
+        "id": "test/16_00119:2",
+        "gold": {
+          "arguments": {
+            "city": "Lafayette"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "primary": "search",
+        "secondary": null,
+        "last_three_turns": [
+          "USER: I'm looking for a salon.",
+          "SYSTEM: What city do you want to search in?",
+          "USER: I want a salon in Lafayette."
+        ],
+        "reasons": {
+          "action": "keep",
+          "trigger": "none"
+        },
+        "from": {
+          "arguments": {},
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "to": {
+          "arguments": {
+            "city": "Lafayette"
+          },
+          "method": "FindProvider",
+          "service": "Services_1"
+        },
+        "raw_second": null
+      },
+      {
+        "id": "test/18_00032:22",
+        "gold": {
+          "arguments": {
+            "destination": "2516 Samaritan Drive",
+            "number_of_seats": "1",
+            "ride_type": "Luxury"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "primary": "search",
+        "secondary": null,
+        "last_three_turns": [
+          "USER: I would like the ride that is the most comfortable.",
+          "SYSTEM: Confirming a luxury ride for 1 passenger to 2516 Samaritan Drive.",
+          "USER: Correct, thank you."
+        ],
+        "reasons": {
+          "action": "keep",
+          "trigger": "none"
+        },
+        "from": {
+          "arguments": {
+            "number_of_seats": "1",
+            "ride_type": "Luxury"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "to": {
+          "arguments": {
+            "number_of_seats": "1",
+            "ride_type": "Luxury",
+            "destination": "2516 Samaritan Drive"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "raw_second": null
+      }
+    ],
+    "single_vs_matrix_loss": [
+      {
+        "id": "test/21_00019:4",
+        "gold": {
+          "arguments": {
+            "destination": "Sticky Rice Chinese Bistro & Bar",
+            "number_of_seats": "4",
+            "ride_type": "Pool"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "primary": "search",
+        "secondary": null,
+        "last_three_turns": [
+          "USER: I would like a ride to Sticky Rice Chinese Bistro & Bar.",
+          "SYSTEM: Please confirm details for a ride for 4 to Sticky Rice Chinese Bistro & Bar with a Pool ride.",
+          "USER: Yes, that will work for me. How much will it cost and how long before the cab reaches here."
+        ],
+        "reasons": {
+          "action": "keep",
+          "trigger": "none"
+        },
+        "from": {
+          "arguments": {
+            "destination": "Sticky Rice Chinese Bistro & Bar",
+            "number_of_seats": "4",
+            "ride_type": "Pool"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "to": {
+          "arguments": {
+            "destination": "Sticky Rice Chinese Bistro & Bar with a Pool ride",
+            "number_of_seats": "4",
+            "ride_type": "Pool"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "raw_second": null
+      }
+    ],
+    "review_vs_single_loss": [
+      {
+        "id": "test/32_00080:14",
+        "gold": {
+          "arguments": {
+            "destination": "2225 Sharon Road",
+            "number_of_seats": "1",
+            "ride_type": "Pool"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "primary": "search",
+        "secondary": "transaction",
+        "last_three_turns": [
+          "USER: Thank you. Can you find me a cab for 1? Pool ride is good.",
+          "SYSTEM: Please confirm: pool ride for 1 to 2225 Sharon Road.",
+          "USER: Yes, sounds good. How much is it?"
+        ],
+        "reasons": {
+          "action": "replace",
+          "trigger": "service_conflict"
+        },
+        "from": {
+          "arguments": {
+            "number_of_seats": "1",
+            "ride_type": "Pool",
+            "destination": "2225 Sharon Road"
+          },
+          "method": "GetRide",
+          "service": "RideSharing_2"
+        },
+        "to": {
+          "arguments": {},
+          "method": "LookupSong",
+          "service": "Music_1"
+        },
+        "raw_second": {
+          "arguments": {},
+          "method": "LookupSong",
+          "service": "Music_1"
+        }
+      }
+    ]
+  }
+}
