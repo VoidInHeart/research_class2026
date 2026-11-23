@@ -278,8 +278,12 @@ def run(args):
     timings, trace = benchmark(bundle, pool, live_rows, args.repeats, args.seed)
     write_rows(work / "latency.jsonl", trace)
     manifest = root / "manifest.json"
+    sources = gate_sources
+    if args.backend == "retrieval-grounded":
+        sources += ("transaction_executor",)
     summary = {"quality": quality, "diagnostics": oracle, "paired": paired, "warm_single_client": timings,
-               "provenance": provenance(gate_sources), "split_metadata": split["metadata"],
+               "provenance": provenance(sources),
+               "split_metadata": split["metadata"],
                "recognition": {"window": encoder.window, "oos_gate": oos_gate, "threshold": encoder.threshold,
                                "temperature": encoder.temperature, **support_metadata},
                "data_manifest": json.loads(manifest.read_text(encoding="utf8")) if manifest.is_file() else None,

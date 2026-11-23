@@ -24,7 +24,8 @@ def main():
     run.add_argument("--oos-gate", choices=["centroid", "adaptive-support"], default="centroid",
                      help="adaptive-support uses local recent5 MiniLM training examples")
     run.add_argument("--model-path", help="local MiniLM model snapshot")
-    run.add_argument("--backend", choices=["retrieval","lora"], default="retrieval")
+    run.add_argument("--backend", choices=["retrieval", "retrieval-grounded", "lora"], default="retrieval",
+                     help="retrieval-grounded uses public conversation evidence to assemble transaction calls")
     run.add_argument("--base-path")
     run.add_argument("--adapters-dir")
     run.add_argument("--device", default="cpu")

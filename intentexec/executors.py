@@ -168,6 +168,9 @@ def make_pool(fit_rows, schema, config):
     backend = config.get("backend", "retrieval")
     if backend == "retrieval":
         return RetrievalPool(fit_rows, schema, config.get("seed", 1118))
+    if backend == "retrieval-grounded":
+        from .transaction_executor import RepairedRetrievalPool
+        return RepairedRetrievalPool(fit_rows, schema, config.get("seed", 1118))
     if backend == "lora":
         from .lora import LoRAPool
         return LoRAPool(schema, config, fit_rows)
