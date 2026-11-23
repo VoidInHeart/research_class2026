@@ -70,6 +70,12 @@ python -m intentexec.profile --run-dir artifacts/my-minilm --policy matrix --lim
 python -m intentexec run --encoder minilm --model-path '../code/models/models--sentence-transformers--all-MiniLM-L6-v2' --oos-gate adaptive-support --backend retrieval-grounded --out artifacts/my-grounded-run
 ```
 
+若要把旧运行迁移到修复后的本地执行器，可保留原识别器、窗口、OOS 门控和路由监督样本，只重估三专家能力矩阵。输出目录支持 `matrix`、`matrix_no_gate`、`always_base`。从头训练的 `run` 已使用当次执行器的监督。原十九片的公交购票从 12/218 升到 115/218，固定选择交易专家也答对 115 条。[新对话验证、固定专家对照与复现命令](reports/refreshed_routing/REPORT.md)
+
+```powershell
+python -m intentexec.refresh_saved_matrix --run-dir artifacts/verified-minilm --out artifacts/my-refreshed-matrix
+```
+
 ## LoRA 训练与评估
 
 准备本地指令模型目录（含聊天模板及模型权重），安装与硬件匹配的 PyTorch 和 [LoRA 依赖](requirements-lora.txt)。下面的路径需替换成实际基座位置，示例 8192 为总上下文，要求模型支持该长度。训练与评估使用相同的 schema、划分、种子和提示预算。

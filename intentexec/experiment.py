@@ -103,6 +103,8 @@ def policy_decisions(bundle, public_rows):
 
 def infer_one(bundle, pool, policy, text):
     """Deployment path. One executor call, including when the detector bypasses stage two."""
+    if "supported_policies" in bundle and policy not in bundle["supported_policies"]:
+        raise ValueError(f"This run supports {', '.join(bundle['supported_policies'])}")
     start = time.perf_counter()
     gate_ms = route_ms = 0.
     gate = None

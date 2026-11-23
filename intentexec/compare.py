@@ -91,9 +91,14 @@ def costs(trace, instance_rate, input_rate, output_rate, per_k):
 
 
 def compare(args, client=None):
+    path = Path(args.run_dir)
+    summary_path = path / "summary.json"
+    if summary_path.is_file():
+        supported = json.loads(summary_path.read_bytes()).get("supported_policies")
+        if supported is not None and not {"matrix", "lookup", "mlp"}.issubset(supported):
+            raise ValueError("Hosted comparison needs a full experiment with lookup, mlp and reference calls")
     if client is None and not os.environ.get("TYPESAFE_API_KEY"):
         raise ValueError("TYPESAFE_API_KEY is required for the hosted comparison.")
-    path = Path(args.run_dir)
     out = Path(args.out).resolve()
     if (args.input_usd_million is None) != (args.output_usd_million is None):
         raise ValueError("Supply both token prices or leave both unspecified")
