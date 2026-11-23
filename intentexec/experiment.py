@@ -101,15 +101,16 @@ def policy_decisions(bundle, public_rows):
     return records
 
 
-def infer_one(bundle, pool, policy, text, *, repair_arguments=False):
-    """Deployment path. One executor call, including when the detector bypasses stage two."""
+def infer_one(bundle, pool, policy, text, *, expert_review="off"):
+    """Route one request and return one tool call, optionally using a second draft."""
     if "supported_policies" in bundle and policy not in bundle["supported_policies"]:
         raise ValueError(f"This run supports {', '.join(bundle['supported_policies'])}")
-    if repair_arguments:
-        from .query_grounding import ground_call
+    if expert_review not in ("off", "single", "review"):
+        raise ValueError("expert_review must be off, single or review")
+    if expert_review != "off":
         from .transaction_executor import RepairedRetrievalPool
         if policy != "matrix" or not isinstance(pool, RepairedRetrievalPool):
-            raise ValueError("Argument repair requires matrix routing and the retrieval-grounded backend")
+            raise ValueError("Proposal review requires matrix routing and the retrieval-grounded backend")
     start = time.perf_counter()
     gate_ms = route_ms = 0.
     gate = None
@@ -128,12 +129,15 @@ def infer_one(bundle, pool, policy, text, *, repair_arguments=False):
             name = bundle["experts"][int(chosen[0])]
             route_ms = measure_ms(then)
     then = time.perf_counter()
-    call = pool.execute(name, text)
-    if repair_arguments and not gate:
-        call = ground_call(pool, text, call)
+    metadata = {}
+    if expert_review == "off":
+        call = pool.execute(name, text)
+    else:
+        from .review_runtime import reviewed_call
+        call, metadata = reviewed_call(pool, text, name, expert_review)
     exec_ms = measure_ms(then)
     return {"executor": name, "pred_oos": gate, "intent_result": intent_result, "call": call, "recognition_ms": gate_ms,
-            "route_ms": route_ms, "execution_ms": exec_ms, "total_ms": measure_ms(start)}
+            "route_ms": route_ms, "execution_ms": exec_ms, "total_ms": measure_ms(start), **metadata}
 
 
 def scored(row, predicted, executor, known, base, error=False):
