@@ -1,0 +1,1144 @@
+{
+  "pool_sha256": "ef87eb63aa632c568472b010ddfaf61a0498b8b4894108b966de9aaaa6a9cc28",
+  "prediction_sha256": "92654b9fca967e473529e2d86c7eb0814762b9a9948a9cdb4be8e0b8162fda12",
+  "fresh_manifest_sha256": "57a7a4b71803a8b578bf32803ae1f546423754eb684931b8cae6eaac7ae42ec1",
+  "fit_rows": 1852,
+  "folds": {
+    "near_domain_bus_ticket": {
+      "intent": "BuyBusTicket",
+      "requests": 218,
+      "dialogues": 117,
+      "target_tools_in_fit": {
+        "Buses_2.BuyBusTicket": 118,
+        "Buses_1.BuyBusTicket": 52
+      },
+      "target_tools_in_cohort": {
+        "Buses_2.BuyBusTicket": 140,
+        "Buses_1.BuyBusTicket": 78
+      },
+      "selected_expert_frequency": {
+        "search": 218
+      },
+      "selected_expert": {
+        "n": 218,
+        "service_correct": 74,
+        "raw_method_name_correct": 19,
+        "service_and_method_correct": 12,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 144,
+          "method_given_correct_service": 62,
+          "arguments_given_correct_tool": 12,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 63,
+        "wrong_service_pairs": [
+          {
+            "expected": "Buses_1",
+            "predicted": "Buses_2",
+            "n": 35
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Hotels_1",
+            "n": 28
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Buses_1",
+            "n": 28
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Hotels_1",
+            "n": 13
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Hotels_3",
+            "n": 10
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Travel_1",
+            "n": 6
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Flights_1",
+            "n": 6
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Flights_1",
+            "n": 4
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "RideSharing_2",
+            "n": 3
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Travel_1",
+            "n": 2
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "RideSharing_1",
+            "n": 2
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Services_2",
+            "n": 2
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Restaurants_1",
+            "n": 1
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Restaurants_1",
+            "n": 1
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "RideSharing_1",
+            "n": 1
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Services_1",
+            "n": 1
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Music_1",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [
+          {
+            "expected": "Buses_2.BuyBusTicket",
+            "predicted": "Buses_2.FindBus",
+            "n": 45
+          },
+          {
+            "expected": "Buses_1.BuyBusTicket",
+            "predicted": "Buses_1.FindBus",
+            "n": 17
+          }
+        ],
+        "given_correct_tool": {
+          "n": 12,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 12,
+            "wrong_value": 12
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "departure_date": 11,
+              "departure_time": 11,
+              "leaving_date": 1,
+              "leaving_time": 1
+            },
+            "extra": {},
+            "wrong_value": {
+              "origin": 9,
+              "group_size": 7,
+              "destination": 2,
+              "from_location": 1
+            }
+          }
+        }
+      },
+      "base": {
+        "n": 218,
+        "service_correct": 125,
+        "raw_method_name_correct": 122,
+        "service_and_method_correct": 86,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 93,
+          "method_given_correct_service": 39,
+          "arguments_given_correct_tool": 86,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 64,
+        "wrong_service_pairs": [
+          {
+            "expected": "Buses_1",
+            "predicted": "Buses_2",
+            "n": 50
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Buses_1",
+            "n": 14
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Flights_1",
+            "n": 12
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Hotels_1",
+            "n": 4
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Hotels_1",
+            "n": 3
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Hotels_3",
+            "n": 3
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Flights_1",
+            "n": 2
+          },
+          {
+            "expected": "Buses_2",
+            "predicted": "Travel_1",
+            "n": 2
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Hotels_3",
+            "n": 1
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "RideSharing_2",
+            "n": 1
+          },
+          {
+            "expected": "Buses_1",
+            "predicted": "Restaurants_1",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [
+          {
+            "expected": "Buses_2.BuyBusTicket",
+            "predicted": "Buses_2.FindBus",
+            "n": 27
+          },
+          {
+            "expected": "Buses_1.BuyBusTicket",
+            "predicted": "Buses_1.FindBus",
+            "n": 12
+          }
+        ],
+        "given_correct_tool": {
+          "n": 86,
+          "requests_with_slot_error": {
+            "extra": 2,
+            "missing": 86,
+            "wrong_value": 86
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "departure_date": 78,
+              "departure_time": 61,
+              "leaving_date": 8,
+              "leaving_time": 8
+            },
+            "extra": {
+              "fare_type": 2
+            },
+            "wrong_value": {
+              "origin": 65,
+              "group_size": 22,
+              "destination": 15,
+              "from_location": 7,
+              "departure_time": 3,
+              "to_location": 1
+            }
+          }
+        }
+      },
+      "gold_tool_gold_keys_with_original_span_extractor": {
+        "n": 218,
+        "service_correct": 218,
+        "raw_method_name_correct": 218,
+        "service_and_method_correct": 218,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 0,
+          "method_given_correct_service": 0,
+          "arguments_given_correct_tool": 218,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 0,
+        "wrong_service_pairs": [],
+        "wrong_method_pairs_given_correct_service": [],
+        "given_correct_tool": {
+          "n": 218,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 218,
+            "wrong_value": 218
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "departure_date": 140,
+              "departure_time": 105,
+              "leaving_date": 78,
+              "leaving_time": 75
+            },
+            "extra": {},
+            "wrong_value": {
+              "origin": 119,
+              "from_location": 60,
+              "group_size": 38,
+              "destination": 23,
+              "travelers": 19,
+              "to_location": 18,
+              "departure_time": 4,
+              "leaving_time": 1
+            }
+          }
+        }
+      },
+      "any_of_all_four_exact": 0,
+      "all_four_exact_by_executor": {
+        "search": 0,
+        "transaction": 0,
+        "context": 0,
+        "base": 0
+      },
+      "examples": [
+        {
+          "base_first_error": "arguments_given_correct_tool",
+          "id": "59_00109:4",
+          "dialogue_id": "59_00109",
+          "public_prefix": "USER: Hello. I want 2 bus tickets to Sacramento for March 6th.\nSYSTEM: You'll be leaving where at what time?\nUSER: LAX at 4 o\"clock in the evening.\nSYSTEM: I see. You want 2 economy tickets from Los Angeles to Sacramento on March 6th at 4 pm?\nUSER: Yeah, that is correct. What's the bus station I'm departing from called?",
+          "expert": "search",
+          "gold": {
+            "service": "Buses_2",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "departure_date": "2019-03-06",
+              "departure_time": "16:00",
+              "destination": "Sacramento",
+              "fare_type": "Economy",
+              "group_size": "2",
+              "origin": "Los Angeles"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Buses_2",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "destination": "Sacramento",
+              "fare_type": "Economy",
+              "group_size": "4",
+              "origin": "Sacramento"
+            }
+          },
+          "base_call": {
+            "service": "Buses_2",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "destination": "Sacramento",
+              "fare_type": "Economy",
+              "group_size": "4",
+              "origin": "Sacramento"
+            }
+          },
+          "base_slot_diff_if_tool_correct": {
+            "missing": [
+              "departure_date",
+              "departure_time"
+            ],
+            "extra": [],
+            "wrong_value": [
+              "group_size",
+              "origin"
+            ]
+          }
+        },
+        {
+          "base_first_error": "method_given_correct_service",
+          "id": "59_00068:8",
+          "dialogue_id": "59_00068",
+          "public_prefix": "USER: I want fresno, ca\nSYSTEM: what time for bus?\nUSER: 11 o\"clock in the morning for one\nSYSTEM: where to now?\nUSER: On the 14th\nSYSTEM: where from now?\nUSER: just san diego\nSYSTEM: leaving san diego to fresno march 14th at 11 am for 1 person economy\nUSER: what bus station?",
+          "expert": "search",
+          "gold": {
+            "service": "Buses_2",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "departure_date": "2019-03-14",
+              "departure_time": "11:00",
+              "destination": "Fresno",
+              "fare_type": "Economy",
+              "group_size": "1",
+              "origin": "San Diego"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Hotels_1",
+            "method": "SearchHotel",
+            "arguments": {
+              "destination": "Fresno",
+              "star_rating": "1"
+            }
+          },
+          "base_call": {
+            "service": "Buses_2",
+            "method": "FindBus",
+            "arguments": {
+              "destination": "Fresno",
+              "origin": "Fresno"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        },
+        {
+          "base_first_error": "sibling_service",
+          "id": "59_00116:6",
+          "dialogue_id": "59_00116",
+          "public_prefix": "USER: Will you buy a bus ticket that leaves at 1 pm?\nSYSTEM: How many? From where?\nUSER: From Sacramento for 3.\nSYSTEM: What's the destination? Leaving when?\nUSER: Vegas on 9th of this month.\nSYSTEM: Please confirm 3 Economy tickets from Sacramento to Las Vegas on March 9th that leaves at 1 pm.\nUSER: Yes.",
+          "expert": "search",
+          "gold": {
+            "service": "Buses_2",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "departure_date": "2019-03-09",
+              "departure_time": "13:00",
+              "destination": "Las Vegas",
+              "fare_type": "Economy",
+              "group_size": "3",
+              "origin": "Sacramento"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Buses_1",
+            "method": "FindBus",
+            "arguments": {
+              "from_location": "Las Vegas",
+              "to_location": "Las Vegas"
+            }
+          },
+          "base_call": {
+            "service": "Buses_1",
+            "method": "BuyBusTicket",
+            "arguments": {
+              "from_location": "Las Vegas",
+              "to_location": "Las Vegas",
+              "travelers": "1"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        }
+      ]
+    },
+    "near_lodging_booking": {
+      "intent": "ReserveLodging",
+      "requests": 137,
+      "dialogues": 137,
+      "target_tools_in_fit": {
+        "Hotels_1.ReserveHotel": 65
+      },
+      "target_tools_in_cohort": {
+        "Hotels_3.ReserveHotel": 113,
+        "Hotels_2.BookHouse": 17,
+        "Hotels_1.ReserveHotel": 7
+      },
+      "selected_expert_frequency": {
+        "context": 126,
+        "transaction": 11
+      },
+      "selected_expert": {
+        "n": 137,
+        "service_correct": 29,
+        "raw_method_name_correct": 74,
+        "service_and_method_correct": 7,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 108,
+          "method_given_correct_service": 22,
+          "arguments_given_correct_tool": 7,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 82,
+        "wrong_service_pairs": [
+          {
+            "expected": "Hotels_3",
+            "predicted": "Hotels_1",
+            "n": 71
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Flights_1",
+            "n": 14
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Hotels_1",
+            "n": 11
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Buses_2",
+            "n": 4
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Buses_1",
+            "n": 3
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Buses_2",
+            "n": 3
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Buses_1",
+            "n": 1
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Music_1",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [
+          {
+            "expected": "Hotels_3.ReserveHotel",
+            "predicted": "Hotels_3.SearchHotel",
+            "n": 22
+          }
+        ],
+        "given_correct_tool": {
+          "n": 7,
+          "requests_with_slot_error": {
+            "extra": 2,
+            "missing": 7,
+            "wrong_value": 7
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "check_in_date": 7,
+              "hotel_name": 6
+            },
+            "extra": {
+              "destination": 2
+            },
+            "wrong_value": {
+              "number_of_days": 7
+            }
+          }
+        }
+      },
+      "base": {
+        "n": 137,
+        "service_correct": 31,
+        "raw_method_name_correct": 68,
+        "service_and_method_correct": 7,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 106,
+          "method_given_correct_service": 24,
+          "arguments_given_correct_tool": 7,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 79,
+        "wrong_service_pairs": [
+          {
+            "expected": "Hotels_3",
+            "predicted": "Hotels_1",
+            "n": 69
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Flights_1",
+            "n": 12
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Hotels_1",
+            "n": 10
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Buses_2",
+            "n": 7
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Buses_2",
+            "n": 4
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Buses_1",
+            "n": 2
+          },
+          {
+            "expected": "Hotels_2",
+            "predicted": "Flights_1",
+            "n": 1
+          },
+          {
+            "expected": "Hotels_3",
+            "predicted": "Buses_1",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [
+          {
+            "expected": "Hotels_3.ReserveHotel",
+            "predicted": "Hotels_3.SearchHotel",
+            "n": 24
+          }
+        ],
+        "given_correct_tool": {
+          "n": 7,
+          "requests_with_slot_error": {
+            "extra": 2,
+            "missing": 7,
+            "wrong_value": 7
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "check_in_date": 7,
+              "hotel_name": 6
+            },
+            "extra": {
+              "destination": 2
+            },
+            "wrong_value": {
+              "number_of_days": 7
+            }
+          }
+        }
+      },
+      "gold_tool_gold_keys_with_original_span_extractor": {
+        "n": 137,
+        "service_correct": 137,
+        "raw_method_name_correct": 137,
+        "service_and_method_correct": 137,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 0,
+          "method_given_correct_service": 0,
+          "arguments_given_correct_tool": 137,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 0,
+        "wrong_service_pairs": [],
+        "wrong_method_pairs_given_correct_service": [],
+        "given_correct_tool": {
+          "n": 137,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 137,
+            "wrong_value": 18
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "check_in_date": 137,
+              "check_out_date": 130,
+              "hotel_name": 51,
+              "where_to": 12,
+              "location": 1
+            },
+            "extra": {},
+            "wrong_value": {
+              "hotel_name": 9,
+              "number_of_days": 7,
+              "where_to": 1,
+              "location": 1
+            }
+          }
+        }
+      },
+      "any_of_all_four_exact": 0,
+      "all_four_exact_by_executor": {
+        "search": 0,
+        "transaction": 0,
+        "context": 0,
+        "base": 0
+      },
+      "examples": [
+        {
+          "base_first_error": "arguments_given_correct_tool",
+          "id": "43_00080:6",
+          "dialogue_id": "43_00080",
+          "public_prefix": "USER: Make a hotel reservation for me on March 10th.\nSYSTEM: How many days do you want to stay?\nUSER: I want to hotel room for two days.\nSYSTEM: Which hotel do you want to stay at?\nUSER: I want to stay at The Parc Hotel.\nSYSTEM: Please confirm that you want to stay at The Parc Hotel on March 10th for 2 days and you only want 1 room.\nUSER: Yes I can confirm and does the hotel have wifi?",
+          "expert": "context",
+          "gold": {
+            "service": "Hotels_1",
+            "method": "ReserveHotel",
+            "arguments": {
+              "check_in_date": "2019-03-10",
+              "hotel_name": "The Parc Hotel",
+              "number_of_days": "2",
+              "number_of_rooms": "1"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Hotels_1",
+            "method": "ReserveHotel",
+            "arguments": {
+              "number_of_days": "1",
+              "number_of_rooms": "1"
+            }
+          },
+          "base_call": {
+            "service": "Hotels_1",
+            "method": "ReserveHotel",
+            "arguments": {
+              "number_of_days": "1",
+              "number_of_rooms": "1"
+            }
+          },
+          "base_slot_diff_if_tool_correct": {
+            "missing": [
+              "check_in_date",
+              "hotel_name"
+            ],
+            "extra": [],
+            "wrong_value": [
+              "number_of_days"
+            ]
+          }
+        },
+        {
+          "base_first_error": "method_given_correct_service",
+          "id": "101_00045:20",
+          "dialogue_id": "101_00045",
+          "public_prefix": "USER: Find me a bus to reserve.\nSYSTEM: When and where are you leaving?\nUSER: I want to depart NYC at 7:15 pm on the 12th of this month.\nSYSTEM: Where are you travelling to and how many people are going?\nUSER: Two people are going to Philly.\nSYSTEM: You want 2 tickets from New York to Philadelphia that departs at 7:15 pm on March 12th. Is that right?\nUSER: Yes, that is right. What is the arriving station?\nSYSTEM: I can't find the ticket that you want. There is a bus that leaves at 7:40 pm and arrives at Intercity Terminal. It costs $25.\nUSER: That will be good.\nSYSTEM: Your ticket is booked.\nUSER: Can you find me a hotel there?\nSYSTEM: I found Aka University City which has a 4.6 rating.\nUSER: What is their contact number and do they allow pets?\nSYSTEM: Their contact number is +1 215-372-9000 and they do not allow pets.\nUSER: That works. Book me a room.\nSYSTEM: Is March 12th your check in date?\nUSER: Yes, it is.\nSYSTEM: What day do you want to leave?\nUSER: I want to leave on the 13th.\nSYSTEM: You want 1 room at Aka University City in Philadelphia with a check in date of March 12th and a departure date of March 13th. Is that right?\nUSER: Yes, that is right. What is their address?",
+          "expert": "context",
+          "gold": {
+            "service": "Hotels_3",
+            "method": "ReserveHotel",
+            "arguments": {
+              "check_in_date": "2019-03-12",
+              "check_out_date": "2019-03-13",
+              "hotel_name": "Aka University City",
+              "location": "Philadelphia",
+              "number_of_rooms": "1"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Hotels_1",
+            "method": "ReserveHotel",
+            "arguments": {
+              "destination": "Philadelphia",
+              "hotel_name": "Aka University City",
+              "number_of_days": "1",
+              "number_of_rooms": "1"
+            }
+          },
+          "base_call": {
+            "service": "Hotels_3",
+            "method": "SearchHotel",
+            "arguments": {
+              "location": "Philadelphia",
+              "number_of_rooms": "1"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        },
+        {
+          "base_first_error": "sibling_service",
+          "id": "43_00054:4",
+          "dialogue_id": "43_00054",
+          "public_prefix": "USER: I want to book a house and would like to check in on March 7th for 3 people.\nSYSTEM: Which day do you want to go?\nUSER: I am traveling to Kuala Lumpur and would like to check out on March 12th.\nSYSTEM: Please confirm that the location is Kuala Lumpur and that there are 3 people that would like to check in next Thursday and check out on March 12th.\nUSER: Yes, that would be great.",
+          "expert": "context",
+          "gold": {
+            "service": "Hotels_2",
+            "method": "BookHouse",
+            "arguments": {
+              "check_in_date": "2019-03-07",
+              "check_out_date": "2019-03-12",
+              "number_of_adults": "3",
+              "where_to": "Kuala Lumpur"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Hotels_1",
+            "method": "ReserveHotel",
+            "arguments": {
+              "destination": "Kuala Lumpur",
+              "number_of_days": "3",
+              "number_of_rooms": "3"
+            }
+          },
+          "base_call": {
+            "service": "Hotels_1",
+            "method": "SearchHotel",
+            "arguments": {
+              "destination": "Kuala Lumpur",
+              "number_of_rooms": "3"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        }
+      ]
+    },
+    "near_event_booking": {
+      "intent": "BuyEventTickets",
+      "requests": 206,
+      "dialogues": 198,
+      "target_tools_in_fit": {
+        "Events_1.BuyEventTickets": 39
+      },
+      "target_tools_in_cohort": {
+        "Events_2.BuyEventTickets": 193,
+        "Events_1.BuyEventTickets": 13
+      },
+      "selected_expert_frequency": {
+        "transaction": 125,
+        "context": 80,
+        "search": 1
+      },
+      "selected_expert": {
+        "n": 206,
+        "service_correct": 12,
+        "raw_method_name_correct": 139,
+        "service_and_method_correct": 12,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 194,
+          "method_given_correct_service": 0,
+          "arguments_given_correct_tool": 12,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 127,
+        "wrong_service_pairs": [
+          {
+            "expected": "Events_2",
+            "predicted": "Events_1",
+            "n": 127
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Buses_2",
+            "n": 25
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Hotels_1",
+            "n": 14
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Flights_1",
+            "n": 7
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Buses_1",
+            "n": 6
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Hotels_3",
+            "n": 6
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Restaurants_1",
+            "n": 3
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Travel_1",
+            "n": 2
+          },
+          {
+            "expected": "Events_1",
+            "predicted": "Hotels_1",
+            "n": 1
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Services_2",
+            "n": 1
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Music_1",
+            "n": 1
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Hotels_2",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [],
+        "given_correct_tool": {
+          "n": 12,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 12,
+            "wrong_value": 1
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "date": 12,
+              "event_name": 11,
+              "city_of_event": 2
+            },
+            "extra": {},
+            "wrong_value": {
+              "city_of_event": 1
+            }
+          }
+        }
+      },
+      "base": {
+        "n": 206,
+        "service_correct": 16,
+        "raw_method_name_correct": 122,
+        "service_and_method_correct": 15,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 190,
+          "method_given_correct_service": 1,
+          "arguments_given_correct_tool": 15,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 107,
+        "wrong_service_pairs": [
+          {
+            "expected": "Events_2",
+            "predicted": "Events_1",
+            "n": 107
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Buses_2",
+            "n": 27
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Hotels_1",
+            "n": 18
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Hotels_3",
+            "n": 18
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Buses_1",
+            "n": 10
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Travel_1",
+            "n": 4
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Flights_1",
+            "n": 4
+          },
+          {
+            "expected": "Events_1",
+            "predicted": "Hotels_1",
+            "n": 1
+          },
+          {
+            "expected": "Events_2",
+            "predicted": "Music_1",
+            "n": 1
+          }
+        ],
+        "wrong_method_pairs_given_correct_service": [
+          {
+            "expected": "Events_2.BuyEventTickets",
+            "predicted": "Events_2.FindEvents",
+            "n": 1
+          }
+        ],
+        "given_correct_tool": {
+          "n": 15,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 15,
+            "wrong_value": 1
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "date": 15,
+              "event_name": 14,
+              "city_of_event": 2,
+              "city": 1
+            },
+            "extra": {},
+            "wrong_value": {
+              "city_of_event": 1
+            }
+          }
+        }
+      },
+      "gold_tool_gold_keys_with_original_span_extractor": {
+        "n": 206,
+        "service_correct": 206,
+        "raw_method_name_correct": 206,
+        "service_and_method_correct": 206,
+        "argument_dict_correct_regardless_of_tool": 0,
+        "first_error": {
+          "service": 0,
+          "method_given_correct_service": 0,
+          "arguments_given_correct_tool": 206,
+          "exact": 0
+        },
+        "wrong_service_same_domain": 0,
+        "wrong_service_pairs": [],
+        "wrong_method_pairs_given_correct_service": [],
+        "given_correct_tool": {
+          "n": 206,
+          "requests_with_slot_error": {
+            "extra": 0,
+            "missing": 206,
+            "wrong_value": 9
+          },
+          "error_instances_by_slot": {
+            "missing": {
+              "date": 206,
+              "event_name": 180,
+              "city": 32,
+              "city_of_event": 2
+            },
+            "extra": {},
+            "wrong_value": {
+              "city": 8,
+              "city_of_event": 1
+            }
+          }
+        }
+      },
+      "any_of_all_four_exact": 0,
+      "all_four_exact_by_executor": {
+        "search": 0,
+        "transaction": 0,
+        "context": 0,
+        "base": 0
+      },
+      "examples": [
+        {
+          "base_first_error": "arguments_given_correct_tool",
+          "id": "15_00008:4",
+          "dialogue_id": "15_00008",
+          "public_prefix": "USER: I want to reserve tickets for the Atlanta Summer Organ Festival on the 13th.\nSYSTEM: How many tickets? What city should I search in?\nUSER: One ticket in ATL.\nSYSTEM: Please confirm the following: 1 ticket to Atlanta Summer Organ Festival in Atlanta on March 13th.\nUSER: Yes, perfect.",
+          "expert": "context",
+          "gold": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "city_of_event": "Atlanta",
+              "date": "2019-03-13",
+              "event_name": "Atlanta Summer Organ Festival",
+              "number_of_seats": "1"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "number_of_seats": "1"
+            }
+          },
+          "base_call": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "number_of_seats": "1"
+            }
+          },
+          "base_slot_diff_if_tool_correct": {
+            "missing": [
+              "city_of_event",
+              "date",
+              "event_name"
+            ],
+            "extra": [],
+            "wrong_value": []
+          }
+        },
+        {
+          "base_first_error": "method_given_correct_service",
+          "id": "85_00123:8",
+          "dialogue_id": "85_00123",
+          "public_prefix": "USER: Hello there. I want to get some tickets for an event.\nSYSTEM: Hi! How many tickets do you want?\nUSER: I want to get four tickets.\nSYSTEM: Do you have an exact event in mind?\nUSER: Yeah. I'd like to check out the Huskies vs Cougars game.\nSYSTEM: What city should I check?\nUSER: I'd like it if you could find the March 6th game in Seattle.\nSYSTEM: Okay, I should book 4 tickets for the Huskies vs Cougars game that takes place in Seattle on March 6th?\nUSER: Yes, you should. Where will it be happening?",
+          "expert": "transaction",
+          "gold": {
+            "service": "Events_2",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "city": "Seattle",
+              "date": "2019-03-06",
+              "event_name": "Huskies Vs Cougars",
+              "number_of_tickets": "4"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "city_of_event": "Seattle",
+              "number_of_seats": "4"
+            }
+          },
+          "base_call": {
+            "service": "Events_2",
+            "method": "FindEvents",
+            "arguments": {
+              "city": "Seattle"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        },
+        {
+          "base_first_error": "sibling_service",
+          "id": "85_00109:4",
+          "dialogue_id": "85_00109",
+          "public_prefix": "USER: I would like to buy a ticket for an event tomorrow.\nSYSTEM: How many tickets and in which city?\nUSER: three tickets for Falcons Vs Redskins at ATL.\nSYSTEM: booking 3 tickets for Falcons Vs Redskins on March 2nd in Atlanta\nUSER: Yes that works for me",
+          "expert": "context",
+          "gold": {
+            "service": "Events_2",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "city": "Atlanta",
+              "date": "2019-03-02",
+              "event_name": "Falcons Vs Redskins",
+              "number_of_tickets": "3"
+            }
+          },
+          "selected_expert_call": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "number_of_seats": "3"
+            }
+          },
+          "base_call": {
+            "service": "Events_1",
+            "method": "BuyEventTickets",
+            "arguments": {
+              "number_of_seats": "3"
+            }
+          },
+          "base_slot_diff_if_tool_correct": null
+        }
+      ]
+    }
+  }
+}
